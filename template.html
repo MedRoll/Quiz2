@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Interattivo</title>
+  <style>
+    /* --- STILI BASE --- */
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #1c1f2b; color: #fff; padding: 20px; max-width: 900px; margin: auto; }
+    h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
+    .stats { display: flex; justify-content: space-between; margin-bottom: 15px; }
+    .card { background-color: #2a2e3d; color: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+
+    /* --- RISPOSTE --- */
+    .risposta { 
+      background-color: #ffffff; 
+      color: #000; 
+      border: 2px solid #ccc; 
+      margin: 10px 0; 
+      padding: 15px 20px; 
+      border-radius: 8px; 
+      font-size: 1.2rem; 
+      font-weight: bold; 
+      cursor: pointer; 
+      transition: all 0.25s ease-in-out; 
+      opacity: 0; 
+      transform: translateY(10px); 
+      animation: fadeInUp 0.6s ease forwards; 
+    }
+    .risposta:hover { transform: scale(1.03); box-shadow: 0 0 12px rgba(255,255,255,0.3); }
+    .corretta { background-color: #28a745; color: white; border-color: #28a745; }
+    .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; }
+
+    /* --- BOTTONI --- */
+    button { 
+      padding: 10px 16px; 
+      margin: 5px; 
+      border: none; 
+      border-radius: 6px; 
+      background-color: #1a73e8; 
+      color: white; 
+      font-weight: bold; 
+      cursor: pointer; 
+      transition: all 0.25s ease-in-out;
+      opacity: 0; 
+      transform: translateY(10px); 
+      animation: fadeInUp 0.6s ease forwards; 
+    }
+    button:hover { background-color: #155ab6; transform: scale(1.07); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
+    button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
+    .btn-danger { background-color: #d93025; }
+    .btn-danger:hover { background-color: #b5271b; }
+
+    /* --- RECAP --- */
+    #risposte { display: grid; gap: 1rem; }
+    .domandaRecap { background-color: #2f3347; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
+    .domandaRecap strong { display: block; margin-bottom: 6px; font-size: 1.1em; color: #1a73e8; }
+    .domandaRecap div { margin: 4px 0; }
+
+    /* --- ANIMAZIONI --- */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .progress-bar-animate {
+      transition: width 0.4s ease-in-out;
+    }
+  </style>
+  <!-- Chart.js e DataLabels -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+  <!-- MENU INIZIALE -->
+  <div id="start-container" style="text-align: center; margin-bottom: 30px;">
+    <h1>Benvenuto!</h1>
+    <button onclick="setDocenteMode(false)">📝 Modalità Studente</button>
+    <button onclick="setDocenteMode(true)">👩‍🏫 Modalità Docente</button>
+  </div>
+
+  <!-- SELEZIONE QUIZ -->
+  <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
+    <h2 id="quiz-title"></h2>
+    <button onclick="iniziaQuiz(1)">🎤 Quiz 1 - Competenze Digitali Base</button>
+    <button onclick="iniziaQuiz(2)">📧 Quiz 2 - Internet, Email e PEC</button>
+    <button onclick="iniziaQuiz(3)">🔐 Quiz 3 - SPID, Cybersecurity e GDPR</button>
+    <button onclick="iniziaQuiz(4)">💬 Quiz 4 - Social Media</button>
+    <button onclick="iniziaQuiz(5)">💻 Quiz 5 - Produttività, Cyberbullismo e Tecnologia</button>
+    <div style="margin-top:15px;">
+      <button onclick="tornaAllaModalita()">⬅️ Torna alla scelta modalità</button>
+    </div>
+  </div>
+
+  <!-- QUIZ CLASSICO -->
+  <h1 style="display:none;" id="titolo-quiz">Quiz a Scelta Multipla</h1>
+  <div class="stats" id="stats-container" style="display:none;">
+    <div><strong>Punteggio:</strong> <span id="punteggio">0</span></div>
+    <div><strong>Domanda:</strong> <span id="contatore">0</span></div>
+  </div>
+  <div class="progress-container" id="progress-container" style="display:none; background-color: #444; border-radius: 30px; margin-bottom: 20px; overflow: hidden;">
+    <div id="progress-bar" class="progress-bar-animate" style="width: 0%; height: 14px; background: linear-gradient(to right, #ff416c, #ff4b2b);"></div>
+  </div>
+  <div class="card" id="card-container" style="display:none;">
+    <div id="domanda" style="font-size: 1.4em; font-weight: bold; border: 2px solid #007bff; padding: 20px; border-radius: 10px; background-color: #2a2e3d; color: white; margin-bottom: 20px;">Caricamento...</div>
+    <div id="risposte"></div>
+    <div id="feedback" style="margin-top: 15px;"></div>
+  </div>
+  <div class="controls" id="controls-container" style="display:none; text-align:center;">
+    <button onclick="domandaPrecedente()">⬅️ Indietro</button>
+    <button onclick="prossimaDomanda()">➡️ Avanti</button>
+    <button class="btn-danger" onclick="terminaTest()">🛑 Termina Test</button>
+    <button onclick="ricomincia()">🔄 Ricomincia</button>
+    <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
+  </div>
+  <div id="recap"></div>
+
+  <!-- MODALITÀ DOCENTE -->
+  <div id="docente-container" style="display:none;">
+    <h1>Modalità Docente</h1>
+    <div id="lista-docente"></div>
+    <div style="text-align:center;">
+      <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
+    </div>
+  </div>
+
+  <script>
+    let docenteMode = false;
+    let rispostaCorretta = "";
+    let punteggio = 0;
+    let ultimaDomanda = null;
+    let risposteUtente = [];
+    let indexDomanda = 0;
+    let quizCorrente = 1;
+    let MAX_DOMANDE = 0;
+    const FEEDBACK_DELAY = 200; // 0,2 secondi
+
+    function setDocenteMode(mode) {
+      if(mode){
+        const pwd = prompt("Inserisci la password per accedere alla modalità docente:");
+        if(pwd !== "admin123"){ alert("❌ Password errata!"); return; }
+      }
+      docenteMode = mode;
+      document.getElementById("start-container").style.display = "none";
+      document.getElementById("quiz-buttons").style.display = "block";
+      document.getElementById("quiz-title").textContent = mode ? "Seleziona un quiz (Modalità Docente)" : "Seleziona un quiz (Modalità Studente)";
+    }
+
+    async function fetchDomanda(index){
+      const res = await fetch(`/quiz/${quizCorrente}/${index}`);
+      return await res.json();
+    }
+
+    function aggiornaPunteggio(){
+      punteggio = risposteUtente.reduce((acc,item)=> acc + (item && item.esito ? 1 : 0),0);
+      document.getElementById('punteggio').textContent = punteggio;
+    }
+
+    async function caricaDomanda(){
+      if(MAX_DOMANDE===0){
+        const res = await fetch(`/quiz_all/${quizCorrente}`);
+        const tutte = await res.json();
+        if(!tutte.errore){ MAX_DOMANDE = tutte.length; document.getElementById("contatore").textContent = `0/${MAX_DOMANDE}`; }
+      }
+      if(indexDomanda >= MAX_DOMANDE){ mostraRecap(); return; }
+
+      const domandaData = await fetchDomanda(indexDomanda);
+      if(domandaData.errore){ mostraRecap(); return; }
+
+      ultimaDomanda = domandaData;
+      const domandaElem = document.getElementById('domanda');
+      domandaElem.textContent = domandaData.domanda;
+      domandaElem.style.animation = "fadeInUp 0.6s ease";
+
+      document.getElementById('contatore').textContent = `${indexDomanda+1}/${MAX_DOMANDE}`;
+      document.getElementById('progress-bar').style.width = Math.floor(((indexDomanda+1)/MAX_DOMANDE)*100) + "%";
+      rispostaCorretta = domandaData.corretta;
+
+      const risposte = [...domandaData.risposte].sort(() => Math.random()-0.5);
+      const container = document.getElementById('risposte');
+      container.innerHTML = "";
+      document.getElementById('feedback').textContent = "";
+
+      risposte.forEach((r,i)=>{
+        const btn = document.createElement('div');
+        btn.className = 'risposta';
+        btn.style.animationDelay = `${i*0.1}s`;
+        btn.textContent = r;
+        btn.onclick = () => verificaRisposta(btn,r);
+        container.appendChild(btn);
+      });
+
+      const salvata = risposteUtente[indexDomanda];
+      if(salvata){
+        const tutte = document.querySelectorAll('.risposta');
+        tutte.forEach(el=>{ el.onclick=null; el.style.pointerEvents='none'; });
+        if(salvata.esito) document.getElementById('feedback').textContent="✅ Corretto!";
+        else document.getElementById('feedback').textContent="❌ Sbagliato!";
+        tutte.forEach(el=>{
+          if(el.textContent===salvata.rispostaUtente){ if(salvata.esito) el.classList.add('corretta'); else el.classList.add('sbagliata'); }
+          if(!salvata.esito && el.textContent===rispostaCorretta) el.classList.add('corretta');
+        });
+      }
+      aggiornaPunteggio();
+    }
+
+    function verificaRisposta(elemento,rispostaUtenteSelezionata){
+      if(risposteUtente[indexDomanda]) return;
+
+      const tutte = document.querySelectorAll('.risposta');
+      tutte.forEach(el=>el.onclick=null);
+
+      const esitoCorretto = rispostaUtenteSelezionata===rispostaCorretta;
+      if(esitoCorretto) { elemento.classList.add('corretta'); document.getElementById('feedback').textContent="✅ Corretto!"; }
+      else { elemento.classList.add('sbagliata'); document.getElementById('feedback').textContent="❌ Sbagliato!"; tutte.forEach(el=>{ if(el.textContent===rispostaCorretta) el.classList.add('corretta'); }); }
+
+      risposteUtente[indexDomanda] = {
+        domanda: ultimaDomanda.domanda,
+        rispostaUtente: rispostaUtenteSelezionata,
+        corretta: rispostaCorretta,
+        esito: esitoCorretto
+      };
+
+      aggiornaPunteggio();
+      setTimeout(()=>{ indexDomanda++; caricaDomanda(); }, FEEDBACK_DELAY);
+    }
+
+    function prossimaDomanda(){ indexDomanda++; caricaDomanda(); }
+    function domandaPrecedente(){ if(indexDomanda>0){ indexDomanda--; caricaDomanda(); } }
+
+    function mostraRecap(){
+      document.getElementById('controls-container').style.display='none';
+      document.getElementById('domanda').textContent="📊 Test completato!";
+      document.getElementById('risposte').innerHTML="";
+      document.getElementById('feedback').textContent="";
+
+      let recapHTML="<h2 style='margin-bottom:20px;'>Riepilogo Risposte</h2><div>";
+      risposteUtente.forEach((item,i)=>{
+        if(!item) return;
+        const corretta = item.rispostaUtente===item.corretta;
+        recapHTML+=`
+          <div class='domandaRecap'>
+            <div><strong>${i+1}. ${item.domanda}</strong></div>
+            ${!corretta? `<div><strong>Tua risposta:</strong> <span style="color:red;">${item.rispostaUtente}</span></div>` :``}
+            <div><strong>Risposta corretta:</strong> <span style="color:lightgreen;">${item.corretta}</span></div>
+            <div><strong>Esito:</strong> ${item.esito ? '✅ Corretto' : '❌ Sbagliato'}</div>
+          </div>`;
+      });
+      recapHTML+="</div>";
+
+      // Conteggio corrette, sbagliate, non date
+      const corrette = risposteUtente.filter(r=>r && r.esito).length;
+      const sbagliate = risposteUtente.filter(r=>r && !r.esito).length;
+      const nonDate = MAX_DOMANDE - risposteUtente.length;
+
+      recapHTML+=`<h3 style="margin-top:20px; text-align:center;">Statistiche Risposte</h3>
+        <canvas id="graficoRiepilogo" style="max-width:500px; margin:auto; display:block;"></canvas>
+        <div style="margin-top:20px; text-align:center;">
+          <button onclick="ricomincia()">🔄 Rifai questo Quiz</button>
+          <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
+        </div>`;
+
+      document.getElementById('recap').innerHTML=recapHTML;
+
+      // Creazione grafico
+      const ctx=document.getElementById('graficoRiepilogo').getContext('2d');
+      new Chart(ctx,{
+        type:'bar',
+        data:{
+          labels:['Corrette','Sbagliate','Non Risposte'],
+          datasets:[{
+            label:'Risposte',
+            data:[corrette,sbagliate,nonDate],
+            backgroundColor:['#28a745','#dc3545','#6c757d']
+          }]
+        },
+        options:{
+          responsive:true,
+          plugins:{
+            legend:{display:false},
+            datalabels:{
+              anchor:'end',
+              align:'end',
+              color:'white',
+              font:{weight:'bold',size:14},
+              formatter: function(value){ return value; }
+            }
+          },
+          scales:{
+            x:{ ticks:{ color:'white' } },
+            y:{ beginAtZero:true, ticks:{ color:'white', stepSize:1 } }
+          }
+        },
+        plugins:[ChartDataLabels]
+      });
+    }
+
+    function ricomincia(){
+      punteggio=0; indexDomanda=0; risposteUtente=[];
+      document.getElementById('punteggio').textContent="0";
+      document.getElementById('recap').innerHTML="";
+      document.getElementById('controls-container').style.display='block';
+      document.getElementById('progress-container').style.display='block';
+      caricaDomanda();
+    }
+
+    function terminaTest(){ indexDomanda=MAX_DOMANDE; mostraRecap(); }
+
+    async function iniziaQuiz(quizId){
+      quizCorrente=quizId;
+      document.getElementById('quiz-buttons').style.display='none';
+      if(docenteMode){
+        document.getElementById('docente-container').style.display='block';
+        caricaModalitaDocente();
+      } else {
+        punteggio=0; indexDomanda=0; risposteUtente=[]; MAX_DOMANDE=0;
+        document.getElementById('punteggio').textContent='0';
+        document.getElementById('recap').innerHTML='';
+        document.getElementById('titolo-quiz').style.display='block';
+        document.getElementById('stats-container').style.display='flex';
+        document.getElementById('card-container').style.display='block';
+        document.getElementById('controls-container').style.display='block';
+        document.getElementById('progress-container').style.display='block';
+        caricaDomanda();
+      }
+    }
+
+    async function caricaModalitaDocente(){
+      const res=await fetch(`/quiz_all/${quizCorrente}`);
+      const domande=await res.json();
+      const container=document.getElementById("lista-docente");
+      container.innerHTML="";
+      domande.forEach((d,i)=>{
+        let html=`<div class="card"><div style="font-size:1.2em; margin-bottom:10px;"><strong>${i+1}. ${d.domanda}</strong></div>`;
+        d.risposte.forEach(r=>{
+          if(r===d.corretta) html+=`<div class="risposta corretta">✔️ ${r}</div>`;
+          else html+=`<div class="risposta">${r}</div>`;
+        });
+        html+="</div>";
+        container.innerHTML+=html;
+      });
+    }
+
+    function tornaAiQuiz(){
+      document.getElementById('titolo-quiz').style.display='none';
+      document.getElementById('stats-container').style.display='none';
+      document.getElementById('card-container').style.display='none';
+      document.getElementById('controls-container').style.display='none';
+      document.getElementById('docente-container').style.display='none';
+      document.getElementById('progress-container').style.display='none';
+      document.getElementById('recap').innerHTML='';
+      document.getElementById('quiz-buttons').style.display='block';
+    }
+
+    function tornaAllaModalita(){
+      document.getElementById('quiz-buttons').style.display='none';
+      document.getElementById('start-container').style.display='block';
+    }
+  </script>
+</body>
+</html>
