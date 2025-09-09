@@ -7,6 +7,7 @@ app = FastAPI()
 
 # dizionario che contiene tutti i quiz caricati
 quizzes = {}
+alt_quizzes = {}  # Nuovo dizionario per quiz alternativi
 
 def load_data():
     """
@@ -20,8 +21,21 @@ def load_data():
             with open(path, "r", encoding="utf-8") as f:
                 quizzes[i] = json.load(f)
 
+def load_alt_data():
+    """
+    Carica i file ordered_alt_questions1.json ... ordered_alt_questions5.json
+    """
+    global alt_quizzes
+    alt_quizzes.clear()
+    for i in range(1, 6):
+        path = Path(f"ordered_alt_questions{i}.json")
+        if path.exists():
+            with open(path, "r", encoding="utf-8") as f:
+                alt_quizzes[i] = json.load(f)
+
 # carico subito i dati all'avvio
 load_data()
+load_alt_data()
 
 @app.get("/quiz/{quiz_id}/{index}")
 def get_quiz_question(quiz_id: int, index: int):
@@ -42,6 +56,27 @@ def get_quiz_all(quiz_id: int):
     if quiz_id not in quizzes:
         return {"errore": "Quiz non trovato"}
     return quizzes[quiz_id]
+
+# --- ENDPOINT QUIZ ALTERNATIVI ---
+@app.get("/quiz_alt/{quiz_id}/{index}")
+def get_alt_question(quiz_id: int, index: int):
+    """
+    Restituisce la domanda 'index' del quiz alternativo 'quiz_id'
+    """
+    if quiz_id not in alt_quizzes:
+        return {"errore": "Quiz alternativo non trovato"}
+    if 0 <= index < len(alt_quizzes[quiz_id]):
+        return alt_quizzes[quiz_id][index]
+    return {"errore": "Indice non valido"}
+
+@app.get("/quiz_all_alt/{quiz_id}")
+def get_alt_all(quiz_id: int):
+    """
+    Restituisce tutte le domande di un quiz alternativo
+    """
+    if quiz_id not in alt_quizzes:
+        return {"errore": "Quiz alternativo non trovato"}
+    return alt_quizzes[quiz_id]
 
 @app.get("/", response_class=HTMLResponse)
 def index():
