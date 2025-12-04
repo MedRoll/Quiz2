@@ -1,182 +1,227 @@
 [
   {
-    "domanda": "Che cos’è lo SPID e a cosa serve?",
+    "domanda": "SIMULAZIONE 1: Devi aprire il programma 'Calcolatrice' ma non vedi l'icona sul Desktop. Qual è il metodo più veloce (da Pro)?",
     "risposte": [
-      "Un’applicazione bancaria per i pagamenti online",
-      "Un sistema di identità digitale per accedere ai servizi online della Pubblica Amministrazione",
-      "Un programma per proteggere i dispositivi da virus"
+      "Clicco su Start (bandierina) e scrivo subito 'Calcolatrice'",
+      "Apro tutte le cartelle in Esplora File finché non la trovo",
+      "Clicco col tasto destro sullo sfondo e cerco 'Nuovo Programma'"
     ],
-    "corretta": "Un sistema di identità digitale per accedere ai servizi online della Pubblica Amministrazione"
+    "corretta": "Clicco su Start (bandierina) e scrivo subito 'Calcolatrice'"
   },
   {
-    "domanda": "Quali sono i vantaggi principali nell’utilizzo dello SPID per i cittadini?",
+    "domanda": "SIMULAZIONE 2: Hai una finestra aperta a tutto schermo che copre tutto. Devi vedere un attimo il Desktop senza chiudere il programma. Dove clicchi?",
     "risposte": [
-      "Possibilità di accedere con un’unica identità digitale a diversi servizi pubblici e privati",
-      "Navigare in rete in modo più veloce e sicuro",
-      "Scaricare applicazioni gratuite senza registrazione"
+      "Sul trattino basso ( _ ) in alto a destra (Minimizza)",
+      "Sulla X rossa in alto a destra",
+      "Stacchi e riattacchi il cavo del monitor"
     ],
-    "corretta": "Possibilità di accedere con un’unica identità digitale a diversi servizi pubblici e privati"
+    "corretta": "Sul trattino basso ( _ ) in alto a destra (Minimizza)"
   },
   {
-    "domanda": "Come si ottiene lo SPID?",
+    "domanda": "SIMULAZIONE 3: Stai scrivendo un'email e devi copiare dati da un PDF. Vuoi vedere le due finestre affiancate (metà schermo ciascuna). Cosa fai?",
     "risposte": [
-      "Registrandosi con un account social personale",
-      "Rivolgendosi a un gestore di identità digitale autorizzato",
-      "Installando un software fornito dal Ministero"
+      "Trascino la barra del titolo di una finestra contro il bordo laterale dello schermo (Snap)",
+      "Rimpicciolisco le finestre a mano pixel per pixel",
+      "Compro un secondo monitor"
     ],
-    "corretta": "Rivolgendosi a un gestore di identità digitale autorizzato"
+    "corretta": "Trascino la barra del titolo di una finestra contro il bordo laterale dello schermo (Snap)"
   },
   {
-    "domanda": "Quali sono i livelli di sicurezza previsti dallo SPID?",
+    "domanda": "SIMULAZIONE 4: L'audio del computer è troppo alto durante una riunione. Dove agisci rapidamente?",
     "risposte": [
-      "Tre livelli, con autenticazione crescente (password, OTP, app dedicata)",
-      "Due livelli, uno con username e password e uno con impronta digitale",
-      "Quattro livelli, con scelta libera tra i cittadini"
+      "Clicco sull'icona dell'altoparlante nell'Area di Notifica (in basso a destra)",
+      "Apro il Pannello di Controllo e cerco i driver audio",
+      "Metto le mani sopra le casse per coprire il suono"
     ],
-    "corretta": "Tre livelli, con autenticazione crescente (password, OTP, app dedicata)"
+    "corretta": "Clicco sull'icona dell'altoparlante nell'Area di Notifica (in basso a destra)"
   },
   {
-    "domanda": "Qual è la differenza tra SPID e Carta d’Identità Elettronica (CIE)?",
+    "domanda": "SIMULAZIONE 5: Devi allontanarti dal PC per 5 minuti (pausa caffè). Non vuoi spegnerlo, ma non vuoi che altri leggano le tue cose. Cosa scegli?",
     "risposte": [
-      "SPID è un servizio digitale, la CIE è un documento fisico con microchip",
-      "SPID è gratuito mentre la CIE è sempre a pagamento",
-      "SPID è valido solo in Italia, la CIE in tutta Europa"
+      "Blocca Schermo (Lock)",
+      "Arresta il sistema",
+      "Spegni solo il monitor col tasto fisico"
     ],
-    "corretta": "SPID è un servizio digitale, la CIE è un documento fisico con microchip"
+    "corretta": "Blocca Schermo (Lock)"
   },
   {
-    "domanda": "Che cosa significa il termine “cybersecurity”?",
+    "domanda": "SIMULAZIONE 6: Vedi un'icona sul Desktop con una piccola freccina blu nell'angolo. La cancelli. Hai perso il programma originale?",
     "risposte": [
-      "Una tecnica per migliorare la velocità delle reti",
-      "L’insieme di pratiche e strumenti per proteggere sistemi e dati digitali",
-      "Un software che blocca automaticamente i contenuti non sicuri"
+      "No, era solo un 'Collegamento'. Il programma vero è al sicuro",
+      "Sì, hai disinstallato tutto",
+      "Sì, ma solo se svuoti il cestino"
     ],
-    "corretta": "L’insieme di pratiche e strumenti per proteggere sistemi e dati digitali"
+    "corretta": "No, era solo un 'Collegamento'. Il programma vero è al sicuro"
   },
   {
-    "domanda": "Qual è lo scopo principale della cybersecurity per individui e aziende?",
+    "domanda": "SIMULAZIONE 7: Vuoi spostare una finestra che è in mezzo allo schermo. Dove devi 'afferrarla' col mouse?",
     "risposte": [
-      "Creare siti web più accattivanti graficamente",
-      "Proteggere i dati e ridurre i rischi di attacchi informatici",
-      "Rendere più rapidi i processi di produzione industriale"
+      "Sulla 'Barra del Titolo' (la striscia in alto)",
+      "Sull'angolo in basso a destra",
+      "Al centro preciso della finestra"
     ],
-    "corretta": "Proteggere i dati e ridurre i rischi di attacchi informatici"
+    "corretta": "Sulla 'Barra del Titolo' (la striscia in alto)"
   },
   {
-    "domanda": "Quali sono i rischi più comuni legati a un attacco informatico?",
+    "domanda": "SIMULAZIONE 8: Hai finito di lavorare per oggi. Qual è la sequenza corretta per spegnere?",
     "risposte": [
-      "Perdita di dati, furto di informazioni e interruzione dei servizi",
-      "Maggior consumo di batteria e spazio di memoria",
-      "Difficoltà di aggiornare i sistemi operativi"
+      "Start -> Icona Alimentazione -> Arresta il sistema",
+      "Start -> Icona Alimentazione -> Sospendi",
+      "Chiudo il coperchio del portatile e me ne vado"
     ],
-    "corretta": "Perdita di dati, furto di informazioni e interruzione dei servizi"
+    "corretta": "Start -> Icona Alimentazione -> Arresta il sistema"
   },
   {
-    "domanda": "Che cos’è un malware e quali forme può assumere?",
+    "domanda": "SIMULAZIONE 9: Il tecnico ti chiede: 'Che versione di Windows hai?'. Dove trovi questa informazione?",
     "risposte": [
-      "Un programma utile per comprimere file di grandi dimensioni",
-      "Un software dannoso come virus, worm, trojan o ransomware",
-      "Un’applicazione che aumenta la velocità del computer"
+      "Start -> Impostazioni (Ingranaggio) -> Sistema -> Informazioni",
+      "Guardo se c'è un adesivo sotto il mouse",
+      "Start -> Cerca -> 'Versione Segreta'"
     ],
-    "corretta": "Un software dannoso come virus, worm, trojan o ransomware"
+    "corretta": "Start -> Impostazioni (Ingranaggio) -> Sistema -> Informazioni"
   },
   {
-    "domanda": "Qual è la differenza tra virus, worm e trojan?",
+    "domanda": "SIMULAZIONE 10: Vuoi collegarti al Wi-Fi dell'ufficio. Dove guardi?",
     "risposte": [
-      "Virus si diffonde nei file, worm si replica autonomamente, trojan si maschera da software legittimo",
-      "Virus colpisce solo i social, worm solo le email, trojan solo i giochi online",
-      "Non ci sono differenze significative, sono sinonimi"
+      "Nell'Area di Notifica in basso a destra (icona con le onde)",
+      "Nel menu Start in alto a sinistra",
+      "Sulla tastiera cerchi il tasto 'Internet'"
     ],
-    "corretta": "Virus si diffonde nei file, worm si replica autonomamente, trojan si maschera da software legittimo"
+    "corretta": "Nell'Area di Notifica in basso a destra (icona con le onde)"
   },
   {
-    "domanda": "Che cos’è un ransomware e perché è pericoloso?",
+    "domanda": "TEORIA: Cos'è la 'Taskbar'?",
     "risposte": [
-      "Un malware che cripta i dati e richiede un pagamento per sbloccarli",
-      "Un programma che elimina automaticamente file inutili",
-      "Un software che consente di scaricare musica e video gratuitamente"
+      "La barra orizzontale in basso con Start e le icone dei programmi",
+      "La barra in alto con il titolo della finestra",
+      "Il menu che appare col tasto destro"
     ],
-    "corretta": "Un malware che cripta i dati e richiede un pagamento per sbloccarli"
+    "corretta": "La barra orizzontale in basso con Start e le icone dei programmi"
   },
   {
-    "domanda": "In cosa consiste un attacco di tipo phishing?",
+    "domanda": "TEORIA: A cosa serve il pulsante 'Quadrato' (o doppio quadrato) in alto a destra in una finestra?",
     "risposte": [
-      "Nell’invio di email o messaggi ingannevoli per rubare dati personali o bancari",
-      "Nell’uso di virus che bloccano fisicamente il computer",
-      "Nella diffusione di spam pubblicitario attraverso i social"
+      "Ingrandisce la finestra a tutto schermo (o la ripristina)",
+      "Chiude il programma",
+      "Nasconde il programma nella barra applicazioni"
     ],
-    "corretta": "Nell’invio di email o messaggi ingannevoli per rubare dati personali o bancari"
+    "corretta": "Ingrandisce la finestra a tutto schermo (o la ripristina)"
   },
   {
-    "domanda": "Qual è l’obiettivo principale dell’ingegneria sociale negli attacchi informatici?",
+    "domanda": "TEORIA: Perché non dovresti riempire il Desktop di troppe icone?",
     "risposte": [
-      "Migliorare la comunicazione aziendale",
-      "Ingannare le persone per ottenere informazioni riservate",
-      "Creare reti informatiche più veloci"
+      "Rallentano l'avvio del PC e creano confusione visiva",
+      "Consumano la batteria del mouse",
+      "Non c'è nessun problema, puoi riempirlo tutto"
     ],
-    "corretta": "Ingannare le persone per ottenere informazioni riservate"
+    "corretta": "Rallentano l'avvio del PC e creano confusione visiva"
   },
   {
-    "domanda": "Perché è importante scegliere password complesse e uniche?",
+    "domanda": "TEORIA: Cos'è il 'Menu Contestuale'?",
     "risposte": [
-      "Per ridurre il rischio che vengano indovinate o rubate",
-      "Per accedere più velocemente ai siti web",
-      "Per non dover usare sistemi di backup dei dati"
+      "Il menu che si apre col Tasto Destro e cambia in base a cosa clicchi",
+      "Il menu Start di Windows",
+      "La lista dei programmi installati"
     ],
-    "corretta": "Per ridurre il rischio che vengano indovinate o rubate"
+    "corretta": "Il menu che si apre col Tasto Destro e cambia in base a cosa clicchi"
   },
   {
-    "domanda": "Qual è il ruolo dell’autenticazione a due fattori (2FA)?",
+    "domanda": "TEORIA: Dove finiscono le icone dei programmi 'nascosti' o in background (come l'antivirus)?",
     "risposte": [
-      "Consentire di usare due password diverse per ogni servizio",
-      "Offrire un secondo livello di sicurezza oltre alla password principale",
-      "Memorizzare automaticamente i dati dell’utente su cloud"
+      "Nella System Tray (spesso sotto la freccetta ^ vicino all'orologio)",
+      "Nel Cestino",
+      "Nella cartella Documenti"
     ],
-    "corretta": "Offrire un secondo livello di sicurezza oltre alla password principale"
+    "corretta": "Nella System Tray (spesso sotto la freccetta ^ vicino all'orologio)"
   },
   {
-    "domanda": "Qual è la funzione principale di un antivirus?",
+    "domanda": "TEORIA: Se clicchi su 'Riavvia il sistema', cosa fa il PC?",
     "risposte": [
-      "Rilevare e bloccare software dannosi prima che infettino il sistema",
-      "Aumentare la velocità di caricamento delle pagine web",
-      "Espandere la capacità di archiviazione del computer"
+      "Spegne completamente e si riaccende subito (utile per gli aggiornamenti)",
+      "Si spegne e devi premere il tasto fisico per riaccenderlo",
+      "Entra in modalità risparmio energia"
     ],
-    "corretta": "Rilevare e bloccare software dannosi prima che infettino il sistema"
+    "corretta": "Spegne completamente e si riaccende subito (utile per gli aggiornamenti)"
   },
   {
-    "domanda": "Perché è fondamentale aggiornare sistemi e software con patch di sicurezza?",
+    "domanda": "TEORIA: Quale simbolo indica che il cursore può ridimensionare una finestra?",
     "risposte": [
-      "Per ridurre il consumo di energia elettrica",
-      "Per correggere vulnerabilità ed evitare sfruttamenti da parte degli hacker",
-      "Per aumentare la memoria disponibile sul dispositivo"
+      "Una doppia freccia (↔ o ↕ o diagonale)",
+      "Una mano che indica",
+      "Una clessidra"
     ],
-    "corretta": "Per correggere vulnerabilità ed evitare sfruttamenti da parte degli hacker"
+    "corretta": "Una doppia freccia (↔ o ↕ o diagonale)"
   },
   {
-    "domanda": "A cosa serve il backup dei dati e quali tipologie esistono?",
+    "domanda": "TEORIA: Cosa succede se premi il tasto 'Windows' (Bandierina) sulla tastiera?",
     "risposte": [
-      "A salvare copie di sicurezza dei dati, su supporti locali o in cloud",
-      "A duplicare automaticamente le password su più dispositivi",
-      "A ridurre le dimensioni dei file compressi"
+      "Si apre il Menu Start",
+      "Si spegne il computer",
+      "Si apre la posta elettronica"
     ],
-    "corretta": "A salvare copie di sicurezza dei dati, su supporti locali o in cloud"
+    "corretta": "Si apre il Menu Start"
   },
   {
-    "domanda": "Che cos’è il GDPR e quale obiettivo ha?",
+    "domanda": "TEORIA: Come si chiama l'immagine di sfondo della tua scrivania virtuale?",
     "risposte": [
-      "Un regolamento europeo per proteggere i dati personali dei cittadini",
-      "Un software per crittografare le comunicazioni aziendali",
-      "Un servizio online per archiviare documenti legali"
+      "Wallpaper (Sfondo del Desktop)",
+      "Screensaver",
+      "Poster"
     ],
-    "corretta": "Un regolamento europeo per proteggere i dati personali dei cittadini"
+    "corretta": "Wallpaper (Sfondo del Desktop)"
   },
   {
-    "domanda": "Quali diritti garantisce il GDPR ai cittadini in relazione ai propri dati personali?",
+    "domanda": "TEORIA: Quale di queste barre mostra i programmi attualmente aperti?",
     "risposte": [
-      "Accesso, rettifica, cancellazione e portabilità dei dati",
-      "Utilizzo gratuito di social media e piattaforme di streaming",
-      "Accesso illimitato a reti Wi-Fi pubbliche"
+      "La Barra delle Applicazioni (Taskbar)",
+      "La Barra del Titolo",
+      "La Barra di Scorrimento"
     ],
-    "corretta": "Accesso, rettifica, cancellazione e portabilità dei dati"
+    "corretta": "La Barra delle Applicazioni (Taskbar)"
+  },
+  {
+    "domanda": "TEORIA: Cosa indica una linea o un'ombreggiatura sotto un'icona nella barra in basso?",
+    "risposte": [
+      "Che il programma è aperto e attivo",
+      "Che il programma deve essere aggiornato",
+      "Che il programma è un virus"
+    ],
+    "corretta": "Che il programma è aperto e attivo"
+  },
+  {
+    "domanda": "TEORIA: Se trascini un file dal Desktop dentro una cartella, cosa stai facendo?",
+    "risposte": [
+      "Lo stai spostando (o copiando) nella nuova posizione",
+      "Lo stai cancellando",
+      "Lo stai stampando"
+    ],
+    "corretta": "Lo stai spostando (o copiando) nella nuova posizione"
+  },
+  {
+    "domanda": "TEORIA: Il tasto 'Disconnetti' (Sign out) è uguale a 'Arresta'?",
+    "risposte": [
+      "No, chiude solo la tua sessione utente ma lascia il PC acceso",
+      "Sì, fanno la stessa cosa",
+      "Sì, ma è più veloce"
+    ],
+    "corretta": "No, chiude solo la tua sessione utente ma lascia il PC acceso"
+  },
+  {
+    "domanda": "TEORIA: Cos'è un 'Bug'?",
+    "risposte": [
+      "Un piccolo errore nel software che può causare malfunzionamenti",
+      "Un componente hardware rotto",
+      "Un tipo di mouse molto piccolo"
+    ],
+    "corretta": "Un piccolo errore nel software che può causare malfunzionamenti"
+  },
+  {
+    "domanda": "TEORIA: Se non usi il mouse per un po' e lo schermo diventa nero o cambia immagine, cosa è partito?",
+    "risposte": [
+      "Lo Screensaver (o sospensione schermo)",
+      "Il Riavvio automatico",
+      "La Cancellazione dei dati"
+    ],
+    "corretta": "Lo Screensaver (o sospensione schermo)"
   }
 ]
