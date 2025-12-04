@@ -1,722 +1,759 @@
 <!DOCTYPE html>
+
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Interattivo</title>
-  <style>
-    /* --- STILI BASE --- */
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', sans-serif; background-color: #1c1f2b; color: #fff; padding: 20px; max-width: 900px; margin: auto; }
-    h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
-    .stats { display: flex; justify-content: space-between; margin-bottom: 15px; }
-    .card { background-color: #2a2e3d; color: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
 
-    /* --- RISPOSTE --- */
-    .risposta { 
-      background-color: #ffffff; 
-      color: #000; 
-      border: 2px solid #ccc; 
-      margin: 10px 0; 
-      padding: 15px 20px; 
-      border-radius: 8px; 
-      font-size: 1.2rem; 
-      font-weight: bold; 
-      cursor: pointer; 
-      transition: all 0.25s ease-in-out; 
-      opacity: 0; 
-      transform: translateY(10px); 
-      animation: fadeInUp 0.6s ease forwards; 
-    }
-    .risposta:hover { transform: scale(1.03); box-shadow: 0 0 12px rgba(255,255,255,0.3); }
-    .corretta { background-color: #28a745; color: white; border-color: #28a745; }
-    .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; }
+  <meta charset="UTF-8">
 
-    /* --- BOTTONI QUIZ ALTERNATIVO (MODULO 3) --- */
-    .risposta-btn { 
-        padding: 10px 16px; 
-        margin: 5px; 
-        border: none; 
-        border-radius: 6px; 
-        background-color: #3c4043; /* Grigio scuro per le opzioni */
-        color: white; 
-        font-weight: bold; 
-        cursor: pointer; 
-        transition: all 0.25s ease-in-out;
-    }
-    .risposta-btn:hover { background-color: #5f6368; }
-    .risposta-btn:disabled { opacity: 0.5; cursor: default; }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .check-btn {
-        background-color: #28a745;
-        margin-top: 15px;
-    }
+  <title>Quiz Interattivo</title>
 
-    .match-active {
-        background-color: #1a73e8 !important;
-    }
-    
-    .corretta, .sbagliata {
-        opacity: 1; /* Override animation opacity for general classes */
+  <style>
+
+    /* --- STILI BASE --- */
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body { font-family: 'Segoe UI', sans-serif; background-color: #1c1f2b; color: #fff; padding: 20px; max-width: 900px; margin: auto; }
+
+    h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
+
+    .stats { display: flex; justify-content: space-between; margin-bottom: 15px; }
+
+    .card { background-color: #2a2e3d; color: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+
+
+
+    /* --- RISPOSTE --- */
+
+    .risposta { 
+
+      background-color: #ffffff; 
+
+      color: #000; 
+
+      border: 2px solid #ccc; 
+
+      margin: 10px 0; 
+
+      padding: 15px 20px; 
+
+      border-radius: 8px; 
+
+      font-size: 1.2rem; 
+
+      font-weight: bold; 
+
+      cursor: pointer; 
+
+      transition: all 0.25s ease-in-out; 
+
+      opacity: 0; 
+
+      transform: translateY(10px); 
+
+      animation: fadeInUp 0.6s ease forwards; 
+
     }
 
-    /* --- BOTTONI --- */
-    button { 
-      padding: 10px 16px; 
-      margin: 5px; 
-      border: none; 
-      border-radius: 6px; 
-      background-color: #1a73e8; 
-      color: white; 
-      font-weight: bold; 
-      cursor: pointer; 
-      transition: all 0.25s ease-in-out;
-      opacity: 1; /* Rimosso l'animazione di default per i pulsanti di controllo */
-      transform: none; 
-    }
-    button:hover { background-color: #155ab6; transform: scale(1.03); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
-    button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
-    .btn-danger { background-color: #d93025; }
-    .btn-danger:hover { background-color: #b5271b; }
+    .risposta:hover { transform: scale(1.03); box-shadow: 0 0 12px rgba(255,255,255,0.3); }
 
-    /* --- RECAP --- */
-    #risposte { display: grid; gap: 1rem; }
-    .domandaRecap { background-color: #2f3347; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
-    .domandaRecap strong { display: block; margin-bottom: 6px; font-size: 1.1em; color: #1a73e8; }
-    .domandaRecap div { margin: 4px 0; }
-    
-    /* FIX STATS DISPLAY */
-    #progress-text { margin-right: 15px; }
+    .corretta { background-color: #28a745; color: white; border-color: #28a745; }
 
-    /* --- ANIMAZIONI --- */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .progress-bar-animate {
-      transition: width 0.4s ease-in-out;
-    }
-  </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; }
+
+
+
+    /* --- BOTTONI --- */
+
+    button { 
+
+      padding: 10px 16px; 
+
+      margin: 5px; 
+
+      border: none; 
+
+      border-radius: 6px; 
+
+      background-color: #1a73e8; 
+
+      color: white; 
+
+      font-weight: bold; 
+
+      cursor: pointer; 
+
+      transition: all 0.25s ease-in-out;
+
+      opacity: 0; 
+
+      transform: translateY(10px); 
+
+      animation: fadeInUp 0.6s ease forwards; 
+
+    }
+
+    button:hover { background-color: #155ab6; transform: scale(1.07); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
+
+    button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
+
+    .btn-danger { background-color: #d93025; }
+
+    .btn-danger:hover { background-color: #b5271b; }
+
+
+
+    /* --- RECAP --- */
+
+    #risposte { display: grid; gap: 1rem; }
+
+    .domandaRecap { background-color: #2f3347; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
+
+    .domandaRecap strong { display: block; margin-bottom: 6px; font-size: 1.1em; color: #1a73e8; }
+
+    .domandaRecap div { margin: 4px 0; }
+
+
+
+    /* --- ANIMAZIONI --- */
+
+    @keyframes fadeInUp {
+
+      from { opacity: 0; transform: translateY(20px); }
+
+      to { opacity: 1; transform: translateY(0); }
+
+    }
+
+    .progress-bar-animate {
+
+      transition: width 0.4s ease-in-out;
+
+    }
+
+  </style>
+
+  <!-- Chart.js e DataLabels -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
 </head>
+
 <body>
-    <div id="start-container" style="text-align: center; margin-bottom: 30px;">
-    <h1>Benvenuto!</h1>
-    <button onclick="setDocenteMode(false)">📝 Modalità Studente</button>
-    <button onclick="setDocenteMode(true)">👩‍🏫 Modalità Docente</button>
-  </div>
 
-   <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
-    <h2 id="quiz-title"></h2>
-    <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
-        <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
-        <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
-        <button onclick="iniziaQuizAlternativo(3)">🖱️ Modulo 3 - Simulazione Windows (Esercizi Interattivi)</button>
-        <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
-        <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
-    </div>
-    <div style="margin-top:25px;">
-      <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
-    </div>
-  </div>
+  <!-- MENU INIZIALE -->
 
-    <h1 style="display:none;" id="titolo-quiz"></h1>
-  <div class="stats" id="stats-container" style="display:none; justify-content: flex-start; gap: 20px;">
-    <div><strong>Domanda:</strong> <span id="progress-text">0</span></div>
-    <div><strong>Corrette:</strong> <span id="score-text">0</span></div>
-  </div>
-  <div class="progress-container" id="progress-container" style="display:none; background-color: #444; border-radius: 30px; margin-bottom: 20px; overflow: hidden;">
-    <div id="progress-bar" class="progress-bar-animate" style="width: 0%; height: 14px; background: linear-gradient(to right, #ff416c, #ff4b2b);"></div>
-  </div>
-  <div id="card-container" style="display:none;">
-      </div>
-  <div class="controls" id="controls-container" style="display:none; text-align:center;">
-    <button id="prev-btn" onclick="cambiaDomanda(-1)">⬅️ Indietro</button>
-    <button id="next-btn" onclick="cambiaDomanda(1)">➡️ Avanti</button>
-    <button class="btn-danger" onclick="mostraRisultati()">🛑 Termina Test</button>
-    <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
-  </div>
-  <div id="recap"></div>
+  <div id="start-container" style="text-align: center; margin-bottom: 30px;">
 
-    <div id="docente-container" style="display:none;">
-    <h1>Visualizzazione Docente</h1>
-    <h2 style="color:#f8c471;">Seleziona un Modulo per vedere tutte le risposte corrette.</h2>
-    <div id="docente-select" style="margin-bottom: 20px; display: grid; gap: 10px; max-width: 600px; margin: 20px auto;">
-        <button onclick="mostraQuizDocente(1)">Anteprima Modulo 1</button>
-        <button onclick="mostraQuizDocente(2)">Anteprima Modulo 2</button>
-        <button onclick="mostraQuizDocente(4)">Anteprima Modulo 4</button>
-        <button onclick="mostraQuizDocente(5)">Anteprima Modulo 5</button>
+    <h1>Benvenuto!</h1>
+
+    <button onclick="setDocenteMode(false)">📝 Modalità Studente</button>
+
+    <button onclick="setDocenteMode(true)">👩‍🏫 Modalità Docente</button>
+
+  </div>
+
+
+
+  <!-- SELEZIONE QUIZ -->
+
+
+  <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
+
+
+ <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
+
+    <h2 id="quiz-title"></h2>
+
+
+    <button onclick="iniziaQuiz(1)">🎤 Quiz 1 - Competenze Digitali Base</button>
+
+
+    <button onclick="iniziaQuiz(2)">📧 Quiz 2 - Internet, Email e PEC</button>
+
+
+    <button onclick="iniziaQuiz(3)">🔐 Quiz 3 - SPID, Cybersecurity e GDPR</button>
+
+
+    <button onclick="iniziaQuiz(4)">💬 Quiz 4 - Social Media</button>
+
+
+    <button onclick="iniziaQuiz(5)">💻 Quiz 5 - Produttività, Cyberbullismo e Tecnologia</button>
+
+
+    <div style="margin-top:15px;">
+
+
+      <button onclick="tornaAllaModalita()">⬅️ Torna alla scelta modalità</button>
+
+
+    <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
+
+
+        <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
+
+
+        <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
+
+
+        <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
+
+
+        <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
+
+
+        <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
+
+
     </div>
+
+
+    <div style="margin-top:25px;">
+
+
+      <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- QUIZ CLASSICO -->
+
+  <h1 style="display:none;" id="titolo-quiz">Quiz a Scelta Multipla</h1>
+
+  <div class="stats" id="stats-container" style="display:none;">
+
+    <div><strong>Punteggio:</strong> <span id="punteggio">0</span></div>
+
+    <div><strong>Domanda:</strong> <span id="contatore">0</span></div>
+
+  </div>
+
+  <div class="progress-container" id="progress-container" style="display:none; background-color: #444; border-radius: 30px; margin-bottom: 20px; overflow: hidden;">
+
+    <div id="progress-bar" class="progress-bar-animate" style="width: 0%; height: 14px; background: linear-gradient(to right, #ff416c, #ff4b2b);"></div>
+
+  </div>
+
+  <div class="card" id="card-container" style="display:none;">
+
+    <div id="domanda" style="font-size: 1.4em; font-weight: bold; border: 2px solid #007bff; padding: 20px; border-radius: 10px; background-color: #2a2e3d; color: white; margin-bottom: 20px;">Caricamento...</div>
+
+    <div id="risposte"></div>
+
+    <div id="feedback" style="margin-top: 15px;"></div>
+
+  </div>
+
+  <div class="controls" id="controls-container" style="display:none; text-align:center;">
+
+    <button onclick="domandaPrecedente()">⬅️ Indietro</button>
+
+    <button onclick="prossimaDomanda()">➡️ Avanti</button>
+
+    <button class="btn-danger" onclick="terminaTest()">🛑 Termina Test</button>
+
+    <button onclick="ricomincia()">🔄 Ricomincia</button>
+
+    <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
+
+  </div>
+
+  <div id="recap"></div>
+
+
+
+  <!-- MODALITÀ DOCENTE -->
+
+  <div id="docente-container" style="display:none;">
+
+    <h1>Modalità Docente</h1>
+
     <div id="lista-docente"></div>
-    <div style="text-align:center;">
-      <button onclick="tornaAiQuiz()" style="background-color: #6c757d;">⬅️ Torna al Menu</button>
-    </div>
-  </div>
-    <script>
-    let domandeTotali = 0;
-    let domandeCorrenti = 0;
-    let quizCorrente = 0;
-    let risposteCorrette = 0;
-    let statoRisposta = []; // Memorizza lo stato delle risposte
 
-    // Nuove variabili per la gestione dei quiz alternativi
-    let isQuizAlternativo = false;
-    let isDocenteMode = false;
-    let selectedLeft = null;
-    let selectedRight = null;
-    let matchedPairs = [];
+    <div style="text-align:center;">
 
-    // --- FUNZIONI INIZIALI E DI NAVIGAZIONE GLOBALE ---
+      <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
 
-    function setDocenteMode(isDocente) {
-        isDocenteMode = isDocente;
-        document.getElementById('start-container').style.display = 'none';
-        
-        if (isDocente) {
-            document.getElementById('docente-container').style.display = 'block';
-            document.getElementById('quiz-buttons').style.display = 'none';
-            document.getElementById('titolo-quiz').style.display = 'none';
-        } else {
-            document.getElementById('quiz-buttons').style.display = 'block';
-            document.getElementById('quiz-title').innerText = 'Seleziona il Modulo di Alfabetizzazione';
-            document.getElementById('docente-container').style.display = 'none';
-        }
-    }
-    
-    function updateStats() {
-      document.getElementById('progress-text').innerText = `${domandeCorrenti + 1} di ${domandeTotali}`;
-      document.getElementById('score-text').innerText = `${risposteCorrette}`;
-      // Aggiorna la barra di progresso
-      const percent = (domandeCorrenti + 1) / domandeTotali * 100;
-      document.getElementById('progress-bar').style.width = percent + '%';
-    }
+    </div>
 
-    // --- LOGICA QUIZ MULTIPLO STANDARD (Quiz 1, 2, 4, 5) ---
+  </div>
 
-    async function iniziaQuiz(quizId) {
-      quizCorrente = quizId;
-      isQuizAlternativo = false;
-      document.getElementById('quiz-buttons').style.display = 'none';
-      document.getElementById('start-container').style.display = 'none';
-      document.getElementById('titolo-quiz').innerText = document.querySelector(`button[onclick="iniziaQuiz(${quizId})"]`).innerText;
-      document.getElementById('titolo-quiz').style.display = 'block';
 
-      const res = await fetch(`/quiz_all/${quizId}`);
-      const domande = await res.json();
-      domandeTotali = domande.length;
-      domandeCorrenti = 0;
-      risposteCorrette = 0;
-      statoRisposta = new Array(domandeTotali).fill(null);
-      
-      document.getElementById('card-container').style.display = 'block';
-      document.getElementById('controls-container').style.display = 'block';
-      document.getElementById('stats-container').style.display = 'flex';
-      document.getElementById('progress-container').style.display = 'block';
-      
-      caricaDomanda();
-    }
 
-    async function caricaDomanda() {
-      const res = await fetch(`/quiz/${quizCorrente}/${domandeCorrenti}`);
-      const d = await res.json();
-      const card = document.getElementById('card-container');
-      card.innerHTML = '';
-      
-      if (d.errore) {
-        card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
-        return;
+  <script>
+
+    let docenteMode = false;
+
+    let rispostaCorretta = "";
+
+    let punteggio = 0;
+
+    let ultimaDomanda = null;
+
+    let risposteUtente = [];
+
+    let indexDomanda = 0;
+
+    let quizCorrente = 1;
+
+    let MAX_DOMANDE = 0;
+
+    const FEEDBACK_DELAY = 200; // 0,2 secondi
+
+
+
+    function setDocenteMode(mode) {
+
+      if(mode){
+
+        const pwd = prompt("Inserisci la password per accedere alla modalità docente:");
+
+        if(pwd !== "admin123"){ alert("❌ Password errata!"); return; }
+
       }
 
-      card.innerHTML += `<div class="card">
-                          <p class="question-text" style="font-size: 1.4em; font-weight: bold; margin-bottom: 20px;">${d.domanda}</p>
-                          <div id="risposte-container">
-                            ${d.risposte.map((r, i) => 
-                              `<button class="risposta-btn" onclick="controllaRisposta('${r.replace(/'/g, "\\'")}', '${d.corretta.replace(/'/g, "\\'")}', this)">${r}</button>`
-                            ).join('')}
-                          </div>
-                        </div>`;
-      
-      updateStats();
-      const stato = statoRisposta[domandeCorrenti];
-      if (stato !== null) {
-        disableAnswers(stato.risposta, stato.corretta);
-      }
-      
-      document.getElementById('next-btn').disabled = stato === null;
-      document.getElementById('prev-btn').disabled = domandeCorrenti === 0;
+      docenteMode = mode;
+
+      document.getElementById("start-container").style.display = "none";
+
+      document.getElementById("quiz-buttons").style.display = "block";
+
+      document.getElementById("quiz-title").textContent = mode ? "Seleziona un quiz (Modalità Docente)" : "Seleziona un quiz (Modalità Studente)";
+
     }
 
-    function controllaRisposta(risposta, corretta, button) {
-      if (statoRisposta[domandeCorrenti] !== null) return; 
-      
-      // Sanitizzazione degli apici
-      const rispostaPulita = risposta.replace(/\\'/g, "'");
-      const correttaPulita = corretta.replace(/\\'/g, "'");
 
-      const isCorretta = rispostaPulita === correttaPulita;
-      statoRisposta[domandeCorrenti] = { risposta: rispostaPulita, corretta: correttaPulita, isCorretta };
 
-      if (isCorretta) {
-        risposteCorrette++;
-      }
-      
-      disableAnswers(rispostaPulita, correttaPulita);
-      document.getElementById('next-btn').disabled = false;
-      updateStats();
-      mostraFeedback(isCorretta);
+    async function fetchDomanda(index){
+
+      const res = await fetch(`/quiz/${quizCorrente}/${index}`);
+
+      return await res.json();
+
     }
 
-    function disableAnswers(rispostaSelezionata, corretta) {
-      document.querySelectorAll('#risposte-container .risposta-btn').forEach(btn => {
-        btn.disabled = true;
-        
-        // Confronta il testo del bottone con la risposta corretta e selezionata
-        const btnText = btn.innerText.replace(/\\'/g, "'");
-        
-        if (btnText === corretta) {
-          btn.classList.add('corretta');
-        } else if (btnText === rispostaSelezionata && rispostaSelezionata !== corretta) {
-          btn.classList.add('sbagliata');
-        } else {
-          btn.classList.add('risposta'); // Usa la classe 'risposta' per stile standard
-        }
-        btn.classList.remove('risposta-btn'); // Rimuovi la classe base per i bottoni per lo stile finale
+
+
+    function aggiornaPunteggio(){
+
+      punteggio = risposteUtente.reduce((acc,item)=> acc + (item && item.esito ? 1 : 0),0);
+
+      document.getElementById('punteggio').textContent = punteggio;
+
+    }
+
+
+
+    async function caricaDomanda(){
+
+      if(MAX_DOMANDE===0){
+
+        const res = await fetch(`/quiz_all/${quizCorrente}`);
+
+        const tutte = await res.json();
+
+        if(!tutte.errore){ MAX_DOMANDE = tutte.length; document.getElementById("contatore").textContent = `0/${MAX_DOMANDE}`; }
+
+      }
+
+      if(indexDomanda >= MAX_DOMANDE){ mostraRecap(); return; }
+
+
+
+      const domandaData = await fetchDomanda(indexDomanda);
+
+      if(domandaData.errore){ mostraRecap(); return; }
+
+
+
+      ultimaDomanda = domandaData;
+
+      const domandaElem = document.getElementById('domanda');
+
+      domandaElem.textContent = domandaData.domanda;
+
+      domandaElem.style.animation = "fadeInUp 0.6s ease";
+
+
+
+      document.getElementById('contatore').textContent = `${indexDomanda+1}/${MAX_DOMANDE}`;
+
+      document.getElementById('progress-bar').style.width = Math.floor(((indexDomanda+1)/MAX_DOMANDE)*100) + "%";
+
+      rispostaCorretta = domandaData.corretta;
+
+
+
+      const risposte = [...domandaData.risposte].sort(() => Math.random()-0.5);
+
+      const container = document.getElementById('risposte');
+
+      container.innerHTML = "";
+
+      document.getElementById('feedback').textContent = "";
+
+
+
+      risposte.forEach((r,i)=>{
+
+        const btn = document.createElement('div');
+
+        btn.className = 'risposta';
+
+        btn.style.animationDelay = `${i*0.1}s`;
+
+        btn.textContent = r;
+
+        btn.onclick = () => verificaRisposta(btn,r);
+
+        container.appendChild(btn);
+
       });
-    }
 
-    function mostraFeedback(isCorretta) {
-      const card = document.getElementById('card-container').querySelector('.card');
-      card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
-      card.innerHTML += `<div style="margin-top: 15px; padding: 10px; border-radius: 5px; background-color: ${isCorretta ? '#28a74533' : '#dc354533'};">
-                            ${isCorretta ? '✅ Risposta Esatta!' : '❌ Risposta Sbagliata! La risposta corretta è: ' + statoRisposta[domandeCorrenti].corretta}
-                         </div>`;
-      setTimeout(() => { card.style.border = ''; }, 2000);
-    }
-    
-    // --- LOGICA QUIZ ALTERNATIVO (Modulo 3) ---
-    
-    async function iniziaQuizAlternativo(quizId) {
-      quizCorrente = quizId;
-      isQuizAlternativo = true;
-      document.getElementById('quiz-buttons').style.display = 'none';
-      document.getElementById('start-container').style.display = 'none';
-      document.getElementById('titolo-quiz').innerText = document.querySelector(`button[onclick="iniziaQuizAlternativo(${quizId})"]`).innerText;
-      document.getElementById('titolo-quiz').style.display = 'block';
 
-      const res = await fetch(`/quiz_all_alt/${quizId}`);
-      const domande = await res.json();
-      domandeTotali = domande.length;
-      domandeCorrenti = 0;
-      risposteCorrette = 0;
-      statoRisposta = new Array(domandeTotali).fill(null);
-      
-      document.getElementById('card-container').style.display = 'block';
-      document.getElementById('controls-container').style.display = 'block';
-      document.getElementById('stats-container').style.display = 'flex';
-      document.getElementById('progress-container').style.display = 'block';
-      
-      caricaEsercizio();
-    }
 
-    async function caricaEsercizio() {
-      if (!isQuizAlternativo) return caricaDomanda();
+      const salvata = risposteUtente[indexDomanda];
 
-      const res = await fetch(`/quiz_alt/${quizCorrente}/${domandeCorrenti}`);
-      const d = await res.json();
-      const card = document.getElementById('card-container');
-      card.innerHTML = '';
-      
-      if (d.errore) {
-        card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
-        return;
-      }
-      
-      // Reset stato Match per la domanda corrente
-      selectedLeft = null;
-      selectedRight = null;
-      matchedPairs = []; 
-      if (d.type === 'match_pair' && statoRisposta[domandeCorrenti] !== null) {
-          // Ricostruisce matchedPairs temporaneamente per la visualizzazione
-          const risposteDate = statoRisposta[domandeCorrenti].risposta.split(' | ');
-          matchedPairs = risposteDate.map(p => p.split(' = '));
-      }
-      // Reset stato Order per la domanda corrente
-      let passiScelti = [];
-      if (d.type === 'order' && statoRisposta[domandeCorrenti] !== null) {
-          passiScelti = statoRisposta[domandeCorrenti].risposta.split(' → ');
+      if(salvata){
+
+        const tutte = document.querySelectorAll('.risposta');
+
+        tutte.forEach(el=>{ el.onclick=null; el.style.pointerEvents='none'; });
+
+        if(salvata.esito) document.getElementById('feedback').textContent="✅ Corretto!";
+
+        else document.getElementById('feedback').textContent="❌ Sbagliato!";
+
+        tutte.forEach(el=>{
+
+          if(el.textContent===salvata.rispostaUtente){ if(salvata.esito) el.classList.add('corretta'); else el.classList.add('sbagliata'); }
+
+          if(!salvata.esito && el.textContent===rispostaCorretta) el.classList.add('corretta');
+
+        });
+
       }
 
-      let esercizioHTML = '';
+      aggiornaPunteggio();
 
-      switch (d.type) {
-        case 'order':
-          // Esercizio di Sequenziamento
-          esercizioHTML = `
-            <div id="order-target" class="list-group mb-3">
-                <p><strong>Sequenza scelta:</strong></p>
-                <div id="order-sequence" style="min-height: 40px; border: 1px solid #1a73e8; padding: 5px; border-radius: 5px; background: #3c4043;">Nessun passo selezionato.</div>
-            </div>
-            <p><strong>Clicca i passi nell'ordine corretto:</strong></p>
-            <div id="order-options" class="list-group">
-                ${d.passi.sort(() => Math.random() - 0.5).map(passo => 
-                    `<button class="risposta-btn passo-btn" onclick="aggiungiPasso(this)">${passo}</button>`
-                ).join('')}
-            </div>
-            <button id="controlla-ordine" class="check-btn" onclick="controllaOrdine('${d.corretto.join('|||')}', '${d.passi.join('|||')}')">Controlla Ordine</button>
-          `;
-          break;
-
-        case 'match_pair':
-          // Esercizio di Associazione
-          let optionsRight = [...d.options_right].sort(() => Math.random() - 0.5);
-          esercizioHTML = `
-            <div style="display: flex; justify-content: space-around; gap: 10px;">
-                <div id="match-left" class="list-group" style="flex: 1;">
-                    <p><strong>Concetto (Sinistra)</strong></p>
-                    ${d.options_left.map((item, i) => `<button class="risposta-btn match-btn-left" data-index="${i}" onclick="selezionaMatch(this, 'left')">${item}</button>`).join('')}
-                </div>
-                <div id="match-right" class="list-group" style="flex: 1;">
-                    <p><strong>Descrizione (Destra)</strong></p>
-                    ${optionsRight.map((item, i) => `<button class="risposta-btn match-btn-right" data-value="${item}" onclick="selezionaMatch(this, 'right')">${item}</button>`).join('')}
-                </div>
-            </div>
-            <div id="match-selection" style="margin-top: 20px; text-align: center;">
-                <p>Seleziona un elemento a sinistra, poi il corrispondente a destra.</p>
-            </div>
-            <button id="controlla-match" class="check-btn" onclick="controllaAssociazione('${JSON.stringify(d.corretto_pairs)}')">Controlla Associazione</button>
-          `;
-          break;
-        
-        case 'input_text':
-          // Esercizio di Input Testuale
-          esercizioHTML = `
-            <div style="text-align: center;">
-                <p><strong>Cosa digiteresti (parola singola)?</strong></p>
-                <input type="text" id="input-command" class="form-control" style="width: 80%; max-width: 300px; padding: 10px; margin: 10px auto; border-radius: 5px; border: none; font-size: 1.1em; text-align: center; color: #000;" placeholder="Digita qui il comando o la parola">
-                <p style="font-size: 0.9em; color: #aaa;">Suggerimento: ${d.hint || 'Nessun suggerimento'}</p>
-            </div>
-            <button id="controlla-input" class="check-btn" onclick="controllaInput('${d.corretta}')">Controlla Input</button>
-          `;
-          break;
-
-        default:
-          esercizioHTML = '<h2>Tipo di esercizio non supportato.</h2>';
-          break;
-      }
-      
-      card.innerHTML = `<div class="card">
-                          <p class="question-text" style="font-size: 1.4em; font-weight: bold; margin-bottom: 20px;">${d.domanda}</p>
-                          <div id="esercizio-container">${esercizioHTML}</div>
-                        </div>`;
-
-      // Ripristina lo stato se già risposto
-      if (statoRisposta[domandeCorrenti] !== null) {
-          const stato = statoRisposta[domandeCorrenti];
-          mostraFeedbackAlternativo(stato.isCorretta, stato.corretta, d.type);
-          document.getElementById('next-btn').disabled = false;
-          // Disabilita i controlli dell'esercizio
-          const checkBtn = document.querySelector('.check-btn');
-          if(checkBtn) checkBtn.disabled = true;
-      } else {
-        document.getElementById('next-btn').disabled = true;
-      }
-
-      updateStats();
-      document.getElementById('prev-btn').disabled = domandeCorrenti === 0;
     }
 
-    // --- LOGICA SPECIFICA ESERCIZIO ORDINE ---
-    // Usiamo una variabile locale per la logica dell'ordine durante la risposta
-    
-    function aggiungiPasso(button) {
-        if(statoRisposta[domandeCorrenti] !== null) return;
-        
-        // Recupera o inizializza l'array dei passi scelti
-        let passiScelti = JSON.parse(localStorage.getItem('currentPassiScelti') || '[]');
-        
-        passiScelti.push(button.innerText);
-        localStorage.setItem('currentPassiScelti', JSON.stringify(passiScelti));
-        
-        document.getElementById('order-sequence').innerText = passiScelti.join(' → ');
-        button.disabled = true;
-        button.classList.add('sbagliata'); // Usa 'sbagliata' per indicare che è stato selezionato
+
+
+    function verificaRisposta(elemento,rispostaUtenteSelezionata){
+
+      if(risposteUtente[indexDomanda]) return;
+
+
+
+      const tutte = document.querySelectorAll('.risposta');
+
+      tutte.forEach(el=>el.onclick=null);
+
+
+
+      const esitoCorretto = rispostaUtenteSelezionata===rispostaCorretta;
+
+      if(esitoCorretto) { elemento.classList.add('corretta'); document.getElementById('feedback').textContent="✅ Corretto!"; }
+
+      else { elemento.classList.add('sbagliata'); document.getElementById('feedback').textContent="❌ Sbagliato!"; tutte.forEach(el=>{ if(el.textContent===rispostaCorretta) el.classList.add('corretta'); }); }
+
+
+
+      risposteUtente[indexDomanda] = {
+
+        domanda: ultimaDomanda.domanda,
+
+        rispostaUtente: rispostaUtenteSelezionata,
+
+        corretta: rispostaCorretta,
+
+        esito: esitoCorretto
+
+      };
+
+
+
+      aggiornaPunteggio();
+
+      setTimeout(()=>{ indexDomanda++; caricaDomanda(); }, FEEDBACK_DELAY);
+
     }
-    
-    function controllaOrdine(correttoStr, passiStr) {
-        const corretta = correttoStr.split('|||');
-        const passiScelti = JSON.parse(localStorage.getItem('currentPassiScelti') || '[]');
-        
-        // Se non è stato selezionato nulla, esci
-        if (passiScelti.length === 0) return;
-        
-        const isCorretta = passiScelti.join('|||') === corretta.join('|||');
-        
-        salvaEsercizioAlternativo(isCorretta, corretta.join(' → '), passiScelti.join(' → '), 'order');
-        localStorage.removeItem('currentPassiScelti'); // Pulisce lo stato intermedio
-        
-        // Styling finale
-        document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
-        const orderSequenceDiv = document.getElementById('order-sequence');
-        if (isCorretta) {
-            document.querySelectorAll('.passo-btn').forEach(btn => btn.classList.remove('sbagliata'));
-            orderSequenceDiv.classList.remove('sbagliata');
-            orderSequenceDiv.classList.add('corretta');
-        } else {
-            orderSequenceDiv.classList.add('sbagliata');
-        }
-    }
 
-    // --- LOGICA SPECIFICA ESERCIZIO MATCH ---
-    // Le variabili selectedLeft/Right/matchedPairs sono definite in scope globale
-    
-    function selezionaMatch(button, side) {
-        if(statoRisposta[domandeCorrenti] !== null) return;
 
-        // Rimuove la classe match-active da tutti prima di applicarla
-        document.querySelectorAll('.match-btn-left').forEach(btn => btn.classList.remove('match-active'));
-        document.querySelectorAll('.match-btn-right').forEach(btn => btn.classList.remove('match-active'));
 
-        if (side === 'left') {
-            selectedLeft = button;
-            selectedRight = null;
-            button.classList.add('match-active');
-        } else if (side === 'right') {
-            selectedRight = button;
-            selectedRight.classList.add('match-active');
-        }
+    function prossimaDomanda(){ indexDomanda++; caricaDomanda(); }
 
-        // Se entrambi selezionati, prova l'accoppiamento
-        if (selectedLeft && selectedRight) {
-            const pair = [selectedLeft.innerText, selectedRight.innerText];
-            
-            // Controlla se una delle due parti è già stata accoppiata (per evitare click multipli)
-            const isLeftUsed = matchedPairs.some(p => p[0] === pair[0]);
-            const isRightUsed = matchedPairs.some(p => p[1] === pair[1]);
-            
-            if (!isLeftUsed && !isRightUsed) {
-                // Rimuovi dai pulsanti e aggiungi come coppia visualizzata
-                selectedLeft.style.display = 'none';
-                selectedRight.style.display = 'none';
-                matchedPairs.push(pair);
-                document.getElementById('match-selection').innerHTML += `<div class="risposta corretta match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: #28a74555;">✅ ${pair[0]} ↔️ ${pair[1]}</div>`;
-            } else {
-                 document.getElementById('match-selection').innerHTML += `<div class="risposta sbagliata match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: #dc354555;">❌ Coppia non valida o già usata!</div>`;
-                 setTimeout(() => {
-                    const elements = document.getElementById('match-selection').getElementsByClassName('match-pair-display');
-                    if(elements.length > 0 && elements[elements.length - 1].classList.contains('sbagliata')) {
-                        elements[elements.length - 1].remove();
-                    }
-                 }, 1500);
+    function domandaPrecedente(){ if(indexDomanda>0){ indexDomanda--; caricaDomanda(); } }
+
+
+
+    function mostraRecap(){
+
+      document.getElementById('controls-container').style.display='none';
+
+      document.getElementById('domanda').textContent="📊 Test completato!";
+
+      document.getElementById('risposte').innerHTML="";
+
+      document.getElementById('feedback').textContent="";
+
+
+
+      let recapHTML="<h2 style='margin-bottom:20px;'>Riepilogo Risposte</h2><div>";
+
+      risposteUtente.forEach((item,i)=>{
+
+        if(!item) return;
+
+        const corretta = item.rispostaUtente===item.corretta;
+
+        recapHTML+=`
+
+          <div class='domandaRecap'>
+
+            <div><strong>${i+1}. ${item.domanda}</strong></div>
+
+            ${!corretta? `<div><strong>Tua risposta:</strong> <span style="color:red;">${item.rispostaUtente}</span></div>` :``}
+
+            <div><strong>Risposta corretta:</strong> <span style="color:lightgreen;">${item.corretta}</span></div>
+
+            <div><strong>Esito:</strong> ${item.esito ? '✅ Corretto' : '❌ Sbagliato'}</div>
+
+          </div>`;
+
+      });
+
+      recapHTML+="</div>";
+
+
+
+      // Conteggio corrette, sbagliate, non date
+
+      const corrette = risposteUtente.filter(r=>r && r.esito).length;
+
+      const sbagliate = risposteUtente.filter(r=>r && !r.esito).length;
+
+      const nonDate = MAX_DOMANDE - risposteUtente.length;
+
+
+
+      recapHTML+=`<h3 style="margin-top:20px; text-align:center;">Statistiche Risposte</h3>
+
+        <canvas id="graficoRiepilogo" style="max-width:500px; margin:auto; display:block;"></canvas>
+
+        <div style="margin-top:20px; text-align:center;">
+
+          <button onclick="ricomincia()">🔄 Rifai questo Quiz</button>
+
+          <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
+
+        </div>`;
+
+
+
+      document.getElementById('recap').innerHTML=recapHTML;
+
+
+
+      // Creazione grafico
+
+      const ctx=document.getElementById('graficoRiepilogo').getContext('2d');
+
+      new Chart(ctx,{
+
+        type:'bar',
+
+        data:{
+
+          labels:['Corrette','Sbagliate','Non Risposte'],
+
+          datasets:[{
+
+            label:'Risposte',
+
+            data:[corrette,sbagliate,nonDate],
+
+            backgroundColor:['#28a745','#dc3545','#6c757d']
+
+          }]
+
+        },
+
+        options:{
+
+          responsive:true,
+
+          plugins:{
+
+            legend:{display:false},
+
+            datalabels:{
+
+              anchor:'end',
+
+              align:'end',
+
+              color:'white',
+
+              font:{weight:'bold',size:14},
+
+              formatter: function(value){ return value; }
+
             }
-            
-            // Reset selezione
-            selectedLeft = null;
-            selectedRight = null;
-            document.querySelectorAll('.match-btn-left').forEach(btn => btn.classList.remove('match-active'));
-            document.querySelectorAll('.match-btn-right').forEach(btn => btn.classList.remove('match-active'));
-        }
-    }
 
-    function controllaAssociazione(correttoJson) {
-        const corretti = JSON.parse(correttoJson);
-        
-        let correttiMap = new Map(corretti);
-        let corretteCount = 0;
-        let risposteDate = matchedPairs.map(p => p.join(' = '));
-        let correttaStr = corretti.map(p => p.join(' = ')).join(' | ');
+          },
 
-        if (matchedPairs.length === 0) return; // Non controllare se non è stata fatta nessuna associazione
+          scales:{
 
-        for (const [left, right] of matchedPairs) {
-            if (correttiMap.get(left) === right) {
-                corretteCount++;
-            }
-        }
+            x:{ ticks:{ color:'white' } },
 
-        const isCorretta = corretteCount === corretti.length;
+            y:{ beginAtZero:true, ticks:{ color:'white', stepSize:1 } }
 
-        salvaEsercizioAlternativo(isCorretta, correttaStr, risposteDate.join(' | '), 'match_pair');
-        
-        // Disabilita tutti i bottoni di match
-        document.querySelectorAll('.match-btn-left, .match-btn-right').forEach(btn => btn.disabled = true);
-        document.getElementById('match-selection').innerHTML += `<p style="font-weight: bold; margin-top: 15px;">Associazioni corrette: ${corretteCount} su ${corretti.length}</p>`;
-    }
-
-
-    // --- LOGICA SPECIFICA ESERCIZIO INPUT ---
-
-    function controllaInput(corretta) {
-        const inputField = document.getElementById('input-command');
-        const rispostaUtente = inputField.value.trim();
-        const isCorretta = rispostaUtente.toLowerCase() === corretta.toLowerCase();
-        
-        if (rispostaUtente === '') return;
-
-        salvaEsercizioAlternativo(isCorretta, corretta, rispostaUtente, 'input_text');
-        inputField.disabled = true;
-    }
-
-    // --- FUNZIONI RISULTATO E SALVATAGGIO ALTERNATIVO ---
-    
-    function mostraFeedbackAlternativo(isCorretta, corretta, type) {
-      const card = document.getElementById('card-container').querySelector('.card');
-      card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
-      const stato = statoRisposta[domandeCorrenti]; // Recupera lo stato completo
-      
-      const testoFeedback = isCorretta ? 
-                            '✅ Esercizio completato correttamente!' : 
-                            `❌ Non corretto! La risposta corretta è: ${corretta}`;
-      
-      const checkBtn = document.querySelector('.check-btn');
-      if(checkBtn) checkBtn.disabled = true;
-
-      card.innerHTML += `<div style="margin-top: 15px; padding: 10px; border-radius: 5px; background-color: ${isCorretta ? '#28a74533' : '#dc354533'};">
-                            ${testoFeedback}
-                         </div>`;
-      
-      if (type === 'order') {
-          // Disabilita tutti i pulsanti
-          document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
-
-          // Ripristina la visualizzazione della sequenza
-          const orderSequenceDiv = document.getElementById('order-sequence');
-          if (orderSequenceDiv) {
-              orderSequenceDiv.innerText = `La tua sequenza: ${stato.risposta}`;
-              orderSequenceDiv.className = stato.isCorretta ? 'corretta' : 'sbagliata';
           }
-      } else if (type === 'match_pair') {
-          // Disabilita i pulsanti di match
-          document.querySelectorAll('.match-btn-left, .match-btn-right').forEach(btn => btn.disabled = true);
-          
-          // Ricostruisce il display delle coppie
-          const matchSelection = document.getElementById('match-selection');
-          const risposteDate = stato.risposta.split(' | ');
-          const corretti = stato.corretta.split(' | ');
-          
-          matchSelection.innerHTML = '<p>Associazioni Effettuate:</p>';
-          
-          let corretteCount = 0;
-          risposteDate.forEach(p => {
-              const [left, right] = p.split(' = ');
-              const isPairCorrect = corretti.includes(p);
-              if (isPairCorrect) corretteCount++;
-              const className = isPairCorrect ? 'corretta' : 'sbagliata';
-              const icon = isPairCorrect ? '✅' : '❌';
 
-              matchSelection.innerHTML += `<div class="risposta ${className} match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: ${isPairCorrect ? '#28a74555' : '#dc354555'};">${icon} ${left} ↔️ ${right}</div>`;
-              
-              // Nasconde i bottoni usati (per la restaurazione dello stato)
-              document.querySelectorAll('.match-btn-left').forEach(btn => {
-                  if (btn.innerText === left) btn.style.display = 'none';
-              });
-              document.querySelectorAll('.match-btn-right').forEach(btn => {
-                  if (btn.innerText === right) btn.style.display = 'none';
-              });
-          });
-          
-          matchSelection.innerHTML += `<p style="font-weight: bold; margin-top: 15px;">Associazioni corrette: ${corretteCount} su ${corretti.length}</p>`;
+        },
 
-      } else if (type === 'input_text') {
-          const inputField = document.getElementById('input-command');
-          if (inputField) inputField.disabled = true;
-      }
-      setTimeout(() => { card.style.border = ''; }, 2000);
+        plugins:[ChartDataLabels]
+
+      });
+
     }
-    
-    function salvaEsercizioAlternativo(isCorretta, corretta, rispostaData, type) {
-        if (statoRisposta[domandeCorrenti] !== null) return; 
 
-        statoRisposta[domandeCorrenti] = { 
-            risposta: rispostaData, 
-            corretta: corretta, 
-            isCorretta 
-        };
 
-        if (isCorretta) {
-            risposteCorrette++;
-        }
 
-        mostraFeedbackAlternativo(isCorretta, corretta, type);
-        document.getElementById('next-btn').disabled = false;
-        updateStats();
+    function ricomincia(){
+
+      punteggio=0; indexDomanda=0; risposteUtente=[];
+
+      document.getElementById('punteggio').textContent="0";
+
+      document.getElementById('recap').innerHTML="";
+
+      document.getElementById('controls-container').style.display='block';
+
+      document.getElementById('progress-container').style.display='block';
+
+      caricaDomanda();
+
     }
-    
-    // --- FUNZIONI DI NAVIGAZIONE E FINE QUIZ ---
 
-    function cambiaDomanda(delta) {
-      if (domandeCorrenti + delta >= domandeTotali) {
-        mostraRisultati();
-        return;
-      }
-      if (domandeCorrenti + delta < 0) return;
 
-      domandeCorrenti += delta;
-      
-      if (isQuizAlternativo) {
-        caricaEsercizio();
+
+    function terminaTest(){ indexDomanda=MAX_DOMANDE; mostraRecap(); }
+
+
+
+    async function iniziaQuiz(quizId){
+
+      quizCorrente=quizId;
+
+      document.getElementById('quiz-buttons').style.display='none';
+
+      if(docenteMode){
+
+        document.getElementById('docente-container').style.display='block';
+
+        caricaModalitaDocente();
+
       } else {
+
+        punteggio=0; indexDomanda=0; risposteUtente=[]; MAX_DOMANDE=0;
+
+        document.getElementById('punteggio').textContent='0';
+
+        document.getElementById('recap').innerHTML='';
+
+        document.getElementById('titolo-quiz').style.display='block';
+
+        document.getElementById('stats-container').style.display='flex';
+
+        document.getElementById('card-container').style.display='block';
+
+        document.getElementById('controls-container').style.display='block';
+
+        document.getElementById('progress-container').style.display='block';
+
         caricaDomanda();
+
       }
+
     }
 
-    function mostraRisultati() {
-      document.getElementById('card-container').style.display = 'none';
-      document.getElementById('controls-container').style.display = 'none';
-      document.getElementById('stats-container').style.display = 'none';
-      document.getElementById('progress-container').style.display = 'none';
 
-      const recap = document.getElementById('recap');
-      recap.innerHTML = `
-        <div class="card" style="text-align: center;">
-          <h2>Fine del Quiz!</h2>
-          <p style="font-size: 1.5em; margin: 20px 0;">Hai risposto correttamente a <strong>${risposteCorrette}</strong> domande su <strong>${domandeTotali}</strong>.</p>
-          <div style="margin-top: 30px;">
-              <button onclick="tornaAiQuiz()" style="background-color: #6c757d;">Ricomincia/Scegli un altro Modulo</button>
-          </div>
-        </div>
-      `;
+
+    async function caricaModalitaDocente(){
+
+      const res=await fetch(`/quiz_all/${quizCorrente}`);
+
+      const domande=await res.json();
+
+      const container=document.getElementById("lista-docente");
+
+      container.innerHTML="";
+
+      domande.forEach((d,i)=>{
+
+        let html=`<div class="card"><div style="font-size:1.2em; margin-bottom:10px;"><strong>${i+1}. ${d.domanda}</strong></div>`;
+
+        d.risposte.forEach(r=>{
+
+          if(r===d.corretta) html+=`<div class="risposta corretta">✔️ ${r}</div>`;
+
+          else html+=`<div class="risposta">${r}</div>`;
+
+        });
+
+        html+="</div>";
+
+        container.innerHTML+=html;
+
+      });
+
     }
+
+
 
     function tornaAiQuiz(){
+
       document.getElementById('titolo-quiz').style.display='none';
+
       document.getElementById('stats-container').style.display='none';
+
       document.getElementById('card-container').style.display='none';
+
       document.getElementById('controls-container').style.display='none';
+
       document.getElementById('docente-container').style.display='none';
+
       document.getElementById('progress-container').style.display='none';
+
       document.getElementById('recap').innerHTML='';
-      document.getElementById('lista-docente').innerHTML=''; // Pulisce la vista docente
+
       document.getElementById('quiz-buttons').style.display='block';
+
     }
+
+
 
     function tornaAllaModalita(){
+
       document.getElementById('quiz-buttons').style.display='none';
+
       document.getElementById('start-container').style.display='block';
-    }
-    
-    async function mostraQuizDocente(quizId) {
-        const res = await fetch(`/quiz_all/${quizId}`);
-        const domande = await res.json();
-        const container = document.getElementById("lista-docente");
-        container.innerHTML = `<h3 style="color:#1a73e8; margin-top:20px;">Modulo ${quizId} - Risposte Corrette</h3>`;
-        
-        if (domande.errore) {
-             container.innerHTML += `<div class="card">${domande.errore}</div>`;
-             return;
-        }
 
-        domande.forEach((d, i) => {
-            let html = `<div class="domandaRecap"><strong>${i + 1}. ${d.domanda}</strong>`;
-            d.risposte.forEach(r => {
-                if (r === d.corretta) html += `<div class="risposta corretta">✔️ ${r}</div>`;
-                else html += `<div class="risposta" style="background-color:#4a505c; color: white;">${r}</div>`;
-            });
-            html += "</div>";
-            container.innerHTML += html;
-        });
     }
 
-</script>
+  </script>
+
 </body>
+
 </html>
