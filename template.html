@@ -80,15 +80,17 @@
   </div>
 
   <!-- SELEZIONE QUIZ -->
-  <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
+ <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
     <h2 id="quiz-title"></h2>
-    <button onclick="iniziaQuiz(1)">🎤 Quiz 1 - Competenze Digitali Base</button>
-    <button onclick="iniziaQuiz(2)">📧 Quiz 2 - Internet, Email e PEC</button>
-    <button onclick="iniziaQuiz(3)">🔐 Quiz 3 - SPID, Cybersecurity e GDPR</button>
-    <button onclick="iniziaQuiz(4)">💬 Quiz 4 - Social Media</button>
-    <button onclick="iniziaQuiz(5)">💻 Quiz 5 - Produttività, Cyberbullismo e Tecnologia</button>
-    <div style="margin-top:15px;">
-      <button onclick="tornaAllaModalita()">⬅️ Torna alla scelta modalità</button>
+    <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
+        <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
+        <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
+        <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
+        <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
+        <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
+    </div>
+    <div style="margin-top:25px;">
+      <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
     </div>
   </div>
 
