@@ -67,34 +67,38 @@
       transition: width 0.4s ease-in-out;
     }
   </style>
-  <!-- Chart.js e DataLabels -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
 <body>
-  <!-- MENU INIZIALE -->
   <div id="start-container" style="text-align: center; margin-bottom: 30px;">
     <h1>Benvenuto!</h1>
     <button onclick="setDocenteMode(false)">📝 Modalità Studente</button>
     <button onclick="setDocenteMode(true)">👩‍🏫 Modalità Docente</button>
   </div>
 
-  <!-- SELEZIONE QUIZ -->
- <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
+  <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
     <h2 id="quiz-title"></h2>
-    <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
-        <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
-        <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
-        <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
-        <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
-        <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
+    
+    <div id="lezione-container" style="max-width: 600px; margin: 10px auto; display: none;">
+      <button onclick="mostraModuliQuiz()" style="width: 100%; font-size: 1.5rem; padding: 20px;">
+        📚 Lezione 1: Anatomia e Fondamenti
+      </button>
     </div>
+    
+    <div id="moduli-container" style="display: none; grid-template-columns: 1fr; gap: 10px; max-width: 600px; margin: auto;">
+      <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
+      <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
+      <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
+      <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
+      <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
+    </div>
+
     <div style="margin-top:25px;">
       <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
     </div>
   </div>
 
-  <!-- QUIZ CLASSICO -->
   <h1 style="display:none;" id="titolo-quiz">Quiz a Scelta Multipla</h1>
   <div class="stats" id="stats-container" style="display:none;">
     <div><strong>Punteggio:</strong> <span id="punteggio">0</span></div>
@@ -117,7 +121,6 @@
   </div>
   <div id="recap"></div>
 
-  <!-- MODALITÀ DOCENTE -->
   <div id="docente-container" style="display:none;">
     <h1>Modalità Docente</h1>
     <div id="lista-docente"></div>
@@ -138,14 +141,37 @@
     const FEEDBACK_DELAY = 200; // 0,2 secondi
 
     function setDocenteMode(mode) {
-      if(mode){
+      const lezioneContainer = document.getElementById("lezione-container");
+      const moduliContainer = document.getElementById("moduli-container");
+      
+      if (mode) {
         const pwd = prompt("Inserisci la password per accedere alla modalità docente:");
-        if(pwd !== "admin123"){ alert("❌ Password errata!"); return; }
+        if (pwd !== "admin123") {
+          alert("❌ Password errata!");
+          return;
+        }
       }
+      
       docenteMode = mode;
       document.getElementById("start-container").style.display = "none";
       document.getElementById("quiz-buttons").style.display = "block";
       document.getElementById("quiz-title").textContent = mode ? "Seleziona un quiz (Modalità Docente)" : "Seleziona un quiz (Modalità Studente)";
+      
+      if (mode) {
+        // Modalità Docente: Mostra subito tutti i moduli
+        lezioneContainer.style.display = "none";
+        moduliContainer.style.display = "grid";
+      } else {
+        // Modalità Studente: Mostra solo il pulsante Lezione 1
+        lezioneContainer.style.display = "block"; 
+        moduliContainer.style.display = "none";
+      }
+    }
+    
+    // NUOVA FUNZIONE
+    function mostraModuliQuiz() {
+      document.getElementById("lezione-container").style.display = "none";
+      document.getElementById("moduli-container").style.display = "grid";
     }
 
     async function fetchDomanda(index){
@@ -352,11 +378,22 @@
       document.getElementById('progress-container').style.display='none';
       document.getElementById('recap').innerHTML='';
       document.getElementById('quiz-buttons').style.display='block';
+
+      // Reset della vista di selezione quiz in base alla modalità
+      if (docenteMode) {
+        document.getElementById("lezione-container").style.display = "none";
+        document.getElementById("moduli-container").style.display = "grid";
+      } else {
+        document.getElementById("lezione-container").style.display = "block";
+        document.getElementById("moduli-container").style.display = "none";
+      }
     }
 
     function tornaAllaModalita(){
       document.getElementById('quiz-buttons').style.display='none';
       document.getElementById('start-container').style.display='block';
+      document.getElementById('lezione-container').style.display='none';
+      document.getElementById('moduli-container').style.display='none';
     }
   </script>
 </body>
