@@ -1,1642 +1,654 @@
 <!DOCTYPE html>
-
 <html lang="it">
-
 <head>
-
-
-  <meta charset="UTF-8">
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-  <title>Quiz Interattivo</title>
-
-
-  <style>
-
-
-    /* --- STILI BASE --- */
-
-
-    html { font-size: 16px; scroll-behavior: smooth; }
-
-
-    body { font-family: 'Segoe UI', sans-serif; background-color: #1c1f2b; color: #fff; padding: 20px; max-width: 900px; margin: auto; }
-
-
-    h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
-
-
-    .stats { display: flex; justify-content: space-between; margin-bottom: 15px; }
-
-
-    .card { background-color: #2a2e3d; color: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-
-
-
-
-
-    /* --- RISPOSTE --- */
-
-
-    .risposta { 
-
-
-      background-color: #ffffff; 
-
-
-      color: #000; 
-
-
-      border: 2px solid #ccc; 
-
-
-      margin: 10px 0; 
-
-
-      padding: 15px 20px; 
-
-
-      border-radius: 8px; 
-
-
-      font-size: 1.2rem; 
-
-
-      font-weight: bold; 
-
-
-      cursor: pointer; 
-
-
-      transition: all 0.25s ease-in-out; 
-
-
-      opacity: 0; 
-
-
-      transform: translateY(10px); 
-
-
-      animation: fadeInUp 0.6s ease forwards; 
-
-
   <meta charset="UTF-8">
-
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
   <title>Quiz Interattivo</title>
-
-
   <style>
-
-
     /* --- STILI BASE --- */
-
-
     html { font-size: 16px; scroll-behavior: smooth; }
-
-
     body { font-family: 'Segoe UI', sans-serif; background-color: #1c1f2b; color: #fff; padding: 20px; max-width: 900px; margin: auto; }
-
-
     h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
-
-
     .stats { display: flex; justify-content: space-between; margin-bottom: 15px; }
-
-
     .card { background-color: #2a2e3d; color: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
 
-
-
-
-
     /* --- RISPOSTE --- */
-
-
     .risposta { 
-
-
       background-color: #ffffff; 
-
-
       color: #000; 
-
-
       border: 2px solid #ccc; 
-
-
       margin: 10px 0; 
-
-
       padding: 15px 20px; 
-
-
       border-radius: 8px; 
-
-
       font-size: 1.2rem; 
-
-
       font-weight: bold; 
-
-
       cursor: pointer; 
-
-
       transition: all 0.25s ease-in-out; 
-
-
       opacity: 0; 
-
-
       transform: translateY(10px); 
-
-
       animation: fadeInUp 0.6s ease forwards; 
-
-
     }
-
-
     .risposta:hover { transform: scale(1.03); box-shadow: 0 0 12px rgba(255,255,255,0.3); }
-
-
     .corretta { background-color: #28a745; color: white; border-color: #28a745; }
-
-
     .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; }
 
-
-
-
-
     /* --- BOTTONI QUIZ ALTERNATIVO (MODULO 3) --- */
-
-
     .risposta-btn { 
-
-
         padding: 10px 16px; 
-
-
         margin: 5px; 
-
-
         border: none; 
-
-
         border-radius: 6px; 
-
-
         background-color: #3c4043; /* Grigio scuro per le opzioni */
-
-
         color: white; 
-
-
         font-weight: bold; 
-
-
         cursor: pointer; 
-
-
         transition: all 0.25s ease-in-out;
-
     }
-
-
-    .risposta:hover { transform: scale(1.03); box-shadow: 0 0 12px rgba(255,255,255,0.3); }
-
-
-    .corretta { background-color: #28a745; color: white; border-color: #28a745; }
-
-
-    .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; }
-
-
-
-
-
-    /* --- BOTTONI --- */
-
-
-    button { 
-
-
-      padding: 10px 16px; 
-
-
-      margin: 5px; 
-
-
-      border: none; 
-
-
-      border-radius: 6px; 
-
-
-      background-color: #1a73e8; 
-
-
-      color: white; 
-
-
-      font-weight: bold; 
-
-
-      cursor: pointer; 
-
-
-      transition: all 0.25s ease-in-out;
-
-
-      opacity: 0; 
-
-
-      transform: translateY(10px); 
-
-
-      animation: fadeInUp 0.6s ease forwards; 
-
-
     .risposta-btn:hover { background-color: #5f6368; }
-
-
     .risposta-btn:disabled { opacity: 0.5; cursor: default; }
 
-
-
-
-
     .check-btn {
-
-
         background-color: #28a745;
-
-
         margin-top: 15px;
-
     }
-
-
-    button:hover { background-color: #155ab6; transform: scale(1.07); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
-
-
-    button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
-
-
-    .btn-danger { background-color: #d93025; }
-
-
-    .btn-danger:hover { background-color: #b5271b; }
-
-
-
-
-
-    /* --- RECAP --- */
-
-
-    #risposte { display: grid; gap: 1rem; }
-
-
-    .domandaRecap { background-color: #2f3347; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
-
-
-    .domandaRecap strong { display: block; margin-bottom: 6px; font-size: 1.1em; color: #1a73e8; }
-
-
-    .domandaRecap div { margin: 4px 0; }
-
-
-
-
-
-    /* --- ANIMAZIONI --- */
-
-
-    @keyframes fadeInUp {
-
-
-      from { opacity: 0; transform: translateY(20px); }
-
-
-      to { opacity: 1; transform: translateY(0); }
-
-
-
-
 
     .match-active {
-
-
         background-color: #1a73e8 !important;
-
     }
-
-
-    .progress-bar-animate {
-
-
-      transition: width 0.4s ease-in-out;
-
-
     
-
-
     .corretta, .sbagliata {
-
-
         opacity: 1; /* Override animation opacity for general classes */
-
     }
-
-
-  </style>
-
-
-  <!-- Chart.js e DataLabels -->
-
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-
-
-
-
 
     /* --- BOTTONI --- */
-
-
     button { 
-
-
       padding: 10px 16px; 
-
-
       margin: 5px; 
-
-
       border: none; 
-
-
       border-radius: 6px; 
-
-
       background-color: #1a73e8; 
-
-
       color: white; 
-
-
       font-weight: bold; 
-
-
       cursor: pointer; 
-
-
       transition: all 0.25s ease-in-out;
-
-
       opacity: 1; /* Rimosso l'animazione di default per i pulsanti di controllo */
-
-
       transform: none; 
-
-
     }
-
-
     button:hover { background-color: #155ab6; transform: scale(1.03); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
-
-
     button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
-
-
     .btn-danger { background-color: #d93025; }
-
-
     .btn-danger:hover { background-color: #b5271b; }
 
-
-
-
-
     /* --- RECAP --- */
-
-
     #risposte { display: grid; gap: 1rem; }
-
-
     .domandaRecap { background-color: #2f3347; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
-
-
     .domandaRecap strong { display: block; margin-bottom: 6px; font-size: 1.1em; color: #1a73e8; }
-
-
     .domandaRecap div { margin: 4px 0; }
-
-
     
-
-
     /* FIX STATS DISPLAY */
-
-
     #progress-text { margin-right: 15px; }
 
-
-
-
-
     /* --- ANIMAZIONI --- */
-
-
     @keyframes fadeInUp {
-
-
       from { opacity: 0; transform: translateY(20px); }
-
-
       to { opacity: 1; transform: translateY(0); }
-
-
     }
-
-
     .progress-bar-animate {
-
-
       transition: width 0.4s ease-in-out;
-
-
     }
-
-
   </style>
-
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-
 </head>
-
 <body>
-
-
-  <!-- MENU INIZIALE -->
-
-
-  <div id="start-container" style="text-align: center; margin-bottom: 30px;">
-
-
-    <h1>Benvenuto!</h1>
-
-
-    <button onclick="setDocenteMode(false)">📝 Modalità Studente</button>
-
-
-    <button onclick="setDocenteMode(true)">👩‍🏫 Modalità Docente</button>
-
-
-  </div>
-
-
-
-
-
-  <!-- SELEZIONE QUIZ -->
-
-
- <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
-
-
-    <h2 id="quiz-title"></h2>
-
-
-    <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
-
-
-        <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
-
-
-        <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
-
-
-        <button onclick="iniziaQuizAlternativo(3)">🖱️ Modulo 3 - Simulazione Windows (Esercizi Interattivi)</button>
-
-
-        <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
-
-
-        <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
-
-
-    </div>
-
-
-    <div style="margin-top:25px;">
-
-
-      <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
-
-
     <div id="start-container" style="text-align: center; margin-bottom: 30px;">
-
-
     <h1>Benvenuto!</h1>
-
-
     <button onclick="setDocenteMode(false)">📝 Modalità Studente</button>
-
-
     <button onclick="setDocenteMode(true)">👩‍🏫 Modalità Docente</button>
-
-
   </div>
-
-
-
-
 
    <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;">
-
-
     <h2 id="quiz-title"></h2>
-
-
     <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
-
-
         <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
-
-
         <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
-
-
         <button onclick="iniziaQuizAlternativo(3)">🖱️ Modulo 3 - Simulazione Windows (Esercizi Interattivi)</button>
-
-
         <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
-
-
         <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
-
-
     </div>
-
-
     <div style="margin-top:25px;">
-
-
       <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
-
-
     </div>
-
-
   </div>
-
-
-
-
 
     <h1 style="display:none;" id="titolo-quiz"></h1>
-
-
   <div class="stats" id="stats-container" style="display:none; justify-content: flex-start; gap: 20px;">
-
-
     <div><strong>Domanda:</strong> <span id="progress-text">0</span></div>
-
-
     <div><strong>Corrette:</strong> <span id="score-text">0</span></div>
-
-
   </div>
-
-
   <div class="progress-container" id="progress-container" style="display:none; background-color: #444; border-radius: 30px; margin-bottom: 20px; overflow: hidden;">
-
-
     <div id="progress-bar" class="progress-bar-animate" style="width: 0%; height: 14px; background: linear-gradient(to right, #ff416c, #ff4b2b);"></div>
-
-
   </div>
-
-
   <div id="card-container" style="display:none;">
-
-
       </div>
-
-
   <div class="controls" id="controls-container" style="display:none; text-align:center;">
-
-
     <button id="prev-btn" onclick="cambiaDomanda(-1)">⬅️ Indietro</button>
-
-
     <button id="next-btn" onclick="cambiaDomanda(1)">➡️ Avanti</button>
-
-
     <button class="btn-danger" onclick="mostraRisultati()">🛑 Termina Test</button>
-
-
     <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
-
-
   </div>
-
-
   <div id="recap"></div>
 
-
-
-
-
     <div id="docente-container" style="display:none;">
-
-
     <h1>Visualizzazione Docente</h1>
-
-
     <h2 style="color:#f8c471;">Seleziona un Modulo per vedere tutte le risposte corrette.</h2>
-
-
     <div id="docente-select" style="margin-bottom: 20px; display: grid; gap: 10px; max-width: 600px; margin: 20px auto;">
-
-
         <button onclick="mostraQuizDocente(1)">Anteprima Modulo 1</button>
-
-
         <button onclick="mostraQuizDocente(2)">Anteprima Modulo 2</button>
-
-
         <button onclick="mostraQuizDocente(4)">Anteprima Modulo 4</button>
-
-
         <button onclick="mostraQuizDocente(5)">Anteprima Modulo 5</button>
-
     </div>
-
-
-  </div>
-
-
-
-
-
-  <!-- QUIZ CLASSICO -->
-
-
-  <h1 style="display:none;" id="titolo-quiz">Quiz a Scelta Multipla</h1>
-
-
-  <div class="stats" id="stats-container" style="display:none;">
-
-
-    <div><strong>Punteggio:</strong> <span id="punteggio">0</span></div>
-
-
-    <div><strong>Domanda:</strong> <span id="contatore">0</span></div>
-
-
-  </div>
-
-
-  <div class="progress-container" id="progress-container" style="display:none; background-color: #444; border-radius: 30px; margin-bottom: 20px; overflow: hidden;">
-
-
-    <div id="progress-bar" class="progress-bar-animate" style="width: 0%; height: 14px; background: linear-gradient(to right, #ff416c, #ff4b2b);"></div>
-
-
-  </div>
-
-
-  <div class="card" id="card-container" style="display:none;">
-
-
-    <div id="domanda" style="font-size: 1.4em; font-weight: bold; border: 2px solid #007bff; padding: 20px; border-radius: 10px; background-color: #2a2e3d; color: white; margin-bottom: 20px;">Caricamento...</div>
-
-
-    <div id="risposte"></div>
-
-
-    <div id="feedback" style="margin-top: 15px;"></div>
-
-
-  </div>
-
-
-  <div class="controls" id="controls-container" style="display:none; text-align:center;">
-
-
-    <button onclick="domandaPrecedente()">⬅️ Indietro</button>
-
-
-    <button onclick="prossimaDomanda()">➡️ Avanti</button>
-
-
-    <button class="btn-danger" onclick="terminaTest()">🛑 Termina Test</button>
-
-
-    <button onclick="ricomincia()">🔄 Ricomincia</button>
-
-
-    <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
-
-
-  </div>
-
-
-  <div id="recap"></div>
-
-
-
-
-
-  <!-- MODALITÀ DOCENTE -->
-
-
-  <div id="docente-container" style="display:none;">
-
-
-    <h1>Modalità Docente</h1>
-
     <div id="lista-docente"></div>
-
-
-    <div style="text-align:center;">
-
-
-      <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
-
-
-    </div>
-
-
-  </div>
-
-
-  <script>
-
-
     <div style="text-align:center;">
-
-
       <button onclick="tornaAiQuiz()" style="background-color: #6c757d;">⬅️ Torna al Menu</button>
-
-
     </div>
-
-
   </div>
-
-
   <script>
-
     let domandeTotali = 0;
-
     let domandeCorrenti = 0;
-
     let quizCorrente = 0;
-
-@@ -134,13 +162,28 @@ <h1>Modalità Docente</h1>
-
-
+    let risposteCorrette = 0;
+    let statoRisposta = []; // Memorizza lo stato delle risposte
 
     // Nuove variabili per la gestione dei quiz alternativi
-
     let isQuizAlternativo = false;
-
-
-    let esercizioCorrente = 0;
-
-
     let isDocenteMode = false;
-
-
-
-
-    // --- FUNZIONI COMUNI ---
-
 
     // --- FUNZIONI INIZIALI E DI NAVIGAZIONE GLOBALE ---
 
-
-
-
     function setDocenteMode(isDocente) {
-
-
         isDocenteMode = isDocente;
-
-
         document.getElementById('start-container').style.display = 'none';
-
-
         
-
-
         if (isDocente) {
-
-
             document.getElementById('docente-container').style.display = 'block';
-
-
             document.getElementById('quiz-buttons').style.display = 'none';
-
-
             document.getElementById('titolo-quiz').style.display = 'none';
-
-
         } else {
-
-
             document.getElementById('quiz-buttons').style.display = 'block';
-
-
             document.getElementById('quiz-title').innerText = 'Seleziona il Modulo di Alfabetizzazione';
-
-
             document.getElementById('docente-container').style.display = 'none';
-
-
         }
-
-
+    }
+    
+    function updateStats() {
+      document.getElementById('progress-text').innerText = `${domandeCorrenti + 1} di ${domandeTotali}`;
+      document.getElementById('score-text').innerText = `${risposteCorrette}`;
+      // Aggiorna la barra di progresso
+      const percent = (domandeCorrenti + 1) / domandeTotali * 100;
+      document.getElementById('progress-bar').style.width = percent + '%';
     }
 
+    // --- LOGICA QUIZ MULTIPLO STANDARD (Quiz 1, 2, 4, 5) ---
 
-    
+    async function iniziaQuiz(quizId) {
+      quizCorrente = quizId;
+      isQuizAlternativo = false;
+      document.getElementById('quiz-buttons').style.display = 'none';
+      document.getElementById('start-container').style.display = 'none';
+      document.getElementById('titolo-quiz').innerText = document.querySelector(`button[onclick="iniziaQuiz(${quizId})"]`).innerText;
+      document.getElementById('titolo-quiz').style.display = 'block';
 
-    function updateStats() {
+      const res = await fetch(`/quiz_all/${quizId}`);
+      const domande = await res.json();
+      domandeTotali = domande.length;
+      domandeCorrenti = 0;
+      risposteCorrette = 0;
+      statoRisposta = new Array(domandeTotali).fill(null);
+      
+      document.getElementById('card-container').style.display = 'block';
+      document.getElementById('controls-container').style.display = 'block';
+      document.getElementById('stats-container').style.display = 'flex';
+      document.getElementById('progress-container').style.display = 'block';
+      
+      caricaDomanda();
+    }
 
-
-      document.getElementById('progress-text').innerText = `Domanda ${domandeCorrenti + 1} di ${domandeTotali}`;
-
-
-      document.getElementById('score-text').innerText = `Corrette: ${risposteCorrette}`;
-
-
-      document.getElementById('progress-text').innerText = `${domandeCorrenti + 1} di ${domandeTotali}`;
-
-
-      document.getElementById('score-text').innerText = `${risposteCorrette}`;
-
-      // Aggiorna la barra di progresso
-
-      const percent = (domandeCorrenti + 1) / domandeTotali * 100;
-
-      document.getElementById('progress-bar').style.width = percent + '%';
-
-@@ -183,10 +226,10 @@ <h1>Modalità Docente</h1>
-
+    async function caricaDomanda() {
+      const res = await fetch(`/quiz/${quizCorrente}/${domandeCorrenti}`);
+      const d = await res.json();
+      const card = document.getElementById('card-container');
+      card.innerHTML = '';
+      
+      if (d.errore) {
+        card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
+        return;
       }
-
-
 
       card.innerHTML += `<div class="card">
-
-
-                          <p class="question-text">${d.domanda}</p>
-
-
                           <p class="question-text" style="font-size: 1.4em; font-weight: bold; margin-bottom: 20px;">${d.domanda}</p>
-
                           <div id="risposte-container">
-
                             ${d.risposte.map((r, i) => 
-
-
-                              `<button class="risposta-btn" onclick="controllaRisposta('${r}', '${d.corretta}', this)">${r}</button>`
-
-
                               `<button class="risposta-btn" onclick="controllaRisposta('${r.replace(/'/g, "\\'")}', '${d.corretta.replace(/'/g, "\\'")}', this)">${r}</button>`
-
                             ).join('')}
-
                           </div>
-
                         </div>`;
-
-@@ -203,15 +246,19 @@ <h1>Modalità Docente</h1>
-
-
+      
+      updateStats();
+      const stato = statoRisposta[domandeCorrenti];
+      if (stato !== null) {
+        disableAnswers(stato.risposta, stato.corretta);
+      }
+      
+      document.getElementById('next-btn').disabled = stato === null;
+      document.getElementById('prev-btn').disabled = domandeCorrenti === 0;
+    }
 
     function controllaRisposta(risposta, corretta, button) {
-
       if (statoRisposta[domandeCorrenti] !== null) return; 
-
-
       
-
-
       // Sanitizzazione degli apici (già fatta nell'HTML, ma necessaria per il confronto)
-
-
       const rispostaPulita = risposta.replace(/\\'/g, "'");
-
-
       const correttaPulita = corretta.replace(/\\'/g, "'");
 
-
-
-
-      const isCorretta = risposta === corretta;
-
-
-      statoRisposta[domandeCorrenti] = { risposta, corretta, isCorretta };
-
-
       const isCorretta = rispostaPulita === correttaPulita;
-
-
       statoRisposta[domandeCorrenti] = { risposta: rispostaPulita, corretta: correttaPulita, isCorretta };
 
-
-
       if (isCorretta) {
-
         risposteCorrette++;
-
       }
-
-
-
-
-      disableAnswers(risposta, corretta);
-
-
+      
       disableAnswers(rispostaPulita, correttaPulita);
-
       document.getElementById('next-btn').disabled = false;
-
       updateStats();
-
       mostraFeedback(isCorretta);
-
-@@ -220,13 +267,18 @@ <h1>Modalità Docente</h1>
+    }
 
     function disableAnswers(rispostaSelezionata, corretta) {
-
       document.querySelectorAll('#risposte-container .risposta-btn').forEach(btn => {
-
         btn.disabled = true;
-
-
-        if (btn.innerText === corretta) {
-
-
         
-
-
         // Confronta il testo del bottone con la risposta corretta e selezionata
-
-
         const btnText = btn.innerText.replace(/\\'/g, "'");
-
-
         
-
-
         if (btnText === corretta) {
-
           btn.classList.add('corretta');
-
-
-        } else if (btn.innerText === rispostaSelezionata && rispostaSelezionata !== corretta) {
-
-
         } else if (btnText === rispostaSelezionata && rispostaSelezionata !== corretta) {
-
           btn.classList.add('sbagliata');
-
         } else {
-
-
-          btn.classList.add('disattivata');
-
-
           btn.classList.add('risposta'); // Usa la classe 'risposta' per stile standard
-
         }
-
-
         btn.classList.remove('risposta-btn'); // Rimuovi la classe base per i bottoni per lo stile finale
-
       });
-
     }
 
-
-
-@@ -238,7 +290,7 @@ <h1>Modalità Docente</h1>
-
+    function mostraFeedback(isCorretta) {
+      const card = document.getElementById('card-container').querySelector('.card');
+      card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
+      card.innerHTML += `<div style="margin-top: 15px; padding: 10px; border-radius: 5px; background-color: ${isCorretta ? '#28a74533' : '#dc354533'};">
+                            ${isCorretta ? '✅ Risposta Esatta!' : '❌ Risposta Sbagliata! La risposta corretta è: ' + statoRisposta[domandeCorrenti].corretta}
                          </div>`;
-
       setTimeout(() => { card.style.border = ''; }, 2000);
+    }
+    
+    // --- LOGICA QUIZ ALTERNATIVO (Modulo 3) ---
+    
+    async function iniziaQuizAlternativo(quizId) {
+      quizCorrente = quizId;
+      isQuizAlternativo = true;
+      document.getElementById('quiz-buttons').style.display = 'none';
+      document.getElementById('start-container').style.display = 'none';
+      document.getElementById('titolo-quiz').innerText = document.querySelector(`button[onclick="iniziaQuizAlternativo(${quizId})"]`).innerText;
+      document.getElementById('titolo-quiz').style.display = 'block';
 
+      const res = await fetch(`/quiz_all_alt/${quizId}`);
+      const domande = await res.json();
+      domandeTotali = domande.length;
+      domandeCorrenti = 0;
+      risposteCorrette = 0;
+      statoRisposta = new Array(domandeTotali).fill(null);
+      
+      document.getElementById('card-container').style.display = 'block';
+      document.getElementById('controls-container').style.display = 'block';
+      document.getElementById('stats-container').style.display = 'flex';
+      document.getElementById('progress-container').style.display = 'block';
+      
+      caricaEsercizio();
     }
 
+    async function caricaEsercizio() {
+      if (!isQuizAlternativo) return caricaDomanda();
 
-
-
-
-    
-
-    // --- LOGICA QUIZ ALTERNATIVO (Modulo 3) ---
-
-
-
-    async function iniziaQuizAlternativo(quizId) {
-
-@@ -281,7 +333,8 @@ <h1>Modalità Docente</h1>
-
-
-
-      switch (d.type) {
-
-        case 'order':
-
-
-          // Esercizio di Sequenziamento (l'utente clicca nell'ordine corretto)
-
-
-          // Esercizio di Sequenziamento
-
-
-          passiScelti = []; // Reset per ogni domanda
-
-          esercizioHTML = `
-
-            <div id="order-target" class="list-group mb-3">
-
-                <p><strong>Sequenza scelta:</strong></p>
-
-@@ -299,6 +352,9 @@ <h1>Modalità Docente</h1>
-
-
-
-        case 'match_pair':
-
-          // Esercizio di Associazione
-
-
-          selectedLeft = null;
-
-
-          selectedRight = null;
-
-
-          matchedPairs = []; // Reset per ogni domanda
-
-          let optionsRight = [...d.options_right].sort(() => Math.random() - 0.5);
-
-          esercizioHTML = `
-
-            <div style="display: flex; justify-content: space-around; gap: 10px;">
-
-@@ -319,7 +375,7 @@ <h1>Modalità Docente</h1>
-
-          break;
-
-
-
-        case 'input_text':
-
-
-          // Esercizio di Input Testuale (Simulazione Comando)
-
-
-          // Esercizio di Input Testuale
-
-          esercizioHTML = `
-
-            <div style="text-align: center;">
-
-                <p><strong>Cosa digiteresti (parola singola)?</strong></p>
-
-@@ -336,14 +392,14 @@ <h1>Modalità Docente</h1>
-
+      const res = await fetch(`/quiz_alt/${quizCorrente}/${domandeCorrenti}`);
+      const d = await res.json();
+      const card = document.getElementById('card-container');
+      card.innerHTML = '';
+      
+      if (d.errore) {
+        card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
+        return;
       }
 
+      let esercizioHTML = '';
 
+      switch (d.type) {
+        case 'order':
+          // Esercizio di Sequenziamento
+          passiScelti = []; // Reset per ogni domanda
+          esercizioHTML = `
+            <div id="order-target" class="list-group mb-3">
+                <p><strong>Sequenza scelta:</strong></p>
+                <div id="order-sequence" style="min-height: 40px; border: 1px solid #1a73e8; padding: 5px; border-radius: 5px; background: #3c4043;">Nessun passo selezionato.</div>
+            </div>
+            <p><strong>Clicca i passi nell'ordine corretto:</strong></p>
+            <div id="order-options" class="list-group">
+                ${d.passi.sort(() => Math.random() - 0.5).map(passo => 
+                    `<button class="risposta-btn passo-btn" onclick="aggiungiPasso(this)">${passo}</button>`
+                ).join('')}
+            </div>
+            <button id="controlla-ordine" class="check-btn" onclick="controllaOrdine('${d.corretto.join('|||')}')">Controlla Ordine</button>
+          `;
+          break;
 
+        case 'match_pair':
+          // Esercizio di Associazione
+          selectedLeft = null;
+          selectedRight = null;
+          matchedPairs = []; // Reset per ogni domanda
+          let optionsRight = [...d.options_right].sort(() => Math.random() - 0.5);
+          esercizioHTML = `
+            <div style="display: flex; justify-content: space-around; gap: 10px;">
+                <div id="match-left" class="list-group" style="flex: 1;">
+                    <p><strong>Concetto (Sinistra)</strong></p>
+                    ${d.options_left.map((item, i) => `<button class="risposta-btn match-btn-left" data-index="${i}" onclick="selezionaMatch(this, 'left')">${item}</button>`).join('')}
+                </div>
+                <div id="match-right" class="list-group" style="flex: 1;">
+                    <p><strong>Descrizione (Destra)</strong></p>
+                    ${optionsRight.map((item, i) => `<button class="risposta-btn match-btn-right" data-value="${item}" onclick="selezionaMatch(this, 'right')">${item}</button>`).join('')}
+                </div>
+            </div>
+            <div id="match-selection" style="margin-top: 20px; text-align: center;">
+                <p>Seleziona un elemento a sinistra, poi il corrispondente a destra.</p>
+            </div>
+            <button id="controlla-match" class="check-btn" onclick="controllaAssociazione('${JSON.stringify(d.corretto_pairs)}')">Controlla Associazione</button>
+          `;
+          break;
+        
+        case 'input_text':
+          // Esercizio di Input Testuale
+          esercizioHTML = `
+            <div style="text-align: center;">
+                <p><strong>Cosa digiteresti (parola singola)?</strong></p>
+                <input type="text" id="input-command" class="form-control" style="width: 80%; max-width: 300px; padding: 10px; margin: 10px auto; border-radius: 5px; border: none; font-size: 1.1em; text-align: center; color: #000;" placeholder="Digita qui il comando o la parola">
+                <p style="font-size: 0.9em; color: #aaa;">Suggerimento: ${d.hint || 'Nessun suggerimento'}</p>
+            </div>
+            <button id="controlla-input" class="check-btn" onclick="controllaInput('${d.corretta}')">Controlla Input</button>
+          `;
+          break;
+
+        default:
+          esercizioHTML = '<h2>Tipo di esercizio non supportato.</h2>';
+          break;
+      }
+      
       card.innerHTML = `<div class="card">
-
-
-                          <p class="question-text">${d.domanda}</p>
-
-
                           <p class="question-text" style="font-size: 1.4em; font-weight: bold; margin-bottom: 20px;">${d.domanda}</p>
-
                           <div id="esercizio-container">${esercizioHTML}</div>
-
                         </div>`;
 
-
-
       // Ripristina lo stato se già risposto
-
       if (statoRisposta[domandeCorrenti] !== null) {
-
           const stato = statoRisposta[domandeCorrenti];
-
-
-          mostraFeedbackAlternativo(stato.isCorretta, stato.corretta);
-
-
           mostraFeedbackAlternativo(stato.isCorretta, stato.corretta, d.type);
-
           document.getElementById('next-btn').disabled = false;
-
           // Disabilita i controlli dell'esercizio
-
           const checkBtn = document.querySelector('.check-btn');
+          if(checkBtn) checkBtn.disabled = true;
+      } else {
+        document.getElementById('next-btn').disabled = true;
+      }
 
-@@ -367,14 +423,16 @@ <h1>Modalità Docente</h1>
-
+      updateStats();
+      document.getElementById('prev-btn').disabled = domandeCorrenti === 0;
     }
 
-
-
+    // --- LOGICA SPECIFICA ESERCIZIO ORDINE ---
+    let passiScelti = [];
+    function aggiungiPasso(button) {
+        if(statoRisposta[domandeCorrenti] !== null) return;
+        passiScelti.push(button.innerText);
+        document.getElementById('order-sequence').innerText = passiScelti.join(' → ');
+        button.disabled = true;
+        button.classList.add('sbagliata'); // Uso 'sbagliata' per indicare che è stato selezionato
+    }
+    
     function controllaOrdine(correttoStr) {
-
-
-        const corretta = correttoStr.split('|||');
-
-
         const corretta = correttaStr.split('|||');
-
         const isCorretta = passiScelti.join('|||') === corretta.join('|||');
-
-
-
-
-        salvaEsercizioAlternativo(isCorretta, corretta.join(' → '), passiScelti.join(' → '));
-
-
-        passiScelti = []; // Reset per la prossima
-
-
+        
         salvaEsercizioAlternativo(isCorretta, corretta.join(' → '), passiScelti.join(' → '), 'order');
-
-
-
-
+        
         // Reset e styling
-
-
         document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
-
         if (isCorretta) {
-
             document.querySelectorAll('.passo-btn').forEach(btn => btn.classList.remove('sbagliata'));
-
-
             document.getElementById('order-sequence').classList.remove('sbagliata');
-
             document.getElementById('order-sequence').classList.add('corretta');
-
         } else {
-
             document.getElementById('order-sequence').classList.add('sbagliata');
+        }
+    }
 
-@@ -389,7 +447,7 @@ <h1>Modalità Docente</h1>
+    // --- LOGICA SPECIFICA ESERCIZIO MATCH ---
+    let selectedLeft = null;
+    let selectedRight = null;
+    let matchedPairs = [];
 
     function selezionaMatch(button, side) {
-
         if(statoRisposta[domandeCorrenti] !== null) return;
 
-
-
-
-        // Reset visivo di tutti
-
-
         // Rimuove la classe match-active da tutti prima di applicarla
-
         document.querySelectorAll('.match-btn-left').forEach(btn => btn.classList.remove('match-active'));
-
         document.querySelectorAll('.match-btn-right').forEach(btn => btn.classList.remove('match-active'));
 
-
-
-@@ -405,14 +463,22 @@ <h1>Modalità Docente</h1>
+        if (side === 'left') {
+            selectedLeft = button;
+            selectedRight = null;
+            button.classList.add('match-active');
+        } else if (side === 'right') {
+            selectedRight = button;
+            selectedRight.classList.add('match-active');
+        }
 
         // Se entrambi selezionati, prova l'accoppiamento
-
         if (selectedLeft && selectedRight) {
-
             const pair = [selectedLeft.innerText, selectedRight.innerText];
-
-
-            const isMatch = matchedPairs.every(p => p[0] !== pair[0] && p[1] !== pair[1]); // Evita duplicati
-
-
-
-
-
-            if (isMatch) {
-
-
             
-
-
             // Controlla se una delle due parti è già stata accoppiata
-
-
             const isLeftUsed = matchedPairs.some(p => p[0] === pair[0]);
-
-
             const isRightUsed = matchedPairs.some(p => p[1] === pair[1]);
-
-
             
-
-
             if (!isLeftUsed && !isRightUsed) {
-
                 // Rimuovi dai pulsanti e aggiungi come coppia visualizzata
-
                 selectedLeft.style.display = 'none';
-
                 selectedRight.style.display = 'none';
-
                 matchedPairs.push(pair);
-
-
-                document.getElementById('match-selection').innerHTML += `<div class="risposta corretta match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em;">✅ ${pair[0]} ↔️ ${pair[1]}</div>`;
-
-
                 document.getElementById('match-selection').innerHTML += `<div class="risposta corretta match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: #28a74555;">✅ ${pair[0]} ↔️ ${pair[1]}</div>`;
-
-
             } else {
-
-
                  document.getElementById('match-selection').innerHTML += `<div class="risposta sbagliata match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: #dc354555;">❌ Coppia non valida o già usata!</div>`;
-
-
                  setTimeout(() => {
-
-
                     document.getElementById('match-selection').lastElementChild.remove();
-
-
                  }, 1500);
-
             }
-
-
-
+            
             // Reset selezione
-
-@@ -425,25 +491,25 @@ <h1>Modalità Docente</h1>
-
-
+            selectedLeft = null;
+            selectedRight = null;
+            document.querySelectorAll('.match-btn-left').forEach(btn => btn.classList.remove('match-active'));
+            document.querySelectorAll('.match-btn-right').forEach(btn => btn.classList.remove('match-active'));
+        }
+    }
 
     function controllaAssociazione(correttoJson) {
-
         const corretti = JSON.parse(correttoJson);
-
-
-        if (matchedPairs.length !== corretti.length) {
-
-
-            salvaEsercizioAlternativo(false, 'Tutte le coppie devono essere associate');
-
-
-            return;
-
-
-        }
-
-
-
-
-
         
-
-
         let correttiMap = new Map(corretti);
-
         let corretteCount = 0;
-
         let risposteDate = matchedPairs.map(p => p.join(' = '));
-
-
         let correttaStr = corretti.map(p => p.join(' = ')).join(' | ');
 
-
-
         for (const [left, right] of matchedPairs) {
-
-
-            const found = corretti.some(([cLeft, cRight]) => cLeft === left && cRight === right);
-
-
-            if (found) {
-
-
             if (correttiMap.get(left) === right) {
-
                 corretteCount++;
-
             }
-
         }
-
-
 
         const isCorretta = corretteCount === corretti.length;
 
-
-        const correttaStr = corretti.map(p => p.join(' = ')).join(' | ');
-
-
-
-
-        salvaEsercizioAlternativo(isCorretta, correttaStr, risposteDate.join(' | '));
-
-
         salvaEsercizioAlternativo(isCorretta, correttaStr, risposteDate.join(' | '), 'match_pair');
-
-
         
-
-
         // Disabilita tutti i bottoni di match
-
-
         document.querySelectorAll('.match-btn-left, .match-btn-right').forEach(btn => btn.disabled = true);
-
-
         document.getElementById('match-selection').innerHTML += `<p style="font-weight: bold; margin-top: 15px;">Associazioni corrette: ${corretteCount} su ${corretti.length}</p>`;
-
     }
 
 
+    // --- LOGICA SPECIFICA ESERCIZIO INPUT ---
 
-
-
-@@ -454,13 +520,13 @@ <h1>Modalità Docente</h1>
-
+    function controllaInput(corretta) {
+        const inputField = document.getElementById('input-command');
         const rispostaUtente = inputField.value.trim();
-
         const isCorretta = rispostaUtente.toLowerCase() === corretta.toLowerCase();
 
-
-
-
-        salvaEsercizioAlternativo(isCorretta, corretta, rispostaUtente);
-
-
         salvaEsercizioAlternativo(isCorretta, corretta, rispostaUtente, 'input_text');
-
         inputField.disabled = true;
-
     }
-
-
 
     // --- FUNZIONI RISULTATO E SALVATAGGIO ALTERNATIVO ---
-
-
-
-
-    function mostraFeedbackAlternativo(isCorretta, corretta) {
-
-
+    
     function mostraFeedbackAlternativo(isCorretta, corretta, type) {
-
       const card = document.getElementById('card-container').querySelector('.card');
-
       card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
-
       const testoFeedback = isCorretta ? 
-
-@@ -473,10 +539,24 @@ <h1>Modalità Docente</h1>
+                            '✅ Esercizio completato correttamente!' : 
+                            `❌ Non corretto! La risposta corretta è: ${corretta}`;
+      
+      const checkBtn = document.querySelector('.check-btn');
+      if(checkBtn) checkBtn.disabled = true;
 
       card.innerHTML += `<div style="margin-top: 15px; padding: 10px; border-radius: 5px; background-color: ${isCorretta ? '#28a74533' : '#dc354533'};">
-
                             ${testoFeedback}
-
                          </div>`;
-
-
       
-
-
       if (type === 'order') {
-
-
           // Ricrea la sequenza con la risposta dell'utente per la visualizzazione post-risposta
-
-
           const rispostaUtente = statoRisposta[domandeCorrenti].risposta;
-
-
           const orderSequenceDiv = document.getElementById('order-sequence');
-
-
           if (orderSequenceDiv) {
-
-
               orderSequenceDiv.innerText = `La tua sequenza: ${rispostaUtente}`;
-
-
               orderSequenceDiv.className = isCorretta ? 'corretta' : 'sbagliata';
-
-
               document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
-
-
           }
-
-
       } else if (type === 'match_pair') {
-
-
           // Disabilita i pulsanti di match se si torna indietro
-
-
           document.querySelectorAll('.match-btn-left, .match-btn-right').forEach(btn => btn.disabled = true);
-
-
       }
-
       setTimeout(() => { card.style.border = ''; }, 2000);
-
     }
-
-
-
-
-    function salvaEsercizioAlternativo(isCorretta, corretta, rispostaData) {
-
-
+    
     function salvaEsercizioAlternativo(isCorretta, corretta, rispostaData, type) {
-
         if (statoRisposta[domandeCorrenti] !== null) return; 
 
-
-
         statoRisposta[domandeCorrenti] = { 
+            risposta: rispostaData, 
+            corretta: corretta, 
+            isCorretta 
+        };
 
-@@ -489,7 +569,7 @@ <h1>Modalità Docente</h1>
-
+        if (isCorretta) {
             risposteCorrette++;
-
         }
-
-
-
-
-        mostraFeedbackAlternativo(isCorretta, corretta);
-
 
         mostraFeedbackAlternativo(isCorretta, corretta, type);
-
         document.getElementById('next-btn').disabled = false;
-
         updateStats();
+    }
+    
+    // --- FUNZIONI DI NAVIGAZIONE E FINE QUIZ ---
 
+    function cambiaDomanda(delta) {
+      if (domandeCorrenti + delta >= domandeTotali) {
+        mostraRisultati();
+        return;
+      }
+      if (domandeCorrenti + delta < 0) return;
+
+      domandeCorrenti += delta;
+      
+      if (isQuizAlternativo) {
+        caricaEsercizio();
+      } else {
+        caricaDomanda();
+      }
     }
 
-@@ -538,6 +618,7 @@ <h2>Fine del Quiz!</h2>
+    function mostraRisultati() {
+      document.getElementById('card-container').style.display = 'none';
+      document.getElementById('controls-container').style.display = 'none';
+      document.getElementById('stats-container').style.display = 'none';
+      document.getElementById('progress-container').style.display = 'none';
 
+      const recap = document.getElementById('recap');
+      recap.innerHTML = `
+        <div class="card" style="text-align: center;">
+          <h2>Fine del Quiz!</h2>
+          <p style="font-size: 1.5em; margin: 20px 0;">Hai risposto correttamente a <strong>${risposteCorrette}</strong> domande su <strong>${domandeTotali}</strong>.</p>
+          <div style="margin-top: 30px;">
+              <button onclick="tornaAiQuiz()" style="background-color: #6c757d;">Ricomincia/Scegli un altro Modulo</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function tornaAiQuiz(){
+      document.getElementById('titolo-quiz').style.display='none';
+      document.getElementById('stats-container').style.display='none';
+      document.getElementById('card-container').style.display='none';
+      document.getElementById('controls-container').style.display='none';
       document.getElementById('docente-container').style.display='none';
-
       document.getElementById('progress-container').style.display='none';
-
       document.getElementById('recap').innerHTML='';
-
-
       document.getElementById('lista-docente').innerHTML=''; // Pulisce la vista docente
-
       document.getElementById('quiz-buttons').style.display='block';
-
     }
 
-
-
-@@ -546,18 +627,28 @@ <h2>Fine del Quiz!</h2>
-
+    function tornaAllaModalita(){
+      document.getElementById('quiz-buttons').style.display='none';
       document.getElementById('start-container').style.display='block';
-
     }
-
-
-
-
-    function mostraQuizDocente() {
-
-
-      // Logic for teacher view (can be updated later)
-
-
-    }
-
-
-
-
-
+    
     async function mostraQuizDocente(quizId) {
-
-
         const res = await fetch(`/quiz_all/${quizId}`);
-
-
         const domande = await res.json();
-
-
         const container = document.getElementById("lista-docente");
-
-
         container.innerHTML = `<h3 style="color:#1a73e8; margin-top:20px;">Modulo ${quizId} - Risposte Corrette</h3>`;
-
-
         
-
-
         if (domande.errore) {
-
-
              container.innerHTML += `<div class="card">${domande.errore}</div>`;
-
-
              return;
-
-
         }
 
-
-
-
-    // --- INIZIALIZZAZIONE ---
-
-
         domande.forEach((d, i) => {
-
-
             let html = `<div class="domandaRecap"><strong>${i + 1}. ${d.domanda}</strong>`;
-
-
             d.risposte.forEach(r => {
-
-
                 if (r === d.corretta) html += `<div class="risposta corretta">✔️ ${r}</div>`;
-
-
                 else html += `<div class="risposta" style="background-color:#4a505c; color: white;">${r}</div>`;
-
-
             });
-
-
             html += "</div>";
-
-
             container.innerHTML += html;
-
-
         });
-
-
     }
 
-
-
-
-    document.getElementById('start-quiz-btn').addEventListener('click', () => {
-
-
-      document.getElementById('start-container').style.display = 'none';
-
-
-      document.getElementById('quiz-buttons').style.display = 'block';
-
-
-      document.getElementById('quiz-title').innerText = 'Seleziona il Modulo di Alfabetizzazione';
-
-
-    });
-
 </script>
-
 </body>
-
 </html>
