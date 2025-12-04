@@ -1,182 +1,127 @@
 [
   {
-    "domanda": "Che cos’è Internet?",
-    "risposte": [
-      "Un insieme di server privati con accesso limitato",
-      "Una rete mondiale che collega dispositivi tramite protocolli comuni (TCP/IP)",
-      "Un programma installato sul computer per navigare online"
-    ],
-    "corretta": "Una rete mondiale che collega dispositivi tramite protocolli comuni (TCP/IP)"
+    "domanda": "Azione: Vuoi aprire la cartella 'Documenti'. Che azione esegui col mouse?",
+    "risposte": ["Doppio click sinistro veloce", "Un click destro", "Tengo premuto il tasto centrale"],
+    "corretta": "Doppio click sinistro veloce"
   },
   {
-    "domanda": "Qual è la differenza tra Internet e World Wide Web (WWW)?",
-    "risposte": [
-      "Internet è la rete globale, il WWW è un servizio che utilizza Internet",
-      "WWW è l’infrastruttura fisica, Internet è il contenuto delle pagine web",
-      "Non esiste differenza: sono sinonimi"
-    ],
-    "corretta": "Internet è la rete globale, il WWW è un servizio che utilizza Internet"
+    "domanda": "Azione: Vuoi solo SELEZIONARE una foto senza aprirla. Cosa fai?",
+    "risposte": ["Un singolo click sinistro", "Doppio click sinistro", "Un click destro"],
+    "corretta": "Un singolo click sinistro"
   },
   {
-    "domanda": "Qual è la funzione dei protocolli TCP/IP?",
-    "risposte": [
-      "Gestire la trasmissione dei dati tra dispositivi connessi in rete",
-      "Proteggere la connessione da virus e malware",
-      "Salvare i dati dell’utente durante la navigazione"
-    ],
-    "corretta": "Gestire la trasmissione dei dati tra dispositivi connessi in rete"
+    "domanda": "Scenario: Non sai cosa fa un'icona strana. Quale tasto del mouse premi per vedere il menu 'Cosa posso fare'?",
+    "risposte": ["Tasto Destro", "Tasto Sinistro", "Rotella"],
+    "corretta": "Tasto Destro"
   },
   {
-    "domanda": "Perché Internet è considerato una rivoluzione degli anni ’90?",
-    "risposte": [
-      "Ha introdotto i primi sistemi di pagamento digitale",
-      "Ha permesso la comunicazione e la condivisione di dati su scala globale",
-      "Ha sostituito completamente la rete telefonica tradizionale"
-    ],
-    "corretta": "Ha permesso la comunicazione e la condivisione di dati su scala globale"
+    "domanda": "Tecnica: Vuoi spostare un file nel cestino usando il mouse. Come si chiama questa azione?",
+    "risposte": ["Drag & Drop (Trascina e Rilascia)", "Copy & Paste", "Point & Click"],
+    "corretta": "Drag & Drop (Trascina e Rilascia)"
   },
   {
-    "domanda": "Che cos’è un motore di ricerca?",
-    "risposte": [
-      "Un programma che analizza dati e restituisce risultati in base a parole chiave",
-      "Un dispositivo che accelera la connessione a Internet",
-      "Un browser specializzato per siti web indicizzati"
-    ],
-    "corretta": "Un programma che analizza dati e restituisce risultati in base a parole chiave"
+    "domanda": "Il cursore del mouse diventa una 'I' maiuscola (I-beam). Cosa significa?",
+    "risposte": ["Che puoi scrivere o selezionare del testo in quel punto", "Che il computer è bloccato", "Che devi aspettare"],
+    "corretta": "Che puoi scrivere o selezionare del testo in quel punto"
   },
   {
-    "domanda": "Qual è la differenza tra browser e motore di ricerca?",
-    "risposte": [
-      "Il browser consente di visualizzare i siti, il motore di ricerca aiuta a trovarli",
-      "Il browser elabora i dati, il motore di ricerca li memorizza",
-      "Non c’è differenza: svolgono la stessa funzione"
-    ],
-    "corretta": "Il browser consente di visualizzare i siti, il motore di ricerca aiuta a trovarli"
+    "domanda": "Il cursore diventa una 'Rotellina che gira' o una 'Clessidra'. Cosa devi fare?",
+    "risposte": ["Aspettare, il PC sta elaborando", "Cliccare freneticamente per sbloccarlo", "Spegnere subito il monitor"],
+    "corretta": "Aspettare, il PC sta elaborando"
   },
   {
-    "domanda": "Quale di questi è un browser?",
-    "risposte": [
-      "Mozilla Firefox",
-      "Yahoo",
-      "Google"
-    ],
-    "corretta": "Mozilla Firefox"
+    "domanda": "Il cursore diventa una 'Doppia freccia' (↔ o ↕) quando lo metti sul bordo di una finestra. A cosa serve?",
+    "risposte": ["A ridimensionare (allargare/stringere) la finestra", "A chiudere la finestra", "A spostare la finestra"],
+    "corretta": "A ridimensionare (allargare/stringere) la finestra"
   },
   {
-    "domanda": "Quale di questi è un motore di ricerca?",
-    "risposte": [
-      "Bing",
-      "Microsoft Edge",
-      "Opera"
-    ],
-    "corretta": "Bing"
+    "domanda": "Tastiera: Hai scritto 'ciao' ma volevi scrivere 'Ciao'. Quale tasto tieni premuto mentre digiti la 'c'?",
+    "risposte": ["Shift (Maiusc)", "Ctrl", "Alt"],
+    "corretta": "Shift (Maiusc)"
   },
   {
-    "domanda": "Come si può verificare la sicurezza di un sito web?",
-    "risposte": [
-      "Controllando se utilizza il protocollo HTTPS e un certificato valido",
-      "Aprendolo solo tramite dispositivi mobili",
-      "Analizzando la lunghezza dell’indirizzo web"
-    ],
-    "corretta": "Controllando se utilizza il protocollo HTTPS e un certificato valido"
+    "domanda": "Attenzione: Hai premuto per sbaglio 'Caps Lock' (Bloc Maiusc). Cosa succede ora?",
+    "risposte": ["SCRIVI TUTTO COSÌ (IN MAIUSCOLO)", "scrivi tutto minuscolo", "I numeri diventano simboli"],
+    "corretta": "SCRIVI TUTTO COSÌ (IN MAIUSCOLO)"
   },
   {
-    "domanda": "Che cos’è un certificato SSL?",
-    "risposte": [
-      "Un sistema per crittografare i dati trasmessi tra utente e sito",
-      "Un antivirus che protegge i siti web dai malware",
-      "Un file temporaneo che accelera il caricamento delle pagine"
-    ],
-    "corretta": "Un sistema per crittografare i dati trasmessi tra utente e sito"
+    "domanda": "Netiquette: Perché non dovresti scrivere intere frasi in MAIUSCOLO su internet?",
+    "risposte": ["Perché equivale a URLARE ed è maleducato", "Perché consuma più inchiostro", "Perché il PC si surriscalda"],
+    "corretta": "Perché equivale a URLARE ed è maleducato"
   },
   {
-    "domanda": "Qual è la funzione principale della posta elettronica?",
-    "risposte": [
-      "Scambiare messaggi e allegati tramite Internet",
-      "Navigare tra siti sicuri",
-      "Memorizzare dati di navigazione"
-    ],
-    "corretta": "Scambiare messaggi e allegati tramite Internet"
+    "domanda": "Tasti Speciali: Quale tasto serve per confermare un comando o andare a capo?",
+    "risposte": ["Invio (Enter)", "Esc", "Tab"],
+    "corretta": "Invio (Enter)"
   },
   {
-    "domanda": "Come è strutturato un indirizzo email?",
-    "risposte": [
-      "Dominio seguito da “/” e nome utente",
-      "Nome utente seguito da “@” e dominio",
-      "Nome utente seguito da “#” e percorso di rete"
-    ],
-    "corretta": "Nome utente seguito da “@” e dominio"
+    "domanda": "Tasti Speciali: Hai sbagliato a scrivere una lettera. Quale tasto cancella verso sinistra?",
+    "risposte": ["Backspace (la freccia verso sinistra sopra Invio)", "Canc (Delete)", "Barra Spaziatrice"],
+    "corretta": "Backspace (la freccia verso sinistra sopra Invio)"
   },
   {
-    "domanda": "Qual è il significato del campo CC in una email?",
-    "risposte": [
-      "Inviare una copia visibile ad altri destinatari oltre al principale",
-      "Nascondere il messaggio agli altri destinatari",
-      "Impedire la risposta automatica del destinatario"
-    ],
-    "corretta": "Inviare una copia visibile ad altri destinatari oltre al principale"
+    "domanda": "Scorciatoie: Devi COPIARE un testo selezionato. Combinazione?",
+    "risposte": ["Ctrl + C", "Ctrl + V", "Ctrl + P"],
+    "corretta": "Ctrl + C"
   },
   {
-    "domanda": "Qual è il significato del campo CCN in una email?",
-    "risposte": [
-      "Inviare una copia a destinatari nascosti",
-      "Inviare il messaggio solo al mittente originale",
-      "Condividere l’email su più dispositivi"
-    ],
-    "corretta": "Inviare una copia a destinatari nascosti"
+    "domanda": "Scorciatoie: Dopo aver copiato, devi INCOLLARE. Combinazione?",
+    "risposte": ["Ctrl + V", "Ctrl + C", "Ctrl + X"],
+    "corretta": "Ctrl + V"
   },
   {
-    "domanda": "Che cos’è la PEC?",
-    "risposte": [
-      "Una casella email con spazio illimitato",
-      "Un sistema di posta elettronica che certifica l’invio e la ricezione con valore legale",
-      "Un protocollo Internet usato solo per comunicazioni aziendali"
-    ],
-    "corretta": "Un sistema di posta elettronica che certifica l’invio e la ricezione con valore legale"
+    "domanda": "Scorciatoie: Stai scrivendo un documento importante. Vuoi SALVARE subito. Combinazione?",
+    "risposte": ["Ctrl + S (Save)", "Ctrl + Alt + Canc", "Shift + Invio"],
+    "corretta": "Ctrl + S (Save)"
   },
   {
-    "domanda": "Quale di questi è un vantaggio della PEC?",
-    "risposte": [
-      "Garantisce la prova legale di invio e consegna dei messaggi",
-      "Cripta automaticamente tutti gli allegati in formato PDF",
-      "Funziona anche senza connessione a Internet"
-    ],
-    "corretta": "Garantisce la prova legale di invio e consegna dei messaggi"
+    "domanda": "Simboli: Devi digitare la chiocciola (@). Sulla tastiera italiana premi:",
+    "risposte": ["Alt Gr + ò", "Shift + 2", "Ctrl + Alt + Canc"],
+    "corretta": "Alt Gr + ò"
   },
   {
-    "domanda": "Qual è uno svantaggio della PEC?",
-    "risposte": [
-      "Ha costi di gestione e non è riconosciuta come standard internazionale",
-      "Non permette di inviare allegati di grandi dimensioni",
-      "Cancella automaticamente i messaggi dopo 7 giorni"
-    ],
-    "corretta": "Ha costi di gestione e non è riconosciuta come standard internazionale"
+    "domanda": "Simboli: Devi digitare il cancelletto (#). Premi:",
+    "risposte": ["Alt Gr + à", "Shift + 3", "Invio + Ctrl"],
+    "corretta": "Alt Gr + à"
   },
   {
-    "domanda": "Chi gestisce e controlla i fornitori PEC in Italia?",
-    "risposte": [
-      "Agenzia per l’Italia Digitale (AGID)",
-      "Ministero delle Comunicazioni",
-      "Camera di Commercio"
-    ],
-    "corretta": "Agenzia per l’Italia Digitale (AGID)"
+    "domanda": "A cosa serve il tasto 'Esc' (in alto a sinistra)?",
+    "risposte": ["A uscire da una modalità (es. schermo intero) o annullare", "A spegnere il PC", "A scrivere maiuscolo"],
+    "corretta": "A uscire da una modalità (es. schermo intero) o annullare"
   },
   {
-    "domanda": "Qual è la validità di una PEC inviata a una casella email ordinaria?",
-    "risposte": [
-      "Non ha pieno valore legale come una PEC-PEC",
-      "Ha lo stesso valore se l’email ordinaria conferma la ricezione",
-      "Vale solo se il destinatario accetta la notifica"
-    ],
-    "corretta": "Non ha pieno valore legale come una PEC-PEC"
+    "domanda": "Hai un portatile e non hai il mouse esterno. Cosa usi?",
+    "risposte": ["Il Touchpad", "Lo Schermo", "La tastiera numerica"],
+    "corretta": "Il Touchpad"
   },
   {
-    "domanda": "Perché la posta elettronica tradizionale è ancora molto usata?",
-    "risposte": [
-      "È gratuita, veloce e sufficiente per la maggior parte delle comunicazioni",
-      "È l’unico modo per inviare documenti ufficiali",
-      "Offre sempre una prova legale della consegna"
-    ],
-    "corretta": "È gratuita, veloce e sufficiente per la maggior parte delle comunicazioni"
+    "domanda": "Scroll: Stai leggendo una pagina web lunga. Quale parte del mouse usi per scendere?",
+    "risposte": ["La Rotella (Scroll Wheel)", "Il Tasto Destro", "Il cavo"],
+    "corretta": "La Rotella (Scroll Wheel)"
+  },
+  {
+    "domanda": "Il cursore diventa una 'Mano con l'indice puntato'. Cosa indica?",
+    "risposte": ["C'è un link cliccabile (collegamento)", "Puoi spostare l'oggetto", "Devi fermarti"],
+    "corretta": "C'è un link cliccabile (collegamento)"
+  },
+  {
+    "domanda": "Qual è la differenza tra 'Backspace' e 'Canc'?",
+    "risposte": ["Backspace cancella a sinistra del cursore, Canc a destra (o l'oggetto selezionato)", "Fanno la stessa cosa", "Canc spegne il monitor"],
+    "corretta": "Backspace cancella a sinistra del cursore, Canc a destra (o l'oggetto selezionato)"
+  },
+  {
+    "domanda": "Per scrivere i numeri velocemente (come su una calcolatrice), quale parte della tastiera usi?",
+    "risposte": ["Il Tastierino Numerico (a destra)", "I tasti funzione F1-F12", "La barra spaziatrice"],
+    "corretta": "Il Tastierino Numerico (a destra)"
+  },
+  {
+    "domanda": "Cosa succede se tieni premuto il tasto sinistro del mouse sulla barra del titolo di una finestra e muovi il mouse?",
+    "risposte": ["Sposti la finestra (Drag)", "Ingrandisci la finestra", "Chiudi la finestra"],
+    "corretta": "Sposti la finestra (Drag)"
+  },
+  {
+    "domanda": "Simboli: Come si fa solitamente la È maiuscola accentata se non c'è il tasto?",
+    "risposte": ["Si scrive E poi l'apostrofo (E') nei contesti informali", "Si preme Invio", "Non si può fare"],
+    "corretta": "Si scrive E poi l'apostrofo (E') nei contesti informali"
   }
 ]
