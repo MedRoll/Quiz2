@@ -85,7 +85,7 @@
     <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
         <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
         <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
-        <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
+        <button onclick="iniziaQuizAlternativo(3)">🖱️ Modulo 3 - Simulazione Windows (Esercizi Interattivi)</button>
         <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
         <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
     </div>
@@ -125,222 +125,409 @@
       <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
     </div>
   </div>
-
   <script>
-    let docenteMode = false;
-    let rispostaCorretta = "";
-    let punteggio = 0;
-    let ultimaDomanda = null;
-    let risposteUtente = [];
-    let indexDomanda = 0;
-    let quizCorrente = 1;
-    let MAX_DOMANDE = 0;
-    const FEEDBACK_DELAY = 200; // 0,2 secondi
+    let domandeTotali = 0;
+    let domandeCorrenti = 0;
+    let quizCorrente = 0;
+    let risposteCorrette = 0;
+    let statoRisposta = []; // Memorizza lo stato delle risposte
 
-    function setDocenteMode(mode) {
-      if(mode){
-        const pwd = prompt("Inserisci la password per accedere alla modalità docente:");
-        if(pwd !== "admin123"){ alert("❌ Password errata!"); return; }
-      }
-      docenteMode = mode;
-      document.getElementById("start-container").style.display = "none";
-      document.getElementById("quiz-buttons").style.display = "block";
-      document.getElementById("quiz-title").textContent = mode ? "Seleziona un quiz (Modalità Docente)" : "Seleziona un quiz (Modalità Studente)";
+    // Nuove variabili per la gestione dei quiz alternativi
+    let isQuizAlternativo = false;
+    let esercizioCorrente = 0;
+
+    // --- FUNZIONI COMUNI ---
+
+    function updateStats() {
+      document.getElementById('progress-text').innerText = `Domanda ${domandeCorrenti + 1} di ${domandeTotali}`;
+      document.getElementById('score-text').innerText = `Corrette: ${risposteCorrette}`;
+      // Aggiorna la barra di progresso
+      const percent = (domandeCorrenti + 1) / domandeTotali * 100;
+      document.getElementById('progress-bar').style.width = percent + '%';
     }
 
-    async function fetchDomanda(index){
-      const res = await fetch(`/quiz/${quizCorrente}/${index}`);
-      return await res.json();
-    }
+    // --- LOGICA QUIZ MULTIPLO STANDARD (Quiz 1, 2, 4, 5) ---
 
-    function aggiornaPunteggio(){
-      punteggio = risposteUtente.reduce((acc,item)=> acc + (item && item.esito ? 1 : 0),0);
-      document.getElementById('punteggio').textContent = punteggio;
-    }
+    async function iniziaQuiz(quizId) {
+      quizCorrente = quizId;
+      isQuizAlternativo = false;
+      document.getElementById('quiz-buttons').style.display = 'none';
+      document.getElementById('start-container').style.display = 'none';
+      document.getElementById('titolo-quiz').innerText = document.querySelector(`button[onclick="iniziaQuiz(${quizId})"]`).innerText;
+      document.getElementById('titolo-quiz').style.display = 'block';
 
-    async function caricaDomanda(){
-      if(MAX_DOMANDE===0){
-        const res = await fetch(`/quiz_all/${quizCorrente}`);
-        const tutte = await res.json();
-        if(!tutte.errore){ MAX_DOMANDE = tutte.length; document.getElementById("contatore").textContent = `0/${MAX_DOMANDE}`; }
-      }
-      if(indexDomanda >= MAX_DOMANDE){ mostraRecap(); return; }
-
-      const domandaData = await fetchDomanda(indexDomanda);
-      if(domandaData.errore){ mostraRecap(); return; }
-
-      ultimaDomanda = domandaData;
-      const domandaElem = document.getElementById('domanda');
-      domandaElem.textContent = domandaData.domanda;
-      domandaElem.style.animation = "fadeInUp 0.6s ease";
-
-      document.getElementById('contatore').textContent = `${indexDomanda+1}/${MAX_DOMANDE}`;
-      document.getElementById('progress-bar').style.width = Math.floor(((indexDomanda+1)/MAX_DOMANDE)*100) + "%";
-      rispostaCorretta = domandaData.corretta;
-
-      const risposte = [...domandaData.risposte].sort(() => Math.random()-0.5);
-      const container = document.getElementById('risposte');
-      container.innerHTML = "";
-      document.getElementById('feedback').textContent = "";
-
-      risposte.forEach((r,i)=>{
-        const btn = document.createElement('div');
-        btn.className = 'risposta';
-        btn.style.animationDelay = `${i*0.1}s`;
-        btn.textContent = r;
-        btn.onclick = () => verificaRisposta(btn,r);
-        container.appendChild(btn);
-      });
-
-      const salvata = risposteUtente[indexDomanda];
-      if(salvata){
-        const tutte = document.querySelectorAll('.risposta');
-        tutte.forEach(el=>{ el.onclick=null; el.style.pointerEvents='none'; });
-        if(salvata.esito) document.getElementById('feedback').textContent="✅ Corretto!";
-        else document.getElementById('feedback').textContent="❌ Sbagliato!";
-        tutte.forEach(el=>{
-          if(el.textContent===salvata.rispostaUtente){ if(salvata.esito) el.classList.add('corretta'); else el.classList.add('sbagliata'); }
-          if(!salvata.esito && el.textContent===rispostaCorretta) el.classList.add('corretta');
-        });
-      }
-      aggiornaPunteggio();
-    }
-
-    function verificaRisposta(elemento,rispostaUtenteSelezionata){
-      if(risposteUtente[indexDomanda]) return;
-
-      const tutte = document.querySelectorAll('.risposta');
-      tutte.forEach(el=>el.onclick=null);
-
-      const esitoCorretto = rispostaUtenteSelezionata===rispostaCorretta;
-      if(esitoCorretto) { elemento.classList.add('corretta'); document.getElementById('feedback').textContent="✅ Corretto!"; }
-      else { elemento.classList.add('sbagliata'); document.getElementById('feedback').textContent="❌ Sbagliato!"; tutte.forEach(el=>{ if(el.textContent===rispostaCorretta) el.classList.add('corretta'); }); }
-
-      risposteUtente[indexDomanda] = {
-        domanda: ultimaDomanda.domanda,
-        rispostaUtente: rispostaUtenteSelezionata,
-        corretta: rispostaCorretta,
-        esito: esitoCorretto
-      };
-
-      aggiornaPunteggio();
-      setTimeout(()=>{ indexDomanda++; caricaDomanda(); }, FEEDBACK_DELAY);
-    }
-
-    function prossimaDomanda(){ indexDomanda++; caricaDomanda(); }
-    function domandaPrecedente(){ if(indexDomanda>0){ indexDomanda--; caricaDomanda(); } }
-
-    function mostraRecap(){
-      document.getElementById('controls-container').style.display='none';
-      document.getElementById('domanda').textContent="📊 Test completato!";
-      document.getElementById('risposte').innerHTML="";
-      document.getElementById('feedback').textContent="";
-
-      let recapHTML="<h2 style='margin-bottom:20px;'>Riepilogo Risposte</h2><div>";
-      risposteUtente.forEach((item,i)=>{
-        if(!item) return;
-        const corretta = item.rispostaUtente===item.corretta;
-        recapHTML+=`
-          <div class='domandaRecap'>
-            <div><strong>${i+1}. ${item.domanda}</strong></div>
-            ${!corretta? `<div><strong>Tua risposta:</strong> <span style="color:red;">${item.rispostaUtente}</span></div>` :``}
-            <div><strong>Risposta corretta:</strong> <span style="color:lightgreen;">${item.corretta}</span></div>
-            <div><strong>Esito:</strong> ${item.esito ? '✅ Corretto' : '❌ Sbagliato'}</div>
-          </div>`;
-      });
-      recapHTML+="</div>";
-
-      // Conteggio corrette, sbagliate, non date
-      const corrette = risposteUtente.filter(r=>r && r.esito).length;
-      const sbagliate = risposteUtente.filter(r=>r && !r.esito).length;
-      const nonDate = MAX_DOMANDE - risposteUtente.length;
-
-      recapHTML+=`<h3 style="margin-top:20px; text-align:center;">Statistiche Risposte</h3>
-        <canvas id="graficoRiepilogo" style="max-width:500px; margin:auto; display:block;"></canvas>
-        <div style="margin-top:20px; text-align:center;">
-          <button onclick="ricomincia()">🔄 Rifai questo Quiz</button>
-          <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button>
-        </div>`;
-
-      document.getElementById('recap').innerHTML=recapHTML;
-
-      // Creazione grafico
-      const ctx=document.getElementById('graficoRiepilogo').getContext('2d');
-      new Chart(ctx,{
-        type:'bar',
-        data:{
-          labels:['Corrette','Sbagliate','Non Risposte'],
-          datasets:[{
-            label:'Risposte',
-            data:[corrette,sbagliate,nonDate],
-            backgroundColor:['#28a745','#dc3545','#6c757d']
-          }]
-        },
-        options:{
-          responsive:true,
-          plugins:{
-            legend:{display:false},
-            datalabels:{
-              anchor:'end',
-              align:'end',
-              color:'white',
-              font:{weight:'bold',size:14},
-              formatter: function(value){ return value; }
-            }
-          },
-          scales:{
-            x:{ ticks:{ color:'white' } },
-            y:{ beginAtZero:true, ticks:{ color:'white', stepSize:1 } }
-          }
-        },
-        plugins:[ChartDataLabels]
-      });
-    }
-
-    function ricomincia(){
-      punteggio=0; indexDomanda=0; risposteUtente=[];
-      document.getElementById('punteggio').textContent="0";
-      document.getElementById('recap').innerHTML="";
-      document.getElementById('controls-container').style.display='block';
-      document.getElementById('progress-container').style.display='block';
+      const res = await fetch(`/quiz_all/${quizId}`);
+      const domande = await res.json();
+      domandeTotali = domande.length;
+      domandeCorrenti = 0;
+      risposteCorrette = 0;
+      statoRisposta = new Array(domandeTotali).fill(null);
+      
+      document.getElementById('card-container').style.display = 'block';
+      document.getElementById('controls-container').style.display = 'block';
+      document.getElementById('stats-container').style.display = 'flex';
+      document.getElementById('progress-container').style.display = 'block';
+      
       caricaDomanda();
     }
 
-    function terminaTest(){ indexDomanda=MAX_DOMANDE; mostraRecap(); }
+    async function caricaDomanda() {
+      const res = await fetch(`/quiz/${quizCorrente}/${domandeCorrenti}`);
+      const d = await res.json();
+      const card = document.getElementById('card-container');
+      card.innerHTML = '';
+      
+      if (d.errore) {
+        card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
+        return;
+      }
 
-    async function iniziaQuiz(quizId){
-      quizCorrente=quizId;
-      document.getElementById('quiz-buttons').style.display='none';
-      if(docenteMode){
-        document.getElementById('docente-container').style.display='block';
-        caricaModalitaDocente();
+      card.innerHTML += `<div class="card">
+                          <p class="question-text">${d.domanda}</p>
+                          <div id="risposte-container">
+                            ${d.risposte.map((r, i) => 
+                              `<button class="risposta-btn" onclick="controllaRisposta('${r}', '${d.corretta}', this)">${r}</button>`
+                            ).join('')}
+                          </div>
+                        </div>`;
+      
+      updateStats();
+      const stato = statoRisposta[domandeCorrenti];
+      if (stato !== null) {
+        disableAnswers(stato.risposta, stato.corretta);
+      }
+      
+      document.getElementById('next-btn').disabled = stato === null;
+      document.getElementById('prev-btn').disabled = domandeCorrenti === 0;
+    }
+
+    function controllaRisposta(risposta, corretta, button) {
+      if (statoRisposta[domandeCorrenti] !== null) return; 
+
+      const isCorretta = risposta === corretta;
+      statoRisposta[domandeCorrenti] = { risposta, corretta, isCorretta };
+
+      if (isCorretta) {
+        risposteCorrette++;
+      }
+      
+      disableAnswers(risposta, corretta);
+      document.getElementById('next-btn').disabled = false;
+      updateStats();
+      mostraFeedback(isCorretta);
+    }
+
+    function disableAnswers(rispostaSelezionata, corretta) {
+      document.querySelectorAll('#risposte-container .risposta-btn').forEach(btn => {
+        btn.disabled = true;
+        if (btn.innerText === corretta) {
+          btn.classList.add('corretta');
+        } else if (btn.innerText === rispostaSelezionata && rispostaSelezionata !== corretta) {
+          btn.classList.add('sbagliata');
+        } else {
+          btn.classList.add('disattivata');
+        }
+      });
+    }
+
+    function mostraFeedback(isCorretta) {
+      const card = document.getElementById('card-container').querySelector('.card');
+      card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
+      card.innerHTML += `<div style="margin-top: 15px; padding: 10px; border-radius: 5px; background-color: ${isCorretta ? '#28a74533' : '#dc354533'};">
+                            ${isCorretta ? '✅ Risposta Esatta!' : '❌ Risposta Sbagliata! La risposta corretta è: ' + statoRisposta[domandeCorrenti].corretta}
+                         </div>`;
+      setTimeout(() => { card.style.border = ''; }, 2000);
+    }
+
+    // --- LOGICA QUIZ ALTERNATIVO (Modulo 3) ---
+    
+    async function iniziaQuizAlternativo(quizId) {
+      quizCorrente = quizId;
+      isQuizAlternativo = true;
+      document.getElementById('quiz-buttons').style.display = 'none';
+      document.getElementById('start-container').style.display = 'none';
+      document.getElementById('titolo-quiz').innerText = document.querySelector(`button[onclick="iniziaQuizAlternativo(${quizId})"]`).innerText;
+      document.getElementById('titolo-quiz').style.display = 'block';
+
+      const res = await fetch(`/quiz_all_alt/${quizId}`);
+      const domande = await res.json();
+      domandeTotali = domande.length;
+      domandeCorrenti = 0;
+      risposteCorrette = 0;
+      statoRisposta = new Array(domandeTotali).fill(null);
+      
+      document.getElementById('card-container').style.display = 'block';
+      document.getElementById('controls-container').style.display = 'block';
+      document.getElementById('stats-container').style.display = 'flex';
+      document.getElementById('progress-container').style.display = 'block';
+      
+      caricaEsercizio();
+    }
+
+    async function caricaEsercizio() {
+      if (!isQuizAlternativo) return caricaDomanda();
+
+      const res = await fetch(`/quiz_alt/${quizCorrente}/${domandeCorrenti}`);
+      const d = await res.json();
+      const card = document.getElementById('card-container');
+      card.innerHTML = '';
+      
+      if (d.errore) {
+        card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
+        return;
+      }
+
+      let esercizioHTML = '';
+
+      switch (d.type) {
+        case 'order':
+          // Esercizio di Sequenziamento (l'utente clicca nell'ordine corretto)
+          esercizioHTML = `
+            <div id="order-target" class="list-group mb-3">
+                <p><strong>Sequenza scelta:</strong></p>
+                <div id="order-sequence" style="min-height: 40px; border: 1px solid #1a73e8; padding: 5px; border-radius: 5px; background: #3c4043;">Nessun passo selezionato.</div>
+            </div>
+            <p><strong>Clicca i passi nell'ordine corretto:</strong></p>
+            <div id="order-options" class="list-group">
+                ${d.passi.sort(() => Math.random() - 0.5).map(passo => 
+                    `<button class="risposta-btn passo-btn" onclick="aggiungiPasso(this)">${passo}</button>`
+                ).join('')}
+            </div>
+            <button id="controlla-ordine" class="check-btn" onclick="controllaOrdine('${d.corretto.join('|||')}')">Controlla Ordine</button>
+          `;
+          break;
+
+        case 'match_pair':
+          // Esercizio di Associazione
+          let optionsRight = [...d.options_right].sort(() => Math.random() - 0.5);
+          esercizioHTML = `
+            <div style="display: flex; justify-content: space-around; gap: 10px;">
+                <div id="match-left" class="list-group" style="flex: 1;">
+                    <p><strong>Concetto (Sinistra)</strong></p>
+                    ${d.options_left.map((item, i) => `<button class="risposta-btn match-btn-left" data-index="${i}" onclick="selezionaMatch(this, 'left')">${item}</button>`).join('')}
+                </div>
+                <div id="match-right" class="list-group" style="flex: 1;">
+                    <p><strong>Descrizione (Destra)</strong></p>
+                    ${optionsRight.map((item, i) => `<button class="risposta-btn match-btn-right" data-value="${item}" onclick="selezionaMatch(this, 'right')">${item}</button>`).join('')}
+                </div>
+            </div>
+            <div id="match-selection" style="margin-top: 20px; text-align: center;">
+                <p>Seleziona un elemento a sinistra, poi il corrispondente a destra.</p>
+            </div>
+            <button id="controlla-match" class="check-btn" onclick="controllaAssociazione('${JSON.stringify(d.corretto_pairs)}')">Controlla Associazione</button>
+          `;
+          break;
+        
+        case 'input_text':
+          // Esercizio di Input Testuale (Simulazione Comando)
+          esercizioHTML = `
+            <div style="text-align: center;">
+                <p><strong>Cosa digiteresti (parola singola)?</strong></p>
+                <input type="text" id="input-command" class="form-control" style="width: 80%; max-width: 300px; padding: 10px; margin: 10px auto; border-radius: 5px; border: none; font-size: 1.1em; text-align: center; color: #000;" placeholder="Digita qui il comando o la parola">
+                <p style="font-size: 0.9em; color: #aaa;">Suggerimento: ${d.hint || 'Nessun suggerimento'}</p>
+            </div>
+            <button id="controlla-input" class="check-btn" onclick="controllaInput('${d.corretta}')">Controlla Input</button>
+          `;
+          break;
+
+        default:
+          esercizioHTML = '<h2>Tipo di esercizio non supportato.</h2>';
+          break;
+      }
+      
+      card.innerHTML = `<div class="card">
+                          <p class="question-text">${d.domanda}</p>
+                          <div id="esercizio-container">${esercizioHTML}</div>
+                        </div>`;
+
+      // Ripristina lo stato se già risposto
+      if (statoRisposta[domandeCorrenti] !== null) {
+          const stato = statoRisposta[domandeCorrenti];
+          mostraFeedbackAlternativo(stato.isCorretta, stato.corretta);
+          document.getElementById('next-btn').disabled = false;
+          // Disabilita i controlli dell'esercizio
+          const checkBtn = document.querySelector('.check-btn');
+          if(checkBtn) checkBtn.disabled = true;
       } else {
-        punteggio=0; indexDomanda=0; risposteUtente=[]; MAX_DOMANDE=0;
-        document.getElementById('punteggio').textContent='0';
-        document.getElementById('recap').innerHTML='';
-        document.getElementById('titolo-quiz').style.display='block';
-        document.getElementById('stats-container').style.display='flex';
-        document.getElementById('card-container').style.display='block';
-        document.getElementById('controls-container').style.display='block';
-        document.getElementById('progress-container').style.display='block';
+        document.getElementById('next-btn').disabled = true;
+      }
+
+      updateStats();
+      document.getElementById('prev-btn').disabled = domandeCorrenti === 0;
+    }
+
+    // --- LOGICA SPECIFICA ESERCIZIO ORDINE ---
+    let passiScelti = [];
+    function aggiungiPasso(button) {
+        if(statoRisposta[domandeCorrenti] !== null) return;
+        passiScelti.push(button.innerText);
+        document.getElementById('order-sequence').innerText = passiScelti.join(' → ');
+        button.disabled = true;
+        button.classList.add('sbagliata'); // Uso 'sbagliata' per indicare che è stato selezionato
+    }
+    
+    function controllaOrdine(correttoStr) {
+        const corretta = correttoStr.split('|||');
+        const isCorretta = passiScelti.join('|||') === corretta.join('|||');
+        
+        salvaEsercizioAlternativo(isCorretta, corretta.join(' → '), passiScelti.join(' → '));
+        passiScelti = []; // Reset per la prossima
+        
+        if (isCorretta) {
+            document.querySelectorAll('.passo-btn').forEach(btn => btn.classList.remove('sbagliata'));
+            document.getElementById('order-sequence').classList.add('corretta');
+        } else {
+            document.getElementById('order-sequence').classList.add('sbagliata');
+        }
+    }
+
+    // --- LOGICA SPECIFICA ESERCIZIO MATCH ---
+    let selectedLeft = null;
+    let selectedRight = null;
+    let matchedPairs = [];
+
+    function selezionaMatch(button, side) {
+        if(statoRisposta[domandeCorrenti] !== null) return;
+
+        // Reset visivo di tutti
+        document.querySelectorAll('.match-btn-left').forEach(btn => btn.classList.remove('match-active'));
+        document.querySelectorAll('.match-btn-right').forEach(btn => btn.classList.remove('match-active'));
+
+        if (side === 'left') {
+            selectedLeft = button;
+            selectedRight = null;
+            button.classList.add('match-active');
+        } else if (side === 'right') {
+            selectedRight = button;
+            selectedRight.classList.add('match-active');
+        }
+
+        // Se entrambi selezionati, prova l'accoppiamento
+        if (selectedLeft && selectedRight) {
+            const pair = [selectedLeft.innerText, selectedRight.innerText];
+            const isMatch = matchedPairs.every(p => p[0] !== pair[0] && p[1] !== pair[1]); // Evita duplicati
+
+            if (isMatch) {
+                // Rimuovi dai pulsanti e aggiungi come coppia visualizzata
+                selectedLeft.style.display = 'none';
+                selectedRight.style.display = 'none';
+                matchedPairs.push(pair);
+                document.getElementById('match-selection').innerHTML += `<div class="risposta corretta match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em;">✅ ${pair[0]} ↔️ ${pair[1]}</div>`;
+            }
+            
+            // Reset selezione
+            selectedLeft = null;
+            selectedRight = null;
+            document.querySelectorAll('.match-btn-left').forEach(btn => btn.classList.remove('match-active'));
+            document.querySelectorAll('.match-btn-right').forEach(btn => btn.classList.remove('match-active'));
+        }
+    }
+
+    function controllaAssociazione(correttoJson) {
+        const corretti = JSON.parse(correttoJson);
+        if (matchedPairs.length !== corretti.length) {
+            salvaEsercizioAlternativo(false, 'Tutte le coppie devono essere associate');
+            return;
+        }
+
+        let corretteCount = 0;
+        let risposteDate = matchedPairs.map(p => p.join(' = '));
+
+        for (const [left, right] of matchedPairs) {
+            const found = corretti.some(([cLeft, cRight]) => cLeft === left && cRight === right);
+            if (found) {
+                corretteCount++;
+            }
+        }
+
+        const isCorretta = corretteCount === corretti.length;
+        const correttaStr = corretti.map(p => p.join(' = ')).join(' | ');
+
+        salvaEsercizioAlternativo(isCorretta, correttaStr, risposteDate.join(' | '));
+    }
+
+
+    // --- LOGICA SPECIFICA ESERCIZIO INPUT ---
+
+    function controllaInput(corretta) {
+        const inputField = document.getElementById('input-command');
+        const rispostaUtente = inputField.value.trim();
+        const isCorretta = rispostaUtente.toLowerCase() === corretta.toLowerCase();
+
+        salvaEsercizioAlternativo(isCorretta, corretta, rispostaUtente);
+        inputField.disabled = true;
+    }
+
+    // --- FUNZIONI RISULTATO E SALVATAGGIO ALTERNATIVO ---
+    
+    function mostraFeedbackAlternativo(isCorretta, corretta) {
+      const card = document.getElementById('card-container').querySelector('.card');
+      card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
+      const testoFeedback = isCorretta ? 
+                            '✅ Esercizio completato correttamente!' : 
+                            `❌ Non corretto! La risposta corretta è: ${corretta}`;
+      
+      const checkBtn = document.querySelector('.check-btn');
+      if(checkBtn) checkBtn.disabled = true;
+
+      card.innerHTML += `<div style="margin-top: 15px; padding: 10px; border-radius: 5px; background-color: ${isCorretta ? '#28a74533' : '#dc354533'};">
+                            ${testoFeedback}
+                         </div>`;
+      setTimeout(() => { card.style.border = ''; }, 2000);
+    }
+    
+    function salvaEsercizioAlternativo(isCorretta, corretta, rispostaData) {
+        if (statoRisposta[domandeCorrenti] !== null) return; 
+
+        statoRisposta[domandeCorrenti] = { 
+            risposta: rispostaData, 
+            corretta: corretta, 
+            isCorretta 
+        };
+
+        if (isCorretta) {
+            risposteCorrette++;
+        }
+
+        mostraFeedbackAlternativo(isCorretta, corretta);
+        document.getElementById('next-btn').disabled = false;
+        updateStats();
+    }
+    
+    // --- FUNZIONI DI NAVIGAZIONE E FINE QUIZ ---
+
+    function cambiaDomanda(delta) {
+      if (domandeCorrenti + delta >= domandeTotali) {
+        mostraRisultati();
+        return;
+      }
+      if (domandeCorrenti + delta < 0) return;
+
+      domandeCorrenti += delta;
+      
+      if (isQuizAlternativo) {
+        caricaEsercizio();
+      } else {
         caricaDomanda();
       }
     }
 
-    async function caricaModalitaDocente(){
-      const res=await fetch(`/quiz_all/${quizCorrente}`);
-      const domande=await res.json();
-      const container=document.getElementById("lista-docente");
-      container.innerHTML="";
-      domande.forEach((d,i)=>{
-        let html=`<div class="card"><div style="font-size:1.2em; margin-bottom:10px;"><strong>${i+1}. ${d.domanda}</strong></div>`;
-        d.risposte.forEach(r=>{
-          if(r===d.corretta) html+=`<div class="risposta corretta">✔️ ${r}</div>`;
-          else html+=`<div class="risposta">${r}</div>`;
-        });
-        html+="</div>";
-        container.innerHTML+=html;
-      });
+    function mostraRisultati() {
+      document.getElementById('card-container').style.display = 'none';
+      document.getElementById('controls-container').style.display = 'none';
+      document.getElementById('stats-container').style.display = 'none';
+      document.getElementById('progress-container').style.display = 'none';
+
+      const recap = document.getElementById('recap');
+      recap.innerHTML = `
+        <div class="card" style="text-align: center;">
+          <h2>Fine del Quiz!</h2>
+          <p style="font-size: 1.5em; margin: 20px 0;">Hai risposto correttamente a <strong>${risposteCorrette}</strong> domande su <strong>${domandeTotali}</strong>.</p>
+          <div style="margin-top: 30px;">
+              <button onclick="tornaAiQuiz()" style="background-color: #6c757d;">Ricomincia/Scegli un altro Modulo</button>
+          </div>
+        </div>
+      `;
     }
 
     function tornaAiQuiz(){
@@ -358,6 +545,19 @@
       document.getElementById('quiz-buttons').style.display='none';
       document.getElementById('start-container').style.display='block';
     }
-  </script>
+    
+    function mostraQuizDocente() {
+      // Logic for teacher view (can be updated later)
+    }
+
+
+    // --- INIZIALIZZAZIONE ---
+
+    document.getElementById('start-quiz-btn').addEventListener('click', () => {
+      document.getElementById('start-container').style.display = 'none';
+      document.getElementById('quiz-buttons').style.display = 'block';
+      document.getElementById('quiz-title').innerText = 'Seleziona il Modulo di Alfabetizzazione';
+    });
+</script>
 </body>
 </html>
