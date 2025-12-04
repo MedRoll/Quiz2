@@ -1,182 +1,227 @@
 [
   {
-    "domanda": "Cosa sono i Social Media?",
+    "domanda": "Cos'è l'Hardware (il Corpo) di un computer?",
     "risposte": [
-      "Strumenti digitali per gestire documenti aziendali",
-      "Piattaforme digitali per connettersi, condividere e interagire",
-      "Servizi di cloud storage per archiviare file"
+      "I programmi come Windows o Word",
+      "Tutto ciò che è fisico e puoi toccare (Mouse, CPU, Schermo).",
+      "Il servizio internet"
     ],
-    "corretta": "Piattaforme digitali per connettersi, condividere e interagire"
+    "corretta": "Tutto ciò che è fisico e puoi toccare (Mouse, CPU, Schermo)."
   },
   {
-    "domanda": "In quale periodo sono nati i primi Social Media come MySpace e Friendster?",
+    "domanda": "Cos'è il Software (l'Anima) di un computer?",
     "risposte": [
-      "Metà anni ’90",
-      "Fine anni ’90",
-      "Inizio anni 2000"
+      "La tastiera e il monitor",
+      "L'alimentatore",
+      "Il set di istruzioni che fa funzionare l'Hardware (Programmi)."
     ],
-    "corretta": "Inizio anni 2000"
+    "corretta": "Il set di istruzioni che fa funzionare l'Hardware (Programmi)."
   },
   {
-    "domanda": "Quale social ha segnato la crescita esplosiva dei social media dal 2004?",
+    "domanda": "Quale componente hardware viene definito come \"Il Cervello\" o \"Il Calcolatore\" del PC?",
     "risposte": [
-      "Orkut",
-      "Facebook",
-      "Hi5"
+      "La RAM",
+      "La CPU (Central Processing Unit/Processore).",
+      "L'Hard Disk"
     ],
-    "corretta": "Facebook"
+    "corretta": "La CPU (Central Processing Unit/Processore)."
   },
   {
-    "domanda": "Quale tra i seguenti NON è un Social Media?",
+    "domanda": "Cosa sono i \"Core\" all'interno della CPU?",
     "risposte": [
-      "Instagram",
-      "TikTok",
-      "TripAdvisor"
+      "I cavi di alimentazione",
+      "Sono come singoli impiegati che eseguono i lavori contemporaneamente.",
+      "I chip di memoria"
     ],
-    "corretta": "TripAdvisor"
+    "corretta": "Sono come singoli impiegati che eseguono i lavori contemporaneamente."
   },
   {
-    "domanda": "Qual è la fascia d’età che rappresenta oltre il 60% degli utenti di Instagram?",
+    "domanda": "Qual è il ruolo della \"RAM\" (Memoria Temporanea)?",
     "risposte": [
-      "18-34 anni",
-      "35-44 anni",
-      "13-17 anni"
+      "È la \"libreria\" dove salvi i file permanentemente",
+      "È il \"banco da lavoro\" dove risiedono i dati e programmi in uso in questo momento.",
+      "È la scheda madre"
     ],
-    "corretta": "18-34 anni"
+    "corretta": "È il \"banco da lavoro\" dove risiedono i dati e programmi in uso in questo momento."
   },
   {
-    "domanda": "Quale funzionalità di Instagram permette la pubblicazione di contenuti temporanei che durano 24 ore?",
+    "domanda": "Cosa succede ai dati e ai programmi sulla RAM quando spegni il PC?",
     "risposte": [
-      "Post",
-      "Stories",
-      "Highlights"
+      "Vengono salvati sull'Hard Disk automaticamente",
+      "Si svuota (Per questo bisogna salvare i documenti).",
+      "Restano in RAM"
     ],
-    "corretta": "Stories"
+    "corretta": "Si svuota (Per questo bisogna salvare i documenti)."
   },
   {
-    "domanda": "Qual è il rischio legato all’uso eccessivo di Instagram?",
+    "domanda": "Cosa si intende per \"Memoria di Massa\" (Hard Disk/SSD)?",
     "risposte": [
-      "Dipendenza, ansia e bassa autostima",
-      "Maggiore esposizione a pubblicità mirata",
-      "Perdita di memoria del dispositivo"
+      "L'archivio permanente, la \"libreria\" dove restano i file anche a PC spento.",
+      "La webcam",
+      "Il processore"
     ],
-    "corretta": "Dipendenza, ansia e bassa autostima"
+    "corretta": "L'archivio permanente, la \"libreria\" dove restano i file anche a PC spento."
   },
   {
-    "domanda": "Qual è la caratteristica principale dei video di TikTok?",
+    "domanda": "Qual è la grande differenza tra HDD (Hard Disk Tradizionale) e SSD (Solid State Drive)?",
     "risposte": [
-      "Sono ottimizzati per la realtà aumentata",
-      "Sono brevi, creativi e spesso legati a trend musicali",
-      "Sono visibili solo agli amici più stretti"
+      "L'HDD è più veloce",
+      "L'HDD è più moderno",
+      "L'SSD è più veloce e non ha parti meccaniche in movimento."
     ],
-    "corretta": "Sono brevi, creativi e spesso legati a trend musicali"
+    "corretta": "L'SSD è più veloce e non ha parti meccaniche in movimento."
   },
   {
-    "domanda": "Quale fascia d’età rappresenta la maggior parte degli utenti di TikTok?",
+    "domanda": "Quali sono i \"Dispositivi di Input\" (I Sensi)?",
     "risposte": [
-      "13-24 anni",
-      "25-34 anni",
-      "45-54 anni"
+      "Servono per dare comandi al computer (es. Mouse, Tastiera, Microfono).",
+      "Servono al computer per risponderci (es. Monitor)",
+      "Sono i cavi"
     ],
-    "corretta": "13-24 anni"
+    "corretta": "Servono per dare comandi al computer (es. Mouse, Tastiera, Microfono)."
   },
   {
-    "domanda": "Quale tra queste è una tipologia di contenuto pubblicitario su TikTok?",
+    "domanda": "Quali sono i \"Dispositivi di Output\" (La Voce)?",
     "risposte": [
-      "Hashtag Challenge sponsorizzata",
-      "Product Placement in serie TV",
-      "Banner display su siti esterni"
+      "Servono per dare comandi",
+      "Servono al computer per rispondere a noi (es. Monitor, Stampante, Cuffie).",
+      "Sono i programmi"
     ],
-    "corretta": "Hashtag Challenge sponsorizzata"
+    "corretta": "Servono al computer per rispondere a noi (es. Monitor, Stampante, Cuffie)."
   },
   {
-    "domanda": "In che anno è stato fondato Facebook da Mark Zuckerberg ad Harvard?",
+    "domanda": "Cos'è un \"Sistema Operativo\" (OS) come Windows?",
     "risposte": [
-      "2004",
-      "2008",
-      "2012"
+      "È il software fondamentale (il \"Governatore\") che gestisce tutto l'Hardware.",
+      "Un'applicazione per scrivere",
+      "Un chip sulla scheda madre"
     ],
-    "corretta": "2004"
+    "corretta": "È il software fondamentale (il \"Governatore\") che gestisce tutto l'Hardware."
   },
   {
-    "domanda": "Quale società ha acquistato YouTube nel 2006?",
+    "domanda": "Cos'è il \"Software Applicativo\" (Le App)?",
     "risposte": [
-      "Yahoo",
-      "Google",
-      "Meta"
+      "La tastiera e il mouse",
+      "I programmi che installiamo per fare un compito specifico (es. Word, Zoom, Chrome).",
+      "Il sistema operativo"
     ],
-    "corretta": "Google"
+    "corretta": "I programmi che installiamo per fare un compito specifico (es. Word, Zoom, Chrome)."
   },
   {
-    "domanda": "Qual è la funzione principale di YouTube Live?",
+    "domanda": "Cosa sono i \"Driver\"?",
     "risposte": [
-      "Monetizzare con le pubblicità in streaming",
-      "Trasmettere eventi in diretta con interazione del pubblico",
-      "Condividere playlist musicali private"
+      "Piccoli cavi di collegamento",
+      "Piccoli software che permettono al Sistema Operativo di \"parlare\" con una specifica periferica (es. stampante).",
+      "Tipi di computer portatili"
     ],
-    "corretta": "Trasmettere eventi in diretta con interazione del pubblico"
+    "corretta": "Piccoli software che permettono al Sistema Operativo di \"parlare\" con una specifica periferica (es. stampante)."
   },
   {
-    "domanda": "Quale tra i seguenti è un pericolo di YouTube?",
+    "domanda": "Qual è la ragione principale per cui è importante fare gli \"Aggiornamenti\" del Software?",
     "risposte": [
-      "Contenuti inappropriati e problemi di copyright",
-      "Sovraccarico della banda Internet",
-      "Necessità di un account premium per accedere"
+      "Sicurezza: chiudono le \"porte\" che i malintenzionati potrebbero usare (correzione bug).",
+      "Rendere il PC di un altro colore",
+      "Aumentare la RAM"
     ],
-    "corretta": "Contenuti inappropriati e problemi di copyright"
+    "corretta": "Sicurezza: chiudono le \"porte\" che i malintenzionati potrebbero usare (correzione bug)."
   },
   {
-    "domanda": "Che cos’è un sito web?",
+    "domanda": "Cos'è il \"Bit\" (Binary Digit), l'unità minima di informazione?",
     "risposte": [
-      "Una raccolta di pagine web accessibili tramite un URL",
-      "Una piattaforma interattiva riservata ai soli iscritti",
-      "Un software installabile solo su server dedicati"
+      "Un TeraByte",
+      "Un interruttore \"acceso (1) o spento (0)\".",
+      "1000 Byte"
     ],
-    "corretta": "Una raccolta di pagine web accessibili tramite un URL"
+    "corretta": "Un interruttore \"acceso (1) o spento (0)\"."
   },
   {
-    "domanda": "Qual è la principale differenza tra sito web ed e-commerce?",
+    "domanda": "Quanti Bit formano un \"Byte\"?",
     "risposte": [
-      "L’e-commerce permette vendite online, il sito web informazione e presenza online",
-      "Il sito web è sempre istituzionale, l’e-commerce sempre commerciale",
-      "L’e-commerce è accessibile solo da mobile, il sito web anche da desktop"
+      "1 Bit",
+      "8 Bit",
+      "1000 Bit"
     ],
-    "corretta": "L’e-commerce permette vendite online, il sito web informazione e presenza online"
+    "corretta": "8 Bit"
   },
   {
-    "domanda": "Quale tra le seguenti è una tipologia di e-commerce?",
+    "domanda": "Se un file misura 10 MB (Megabyte), è più grande o più piccolo di 1 GB (Gigabyte)?",
     "risposte": [
-      "B2B (Business to Business)",
-      "API (Application Programming Interface)",
-      "SaaS (Software as a Service)"
+      "Più grande, perché 1 MB = 1000 GB",
+      "Molto più piccolo, perché 1 GB = 1000 MB.",
+      "Hanno la stessa dimensione"
     ],
-    "corretta": "B2B (Business to Business)"
+    "corretta": "Molto più piccolo, perché 1 GB = 1000 MB."
   },
   {
-    "domanda": "Quale tipologia di e-commerce indica la vendita diretta dal produttore al consumatore, senza intermediari?",
+    "domanda": "Quale unità di misura è usata per misurare la capacità di Hard Disk e SSD moderni?",
     "risposte": [
-      "B2C",
-      "D2C",
-      "C2C"
+      "Kilobyte (KB)",
+      "Byte",
+      "Terabyte (TB) o centinaia di Gigabyte (GB)."
     ],
-    "corretta": "D2C"
+    "corretta": "Terabyte (TB) o centinaia di Gigabyte (GB)."
   },
   {
-    "domanda": "Cosa significa SEO?",
+    "domanda": "Cos'è il \"Cloud\" (La Nuvola)?",
     "risposte": [
-      "Social Engagement Optimization",
-      "Search Engine Optimization",
-      "Strategy for E-commerce Optimization"
+      "Un software di sistema",
+      "Computer (server) remoti e connessi a Internet dove puoi salvare i tuoi file.",
+      "Un tipo di CPU"
     ],
-    "corretta": "Search Engine Optimization"
+    "corretta": "Computer (server) remoti e connessi a Internet dove puoi salvare i tuoi file."
   },
   {
-    "domanda": "Qual è la differenza principale tra SEO e SEM?",
+    "domanda": "Perché dovresti usare il \"Cloud\" (es. Google Drive, Dropbox)?",
     "risposte": [
-      "SEO è organico, SEM è basato su annunci a pagamento",
-      "SEO riguarda solo i contenuti, SEM solo i social media",
-      "SEM è una tecnica avanzata di SEO tecnico"
+      "Non offre vantaggi reali",
+      "Per l'Accessibilità, la Condivisione e per il Backup (salvare i file al sicuro).",
+      "Rallenta la connessione"
     ],
-    "corretta": "SEO è organico, SEM è basato su annunci a pagamento"
+    "corretta": "Per l'Accessibilità, la Condivisione e per il Backup (salvare i file al sicuro)."
+  },
+  {
+    "domanda": "Cosa rappresenta il tuo \"Account Utente\" sul PC o su un servizio online?",
+    "risposte": [
+      "Un tipo di virus",
+      "La tua \"identità digitale\" (il tuo passaporto per accedere ai servizi personalizzati).",
+      "La RAM"
+    ],
+    "corretta": "La tua \"identità digitale\" (il tuo passaporto per accedere ai servizi personalizzati)."
+  },
+  {
+    "domanda": "Qual è una caratteristica essenziale di una \"Buona Password\"?",
+    "risposte": [
+      "Contenere il tuo nome o data di nascita",
+      "Essere lunga (almeno 8-10 caratteri) e mista (lettere, numeri, simboli).",
+      "Essere una parola comune"
+    ],
+    "corretta": "Essere lunga (almeno 8-10 caratteri) e mista (lettere, numeri, simboli)."
+  },
+  {
+    "domanda": "Cosa indicano la \"Risoluzione\" dello schermo, ad esempio 1920x1080?",
+    "risposte": [
+      "La dimensione fisica del monitor",
+      "Quanti \"pixel\" (punti di luce) ci sono, definendo la qualità e nitidezza dell'immagine.",
+      "La potenza della CPU"
+    ],
+    "corretta": "Quanti \"pixel\" (punti di luce) ci sono, definendo la qualità e nitidezza dell'immagine."
+  },
+  {
+    "domanda": "Qual è il tipo di computer più leggero e portatile, con batteria e tutti i componenti integrati?",
+    "risposte": [
+      "Desktop (Fisso)",
+      "All-in-One (AIO)",
+      "Laptop (Portatile)"
+    ],
+    "corretta": "Laptop (Portatile)"
+  },
+  {
+    "domanda": "Qual è la porta USB più moderna, piccola, reversibile e con tendenza a diventare lo standard per tutti i dispositivi?",
+    "risposte": [
+      "USB A (Rettangolare)",
+      "USB C (Ovale)",
+      "Ethernet (Rete)"
+    ],
+    "corretta": "USB C (Ovale)"
   }
 ]
