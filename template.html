@@ -153,7 +153,7 @@
       <button onclick="tornaAiQuiz()" style="background-color: #6c757d;">⬅️ Torna al Menu</button>
     </div>
   </div>
-  <script>
+    <script>
     let domandeTotali = 0;
     let domandeCorrenti = 0;
     let quizCorrente = 0;
@@ -163,6 +163,9 @@
     // Nuove variabili per la gestione dei quiz alternativi
     let isQuizAlternativo = false;
     let isDocenteMode = false;
+    let selectedLeft = null;
+    let selectedRight = null;
+    let matchedPairs = [];
 
     // --- FUNZIONI INIZIALI E DI NAVIGAZIONE GLOBALE ---
 
@@ -247,7 +250,7 @@
     function controllaRisposta(risposta, corretta, button) {
       if (statoRisposta[domandeCorrenti] !== null) return; 
       
-      // Sanitizzazione degli apici (già fatta nell'HTML, ma necessaria per il confronto)
+      // Sanitizzazione degli apici
       const rispostaPulita = risposta.replace(/\\'/g, "'");
       const correttaPulita = corretta.replace(/\\'/g, "'");
 
@@ -328,13 +331,27 @@
         card.innerHTML = `<div class="card"><h2>Errore: ${d.errore}</h2></div>`;
         return;
       }
+      
+      // Reset stato Match per la domanda corrente
+      selectedLeft = null;
+      selectedRight = null;
+      matchedPairs = []; 
+      if (d.type === 'match_pair' && statoRisposta[domandeCorrenti] !== null) {
+          // Ricostruisce matchedPairs temporaneamente per la visualizzazione
+          const risposteDate = statoRisposta[domandeCorrenti].risposta.split(' | ');
+          matchedPairs = risposteDate.map(p => p.split(' = '));
+      }
+      // Reset stato Order per la domanda corrente
+      let passiScelti = [];
+      if (d.type === 'order' && statoRisposta[domandeCorrenti] !== null) {
+          passiScelti = statoRisposta[domandeCorrenti].risposta.split(' → ');
+      }
 
       let esercizioHTML = '';
 
       switch (d.type) {
         case 'order':
           // Esercizio di Sequenziamento
-          passiScelti = []; // Reset per ogni domanda
           esercizioHTML = `
             <div id="order-target" class="list-group mb-3">
                 <p><strong>Sequenza scelta:</strong></p>
@@ -346,15 +363,12 @@
                     `<button class="risposta-btn passo-btn" onclick="aggiungiPasso(this)">${passo}</button>`
                 ).join('')}
             </div>
-            <button id="controlla-ordine" class="check-btn" onclick="controllaOrdine('${d.corretto.join('|||')}')">Controlla Ordine</button>
+            <button id="controlla-ordine" class="check-btn" onclick="controllaOrdine('${d.corretto.join('|||')}', '${d.passi.join('|||')}')">Controlla Ordine</button>
           `;
           break;
 
         case 'match_pair':
           // Esercizio di Associazione
-          selectedLeft = null;
-          selectedRight = null;
-          matchedPairs = []; // Reset per ogni domanda
           let optionsRight = [...d.options_right].sort(() => Math.random() - 0.5);
           esercizioHTML = `
             <div style="display: flex; justify-content: space-around; gap: 10px;">
@@ -413,37 +427,49 @@
     }
 
     // --- LOGICA SPECIFICA ESERCIZIO ORDINE ---
-    let passiScelti = [];
+    // Usiamo una variabile locale per la logica dell'ordine durante la risposta
+    
     function aggiungiPasso(button) {
         if(statoRisposta[domandeCorrenti] !== null) return;
+        
+        // Recupera o inizializza l'array dei passi scelti
+        let passiScelti = JSON.parse(localStorage.getItem('currentPassiScelti') || '[]');
+        
         passiScelti.push(button.innerText);
+        localStorage.setItem('currentPassiScelti', JSON.stringify(passiScelti));
+        
         document.getElementById('order-sequence').innerText = passiScelti.join(' → ');
         button.disabled = true;
-        button.classList.add('sbagliata'); // Uso 'sbagliata' per indicare che è stato selezionato
+        button.classList.add('sbagliata'); // Usa 'sbagliata' per indicare che è stato selezionato
     }
     
-    function controllaOrdine(correttoStr) {
-        const corretta = correttaStr.split('|||');
+    function controllaOrdine(correttoStr, passiStr) {
+        const corretta = correttoStr.split('|||');
+        const passiScelti = JSON.parse(localStorage.getItem('currentPassiScelti') || '[]');
+        
+        // Se non è stato selezionato nulla, esci
+        if (passiScelti.length === 0) return;
+        
         const isCorretta = passiScelti.join('|||') === corretta.join('|||');
         
         salvaEsercizioAlternativo(isCorretta, corretta.join(' → '), passiScelti.join(' → '), 'order');
+        localStorage.removeItem('currentPassiScelti'); // Pulisce lo stato intermedio
         
-        // Reset e styling
+        // Styling finale
         document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
+        const orderSequenceDiv = document.getElementById('order-sequence');
         if (isCorretta) {
             document.querySelectorAll('.passo-btn').forEach(btn => btn.classList.remove('sbagliata'));
-            document.getElementById('order-sequence').classList.remove('sbagliata');
-            document.getElementById('order-sequence').classList.add('corretta');
+            orderSequenceDiv.classList.remove('sbagliata');
+            orderSequenceDiv.classList.add('corretta');
         } else {
-            document.getElementById('order-sequence').classList.add('sbagliata');
+            orderSequenceDiv.classList.add('sbagliata');
         }
     }
 
     // --- LOGICA SPECIFICA ESERCIZIO MATCH ---
-    let selectedLeft = null;
-    let selectedRight = null;
-    let matchedPairs = [];
-
+    // Le variabili selectedLeft/Right/matchedPairs sono definite in scope globale
+    
     function selezionaMatch(button, side) {
         if(statoRisposta[domandeCorrenti] !== null) return;
 
@@ -464,7 +490,7 @@
         if (selectedLeft && selectedRight) {
             const pair = [selectedLeft.innerText, selectedRight.innerText];
             
-            // Controlla se una delle due parti è già stata accoppiata
+            // Controlla se una delle due parti è già stata accoppiata (per evitare click multipli)
             const isLeftUsed = matchedPairs.some(p => p[0] === pair[0]);
             const isRightUsed = matchedPairs.some(p => p[1] === pair[1]);
             
@@ -477,7 +503,10 @@
             } else {
                  document.getElementById('match-selection').innerHTML += `<div class="risposta sbagliata match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: #dc354555;">❌ Coppia non valida o già usata!</div>`;
                  setTimeout(() => {
-                    document.getElementById('match-selection').lastElementChild.remove();
+                    const elements = document.getElementById('match-selection').getElementsByClassName('match-pair-display');
+                    if(elements.length > 0 && elements[elements.length - 1].classList.contains('sbagliata')) {
+                        elements[elements.length - 1].remove();
+                    }
                  }, 1500);
             }
             
@@ -496,6 +525,8 @@
         let corretteCount = 0;
         let risposteDate = matchedPairs.map(p => p.join(' = '));
         let correttaStr = corretti.map(p => p.join(' = ')).join(' | ');
+
+        if (matchedPairs.length === 0) return; // Non controllare se non è stata fatta nessuna associazione
 
         for (const [left, right] of matchedPairs) {
             if (correttiMap.get(left) === right) {
@@ -519,6 +550,8 @@
         const inputField = document.getElementById('input-command');
         const rispostaUtente = inputField.value.trim();
         const isCorretta = rispostaUtente.toLowerCase() === corretta.toLowerCase();
+        
+        if (rispostaUtente === '') return;
 
         salvaEsercizioAlternativo(isCorretta, corretta, rispostaUtente, 'input_text');
         inputField.disabled = true;
@@ -529,6 +562,8 @@
     function mostraFeedbackAlternativo(isCorretta, corretta, type) {
       const card = document.getElementById('card-container').querySelector('.card');
       card.style.border = isCorretta ? '2px solid #28a745' : '2px solid #dc3545';
+      const stato = statoRisposta[domandeCorrenti]; // Recupera lo stato completo
+      
       const testoFeedback = isCorretta ? 
                             '✅ Esercizio completato correttamente!' : 
                             `❌ Non corretto! La risposta corretta è: ${corretta}`;
@@ -541,17 +576,50 @@
                          </div>`;
       
       if (type === 'order') {
-          // Ricrea la sequenza con la risposta dell'utente per la visualizzazione post-risposta
-          const rispostaUtente = statoRisposta[domandeCorrenti].risposta;
+          // Disabilita tutti i pulsanti
+          document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
+
+          // Ripristina la visualizzazione della sequenza
           const orderSequenceDiv = document.getElementById('order-sequence');
           if (orderSequenceDiv) {
-              orderSequenceDiv.innerText = `La tua sequenza: ${rispostaUtente}`;
-              orderSequenceDiv.className = isCorretta ? 'corretta' : 'sbagliata';
-              document.querySelectorAll('.passo-btn').forEach(btn => btn.disabled = true);
+              orderSequenceDiv.innerText = `La tua sequenza: ${stato.risposta}`;
+              orderSequenceDiv.className = stato.isCorretta ? 'corretta' : 'sbagliata';
           }
       } else if (type === 'match_pair') {
-          // Disabilita i pulsanti di match se si torna indietro
+          // Disabilita i pulsanti di match
           document.querySelectorAll('.match-btn-left, .match-btn-right').forEach(btn => btn.disabled = true);
+          
+          // Ricostruisce il display delle coppie
+          const matchSelection = document.getElementById('match-selection');
+          const risposteDate = stato.risposta.split(' | ');
+          const corretti = stato.corretta.split(' | ');
+          
+          matchSelection.innerHTML = '<p>Associazioni Effettuate:</p>';
+          
+          let corretteCount = 0;
+          risposteDate.forEach(p => {
+              const [left, right] = p.split(' = ');
+              const isPairCorrect = corretti.includes(p);
+              if (isPairCorrect) corretteCount++;
+              const className = isPairCorrect ? 'corretta' : 'sbagliata';
+              const icon = isPairCorrect ? '✅' : '❌';
+
+              matchSelection.innerHTML += `<div class="risposta ${className} match-pair-display" style="padding: 5px; margin: 5px; font-size: 0.9em; background-color: ${isPairCorrect ? '#28a74555' : '#dc354555'};">${icon} ${left} ↔️ ${right}</div>`;
+              
+              // Nasconde i bottoni usati (per la restaurazione dello stato)
+              document.querySelectorAll('.match-btn-left').forEach(btn => {
+                  if (btn.innerText === left) btn.style.display = 'none';
+              });
+              document.querySelectorAll('.match-btn-right').forEach(btn => {
+                  if (btn.innerText === right) btn.style.display = 'none';
+              });
+          });
+          
+          matchSelection.innerHTML += `<p style="font-weight: bold; margin-top: 15px;">Associazioni corrette: ${corretteCount} su ${corretti.length}</p>`;
+
+      } else if (type === 'input_text') {
+          const inputField = document.getElementById('input-command');
+          if (inputField) inputField.disabled = true;
       }
       setTimeout(() => { card.style.border = ''; }, 2000);
     }
