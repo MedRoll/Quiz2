@@ -90,7 +90,7 @@
 
       animation: fadeInUp 0.6s ease forwards; 
 
-      opacity: 1; /* Rimosso l'opacity: 0 iniziale per i controlli base per la visibilità */
+      opacity: 1;
 
       transform: translateY(0);
 
@@ -101,7 +101,7 @@
         cursor: not-allowed;
         transform: none;
         box-shadow: none;
-        background-color: #1a73e8 !important; /* Forza colore base per coerenza */
+        background-color: #1a73e8 !important; 
     }
 
     button:hover { background-color: #155ab6; transform: scale(1.07); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
@@ -109,7 +109,7 @@
     button:disabled:hover { 
         transform: none; 
         box-shadow: none; 
-        background-color: #1a73e8; /* Mantiene colore base se disabilitato */
+        background-color: #1a73e8;
     }
 
     button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
@@ -176,15 +176,15 @@
 
     <div style="display: grid; gap: 10px; max-width: 600px; margin: auto;">
 
-        <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
+        <button onclick="iniziaQuiz(1)">🎤 Quiz 1 - Competenze Digitali Base</button>
 
-        <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
+        <button onclick="iniziaQuiz(2)">📧 Quiz 2 - Internet, Email e PEC</button>
 
-        <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
+        <button onclick="iniziaQuiz(3)">🔐 Quiz 3 - SPID, Cybersecurity e GDPR</button>
 
-        <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
+        <button onclick="iniziaQuiz(4)">💬 Quiz 4 - Social Media</button>
 
-        <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
+        <button onclick="iniziaQuiz(5)">💻 Quiz 5 - Produttività, Cyberbullismo e Tecnologia</button>
 
     </div>
 
@@ -276,10 +276,6 @@
 
     let MAX_DOMANDE = 0;
 
-    // Il ritardo non è più necessario per l'avanzamento automatico
-
-    // const FEEDBACK_DELAY = 200; 
-
 
 
     function setDocenteMode(mode) {
@@ -342,7 +338,7 @@
 
         } else {
 
-            document.getElementById('domanda').textContent = `Errore: Impossibile caricare il quiz ${quizCorrente}.`;
+            document.getElementById('domanda').textContent = `Errore: Impossibile caricare il quiz ${quizCorrente}. Assicurati che il backend sia attivo.`;
 
             document.getElementById('risposte').innerHTML = "";
 
@@ -470,7 +466,7 @@
 
       
 
-      // Logica del pulsante Avanti
+      // Logica del pulsante Avanti (➡️)
 
       if (indexDomanda === MAX_DOMANDE - 1) {
 
@@ -488,7 +484,7 @@
 
       
 
-      // Logica del pulsante Indietro
+      // Logica del pulsante Indietro (⬅️)
 
       indietroBtn.disabled = indexDomanda === 0;
 
@@ -508,7 +504,7 @@
 
       const tutte = document.querySelectorAll('.risposta');
 
-      // Disabilita tutti i pulsanti
+      // Disabilita tutti i pulsanti delle risposte
 
       tutte.forEach(el=>{ el.onclick=null; el.style.pointerEvents='none'; });
 
@@ -580,21 +576,36 @@
 
     function prossimaDomanda(){ 
 
-      if(indexDomanda < MAX_DOMANDE - 1) { // Avanti
-        indexDomanda++; 
-        caricaDomanda(); 
-      } else if (indexDomanda === MAX_DOMANDE - 1) { // Termina Modulo
-        terminaTest();
+      if(risposteUtente[indexDomanda]){ // Procedi solo se è stata data una risposta
+
+        if(indexDomanda < MAX_DOMANDE - 1) { // Avanti
+
+          indexDomanda++; 
+
+          caricaDomanda(); 
+
+        } else if (indexDomanda === MAX_DOMANDE - 1) { // Termina Modulo
+
+          terminaTest();
+
+        }
+
       }
+
     }
 
 
 
     function domandaPrecedente(){ 
+
       if(indexDomanda>0){ 
+
         indexDomanda--; 
+
         caricaDomanda(); 
+
       } 
+
     }
 
 
@@ -752,7 +763,6 @@
 
 
     function terminaTest(){ 
-        // Force display of recap (only used by the "Termina Test" button)
         indexDomanda = MAX_DOMANDE; 
         mostraRecap(); 
     }
@@ -764,7 +774,7 @@
       quizCorrente=quizId;
 
       document.getElementById('quiz-buttons').style.display='none';
-      document.getElementById('start-container').style.display='none'; // Assicura che anche start-container sia nascosto
+      document.getElementById('start-container').style.display='none'; 
 
 
       if(docenteMode){
@@ -809,7 +819,7 @@
 
       container.innerHTML="";
       if (domande.errore) {
-          container.innerHTML = `<div class="card">${domande.errore}</div>`;
+          container.innerHTML = `<div class="card"><strong>Errore:</strong> ${domande.errore}</div>`;
           return;
       }
 
