@@ -1,227 +1,227 @@
 [
   {
-    "domanda": "SIMULAZIONE 1: Devi aprire il programma 'Calcolatrice' ma non vedi l'icona sul Desktop. Qual è il metodo più veloce (da Pro)?",
+    "domanda": "Scenario: Vuoi aprire un programma sul Desktop. Quale azione fai con il tasto sinistro del mouse?",
     "risposte": [
-      "Clicco su Start (bandierina) e scrivo subito 'Calcolatrice'",
-      "Apro tutte le cartelle in Esplora File finché non la trovo",
-      "Clicco col tasto destro sullo sfondo e cerco 'Nuovo Programma'"
+      "Clic singolo (Seleziona)",
+      "Doppio click (Apri/Esegui)",
+      "Trascina e Rilascia"
     ],
-    "corretta": "Clicco su Start (bandierina) e scrivo subito 'Calcolatrice'"
+    "corretta": "Doppio click (Apri/Esegui)"
   },
   {
-    "domanda": "SIMULAZIONE 2: Hai una finestra aperta a tutto schermo che copre tutto. Devi vedere un attimo il Desktop senza chiudere il programma. Dove clicchi?",
+    "domanda": "Qual è lo scopo principale del cursore del mouse (la freccia)?",
     "risposte": [
-      "Sul trattino basso ( _ ) in alto a destra (Minimizza)",
-      "Sulla X rossa in alto a destra",
-      "Stacchi e riattacchi il cavo del monitor"
+      "Garantire la precisione nel selezionare oggetti.",
+      "Avviare il Menu Start",
+      "Scorrere le pagine"
     ],
-    "corretta": "Sul trattino basso ( _ ) in alto a destra (Minimizza)"
+    "corretta": "Garantire la precisione nel selezionare oggetti."
   },
   {
-    "domanda": "SIMULAZIONE 3: Stai scrivendo un'email e devi copiare dati da un PDF. Vuoi vedere le due finestre affiancate (metà schermo ciascuna). Cosa fai?",
+    "domanda": "Quale funzione del mouse ti permette di spostare un file dal Desktop alla cartella Documenti?",
     "risposte": [
-      "Trascino la barra del titolo di una finestra contro il bordo laterale dello schermo (Snap)",
-      "Rimpicciolisco le finestre a mano pixel per pixel",
-      "Compro un secondo monitor"
+      "Click Sinistro (Selezione)",
+      "Click Destro (Menu)",
+      "Trascina e Rilascia (Drag & Drop)"
     ],
-    "corretta": "Trascino la barra del titolo di una finestra contro il bordo laterale dello schermo (Snap)"
+    "corretta": "Trascina e Rilascia (Drag & Drop)"
   },
   {
-    "domanda": "SIMULAZIONE 4: L'audio del computer è troppo alto durante una riunione. Dove agisci rapidamente?",
+    "domanda": "Cosa appare quando fai un \"Click Destro\" su un file o sullo sfondo del Desktop?",
     "risposte": [
-      "Clicco sull'icona dell'altoparlante nell'Area di Notifica (in basso a destra)",
-      "Apro il Pannello di Controllo e cerco i driver audio",
-      "Metto le mani sopra le casse per coprire il suono"
+      "Il Menu Start",
+      "Un Menu Contestuale di azioni possibili (Copia, Elimina, ecc.)",
+      "Un avviso di errore"
     ],
-    "corretta": "Clicco sull'icona dell'altoparlante nell'Area di Notifica (in basso a destra)"
+    "corretta": "Un Menu Contestuale di azioni possibili (Copia, Elimina, ecc.)"
   },
   {
-    "domanda": "SIMULAZIONE 5: Devi allontanarti dal PC per 5 minuti (pausa caffè). Non vuoi spegnerlo, ma non vuoi che altri leggano le tue cose. Cosa scegli?",
+    "domanda": "In Windows, il \"Desktop\" è l'equivalente digitale di cosa?",
     "risposte": [
-      "Blocca Schermo (Lock)",
-      "Arresta il sistema",
-      "Spegni solo il monitor col tasto fisico"
+      "La vostra scrivania o piano di lavoro principale.",
+      "L'hard disk",
+      "Il browser internet"
     ],
-    "corretta": "Blocca Schermo (Lock)"
+    "corretta": "La vostra scrivania o piano di lavoro principale."
   },
   {
-    "domanda": "SIMULAZIONE 6: Vedi un'icona sul Desktop con una piccola freccina blu nell'angolo. La cancelli. Hai perso il programma originale?",
+    "domanda": "A cosa serve la \"Taskbar\" (Barra delle Applicazioni) in fondo allo schermo?",
     "risposte": [
-      "No, era solo un 'Collegamento'. Il programma vero è al sicuro",
-      "Sì, hai disinstallato tutto",
-      "Sì, ma solo se svuoti il cestino"
+      "A tenere tutti i tuoi documenti salvati",
+      "È il centro di comando rapido e mostra i programmi aperti.",
+      "A regolare il volume"
     ],
-    "corretta": "No, era solo un 'Collegamento'. Il programma vero è al sicuro"
+    "corretta": "È il centro di comando rapido e mostra i programmi aperti."
   },
   {
-    "domanda": "SIMULAZIONE 7: Vuoi spostare una finestra che è in mezzo allo schermo. Dove devi 'afferrarla' col mouse?",
+    "domanda": "Qual è il pulsante principale (la bandierina) al centro o a sinistra della Taskbar?",
     "risposte": [
-      "Sulla 'Barra del Titolo' (la striscia in alto)",
-      "Sull'angolo in basso a destra",
-      "Al centro preciso della finestra"
+      "Il pulsante Stop",
+      "Il pulsante \"Start\" (Menu principale).",
+      "Il pulsante Internet"
     ],
-    "corretta": "Sulla 'Barra del Titolo' (la striscia in alto)"
+    "corretta": "Il pulsante \"Start\" (Menu principale)."
   },
   {
-    "domanda": "SIMULAZIONE 8: Hai finito di lavorare per oggi. Qual è la sequenza corretta per spegnere?",
+    "domanda": "Se vuoi accedere rapidamente all'orologio o all'icona del Wi-Fi, dove guardi sulla Taskbar?",
     "risposte": [
-      "Start -> Icona Alimentazione -> Arresta il sistema",
-      "Start -> Icona Alimentazione -> Sospendi",
-      "Chiudo il coperchio del portatile e me ne vado"
+      "Al centro, vicino al pulsante Start",
+      "In alto a sinistra",
+      "Nell'Area di Notifica (System Tray), a destra."
     ],
-    "corretta": "Start -> Icona Alimentazione -> Arresta il sistema"
+    "corretta": "Nell'Area di Notifica (System Tray), a destra."
   },
   {
-    "domanda": "SIMULAZIONE 9: Il tecnico ti chiede: 'Che versione di Windows hai?'. Dove trovi questa informazione?",
+    "domanda": "Qual è il modo più veloce per trovare un programma sul PC (es. \"Word\")?",
     "risposte": [
-      "Start -> Impostazioni (Ingranaggio) -> Sistema -> Informazioni",
-      "Guardo se c'è un adesivo sotto il mouse",
-      "Start -> Cerca -> 'Versione Segreta'"
+      "Scorrere tutte le icone del Desktop",
+      "Cliccare sul pulsante Start e iniziare a scrivere il nome del programma.",
+      "Fare doppio click sul Desktop"
     ],
-    "corretta": "Start -> Impostazioni (Ingranaggio) -> Sistema -> Informazioni"
+    "corretta": "Cliccare sul pulsante Start e iniziare a scrivere il nome del programma."
   },
   {
-    "domanda": "SIMULAZIONE 10: Vuoi collegarti al Wi-Fi dell'ufficio. Dove guardi?",
+    "domanda": "Cosa fa il pulsante con la linea orizzontale ($\\mathbf{\\_}$) in alto a destra di una finestra?",
     "risposte": [
-      "Nell'Area di Notifica in basso a destra (icona con le onde)",
-      "Nel menu Start in alto a sinistra",
-      "Sulla tastiera cerchi il tasto 'Internet'"
-    ],
-    "corretta": "Nell'Area di Notifica in basso a destra (icona con le onde)"
-  },
-  {
-    "domanda": "TEORIA: Cos'è la 'Taskbar'?",
-    "risposte": [
-      "La barra orizzontale in basso con Start e le icone dei programmi",
-      "La barra in alto con il titolo della finestra",
-      "Il menu che appare col tasto destro"
-    ],
-    "corretta": "La barra orizzontale in basso con Start e le icone dei programmi"
-  },
-  {
-    "domanda": "TEORIA: A cosa serve il pulsante 'Quadrato' (o doppio quadrato) in alto a destra in una finestra?",
-    "risposte": [
-      "Ingrandisce la finestra a tutto schermo (o la ripristina)",
       "Chiude il programma",
-      "Nasconde il programma nella barra applicazioni"
+      "Minimizza (Nasconde) la finestra sulla Taskbar.",
+      "Ingrandisce la finestra"
     ],
-    "corretta": "Ingrandisce la finestra a tutto schermo (o la ripristina)"
+    "corretta": "Minimizza (Nasconde) la finestra sulla Taskbar."
   },
   {
-    "domanda": "TEORIA: Perché non dovresti riempire il Desktop di troppe icone?",
+    "domanda": "Cosa fa il pulsante con la $\\mathbf{X}$ rossa in alto a destra di una finestra?",
     "risposte": [
-      "Rallentano l'avvio del PC e creano confusione visiva",
-      "Consumano la batteria del mouse",
-      "Non c'è nessun problema, puoi riempirlo tutto"
+      "Salva il documento",
+      "Ingrandisce la finestra",
+      "Chiude il programma (Esci)."
     ],
-    "corretta": "Rallentano l'avvio del PC e creano confusione visiva"
+    "corretta": "Chiude il programma (Esci)."
   },
   {
-    "domanda": "TEORIA: Cos'è il 'Menu Contestuale'?",
+    "domanda": "Quale forma assume il cursore per \"ridimensionare\" gli angoli di una finestra?",
     "risposte": [
-      "Il menu che si apre col Tasto Destro e cambia in base a cosa clicchi",
-      "Il menu Start di Windows",
-      "La lista dei programmi installati"
+      "Una freccia incrociata",
+      "Una freccia diagonale.",
+      "Un punto rosso"
     ],
-    "corretta": "Il menu che si apre col Tasto Destro e cambia in base a cosa clicchi"
+    "corretta": "Una freccia diagonale."
   },
   {
-    "domanda": "TEORIA: Dove finiscono le icone dei programmi 'nascosti' o in background (come l'antivirus)?",
+    "domanda": "Cosa fa la funzione \"Snap\" di Windows (trascinando una finestra al bordo dello schermo)?",
     "risposte": [
-      "Nella System Tray (spesso sotto la freccetta ^ vicino all'orologio)",
-      "Nel Cestino",
-      "Nella cartella Documenti"
+      "Affianca due finestre per lavorare su due cose contemporaneamente.",
+      "Blocca lo schermo con la password",
+      "Riavvia il PC"
     ],
-    "corretta": "Nella System Tray (spesso sotto la freccetta ^ vicino all'orologio)"
+    "corretta": "Affianca due finestre per lavorare su due cose contemporaneamente."
   },
   {
-    "domanda": "TEORIA: Se clicchi su 'Riavvia il sistema', cosa fa il PC?",
+    "domanda": "Quando clicchi e trascini la \"barra del titolo\" (la striscia scura in alto), quale azione stai eseguendo?",
     "risposte": [
-      "Spegne completamente e si riaccende subito (utile per gli aggiornamenti)",
-      "Si spegne e devi premere il tasto fisico per riaccenderlo",
-      "Entra in modalità risparmio energia"
+      "Ridimensionare la finestra",
+      "Chiudere la finestra",
+      "Spostare la finestra sullo schermo."
     ],
-    "corretta": "Spegne completamente e si riaccende subito (utile per gli aggiornamenti)"
+    "corretta": "Spostare la finestra sullo schermo."
   },
   {
-    "domanda": "TEORIA: Quale simbolo indica che il cursore può ridimensionare una finestra?",
+    "domanda": "Qual è la differenza tra un \"File\" vero e proprio e un \"Collegamento\" (Shortcut) sul Desktop?",
     "risposte": [
-      "Una doppia freccia (↔ o ↕ o diagonale)",
-      "Una mano che indica",
-      "Una clessidra"
+      "Nessuna, sono la stessa cosa",
+      "Il Collegamento è solo un'icona che rimanda al file originale.",
+      "Il File ha una freccetta sull'angolo"
     ],
-    "corretta": "Una doppia freccia (↔ o ↕ o diagonale)"
+    "corretta": "Il Collegamento è solo un'icona che rimanda al file originale."
   },
   {
-    "domanda": "TEORIA: Cosa succede se premi il tasto 'Windows' (Bandierina) sulla tastiera?",
+    "domanda": "Qual è la scorciatoia da tastiera per \"Copiare\" un testo o un oggetto selezionato?",
     "risposte": [
-      "Si apre il Menu Start",
-      "Si spegne il computer",
-      "Si apre la posta elettronica"
+      "Ctrl + V",
+      "Ctrl + C",
+      "Ctrl + S"
     ],
-    "corretta": "Si apre il Menu Start"
+    "corretta": "Ctrl + C"
   },
   {
-    "domanda": "TEORIA: Come si chiama l'immagine di sfondo della tua scrivania virtuale?",
+    "domanda": "Qual è la scorciatoia da tastiera per \"Salvare\" rapidamente il documento aperto?",
     "risposte": [
-      "Wallpaper (Sfondo del Desktop)",
-      "Screensaver",
-      "Poster"
+      "Ctrl + X",
+      "Ctrl + Z",
+      "Ctrl + S"
     ],
-    "corretta": "Wallpaper (Sfondo del Desktop)"
+    "corretta": "Ctrl + S"
   },
   {
-    "domanda": "TEORIA: Quale di queste barre mostra i programmi attualmente aperti?",
+    "domanda": "Quale tasto della tastiera è usato principalmente per \"Confermare\" un'azione o andare a capo in un testo?",
     "risposte": [
-      "La Barra delle Applicazioni (Taskbar)",
-      "La Barra del Titolo",
-      "La Barra di Scorrimento"
+      "Alt Gr",
+      "Backspace",
+      "Invio (Enter/Return)"
     ],
-    "corretta": "La Barra delle Applicazioni (Taskbar)"
+    "corretta": "Invio (Enter/Return)"
   },
   {
-    "domanda": "TEORIA: Cosa indica una linea o un'ombreggiatura sotto un'icona nella barra in basso?",
+    "domanda": "Per spegnere correttamente il PC, l'azione finale che devi scegliere nel Menu Start è:",
     "risposte": [
-      "Che il programma è aperto e attivo",
-      "Che il programma deve essere aggiornato",
-      "Che il programma è un virus"
+      "Staccare la spina",
+      "Arresta il sistema (Shut down).",
+      "Riavvia"
     ],
-    "corretta": "Che il programma è aperto e attivo"
+    "corretta": "Arresta il sistema (Shut down)."
   },
   {
-    "domanda": "TEORIA: Se trascini un file dal Desktop dentro una cartella, cosa stai facendo?",
+    "domanda": "Cosa significa \"Riavviare\" (Restart) il PC?",
     "risposte": [
-      "Lo stai spostando (o copiando) nella nuova posizione",
-      "Lo stai cancellando",
-      "Lo stai stampando"
+      "Bloccare lo schermo con la password",
+      "Spegnere e riaccendere subito il PC.",
+      "Mettere in pausa il PC"
     ],
-    "corretta": "Lo stai spostando (o copiando) nella nuova posizione"
+    "corretta": "Spegnere e riaccendere subito il PC."
   },
   {
-    "domanda": "TEORIA: Il tasto 'Disconnetti' (Sign out) è uguale a 'Arresta'?",
+    "domanda": "Cosa succede se attivi il \"Blocca Schermo\" (Lock)?",
     "risposte": [
-      "No, chiude solo la tua sessione utente ma lascia il PC acceso",
-      "Sì, fanno la stessa cosa",
-      "Sì, ma è più veloce"
+      "Blocchi l'accesso con password, ma i programmi restano aperti in background.",
+      "Chiudi tutti i programmi",
+      "Spegni completamente il PC"
     ],
-    "corretta": "No, chiude solo la tua sessione utente ma lascia il PC acceso"
+    "corretta": "Blocchi l'accesso con password, ma i programmi restano aperti in background."
   },
   {
-    "domanda": "TEORIA: Cos'è un 'Bug'?",
+    "domanda": "Quando muovi la \"rotella\" del mouse, quale azione esegui in una pagina?",
     "risposte": [
-      "Un piccolo errore nel software che può causare malfunzionamenti",
-      "Un componente hardware rotto",
-      "Un tipo di mouse molto piccolo"
+      "Copiare un testo",
+      "Scorrere (Scrollare) la pagina in alto o in basso.",
+      "Aumentare il volume"
     ],
-    "corretta": "Un piccolo errore nel software che può causare malfunzionamenti"
+    "corretta": "Scorrere (Scrollare) la pagina in alto o in basso."
   },
   {
-    "domanda": "TEORIA: Se non usi il mouse per un po' e lo schermo diventa nero o cambia immagine, cosa è partito?",
+    "domanda": "Cosa ti permette di fare la \"Ricerca\" del Menu Start?",
     "risposte": [
-      "Lo Screensaver (o sospensione schermo)",
-      "Il Riavvio automatico",
-      "La Cancellazione dei dati"
+      "Vedere le impostazioni di fabbrica",
+      "Trovare il programma o il file che cerchi, anche se non vedi l'icona.",
+      "Installare nuovi programmi"
     ],
-    "corretta": "Lo Screensaver (o sospensione schermo)"
+    "corretta": "Trovare il programma o il file che cerchi, anche se non vedi l'icona."
+  },
+  {
+    "domanda": "Quando è necessario \"Riavviare\" il PC?",
+    "risposte": [
+      "Dopo ogni breve pausa di lavoro",
+      "Dopo gli aggiornamenti o se il PC è lento/bloccato.",
+      "Solo di notte"
+    ],
+    "corretta": "Dopo gli aggiornamenti o se il PC è lento/bloccato."
+  },
+  {
+    "domanda": "Quale tasto della tastiera devi premere per scrivere caratteri speciali come @ o #?",
+    "risposte": [
+      "Il tasto Ctrl",
+      "Il tasto Shift",
+      "Il tasto Alt Gr (a destra della barra spaziatrice)."
+    ],
+    "corretta": "Il tasto Alt Gr (a destra della barra spaziatrice)."
   }
 ]
