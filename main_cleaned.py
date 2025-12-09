@@ -11,16 +11,18 @@ alt_quizzes = {}  # Nuovo dizionario per quiz alternativi
 
 def load_data():
     """
-    Carica i file ordered_questions1.json ... ordered_questions5.json
+    Carica i file ordered_questions1.json ... ordered_questions10.json
     """
     global quizzes
     quizzes.clear()
-    for i in range(1, 6):
+    # MODIFICA QUI: da range(1, 6) a range(1, 11) per includere fino al 10
+    for i in range(1, 11): 
         path = Path(f"ordered_questions{i}.json")
         if path.exists():
             with open(path, "r", encoding="utf-8") as f:
                 quizzes[i] = json.load(f)
-
+        else:
+            print(f"Attenzione: {path} non trovato.") # Opzionale: per debug
 def load_alt_data():
     """
     Carica i file ordered_alt_questions1.json ... ordered_alt_questions5.json
