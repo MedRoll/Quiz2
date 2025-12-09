@@ -1,75 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Interattivo</title>
-  <style>
-    /* --- STILI BASE --- */
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', sans-serif; background-color: #1c1f2b; color: #fff; padding: 20px; max-width: 900px; margin: auto; }
-    h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
-    .stats { display: flex; justify-content: space-between; margin-bottom: 15px; }
-    .card { background-color: #2a2e3d; color: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-
-    /* --- RISPOSTE --- */
-    .risposta { 
-      background-color: #ffffff; 
-      color: #000; 
-      border: 2px solid #ccc; 
-      margin: 10px 0; 
-      padding: 15px 20px; 
-      border-radius: 8px; 
-      font-size: 1.2rem; 
-      font-weight: bold; 
-      cursor: pointer; 
-      transition: all 0.25s ease-in-out; 
-      opacity: 0; 
-      transform: translateY(10px); 
-      animation: fadeInUp 0.6s ease forwards; 
-    }
-    .risposta:hover { transform: scale(1.03); box-shadow: 0 0 12px rgba(255,255,255,0.3); }
-    .corretta { background-color: #28a745; color: white; border-color: #28a745; }
-    .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; }
-
-    /* --- BOTTONI --- */
-    button { 
-      padding: 10px 16px; 
-      margin: 5px; 
-      border: none; 
-      border-radius: 6px; 
-      background-color: #1a73e8; 
-      color: white; 
-      font-weight: bold; 
-      cursor: pointer; 
-      transition: all 0.25s ease-in-out;
-      opacity: 0; 
-      transform: translateY(10px); 
-      animation: fadeInUp 0.6s ease forwards; 
-    }
-    button:hover { background-color: #155ab6; transform: scale(1.07); box-shadow: 0px 0px 15px rgba(26,115,232,0.6); }
-    button:active { transform: scale(0.95); box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset; }
-    .btn-danger { background-color: #d93025; }
-    .btn-danger:hover { background-color: #b5271b; }
-
-    /* --- RECAP --- */
-    #risposte { display: grid; gap: 1rem; }
-    .domandaRecap { background-color: #2f3347; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
-    .domandaRecap strong { display: block; margin-bottom: 6px; font-size: 1.1em; color: #1a73e8; }
-    .domandaRecap div { margin: 4px 0; }
-
-    /* --- ANIMAZIONI --- */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .progress-bar-animate {
-      transition: width 0.4s ease-in-out;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-</head>
 <body>
   <div id="start-container" style="text-align: center; margin-bottom: 30px;">
     <h1>Benvenuto!</h1>
@@ -81,21 +9,35 @@
     <h2 id="quiz-title"></h2>
     
     <div id="lezione-container" style="max-width: 600px; margin: 10px auto; display: none;">
-      <button onclick="mostraModuliQuiz()" style="width: 100%; font-size: 1.5rem; padding: 20px;">
+      <button onclick="mostraModuliQuiz(1)" style="width: 100%; font-size: 1.5rem; padding: 20px; margin-bottom: 15px;">
         📚 Lezione 1: Anatomia e Fondamenti
+      </button>
+      <button onclick="mostraModuliQuiz(2)" style="width: 100%; font-size: 1.5rem; padding: 20px; background-color: #6f42c1;">
+        🚀 Lezione 2: Office & Produttività
       </button>
     </div>
     
-    <div id="moduli-container" style="display: none; grid-template-columns: 1fr; gap: 10px; max-width: 600px; margin: auto;">
+    <div id="moduli-lezione-1" class="moduli-grid" style="display: none; grid-template-columns: 1fr; gap: 10px; max-width: 600px; margin: auto;">
+      <h3 style="color: #1a73e8;">Lezione 1: Fondamenti</h3>
       <button onclick="iniziaQuiz(1)">🖥️ Modulo 1 - Hardware & Anatomia</button>
       <button onclick="iniziaQuiz(2)">🖱️ Modulo 2 - Mouse & Tastiera</button>
       <button onclick="iniziaQuiz(3)">🪟 Modulo 3 - Ambiente Windows</button>
       <button onclick="iniziaQuiz(4)">☁️ Modulo 4 - Digitale & Sicurezza</button>
-      <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Finale (Opzionale)</button>
+      <button onclick="iniziaQuiz(5)" style="opacity: 0.6;">🎓 Esame Lezione 1</button>
+    </div>
+
+    <div id="moduli-lezione-2" class="moduli-grid" style="display: none; grid-template-columns: 1fr; gap: 10px; max-width: 600px; margin: auto;">
+      <h3 style="color: #6f42c1;">Lezione 2: Produttività</h3>
+      <button onclick="iniziaQuiz(6)" style="background-color: #2b5797;">📝 Modulo 6 - Word Processing</button>
+      <button onclick="iniziaQuiz(7)" style="background-color: #217346;">📊 Modulo 7 - Fogli di Calcolo</button>
+      <button onclick="iniziaQuiz(8)" style="background-color: #d24726;">📢 Modulo 8 - Presentazioni</button>
+      <button onclick="iniziaQuiz(9)" style="background-color: #0078d4;">📧 Modulo 9 - Email e Collaborazione</button>
+      <button onclick="iniziaQuiz(10)" style="opacity: 0.6; background-color: #6f42c1;">🎓 Esame Lezione 2</button>
     </div>
 
     <div style="margin-top:25px;">
-      <button onclick="tornaAllaModalita()" style="background-color: #6c757d;">⬅️ Torna alla scelta modalità</button>
+      <button id="btn-back-lezione" onclick="tornaAlleLezioni()" style="background-color: #6c757d; display:none;">⬅️ Cambia Lezione</button>
+      <button id="btn-back-mode" onclick="tornaAllaModalita()" style="background-color: #444;">⬅️ Torna alla scelta modalità</button>
     </div>
   </div>
 
@@ -138,12 +80,9 @@
     let indexDomanda = 0;
     let quizCorrente = 1;
     let MAX_DOMANDE = 0;
-    const FEEDBACK_DELAY = 200; // 0,2 secondi
+    const FEEDBACK_DELAY = 200; 
 
     function setDocenteMode(mode) {
-      const lezioneContainer = document.getElementById("lezione-container");
-      const moduliContainer = document.getElementById("moduli-container");
-      
       if (mode) {
         const pwd = prompt("Inserisci la password per accedere alla modalità docente:");
         if (pwd !== "admin123") {
@@ -155,23 +94,59 @@
       docenteMode = mode;
       document.getElementById("start-container").style.display = "none";
       document.getElementById("quiz-buttons").style.display = "block";
-      document.getElementById("quiz-title").textContent = mode ? "Seleziona un quiz (Modalità Docente)" : "Seleziona un quiz (Modalità Studente)";
+      document.getElementById("quiz-title").textContent = mode ? "Tutti i Moduli (Modalità Docente)" : "Seleziona una Lezione";
       
+      const lezioneContainer = document.getElementById("lezione-container");
+      const mod1 = document.getElementById("moduli-lezione-1");
+      const mod2 = document.getElementById("moduli-lezione-2");
+      const btnBackLez = document.getElementById("btn-back-lezione");
+      const btnBackMode = document.getElementById("btn-back-mode");
+
       if (mode) {
-        // Modalità Docente: Mostra subito tutti i moduli
+        // Docente: Mostra TUTTI i moduli a cascata
         lezioneContainer.style.display = "none";
-        moduliContainer.style.display = "grid";
+        mod1.style.display = "grid";
+        mod2.style.display = "grid";
+        btnBackLez.style.display = "none";
+        btnBackMode.style.display = "inline-block";
       } else {
-        // Modalità Studente: Mostra solo il pulsante Lezione 1
+        // Studente: Mostra scelta lezione
         lezioneContainer.style.display = "block"; 
-        moduliContainer.style.display = "none";
+        mod1.style.display = "none";
+        mod2.style.display = "none";
+        btnBackLez.style.display = "none";
+        btnBackMode.style.display = "inline-block";
       }
     }
     
-    // NUOVA FUNZIONE
-    function mostraModuliQuiz() {
+    // Funzione aggiornata per gestire l'input della lezione scelta
+    function mostraModuliQuiz(lezione) {
       document.getElementById("lezione-container").style.display = "none";
-      document.getElementById("moduli-container").style.display = "grid";
+      
+      // Nascondi tutti prima
+      document.getElementById("moduli-lezione-1").style.display = "none";
+      document.getElementById("moduli-lezione-2").style.display = "none";
+
+      // Mostra quello selezionato
+      if(lezione === 1) {
+        document.getElementById("moduli-lezione-1").style.display = "grid";
+      } else if (lezione === 2) {
+        document.getElementById("moduli-lezione-2").style.display = "grid";
+      }
+
+      // Gestione bottoni navigazione
+      document.getElementById("btn-back-lezione").style.display = "inline-block";
+      document.getElementById("btn-back-mode").style.display = "none";
+    }
+
+    // Nuova funzione per tornare indietro dalla vista moduli alla vista lezioni
+    function tornaAlleLezioni() {
+      document.getElementById("moduli-lezione-1").style.display = "none";
+      document.getElementById("moduli-lezione-2").style.display = "none";
+      document.getElementById("lezione-container").style.display = "block";
+      
+      document.getElementById("btn-back-lezione").style.display = "none";
+      document.getElementById("btn-back-mode").style.display = "inline-block";
     }
 
     async function fetchDomanda(index){
@@ -198,6 +173,9 @@
       ultimaDomanda = domandaData;
       const domandaElem = document.getElementById('domanda');
       domandaElem.textContent = domandaData.domanda;
+      // Reset animazione
+      domandaElem.style.animation = 'none';
+      domandaElem.offsetHeight; /* trigger reflow */
       domandaElem.style.animation = "fadeInUp 0.6s ease";
 
       document.getElementById('contatore').textContent = `${indexDomanda+1}/${MAX_DOMANDE}`;
@@ -276,7 +254,6 @@
       });
       recapHTML+="</div>";
 
-      // Conteggio corrette, sbagliate, non date
       const corrette = risposteUtente.filter(r=>r && r.esito).length;
       const sbagliate = risposteUtente.filter(r=>r && !r.esito).length;
       const nonDate = MAX_DOMANDE - risposteUtente.length;
@@ -290,7 +267,6 @@
 
       document.getElementById('recap').innerHTML=recapHTML;
 
-      // Creazione grafico
       const ctx=document.getElementById('graficoRiepilogo').getContext('2d');
       new Chart(ctx,{
         type:'bar',
@@ -307,10 +283,7 @@
           plugins:{
             legend:{display:false},
             datalabels:{
-              anchor:'end',
-              align:'end',
-              color:'white',
-              font:{weight:'bold',size:14},
+              anchor:'end', align:'end', color:'white', font:{weight:'bold',size:14},
               formatter: function(value){ return value; }
             }
           },
@@ -358,6 +331,12 @@
       const domande=await res.json();
       const container=document.getElementById("lista-docente");
       container.innerHTML="";
+      
+      if(domande.errore || domande.length === 0) {
+         container.innerHTML = "<h3>Nessuna domanda trovata per questo modulo.</h3>";
+         return;
+      }
+
       domande.forEach((d,i)=>{
         let html=`<div class="card"><div style="font-size:1.2em; margin-bottom:10px;"><strong>${i+1}. ${d.domanda}</strong></div>`;
         d.risposte.forEach(r=>{
@@ -379,13 +358,17 @@
       document.getElementById('recap').innerHTML='';
       document.getElementById('quiz-buttons').style.display='block';
 
-      // Reset della vista di selezione quiz in base alla modalità
+      // Reset della vista
       if (docenteMode) {
+        // Docente: tutto visibile
         document.getElementById("lezione-container").style.display = "none";
-        document.getElementById("moduli-container").style.display = "grid";
+        document.getElementById("moduli-lezione-1").style.display = "grid";
+        document.getElementById("moduli-lezione-2").style.display = "grid";
       } else {
-        document.getElementById("lezione-container").style.display = "block";
-        document.getElementById("moduli-container").style.display = "none";
+        // Studente: torna alla scelta moduli (della lezione attuale) o lezioni?
+        // Per semplicità, quando si torna al menu, facciamo vedere i moduli della lezione che si stava facendo
+        // Però se vogliamo tornare alla Home "pulita":
+        tornaAlleLezioni(); 
       }
     }
 
@@ -393,8 +376,8 @@
       document.getElementById('quiz-buttons').style.display='none';
       document.getElementById('start-container').style.display='block';
       document.getElementById('lezione-container').style.display='none';
-      document.getElementById('moduli-container').style.display='none';
+      document.getElementById('moduli-lezione-1').style.display='none';
+      document.getElementById('moduli-lezione-2').style.display='none';
     }
   </script>
 </body>
-</html>
