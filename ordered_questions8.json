@@ -1,0 +1,127 @@
+[
+  {
+    "domanda": "Cos'è una 'Sottocartella'?",
+    "risposte": ["Un file piccolo", "Una cartella contenuta dentro un'altra cartella", "Una cartella compressa"],
+    "corretta": "Una cartella contenuta dentro un'altra cartella"
+  },
+  {
+    "domanda": "Quale unità di misura corrisponde a un miliardo di lettere (es. un film)?",
+    "risposte": ["Megabyte (MB)", "Kilobyte (KB)", "Gigabyte (GB)"],
+    "corretta": "Gigabyte (GB)"
+  },
+  {
+    "domanda": "Quale estensione è tipica delle immagini animate o 'meme'?",
+    "risposte": [".PNG", ".GIF", ".JPG"],
+    "corretta": ".GIF"
+  },
+  {
+    "domanda": "Cosa succede se provi a usare caratteri come * o ? nel nome di un file?",
+    "risposte": ["Il computer crea un file speciale", "Windows dà un errore", "Il file diventa nascosto"],
+    "corretta": "Windows dà un errore"
+  },
+  {
+    "domanda": "Qual è la funzione del tasto destro del mouse descritta nella lezione?",
+    "risposte": ["Azione Principale", "Opzioni (Menu)", "Selezione Multipla"],
+    "corretta": "Opzioni (Menu)"
+  },
+  {
+    "domanda": "Cosa permette di fare il 'Drag & Drop' (Trascinare)?",
+    "risposte": ["Aprire un file velocemente", "Spostare un oggetto da un punto all'altro", "Cancellare un file senza conferma"],
+    "corretta": "Spostare un oggetto da un punto all'altro"
+  },
+  {
+    "domanda": "Per creare un 'Rettangolo di Selezione', dove devi cliccare inizialmente?",
+    "risposte": ["Sopra il primo file", "In un punto vuoto (bianco) della cartella", "Sulla barra degli indirizzi"],
+    "corretta": "In un punto vuoto (bianco) della cartella"
+  },
+  {
+    "domanda": "Qual è la scorciatoia da tastiera per 'Annulla' (Undo)?",
+    "risposte": ["CTRL + Z", "CTRL + Y", "CTRL + A"],
+    "corretta": "CTRL + Z"
+  },
+  {
+    "domanda": "Fino a quanto tempo indietro 'riporta' metaforicamente il comando CTRL+Z?",
+    "risposte": ["1 ora fa", "10 secondi fa (l'ultima azione)", "Al momento dell'accensione"],
+    "corretta": "10 secondi fa (l'ultima azione)"
+  },
+  {
+    "domanda": "Quando NON funziona il comando CTRL+Z?",
+    "risposte": ["Se il file è un'immagine", "Se avete spento il computer o svuotato il cestino", "Se avete usato il mouse invece della tastiera"],
+    "corretta": "Se avete spento il computer o svuotato il cestino"
+  },
+  {
+    "domanda": "Cosa succede ai file nel Cestino in termini di spazio?",
+    "risposte": ["Non occupano più spazio", "Occupano ancora spazio sul disco", "Vengono compressi al 50%"],
+    "corretta": "Occupano ancora spazio sul disco"
+  },
+  {
+    "domanda": "Quale è un esempio di nome file 'Parlante' e ben fatto?",
+    "risposte": ["Documento1.docx", "asd.jpg", "2023-10-Relazione-Progetto.doc"],
+    "corretta": "2023-10-Relazione-Progetto.doc"
+  },
+  {
+    "domanda": "Come viene vista una chiavetta USB dal computer?",
+    "risposte": ["Come una cartella di sistema", "Come un disco aggiuntivo (es. Disco D: o E:)", "Come un file compresso"],
+    "corretta": "Come un disco aggiuntivo (es. Disco D: o E:)"
+  },
+  {
+    "domanda": "Qual è la differenza principale tra Hard Disk Esterni e Chiavette USB?",
+    "risposte": ["Gli Hard Disk sono più piccoli fisicamente", "Gli Hard Disk contengono molto di più e sono per i backup grandi", "Le Chiavette non si possono rimuovere"],
+    "corretta": "Gli Hard Disk contengono molto di più e sono per i backup grandi"
+  },
+  {
+    "domanda": "Dove finiscono automaticamente i file scaricati da Internet?",
+    "risposte": ["In Documenti", "In Download", "In Immagini"],
+    "corretta": "In Download"
+  },
+  {
+    "domanda": "Se vuoi trovare i file su cui lavoravi ieri, come dovresti ordinare la cartella?",
+    "risposte": ["Per Nome", "Per Tipo", "Per Ultima modifica"],
+    "corretta": "Per Ultima modifica"
+  },
+  {
+    "domanda": "Qual è uno dei vantaggi principali del Cloud?",
+    "risposte": ["Non serve la password", "Se il PC si rompe, i file sono salvi", "Funziona senza internet"],
+    "corretta": "Se il PC si rompe, i file sono salvi"
+  },
+  {
+    "domanda": "Cosa indica l'estensione .mp4?",
+    "risposte": ["Un file Audio", "Un file Video", "Un file di Testo"],
+    "corretta": "Un file Video"
+  },
+  {
+    "domanda": "Quale tasto si usa per cancellare un file selezionato?",
+    "risposte": ["INVIO", "CANC (o DEL)", "MAIUSC"],
+    "corretta": "CANC (o DEL)"
+  },
+  {
+    "domanda": "Cosa bisogna fare per completare un'azione di Copia o Taglia?",
+    "risposte": ["Chiudere la cartella", "Dare il comando Incolla nella destinazione", "Riavviare il PC"],
+    "corretta": "Dare il comando Incolla nella destinazione"
+  },
+  {
+    "domanda": "Quale è un esempio di carattere proibito nei nomi dei file?",
+    "risposte": ["Il trattino (-)", "L'underscore (_)", "Il punto interrogativo (?)"],
+    "corretta": "Il punto interrogativo (?)"
+  },
+  {
+    "domanda": "Come si chiama la struttura che organizza tutto dalla 'radice' alle 'foglie'?",
+    "risposte": ["Struttura a Rete", "Struttura ad Albero", "Struttura a Lista"],
+    "corretta": "Struttura ad Albero"
+  },
+  {
+    "domanda": "Quale tipo di file è considerato 'pesante come un'incudine'?",
+    "risposte": ["Un file di testo", "Un video ad alta definizione", "Una foto dello smartphone"],
+    "corretta": "Un video ad alta definizione"
+  },
+  {
+    "domanda": "Cosa succede se togli l'estensione a un file rinominandolo?",
+    "risposte": ["Il file diventa più leggero", "Il file si cancella", "Non sai più cos'è e il computer non sa come aprirlo"],
+    "corretta": "Non sai più cos'è e il computer non sa come aprirlo"
+  },
+  {
+    "domanda": "Quale azione del mouse è paragonata a 'bussare a una porta per entrare'?",
+    "risposte": ["Click Singolo", "Click Destro", "Doppio Click"],
+    "corretta": "Doppio Click"
+  }
+]

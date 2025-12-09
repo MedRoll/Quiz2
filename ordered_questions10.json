@@ -1,0 +1,127 @@
+[
+  {
+    "domanda": "Secondo la lezione, senza un metodo di organizzazione, cosa diventa il computer?",
+    "risposte": ["Un labirinto", "Una biblioteca", "Un archivio perfetto"],
+    "corretta": "Un labirinto"
+  },
+  {
+    "domanda": "Quale unità di misura corrisponde a un milione di lettere (es. una canzone)?",
+    "risposte": ["Kilobyte (KB)", "Megabyte (MB)", "Gigabyte (GB)"],
+    "corretta": "Megabyte (MB)"
+  },
+  {
+    "domanda": "Quale estensione file è associata ai filmati video?",
+    "risposte": [".mp3", ".mp4", ".jpg"],
+    "corretta": ".mp4"
+  },
+  {
+    "domanda": "Cosa fa l'estensione .exe o il programma al file?",
+    "risposte": ["Lo cancella", "Dice al computer che tipo di file è", "Ne aumenta la dimensione"],
+    "corretta": "Dice al computer che tipo di file è"
+  },
+  {
+    "domanda": "Qual è il tasto del mouse 'Indice' e qual è la sua funzione principale?",
+    "risposte": ["Tasto Destro - Opzioni", "Tasto Sinistro - Azione Principale", "Rotellina - Zoom"],
+    "corretta": "Tasto Sinistro - Azione Principale"
+  },
+  {
+    "domanda": "Quale metafora viene usata per il 'Doppio Click'?",
+    "risposte": ["Tagliare un foglio", "Bussare a una porta per entrare", "Gettare nel cestino"],
+    "corretta": "Bussare a una porta per entrare"
+  },
+  {
+    "domanda": "Come si chiama il menu che appare col Tasto Destro?",
+    "risposte": ["Menu Principale", "Menu Start", "Menu Contestuale"],
+    "corretta": "Menu Contestuale"
+  },
+  {
+    "domanda": "Quale combinazione di tasti è la 'Macchina del Tempo'?",
+    "risposte": ["CTRL + C", "CTRL + V", "CTRL + Z"],
+    "corretta": "CTRL + Z"
+  },
+  {
+    "domanda": "Se trascini un file in una cartella mentre tieni premuto il tasto sinistro, cosa stai facendo?",
+    "risposte": ["Drag & Drop", "Copia e Incolla", "Zip e Unzip"],
+    "corretta": "Drag & Drop"
+  },
+  {
+    "domanda": "Cosa appare se trascini il mouse in diagonale in uno spazio vuoto?",
+    "risposte": ["Un cerchio rosso", "Un rettangolo azzurro di selezione", "Il menu start"],
+    "corretta": "Un rettangolo azzurro di selezione"
+  },
+  {
+    "domanda": "Quale scorciatoia da tastiera significa 'Incolla'?",
+    "risposte": ["CTRL + I", "CTRL + P", "CTRL + V"],
+    "corretta": "CTRL + V"
+  },
+  {
+    "domanda": "Quale è la differenza tra usare CTRL e SHIFT nella selezione?",
+    "risposte": ["CTRL seleziona tutto, SHIFT seleziona uno", "CTRL seleziona a macchia di leopardo, SHIFT seleziona un intervallo continuo", "Non c'è differenza"],
+    "corretta": "CTRL seleziona a macchia di leopardo, SHIFT seleziona un intervallo continuo"
+  },
+  {
+    "domanda": "Cosa è il Cestino?",
+    "risposte": ["Una cartella speciale che funge da limbo", "Un programma antivirus", "La memoria RAM"],
+    "corretta": "Una cartella speciale che funge da limbo"
+  },
+  {
+    "domanda": "Quale tasto della tastiera elimina un file selezionato?",
+    "risposte": ["Backspace", "CANC (DEL)", "Esc"],
+    "corretta": "CANC (DEL)"
+  },
+  {
+    "domanda": "Perché è utile usare la data nel formato AAAA-MM-GG nei nomi dei file?",
+    "risposte": ["Perché è obbligatorio", "Perché aiuta a ordinare cronologicamente", "Perché occupa meno spazio"],
+    "corretta": "Perché aiuta a ordinare cronologicamente"
+  },
+  {
+    "domanda": "Quale di questi caratteri DEVI evitare nei nomi dei file?",
+    "risposte": ["Trattino basso (_)", "Punto esclamativo (!)", "Barra verticale (|)"],
+    "corretta": "Barra verticale (|)"
+  },
+  {
+    "domanda": "Dove dovresti creare una cartella 'PALESTRA' per esercitarti senza rischi?",
+    "risposte": ["Nella cartella di Windows", "Sul Desktop", "Nella chiavetta USB di un amico"],
+    "corretta": "Sul Desktop"
+  },
+  {
+    "domanda": "Come si chiama l'operazione di tirare fuori i file da uno ZIP?",
+    "risposte": ["Comprimere", "Estrarre (Unzip)", "Tagliare"],
+    "corretta": "Estrarre (Unzip)"
+  },
+  {
+    "domanda": "Se vuoi raggruppare tutti i PDF insieme in una cartella disordinata, come ordini?",
+    "risposte": ["Per Data", "Per Dimensione", "Per Tipo"],
+    "corretta": "Per Tipo"
+  },
+  {
+    "domanda": "Qual è il 'Tallone d'Achille' dell'informatica di base citato all'inizio?",
+    "risposte": ["La gestione di file e cartelle", "La navigazione internet", "La scrittura veloce"],
+    "corretta": "La gestione di file e cartelle"
+  },
+  {
+    "domanda": "A cosa servono i servizi come Google Drive o OneDrive?",
+    "risposte": ["A salvare i file online (Cloud)", "A comprimere i file", "A pulire il computer"],
+    "corretta": "A salvare i file online (Cloud)"
+  },
+  {
+    "domanda": "Cosa succede se copi il File A ma dimentichi di incollarlo e poi spegni il PC?",
+    "risposte": ["Rimane negli appunti al riavvio", "Viene perso dagli appunti", "Si salva sul desktop"],
+    "corretta": "Viene perso dagli appunti"
+  },
+  {
+    "domanda": "Qual è l'uso consigliato per il comando 'Taglia'?",
+    "risposte": ["Fare un backup", "Riordinare/Spostare file ('Questo non deve stare qui')", "Duplicare file"],
+    "corretta": "Riordinare/Spostare file ('Questo non deve stare qui')"
+  },
+  {
+    "domanda": "Cosa indica l'estensione .mp3?",
+    "risposte": ["Un documento di testo", "Un file Audio (musica)", "Un'immagine"],
+    "corretta": "Un file Audio (musica)"
+  },
+  {
+    "domanda": "Quale visualizzazione mostra l'anteprima dell'immagine senza aprirla?",
+    "risposte": ["Elenco", "Dettagli", "Icone Grandi"],
+    "corretta": "Icone Grandi"
+  }
+]

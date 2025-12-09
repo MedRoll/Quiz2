@@ -1,0 +1,127 @@
+[
+  {
+    "domanda": "Nella metafora dell'archivio, cosa rappresenta la Cartella?",
+    "risposte": ["Il foglio", "Il Contenitore", "La penna"],
+    "corretta": "Il Contenitore"
+  },
+  {
+    "domanda": "Qual è il percorso (Path) approssimativo di un file?",
+    "risposte": ["Solo il nome del file", "L'indirizzo unico del file (es. C:\\Utenti\\Mario...)", "La data di creazione"],
+    "corretta": "L'indirizzo unico del file (es. C:\\Utenti\\Mario...)"
+  },
+  {
+    "domanda": "Quale estensione indica un file 'Portable Document Format'?",
+    "risposte": [".pdf", ".png", ".ppt"],
+    "corretta": ".pdf"
+  },
+  {
+    "domanda": "Quanto spazio occupa un Documento Word medio?",
+    "risposte": ["20-500 KB (Molto piccolo)", "2-5 MB (Medio)", "2-4 GB (Enorme)"],
+    "corretta": "20-500 KB (Molto piccolo)"
+  },
+  {
+    "domanda": "A cosa serve l'icona grafica associata a un file?",
+    "risposte": ["A renderlo più bello", "A identificare intuitivamente il tipo di file senza leggere l'estensione", "A proteggerlo dai virus"],
+    "corretta": "A identificare intuitivamente il tipo di file senza leggere l'estensione"
+  },
+  {
+    "domanda": "Qual è la data più importante tra le proprietà di un file?",
+    "risposte": ["Ultimo Accesso", "Data Creazione", "Ultima Modifica"],
+    "corretta": "Ultima Modifica"
+  },
+  {
+    "domanda": "Qual è l'errore più comune per chi inizia a usare il mouse?",
+    "risposte": ["Usare la rotellina", "Confondere il tasto sinistro con il destro", "Muoverlo troppo velocemente"],
+    "corretta": "Confondere il tasto sinistro con il destro"
+  },
+  {
+    "domanda": "Cosa fa il Click Singolo col tasto sinistro?",
+    "risposte": ["Apre il file", "Elimina il file", "Seleziona il file (lo fa diventare blu/grigio)"],
+    "corretta": "Seleziona il file (lo fa diventare blu/grigio)"
+  },
+  {
+    "domanda": "Per selezionare un gruppo di file contigui (es. i primi 50), quale tasto usi?",
+    "risposte": ["CTRL", "MAIUSC (SHIFT)", "ALT"],
+    "corretta": "MAIUSC (SHIFT)"
+  },
+  {
+    "domanda": "Quando usi 'Copia', cosa succede al file originale?",
+    "risposte": ["Sparisce", "Rimane dov'era (si crea un doppione)", "Viene rinominato"],
+    "corretta": "Rimane dov'era (si crea un doppione)"
+  },
+  {
+    "domanda": "Quando usi 'Taglia', cosa succede al file originale nella vecchia posizione?",
+    "risposte": ["Rimane lì", "Sparisce (si prepara allo spostamento)", "Diventa di sola lettura"],
+    "corretta": "Sparisce (si prepara allo spostamento)"
+  },
+  {
+    "domanda": "Se copi il File A e poi copi il File B, cosa succede al File A negli appunti?",
+    "risposte": ["Rimane insieme al B", "Viene dimenticato/sovrascritto", "Viene salvato sul Desktop"],
+    "corretta": "Viene dimenticato/sovrascritto"
+  },
+  {
+    "domanda": "Qual è il metodo 'Drag & Drop' per eliminare un file?",
+    "risposte": ["Trascinare il file fuori dallo schermo", "Trascinare il file sopra l'icona del Cestino", "Trascinare il file in una cartella compressa"],
+    "corretta": "Trascinare il file sopra l'icona del Cestino"
+  },
+  {
+    "domanda": "Cosa significa 'Portare fuori la spazzatura' nel computer?",
+    "risposte": ["Spostare il cestino sul desktop", "Svuotare il Cestino (eliminazione definitiva)", "Riavviare il computer"],
+    "corretta": "Svuotare il Cestino (eliminazione definitiva)"
+  },
+  {
+    "domanda": "Quale di questi NON è un buon nome per un file?",
+    "risposte": ["Progetto_Vacanze_2023.jpg", "Relazione_Finale.doc", "Documento1.docx"],
+    "corretta": "Documento1.docx"
+  },
+  {
+    "domanda": "Cosa si intende per 'Nomi Parlanti'?",
+    "risposte": ["Nomi che contengono file audio", "Nomi che descrivono chiaramente il contenuto e usano date", "Nomi brevi di 3 lettere"],
+    "corretta": "Nomi che descrivono chiaramente il contenuto e usano date"
+  },
+  {
+    "domanda": "Quale visualizzazione è migliore per le foto?",
+    "risposte": ["Dettagli", "Elenco", "Icone Grandi"],
+    "corretta": "Icone Grandi"
+  },
+  {
+    "domanda": "Come puoi ordinare i file per trovare quelli che occupano troppo spazio?",
+    "risposte": ["Ordinare per Nome", "Ordinare per Dimensione", "Ordinare per Tipo"],
+    "corretta": "Ordinare per Dimensione"
+  },
+  {
+    "domanda": "Cosa fa la funzione 'Invia a -> Cartella compressa'?",
+    "risposte": ["Invia il file via email", "Crea un file ZIP con i file selezionati", "Sposta i file nel cestino"],
+    "corretta": "Crea un file ZIP con i file selezionati"
+  },
+  {
+    "domanda": "Perché si dice che il file ZIP è come una 'valigia'?",
+    "risposte": ["Perché ha la maniglia", "Perché contiene tanti altri file in un unico pacchetto", "Perché serve per i viaggi"],
+    "corretta": "Perché contiene tanti altri file in un unico pacchetto"
+  },
+  {
+    "domanda": "Cosa è il 'Cloud' in parole semplici?",
+    "risposte": ["Un hard disk volante", "Il computer di qualcun altro accessibile via Internet", "Un programma per il meteo"],
+    "corretta": "Il computer di qualcun altro accessibile via Internet"
+  },
+  {
+    "domanda": "Qual è il tasto per 'Taglia' (Cut)?",
+    "risposte": ["CTRL + C", "CTRL + X", "CTRL + V"],
+    "corretta": "CTRL + X"
+  },
+  {
+    "domanda": "Cosa succede se clicchi 'Svuota Cestino'?",
+    "risposte": ["I file tornano al loro posto", "Puoi ancora recuperarli con Ctrl+Z", "I file sono persi per sempre"],
+    "corretta": "I file sono persi per sempre"
+  },
+  {
+    "domanda": "Se vuoi selezionare la 1°, la 5° e la 10° foto, quale tasto tieni premuto?",
+    "risposte": ["MAIUSC (SHIFT)", "CTRL", "ALT"],
+    "corretta": "CTRL"
+  },
+  {
+    "domanda": "Qual è la definizione di Gigabyte (GB)?",
+    "risposte": ["Mille lettere", "Un milione di lettere", "Un miliardo di lettere"],
+    "corretta": "Un miliardo di lettere"
+  }
+]

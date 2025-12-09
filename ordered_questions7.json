@@ -1,0 +1,127 @@
+[
+  {
+    "domanda": "Secondo la lezione, a cosa può essere paragonato il 'File'?",
+    "risposte": ["A una cartella sospesa", "A un foglio di carta", "A un archivio di metallo"],
+    "corretta": "A un foglio di carta"
+  },
+  {
+    "domanda": "Qual è l'unità di misura che corrisponde approssimativamente a una pagina di testo (mille lettere)?",
+    "risposte": ["Gigabyte (GB)", "Byte (B)", "Kilobyte (KB)"],
+    "corretta": "Kilobyte (KB)"
+  },
+  {
+    "domanda": "Se un file ha l'estensione .txt, di che tipo di file si tratta?",
+    "risposte": ["Testo semplice senza formattazione", "Documento Word con grassetto e colori", "Immagine statica"],
+    "corretta": "Testo semplice senza formattazione"
+  },
+  {
+    "domanda": "Quale estensione è ideale per grafiche e loghi perché supporta lo sfondo trasparente?",
+    "risposte": [".JPG", ".PNG", ".GIF"],
+    "corretta": ".PNG"
+  },
+  {
+    "domanda": "Come viene definita la 'Clipboard' (Appunti) in relazione alla memoria?",
+    "risposte": ["Ricorda tutto ciò che hai copiato nell'ultima ora", "Ricorda solo l'ultima cosa copiata", "È una memoria permanente sul disco"],
+    "corretta": "Ricorda solo l'ultima cosa copiata"
+  },
+  {
+    "domanda": "Qual è il comando da tastiera per 'Seleziona Tutto'?",
+    "risposte": ["CTRL + T", "CTRL + A", "CTRL + S"],
+    "corretta": "CTRL + A"
+  },
+  {
+    "domanda": "Cosa succede se si tiene premuto il tasto CTRL mentre si clicca su diversi file?",
+    "risposte": ["Si selezionano tutti i file tra il primo e l'ultimo", "Si apre un menu contestuale", "Si selezionano file sparsi ('a macchia di leopardo')"],
+    "corretta": "Si selezionano file sparsi ('a macchia di leopardo')"
+  },
+  {
+    "domanda": "Qual è la differenza visiva spesso associata all'azione 'Taglia' prima di incollare?",
+    "risposte": ["L'icona diventa rossa", "L'icona diventa semitrasparente", "L'icona scompare immediatamente"],
+    "corretta": "L'icona diventa semitrasparente"
+  },
+  {
+    "domanda": "Se hai eliminato un file per sbaglio e non hai ancora svuotato il cestino, cosa puoi fare?",
+    "risposte": ["Usare la funzione 'Ripristina' dal Cestino", "Niente, il file è perso", "Riscrivere il file da zero"],
+    "corretta": "Usare la funzione 'Ripristina' dal Cestino"
+  },
+  {
+    "domanda": "Perché non bisogna mai staccare la chiavetta USB mentre il PC sta scrivendo?",
+    "risposte": ["Si potrebbe prendere la scossa", "Potreste bruciare o corrompere i file", "Il computer si spegne"],
+    "corretta": "Potreste bruciare o corrompere i file"
+  },
+  {
+    "domanda": "Quale visualizzazione di Esplora File è migliore per vedere i dettagli come data e dimensione?",
+    "risposte": ["Icone Grandi", "Dettagli", "Riquadri"],
+    "corretta": "Dettagli"
+  },
+  {
+    "domanda": "Cosa fa il trucco dell'asterisco (es. cercare *.jpg)?",
+    "risposte": ["Trova solo i file che iniziano per jpg", "Trova tutte le immagini jpg ignorando il nome", "Elimina tutti i file jpg"],
+    "corretta": "Trova tutte le immagini jpg ignorando il nome"
+  },
+  {
+    "domanda": "Qual è uno svantaggio dell'uso del Cloud?",
+    "risposte": ["I file occupano spazio sul tuo disco", "Serve una connessione Internet", "Non si possono condividere i file"],
+    "corretta": "Serve una connessione Internet"
+  },
+  {
+    "domanda": "Quale attributo speciale rende un file invisibile nella cartella?",
+    "risposte": ["Sola Lettura", "Nascosto", "Sicurezza"],
+    "corretta": "Nascosto"
+  },
+  {
+    "domanda": "Quale parte del nome del file è definita dal programma?",
+    "risposte": ["Il Nome", "L'Estensione", "Il Percorso"],
+    "corretta": "L'Estensione"
+  },
+  {
+    "domanda": "Quanto spazio occupa approssimativamente una foto fatta con lo smartphone?",
+    "risposte": ["20-500 KB", "2-5 MB", "2-4 GB"],
+    "corretta": "2-5 MB"
+  },
+  {
+    "domanda": "Cosa indica l'icona con una 'W' blu?",
+    "risposte": ["Un file Web", "Un documento Word", "Un file di Windows"],
+    "corretta": "Un documento Word"
+  },
+  {
+    "domanda": "A cosa serve il tasto SHIFT (Maiusc) durante la selezione?",
+    "risposte": ["A selezionare file sparsi", "A selezionare un intervallo 'Da qui a lì'", "A copiare i file selezionati"],
+    "corretta": "A selezionare un intervallo 'Da qui a lì'"
+  },
+  {
+    "domanda": "Qual è il rischio principale di un desktop pieno di icone?",
+    "risposte": ["Rallenta la connessione internet", "Aumenta lo stress e riduce la concentrazione", "Consuma più elettricità"],
+    "corretta": "Aumenta lo stress e riduce la concentrazione"
+  },
+  {
+    "domanda": "Cosa significa l'attributo 'Sola Lettura'?",
+    "risposte": ["Il file può essere solo stampato", "Il file può essere aperto ma non modificato/salvato", "Il file può essere letto solo dal creatore"],
+    "corretta": "Il file può essere aperto ma non modificato/salvato"
+  },
+  {
+    "domanda": "Qual è la scorciatoia per incollare un file?",
+    "risposte": ["CTRL + V", "CTRL + I", "CTRL + P"],
+    "corretta": "CTRL + V"
+  },
+  {
+    "domanda": "Dove trovi solitamente la 'carta d'identità' (Proprietà) di un file?",
+    "risposte": ["Cliccando due volte sul file", "Cliccando col tasto destro e scegliendo Proprietà", "Nel menu Start"],
+    "corretta": "Cliccando col tasto destro e scegliendo Proprietà"
+  },
+  {
+    "domanda": "Cosa contiene un file .zip?",
+    "risposte": ["Solo documenti di testo", "Altri file compressi per occupare meno spazio", "Un programma per pulire il PC"],
+    "corretta": "Altri file compressi per occupare meno spazio"
+  },
+  {
+    "domanda": "Qual è il primo passaggio per estrarre un file zip?",
+    "risposte": ["Fare doppio click e trascinare fuori", "Tasto destro sul file ZIP -> Estrai tutto", "Rinominare il file in .txt"],
+    "corretta": "Tasto destro sul file ZIP -> Estrai tutto"
+  },
+  {
+    "domanda": "Se il computer ti dice 'File in Uso', cosa devi fare?",
+    "risposte": ["Riavviare il computer", "Chiudere il programma che sta usando il file", "Forzare l'eliminazione"],
+    "corretta": "Chiudere il programma che sta usando il file"
+  }
+]
