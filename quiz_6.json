@@ -1,0 +1,127 @@
+[
+  {
+    "domanda": "Secondo la metafora dell'archivio, cos'è il disco rigido (Hard Disk) del computer?",
+    "risposte": ["Un foglio", "Il contenuto vero e proprio", "Un enorme archivio fisico di metallo"],
+    "corretta": "Un enorme archivio fisico di metallo"
+  },
+  {
+    "domanda": "Qual è la differenza cruciale tra un File e una Cartella?",
+    "risposte": ["Il File è il Contenitore, la Cartella è il Foglio", "Il File è il Foglio (unità base), la Cartella è il Contenitore", "Non c'è differenza, sono sinonimi"],
+    "corretta": "Il File è il Foglio (unità base), la Cartella è il Contenitore"
+  },
+  {
+    "domanda": "Come viene organizzato gerarchicamente l'archivio del computer?",
+    "risposte": ["In modo casuale", "Con una struttura ad Albero che parte dalla 'radice' (es. Disco C:)", "In base alla data di creazione dei file"],
+    "corretta": "Con una struttura ad Albero che parte dalla 'radice' (es. Disco C:)"
+  },
+  {
+    "domanda": "Cosa rappresenta l'Estensione in un nome file (es. il '.docx' in 'lettera.docx')?",
+    "risposte": ["La dimensione del file", "Il 'Cognome' che dice al computer quale programma usare per aprirlo", "Il nome scelto dall'utente"],
+    "corretta": "Il 'Cognome' che dice al computer quale programma usare per aprirlo"
+  },
+  {
+    "domanda": "Qual è la 'Regola d'oro' da seguire quando si rinomina un file?",
+    "risposte": ["Usare solo lettere maiuscole", "Non modificare mai l'estensione manualmente", "Inserire sempre la data nel nome"],
+    "corretta": "Non modificare mai l'estensione manualmente"
+  },
+  {
+    "domanda": "A quale tipo di file si riferisce l'estensione **.pdf**?",
+    "risposte": ["Un documento modificabile di Word", "Un'immagine animata", "Un formato che si legge ovunque ma è difficile da modificare ('stampa digitale')"],
+    "corretta": "Un formato che si legge ovunque ma è difficile da modificare ('stampa digitale')"
+  },
+  {
+    "domanda": "Cosa rappresenta l'unità di misura **Gigabyte (GB)**?",
+    "risposte": ["Una singola lettera dell'alfabeto", "Un milione di lettere (una foto, una canzone)", "Un miliardo di lettere (un film, un videogioco)"],
+    "corretta": "Un miliardo di lettere (un film, un videogioco)"
+  },
+  {
+    "domanda": "Qual è la funzione principale del **Tasto Sinistro** del mouse (un singolo click)?",
+    "risposte": ["Aprire/Eseguire un elemento", "Mostrare un menu di opzioni (Menu Contestuale)", "SELEZIONARE un elemento"],
+    "corretta": "SELEZIONARE un elemento"
+  },
+  {
+    "domanda": "Quale azione si esegue con il **Doppio Click Sinistro** del mouse?",
+    "risposte": ["SELEZIONARE", "APRIRE o ESEGUIRE", "Mostrare le Proprietà"],
+    "corretta": "APRIRE o ESEGUIRE"
+  },
+  {
+    "domanda": "Cosa appare quando si clicca col **Tasto Destro** su un file o una cartella?",
+    "risposte": ["Si apre l'elemento automaticamente", "Appare un Menu Contestuale con le opzioni disponibili", "Si elimina il file"],
+    "corretta": "Appare un Menu Contestuale con le opzioni disponibili"
+  },
+  {
+    "domanda": "Qual è la scorciatoia da tastiera per **Copia** (Copy)?",
+    "risposte": ["CTRL + X", "CTRL + Z", "CTRL + C"],
+    "corretta": "CTRL + C"
+  },
+  {
+    "domanda": "Qual è la scorciatoia da tastiera per **Taglia** (Cut)?",
+    "risposte": ["CTRL + V", "CTRL + A", "CTRL + X"],
+    "corretta": "CTRL + X"
+  },
+  {
+    "domanda": "Qual è la scorciatoia da tastiera per **Incolla** (Paste)?",
+    "risposte": ["CTRL + P", "CTRL + V", "CTRL + Z"],
+    "corretta": "CTRL + V"
+  },
+  {
+    "domanda": "Che differenza c'è tra l'azione 'Copia' e 'Taglia'?",
+    "risposte": ["Copia crea un doppione, Taglia sposta l'originale", "Copia sposta l'originale, Taglia crea un doppione", "Sono identiche"],
+    "corretta": "Copia crea un doppione, Taglia sposta l'originale"
+  },
+  {
+    "domanda": "Cos'è la 'Clipboard' (Appunti)?",
+    "risposte": ["Una cartella speciale per i file Word", "Una memoria temporanea invisibile che ricorda l'ultima cosa copiata", "Un dispositivo esterno"],
+    "corretta": "Una memoria temporanea invisibile che ricorda l'ultima cosa copiata"
+  },
+  {
+    "domanda": "Quale comando annulla l'ultima azione fatta sul computer (come una 'Macchina del Tempo')?",
+    "risposte": ["CTRL + S", "CTRL + A", "CTRL + Z"],
+    "corretta": "CTRL + Z"
+  },
+  {
+    "domanda": "Quando un file viene eliminato, dove finisce per prima cosa?",
+    "risposte": ["Scompare definitivamente", "Nel Cestino, dove funge da 'limbo' per una seconda possibilità", "Nella cartella Download"],
+    "corretta": "Nel Cestino, dove funge da 'limbo' per una seconda possibilità"
+  },
+  {
+    "domanda": "Cosa succede quando si **svuota il Cestino**?",
+    "risposte": ["I file vengono compressi in uno ZIP", "I file vengono ripristinati nella posizione originale", "I file vengono eliminati definitivamente e sono persi per sempre"],
+    "corretta": "I file vengono eliminati definitivamente e sono persi per sempre"
+  },
+  {
+    "domanda": "Come si chiama la tecnica di selezione che permette di selezionare file non contigui (sparsi) in una cartella?",
+    "risposte": ["Rettangolo di Selezione", "Selezione 'Da Qui a Lì' (MAIUSC/SHIFT)", "Selezione 'A Macchia di Leopardo' (CTRL)"],
+    "corretta": "Selezione 'A Macchia di Leopardo' (CTRL)"
+  },
+  {
+    "domanda": "Quale comando da tastiera seleziona **tutti** i file presenti in una cartella?",
+    "risposte": ["CTRL + X", "CTRL + A", "CTRL + S"],
+    "corretta": "CTRL + A"
+  },
+  {
+    "domanda": "Perché è importante usare la **Rimozione Sicura** prima di togliere una chiavetta USB?",
+    "risposte": ["Per risparmiare batteria", "Per assicurarsi che il PC non stia scrivendo e non 'bruci' i file", "Per formattare la chiavetta"],
+    "corretta": "Per assicurarsi che il PC non stia scrivendo e non 'bruci' i file"
+  },
+  {
+    "domanda": "Quale caratteristica è mostrata nella 'carta d'identità' di un file, che si accede con Tasto Destro -> Proprietà?",
+    "risposte": ["Il nome utente e la password", "La data di creazione, l'ultima modifica e le dimensioni esatte", "Il numero di volte che è stato copiato"],
+    "corretta": "La data di creazione, l'ultima modifica e le dimensioni esatte"
+  },
+  {
+    "domanda": "Perché si usa l'estensione di file **.zip**?",
+    "risposte": ["È un file di testo semplice", "È un 'valigia' compressa che contiene altri file per occupare meno spazio", "È un file video"],
+    "corretta": "È un 'valigia' compressa che contiene altri file per occupare meno spazio"
+  },
+  {
+    "domanda": "Se Windows dà l'errore '**File in Uso**' quando si cerca di cancellare un file, qual è la probabile causa?",
+    "risposte": ["La cartella è nascosta", "Il file è aperto in qualche programma (es. Word)", "Manca l'estensione del file"],
+    "corretta": "Il file è aperto in qualche programma (es. Word)"
+  },
+  {
+    "domanda": "Dove finisce di solito tutto ciò che si scarica da Internet?",
+    "risposte": ["Nella cartella Immagini", "Nella cartella Download", "Sul Desktop"],
+    "corretta": "Nella cartella Download"
+  }
+]
