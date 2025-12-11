@@ -1,0 +1,272 @@
+[
+  {
+    "domanda": "Qual è la funzione di un Motore di Ricerca (es. Google)?",
+    "risposte": [
+      "Scrivere documenti",
+      "Fare da 'bibliotecario' trovando le informazioni nel Web",
+      "Proteggere dai virus"
+    ],
+    "corretta": "Fare da 'bibliotecario' trovando le informazioni nel Web"
+  },
+  {
+    "domanda": "Qual è la differenza tra Barra degli Indirizzi e Barra di Ricerca?",
+    "risposte": [
+      "La Barra Indirizzi è per siti che conosco già, la Ricerca è per trovare argomenti",
+      "Nessuna, sono uguali",
+      "La Barra di Ricerca è solo per le immagini"
+    ],
+    "corretta": "La Barra Indirizzi è per siti che conosco già, la Ricerca è per trovare argomenti"
+  },
+  {
+    "domanda": "Cosa sono le 'Parole Chiave'?",
+    "risposte": [
+      "Le password segrete",
+      "Parole sintetiche usate per cercare (es. 'Meteo Roma' invece di 'Che tempo fa')",
+      "Le parole scritte in grassetto"
+    ],
+    "corretta": "Parole sintetiche usate per cercare (es. 'Meteo Roma' invece di 'Che tempo fa')"
+  },
+  {
+    "domanda": "Se cerco 'Ristoranti vicino a me', cosa vedrò nei primi risultati in alto?",
+    "risposte": [
+      "Sempre e solo Wikipedia",
+      "Spesso annunci pubblicitari (Sponsorizzati)",
+      "La mappa dell'America"
+    ],
+    "corretta": "Spesso annunci pubblicitari (Sponsorizzati)"
+  },
+  {
+    "domanda": "Come riconosco un risultato 'Sponsorizzato' (Pubblicità) su Google?",
+    "risposte": [
+      "È scritto in rosso",
+      "C'è scritto 'Annuncio' o 'Sponsorizzato' in piccolo sopra il titolo",
+      "Non si può riconoscere"
+    ],
+    "corretta": "C'è scritto 'Annuncio' o 'Sponsorizzato' in piccolo sopra il titolo"
+  },
+  {
+    "domanda": "Cosa sono i 'Risultati Organici'?",
+    "risposte": [
+      "Risultati naturali che Google considera i migliori, non pagati",
+      "Prodotti biologici in vendita",
+      "Risultati vecchi"
+    ],
+    "corretta": "Risultati naturali che Google considera i migliori, non pagati"
+  },
+  {
+    "domanda": "A cosa servono i 'Suggerimenti' mentre scrivo su Google?",
+    "risposte": [
+      "A distrarmi",
+      "A completare la frase con le ricerche più frequenti per risparmiare tempo",
+      "A correggere la grammatica"
+    ],
+    "corretta": "A completare la frase con le ricerche più frequenti per risparmiare tempo"
+  },
+  {
+    "domanda": "Cosa fa la funzione 'Forse cercavi...'?",
+    "risposte": [
+      "Mi prende in giro",
+      "Corregge automaticamente se ho sbagliato a scrivere una parola",
+      "Cancella la ricerca"
+    ],
+    "corretta": "Corregge automaticamente se ho sbagliato a scrivere una parola"
+  },
+  {
+    "domanda": "Se voglio vedere solo foto di gatti, dove clicco dopo la ricerca?",
+    "risposte": [
+      "Su 'Immagini' sotto la barra di ricerca",
+      "Su 'Shopping'",
+      "Su 'Mappe'"
+    ],
+    "corretta": "Su 'Immagini' sotto la barra di ricerca"
+  },
+  {
+    "domanda": "Se voglio vedere dove si trova una via, dove clicco?",
+    "risposte": [
+      "Su 'Notizie'",
+      "Su 'Maps' (Mappe)",
+      "Su 'Video'"
+    ],
+    "corretta": "Su 'Maps' (Mappe)"
+  },
+  {
+    "domanda": "A cosa serve il pulsante del microfono nella barra di ricerca?",
+    "risposte": [
+      "A registrare una canzone",
+      "A fare una Ricerca Vocale parlando invece di scrivere",
+      "A chiamare l'assistenza"
+    ],
+    "corretta": "A fare una Ricerca Vocale parlando invece di scrivere"
+  },
+  {
+    "domanda": "Cos'è Wikipedia?",
+    "risposte": [
+      "Un negozio online",
+      "Un'enciclopedia libera e gratuita scritta da volontari",
+      "Un sito di giochi"
+    ],
+    "corretta": "Un'enciclopedia libera e gratuita scritta da volontari"
+  },
+  {
+    "domanda": "Cosa sono i 'Preferiti' (Bookmarks)?",
+    "risposte": [
+      "I siti che odio",
+      "Segnalibri per salvare l'indirizzo di un sito e ritrovarlo facilmente",
+      "Le password salvate"
+    ],
+    "corretta": "Segnalibri per salvare l'indirizzo di un sito e ritrovarlo facilmente"
+  },
+  {
+    "domanda": "Quale icona si usa di solito per aggiungere un Preferito?",
+    "risposte": [
+      "Un cestino",
+      "Una Stella",
+      "Una chiave inglese"
+    ],
+    "corretta": "Una Stella"
+  },
+  {
+    "domanda": "Dove trovo l'elenco dei miei Preferiti?",
+    "risposte": [
+      "Nella cartella Download",
+      "Nella Barra dei Preferiti o nel Menu del browser",
+      "Sul Desktop"
+    ],
+    "corretta": "Nella Barra dei Preferiti o nel Menu del browser"
+  },
+  {
+    "domanda": "Cos'è la 'Cronologia'?",
+    "risposte": [
+      "L'orologio del computer",
+      "L'elenco di tutti i siti visitati nel passato",
+      "Un sito di storia"
+    ],
+    "corretta": "L'elenco di tutti i siti visitati nel passato"
+  },
+  {
+    "domanda": "Qual è la scorciatoia da tastiera per aprire la Cronologia?",
+    "risposte": [
+      "Ctrl + C",
+      "Ctrl + H (History)",
+      "Ctrl + P"
+    ],
+    "corretta": "Ctrl + H (History)"
+  },
+  {
+    "domanda": "Perché potrei voler cancellare la Cronologia?",
+    "risposte": [
+      "Per liberare spazio sull'Hard Disk (anche se poco)",
+      "Per privacy, per non far vedere ad altri cosa ho visitato",
+      "Tutte le precedenti"
+    ],
+    "corretta": "Tutte le precedenti"
+  },
+  {
+    "domanda": "Cosa fa il Knowledge Graph (riquadro a destra nei risultati Google)?",
+    "risposte": [
+      "Mostra pubblicità",
+      "Dà una risposta diretta e immediata (es. meteo, data di nascita) senza cliccare link",
+      "Blocca il computer"
+    ],
+    "corretta": "Dà una risposta diretta e immediata (es. meteo, data di nascita) senza cliccare link"
+  },
+  {
+    "domanda": "Se voglio cercare una frase esatta, cosa uso?",
+    "risposte": [
+      "Le parentesi quadre",
+      "Le virgolette (es. \"essere o non essere\")",
+      "Gli asterischi"
+    ],
+    "corretta": "Le virgolette (es. \"essere o non essere\")"
+  },
+  {
+    "domanda": "Se cerco 'Ricetta Tiramisù -caffè', cosa succede?",
+    "risposte": [
+      "Trova ricette col caffè",
+      "Esclude la parola caffè dai risultati (ricette senza caffè)",
+      "Cancella la ricerca"
+    ],
+    "corretta": "Esclude la parola caffè dai risultati (ricette senza caffè)"
+  },
+  {
+    "domanda": "Come posso cercare una parola specifica dentro una pagina lunga?",
+    "risposte": [
+      "Leggendo tutto riga per riga",
+      "Usando la funzione Trova (Ctrl + F)",
+      "Chiedendo a voce alta"
+    ],
+    "corretta": "Usando la funzione Trova (Ctrl + F)"
+  },
+  {
+    "domanda": "La Barra dei Preferiti può essere organizzata in:",
+    "risposte": [
+      "Non si può organizzare",
+      "Cartelle (es. Lavoro, Hobby, Ricette)",
+      "Pile di carta"
+    ],
+    "corretta": "Cartelle (es. Lavoro, Hobby, Ricette)"
+  },
+  {
+    "domanda": "Se Google mostra i risultati in inglese, cosa posso fare?",
+    "risposte": [
+      "Imparare l'inglese subito",
+      "Usare la funzione 'Traduci questa pagina' del browser",
+      "Spegnere il PC"
+    ],
+    "corretta": "Usare la funzione 'Traduci questa pagina' del browser"
+  },
+  {
+    "domanda": "YouTube è un sito specializzato in:",
+    "risposte": [
+      "Testi scritti",
+      "Video",
+      "Mappe"
+    ],
+    "corretta": "Video"
+  },
+  {
+    "domanda": "Se vedo 'Le persone hanno chiesto anche' nei risultati, a cosa serve?",
+    "risposte": [
+      "A vedere domande correlate per esplorare meglio l'argomento",
+      "È pubblicità",
+      "È un quiz obbligatorio"
+    ],
+    "corretta": "A vedere domande correlate per esplorare meglio l'argomento"
+  },
+  {
+    "domanda": "Cosa significa 'Google ti legge nel pensiero'?",
+    "risposte": [
+      "È magia nera",
+      "Propone completamenti basati su cosa cercano milioni di altre persone",
+      "Usa la webcam per leggerti le labbra"
+    ],
+    "corretta": "Propone completamenti basati su cosa cercano milioni di altre persone"
+  },
+  {
+    "domanda": "Perché è utile la scorciatoia Ctrl + Maiusc + B?",
+    "risposte": [
+      "Per mostrare o nascondere la Barra dei Preferiti",
+      "Per bloccare il PC",
+      "Per stampare in grassetto"
+    ],
+    "corretta": "Per mostrare o nascondere la Barra dei Preferiti"
+  },
+  {
+    "domanda": "Se clicco sul titolo blu grande di un risultato:",
+    "risposte": [
+      "Apro quel sito",
+      "Cancello il risultato",
+      "Segnalo il sito"
+    ],
+    "corretta": "Apro quel sito"
+  },
+  {
+    "domanda": "Il testo grigio piccolo sotto il titolo nei risultati Google è:",
+    "risposte": [
+      "Inutile",
+      "Una breve descrizione del contenuto della pagina",
+      "Il prezzo del sito"
+    ],
+    "corretta": "Una breve descrizione del contenuto della pagina"
+  }
+]

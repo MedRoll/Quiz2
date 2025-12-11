@@ -1,0 +1,272 @@
+[
+  {
+    "domanda": "Cos'è Internet secondo la metafora usata nella lezione?",
+    "risposte": [
+      "Una nuvola magica nel cielo",
+      "Una rete stradale globale di cavi e computer collegati fisicamente",
+      "Un programma installato sul computer"
+    ],
+    "corretta": "Una rete stradale globale di cavi e computer collegati fisicamente"
+  },
+  {
+    "domanda": "Qual è la differenza principale tra Internet e il Web (WWW)?",
+    "risposte": [
+      "Internet è l'infrastruttura (le strade), il Web sono i contenuti (i negozi)",
+      "Sono esattamente la stessa cosa",
+      "Il Web serve per le email, Internet per i video"
+    ],
+    "corretta": "Internet è l'infrastruttura (le strade), il Web sono i contenuti (i negozi)"
+  },
+  {
+    "domanda": "Cosa significa il termine 'Online'?",
+    "risposte": [
+      "Che il computer è spento",
+      "Che il computer è disconnesso dalla rete",
+      "Che il computer è connesso a Internet e comunica con l'esterno"
+    ],
+    "corretta": "Che il computer è connesso a Internet e comunica con l'esterno"
+  },
+  {
+    "domanda": "Cosa significa il termine 'Offline'?",
+    "risposte": [
+      "Che il computer è velocissimo",
+      "Che il computer è disconnesso e non può 'parlare' con l'esterno",
+      "Che si sta navigando in modalità segreta"
+    ],
+    "corretta": "Che il computer è disconnesso e non può 'parlare' con l'esterno"
+  },
+  {
+    "domanda": "Quali sono le tre cose necessarie per andare su Internet?",
+    "risposte": [
+      "Dispositivo, Connessione, Browser",
+      "Stampante, Scanner, Mouse",
+      "Microfono, Webcam, Casse"
+    ],
+    "corretta": "Dispositivo, Connessione, Browser"
+  },
+  {
+    "domanda": "Nel modello Client-Server, chi è il 'Client'?",
+    "risposte": [
+      "Il computer potente che ospita i siti",
+      "Voi, con il vostro PC o telefono, che chiedete un'informazione",
+      "Il cavo che passa sotto il mare"
+    ],
+    "corretta": "Voi, con il vostro PC o telefono, che chiedete un'informazione"
+  },
+  {
+    "domanda": "Nel modello Client-Server, chi è il 'Server'?",
+    "risposte": [
+      "Voi che usate il computer",
+      "Un computer potente che 'serve' la pagina richiesta",
+      "Il programma per scrivere documenti"
+    ],
+    "corretta": "Un computer potente che 'serve' la pagina richiesta"
+  },
+  {
+    "domanda": "Cosa si intende per 'Provider' (ISP)?",
+    "risposte": [
+      "L'azienda che fornisce l'accesso a Internet (es. TIM, Vodafone)",
+      "Il programma per navigare (es. Chrome)",
+      "Il motore di ricerca (es. Google)"
+    ],
+    "corretta": "L'azienda che fornisce l'accesso a Internet (es. TIM, Vodafone)"
+  },
+  {
+    "domanda": "Chi paga per mantenere i cavi e l'infrastruttura di Internet che arriva a casa vostra?",
+    "risposte": [
+      "Nessuno, è gratis",
+      "Il Provider, grazie alla bolletta che pagate",
+      "Google e Facebook"
+    ],
+    "corretta": "Il Provider, grazie alla bolletta che pagate"
+  },
+  {
+    "domanda": "Come si finanziano molti servizi web 'gratuiti' come Facebook?",
+    "risposte": [
+      "Con le tasse governative",
+      "Con la pubblicità",
+      "Chiedendo donazioni"
+    ],
+    "corretta": "Con la pubblicità"
+  },
+  {
+    "domanda": "Cosa sono i cavi sottomarini?",
+    "risposte": [
+      "Non esistono, internet viaggia solo via satellite",
+      "Enormi cavi sul fondo dell'oceano che collegano i continenti",
+      "Cavi usati solo per la televisione"
+    ],
+    "corretta": "Enormi cavi sul fondo dell'oceano che collegano i continenti"
+  },
+  {
+    "domanda": "Qual è il vantaggio del collegamento via cavo (Ethernet)?",
+    "risposte": [
+      "È più veloce e non si interrompe mai",
+      "Permette di muoversi liberamente per casa",
+      "È l'unico modo per collegare un cellulare"
+    ],
+    "corretta": "È più veloce e non si interrompe mai"
+  },
+  {
+    "domanda": "Qual è il vantaggio del collegamento Wi-Fi?",
+    "risposte": [
+      "È più sicuro dei cavi",
+      "È comodo per muoversi con portatili e cellulari senza fili",
+      "È sempre più veloce del cavo"
+    ],
+    "corretta": "È comodo per muoversi con portatili e cellulari senza fili"
+  },
+  {
+    "domanda": "A cosa serve il Modem/Router?",
+    "risposte": [
+      "A stampare le pagine web",
+      "A collegare il PC alla linea telefonica e distribuire il segnale (Wi-Fi)",
+      "A proteggere dai virus"
+    ],
+    "corretta": "A collegare il PC alla linea telefonica e distribuire il segnale (Wi-Fi)"
+  },
+  {
+    "domanda": "Se 'cade la linea' internet, di chi è solitamente la colpa?",
+    "risposte": [
+      "Del motore di ricerca",
+      "Del Provider o del modem",
+      "Del mouse"
+    ],
+    "corretta": "Del Provider o del modem"
+  },
+  {
+    "domanda": "Cosa indicano i 'Mega' o 'Giga' in una connessione?",
+    "risposte": [
+      "Il peso del modem",
+      "La velocità di Internet",
+      "Il costo della bolletta"
+    ],
+    "corretta": "La velocità di Internet"
+  },
+  {
+    "domanda": "Cosa significa 'Download'?",
+    "risposte": [
+      "Spedire una mail",
+      "Prendere dati da Internet e portarli sul proprio PC (Giù)",
+      "Cancellare un file"
+    ],
+    "corretta": "Prendere dati da Internet e portarli sul proprio PC (Giù)"
+  },
+  {
+    "domanda": "Cosa significa 'Upload'?",
+    "risposte": [
+      "Prendere dati dal PC e metterli su Internet (Su)",
+      "Scaricare un film",
+      "Accendere il computer"
+    ],
+    "corretta": "Prendere dati dal PC e metterli su Internet (Su)"
+  },
+  {
+    "domanda": "Inviare una mail con una foto allegata è un esempio di:",
+    "risposte": [
+      "Download",
+      "Upload",
+      "Offline"
+    ],
+    "corretta": "Upload"
+  },
+  {
+    "domanda": "Guardare un film in streaming o leggere il giornale è un esempio di:",
+    "risposte": [
+      "Download",
+      "Upload",
+      "Riavvio"
+    ],
+    "corretta": "Download"
+  },
+  {
+    "domanda": "Cosa significa che i dati sono sul 'Cloud'?",
+    "risposte": [
+      "Che sono salvati su un Server remoto sicuro accessibile via Internet",
+      "Che sono persi nel cielo",
+      "Che sono salvati solo sulla chiavetta USB"
+    ],
+    "corretta": "Che sono salvati su un Server remoto sicuro accessibile via Internet"
+  },
+  {
+    "domanda": "Cos'è un Indirizzo IP?",
+    "risposte": [
+      "Il codice fiscale dell'utente",
+      "Un numero che identifica il computer sulla rete (come una targa)",
+      "La password del Wi-Fi"
+    ],
+    "corretta": "Un numero che identifica il computer sulla rete (come una targa)"
+  },
+  {
+    "domanda": "A cosa serve il DNS?",
+    "risposte": [
+      "A pulire il computer dai virus",
+      "A tradurre i nomi dei siti (es. google.it) nei numeri IP corretti",
+      "A velocizzare i video"
+    ],
+    "corretta": "A tradurre i nomi dei siti (es. google.it) nei numeri IP corretti"
+  },
+  {
+    "domanda": "Cos'è un Sito Web?",
+    "risposte": [
+      "Un programma di scrittura",
+      "Una pagina digitale che si può 'sfogliare' sul Web",
+      "Un pezzo fisico del computer"
+    ],
+    "corretta": "Una pagina digitale che si può 'sfogliare' sul Web"
+  },
+  {
+    "domanda": "Perché le chiamate via internet (es. WhatsApp) a volte si sentono male?",
+    "risposte": [
+      "Perché il telefono è vecchio",
+      "Perché la connessione (velocità) potrebbe essere bassa o instabile",
+      "Perché internet è chiuso di notte"
+    ],
+    "corretta": "Perché la connessione (velocità) potrebbe essere bassa o instabile"
+  },
+  {
+    "domanda": "I codici QR sono:",
+    "risposte": [
+      "Virus pericolosi",
+      "Quadrati neri e bianchi che, inquadrati, aprono un sito web",
+      "Giochi online"
+    ],
+    "corretta": "Quadrati neri e bianchi che, inquadrati, aprono un sito web"
+  },
+  {
+    "domanda": "Se uso il Wi-Fi pubblico di un bar, cosa NON dovrei fare?",
+    "risposte": [
+      "Leggere il giornale",
+      "Operazioni bancarie o inserire password importanti",
+      "Cercare il meteo"
+    ],
+    "corretta": "Operazioni bancarie o inserire password importanti"
+  },
+  {
+    "domanda": "Cosa significa WWW?",
+    "risposte": [
+      "World Wide Web",
+      "Web World Wide",
+      "World Web Wait"
+    ],
+    "corretta": "World Wide Web"
+  },
+  {
+    "domanda": "È obbligatorio scrivere 'www' prima di un indirizzo oggi?",
+    "risposte": [
+      "Sì, sempre",
+      "No, il computer capisce lo stesso se si scrive solo il nome e l'estensione",
+      "Solo se il sito è italiano"
+    ],
+    "corretta": "No, il computer capisce lo stesso se si scrive solo il nome e l'estensione"
+  },
+  {
+    "domanda": "Il Cloud storage (es. Google Drive) sostituisce:",
+    "risposte": [
+      "Il mouse",
+      "L'Hard Disk fisico o le chiavette USB per il salvataggio dati",
+      "La tastiera"
+    ],
+    "corretta": "L'Hard Disk fisico o le chiavette USB per il salvataggio dati"
+  }
+]

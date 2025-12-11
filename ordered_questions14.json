@@ -1,0 +1,272 @@
+[
+  {
+    "domanda": "Cosa succede quando faccio un Download?",
+    "risposte": [
+      "Il file viene cancellato da Internet",
+      "Viene creata una copia del file sul mio Hard Disk",
+      "Il file viene stampato"
+    ],
+    "corretta": "Viene creata una copia del file sul mio Hard Disk"
+  },
+  {
+    "domanda": "Dove finiscono automaticamente i file scaricati?",
+    "risposte": [
+      "Nel Cestino",
+      "Nella cartella 'Download'",
+      "Sul Desktop"
+    ],
+    "corretta": "Nella cartella 'Download'"
+  },
+  {
+    "domanda": "Qual è il rischio principale dei file con estensione .EXE?",
+    "risposte": [
+      "Sono file immagine",
+      "Sono programmi eseguibili; se scaricati da siti non sicuri possono essere virus",
+      "Non si aprono mai"
+    ],
+    "corretta": "Sono programmi eseguibili; se scaricati da siti non sicuri possono essere virus"
+  },
+  {
+    "domanda": "Un file .PDF è generalmente:",
+    "risposte": [
+      "Un documento sicuro di sola lettura (come una fattura o manuale)",
+      "Un video",
+      "Un virus"
+    ],
+    "corretta": "Un documento sicuro di sola lettura (come una fattura o manuale)"
+  },
+  {
+    "domanda": "Le estensioni .JPG e .PNG indicano:",
+    "risposte": [
+      "Programmi",
+      "Immagini e foto",
+      "Documenti di testo"
+    ],
+    "corretta": "Immagini e foto"
+  },
+  {
+    "domanda": "Cosa devo fare se ricevo una fattura via email che finisce con .exe?",
+    "risposte": [
+      "Aprirla subito",
+      "Cancellarla immediatamente, è probabilmente un virus (una fattura deve essere PDF)",
+      "Ringraziare il mittente"
+    ],
+    "corretta": "Cancellarla immediatamente, è probabilmente un virus (una fattura deve essere PDF)"
+  },
+  {
+    "domanda": "Come posso salvare un'immagine da un sito web?",
+    "risposte": [
+      "Trascinandola fuori dallo schermo",
+      "Tasto destro sull'immagine > Salva immagine con nome",
+      "Non si può fare"
+    ],
+    "corretta": "Tasto destro sull'immagine > Salva immagine con nome"
+  },
+  {
+    "domanda": "Cos'è un file .ZIP?",
+    "risposte": [
+      "Un file veloce",
+      "Un archivio compresso che contiene uno o più file (come una valigia)",
+      "Un errore di download"
+    ],
+    "corretta": "Un archivio compresso che contiene uno o più file (come una valigia)"
+  },
+  {
+    "domanda": "Cosa è consigliabile fare con la cartella Download periodicamente?",
+    "risposte": [
+      "Lasciarla riempire all'infinito",
+      "Svuotarla o spostare i file importanti nelle cartelle giuste (Documenti, Immagini)",
+      "Nasconderla"
+    ],
+    "corretta": "Svuotarla o spostare i file importanti nelle cartelle giuste (Documenti, Immagini)"
+  },
+  {
+    "domanda": "Qual è la scorciatoia per vedere l'elenco dei download nel browser?",
+    "risposte": [
+      "Ctrl + D",
+      "Ctrl + J",
+      "Ctrl + S"
+    ],
+    "corretta": "Ctrl + J"
+  },
+  {
+    "domanda": "Se clicco su 'Salva link con nome', cosa succede?",
+    "risposte": [
+      "Salvo la destinazione di quel collegamento (es. un documento)",
+      "Salvo solo il testo blu",
+      "Non succede nulla"
+    ],
+    "corretta": "Salvo la destinazione di quel collegamento (es. un documento)"
+  },
+  {
+    "domanda": "Posso aprire un file scaricato se sono Offline (senza internet)?",
+    "risposte": [
+      "No, serve sempre internet",
+      "Sì, perché ora è salvato sul mio computer",
+      "Solo se è un'immagine"
+    ],
+    "corretta": "Sì, perché ora è salvato sul mio computer"
+  },
+  {
+    "domanda": "Perché è meglio non aprire allegati .exe dalle email?",
+    "risposte": [
+      "Perché occupano troppo spazio",
+      "Perché sono spesso vettori di infezioni (malware)",
+      "Perché Windows non li legge"
+    ],
+    "corretta": "Perché sono spesso vettori di infezioni (malware)"
+  },
+  {
+    "domanda": "Un file .docx è:",
+    "risposte": [
+      "Un documento di Word",
+      "Una canzone",
+      "Un programma"
+    ],
+    "corretta": "Un documento di Word"
+  },
+  {
+    "domanda": "Cosa indica l'icona della freccia in giù nel browser?",
+    "risposte": [
+      "Che la pagina sta scorrendo",
+      "I Download recenti o in corso",
+      "Che internet è lento"
+    ],
+    "corretta": "I Download recenti o in corso"
+  },
+  {
+    "domanda": "Cosa significa 'Salvare come PDF' una pagina web?",
+    "risposte": [
+      "Stampare su carta",
+      "Creare un documento digitale fisso della pagina, utile per ricevute",
+      "Cambiare il sito web"
+    ],
+    "corretta": "Creare un documento digitale fisso della pagina, utile per ricevute"
+  },
+  {
+    "domanda": "Se scarico un programma (es. Zoom), da dove devo scaricarlo?",
+    "risposte": [
+      "Da qualsiasi sito che trovo",
+      "Solo dal sito ufficiale del produttore",
+      "Da Facebook"
+    ],
+    "corretta": "Solo dal sito ufficiale del produttore"
+  },
+  {
+    "domanda": "Se il browser mi avvisa che 'questo file potrebbe danneggiare il computer', cosa faccio?",
+    "risposte": [
+      "Lo ignoro sempre",
+      "Ci penso bene: se non sono sicuro della fonte, annullo il download",
+      "Spengo il monitor"
+    ],
+    "corretta": "Ci penso bene: se non sono sicuro della fonte, annullo il download"
+  },
+  {
+    "domanda": "La cartella Download è come:",
+    "risposte": [
+      "Una cassaforte",
+      "Una cassetta della posta: va svuotata ogni tanto",
+      "Un cestino dei rifiuti"
+    ],
+    "corretta": "Una cassetta della posta: va svuotata ogni tanto"
+  },
+  {
+    "domanda": "Cosa significa 'Taglia e Incolla' un file dalla cartella Download?",
+    "risposte": [
+      "Farne una copia",
+      "Spostarlo definitivamente in un'altra cartella (es. Documenti) per fare ordine",
+      "Eliminarlo"
+    ],
+    "corretta": "Spostarlo definitivamente in un'altra cartella (es. Documenti) per fare ordine"
+  },
+  {
+    "domanda": "Posso scegliere in quale cartella scaricare un file?",
+    "risposte": [
+      "No, va sempre in Download",
+      "Sì, se scelgo l'opzione 'Salva con nome' o modifico le impostazioni",
+      "Solo se pago"
+    ],
+    "corretta": "Sì, se scelgo l'opzione 'Salva con nome' o modifico le impostazioni"
+  },
+  {
+    "domanda": "Un file musicale ha solitamente estensione:",
+    "risposte": [
+      ".mp3",
+      ".pdf",
+      ".exe"
+    ],
+    "corretta": ".mp3"
+  },
+  {
+    "domanda": "Se scarico un file .zip, cosa devo fare per usarne il contenuto?",
+    "risposte": [
+      "Rinominarlo",
+      "Estrarlo (Decomprimerlo)",
+      "Cancellarlo"
+    ],
+    "corretta": "Estrarlo (Decomprimerlo)"
+  },
+  {
+    "domanda": "Quanto tempo ci vuole per scaricare un file?",
+    "risposte": [
+      "Sempre 1 minuto",
+      "Dipende dalla velocità della connessione e dalla grandezza del file",
+      "Dipende dalla marca del PC"
+    ],
+    "corretta": "Dipende dalla velocità della connessione e dalla grandezza del file"
+  },
+  {
+    "domanda": "Se il download si blocca, posso riprenderlo?",
+    "risposte": [
+      "Mai",
+      "Spesso sì, usando il tasto 'Riprendi' nella lista download",
+      "Devo comprare un nuovo PC"
+    ],
+    "corretta": "Spesso sì, usando il tasto 'Riprendi' nella lista download"
+  },
+  {
+    "domanda": "Scaricare film pirata è:",
+    "risposte": [
+      "Consigliato",
+      "Illegale e rischioso per i virus",
+      "L'unico modo per vedere film"
+    ],
+    "corretta": "Illegale e rischioso per i virus"
+  },
+  {
+    "domanda": "Per mandare un documento via email a qualcuno, devo prima:",
+    "risposte": [
+      "Averlo salvato sul mio computer (o averlo scaricato)",
+      "Leggerlo ad alta voce",
+      "Stamparlo"
+    ],
+    "corretta": "Averlo salvato sul mio computer (o averlo scaricato)"
+  },
+  {
+    "domanda": "Se non trovo un file appena scaricato, cosa faccio?",
+    "risposte": [
+      "Apro la cartella Download o premo Ctrl+J nel browser",
+      "Piango",
+      "Compro un nuovo mouse"
+    ],
+    "corretta": "Apro la cartella Download o premo Ctrl+J nel browser"
+  },
+  {
+    "domanda": "I file di installazione dei programmi su Windows finiscono spesso con:",
+    "risposte": [
+      ".jpg",
+      ".exe o .msi",
+      ".txt"
+    ],
+    "corretta": ".exe o .msi"
+  },
+  {
+    "domanda": "È sicuro scaricare driver o aggiornamenti da siti sconosciuti?",
+    "risposte": [
+      "Sì, sempre",
+      "No, è meglio usare solo i canali ufficiali (es. Windows Update o sito produttore)",
+      "Solo di notte"
+    ],
+    "corretta": "No, è meglio usare solo i canali ufficiali (es. Windows Update o sito produttore)"
+  }
+]

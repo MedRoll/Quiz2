@@ -1,0 +1,272 @@
+[
+  {
+    "domanda": "Cos'è il Phishing?",
+    "risposte": [
+      "Uno sport acquatico",
+      "Una truffa via email/web che cerca di rubare i tuoi dati (pescare dati)",
+      "Un tipo di virus che rompe lo schermo"
+    ],
+    "corretta": "Una truffa via email/web che cerca di rubare i tuoi dati (pescare dati)"
+  },
+  {
+    "domanda": "Cosa sono i Cookie (biscotti) digitali?",
+    "risposte": [
+      "Dolci che escono dal lettore CD",
+      "Piccoli file di testo che i siti salvano sul PC per 'ricordarsi' di te",
+      "Virus pericolosissimi"
+    ],
+    "corretta": "Piccoli file di testo che i siti salvano sul PC per 'ricordarsi' di te"
+  },
+  {
+    "domanda": "Cosa fa la 'Navigazione in Incognito'?",
+    "risposte": [
+      "Mi rende invisibile alla polizia",
+      "Non salva la cronologia, i cookie e i dati dei moduli sul mio computer",
+      "Mi protegge dai virus"
+    ],
+    "corretta": "Non salva la cronologia, i cookie e i dati dei moduli sul mio computer"
+  },
+  {
+    "domanda": "La Navigazione in Incognito nasconde i miei siti al Provider Internet?",
+    "risposte": [
+      "Sì, nessuno vede nulla",
+      "No, il Provider sa comunque quali siti visito",
+      "Solo se uso Chrome"
+    ],
+    "corretta": "No, il Provider sa comunque quali siti visito"
+  },
+  {
+    "domanda": "Se ricevo una mail dalle 'Poste' che dice 'Clicca qui per sbloccare il conto', cosa faccio?",
+    "risposte": [
+      "Clicco subito per paura",
+      "Non clicco. Controllo il mittente e vado sul sito ufficiale scrivendo l'indirizzo a mano",
+      "Rispondo con i miei dati"
+    ],
+    "corretta": "Non clicco. Controllo il mittente e vado sul sito ufficiale scrivendo l'indirizzo a mano"
+  },
+  {
+    "domanda": "Una password sicura dovrebbe contenere:",
+    "risposte": [
+      "Solo il mio nome",
+      "123456",
+      "Lettere maiuscole, minuscole, numeri e simboli speciali"
+    ],
+    "corretta": "Lettere maiuscole, minuscole, numeri e simboli speciali"
+  },
+  {
+    "domanda": "Devo dire la mia password alla banca se me la chiedono via email?",
+    "risposte": [
+      "Sì, sempre",
+      "Mai. La banca non chiede mai la password via email",
+      "Solo se lo chiedono per favore"
+    ],
+    "corretta": "Mai. La banca non chiede mai la password via email"
+  },
+  {
+    "domanda": "Cosa significa 'Accetta tutti i cookie'?",
+    "risposte": [
+      "Che accetto di mangiare biscotti",
+      "Che do il permesso al sito di tracciarmi, anche per la pubblicità",
+      "Che blocco il sito"
+    ],
+    "corretta": "Che do il permesso al sito di tracciarmi, anche per la pubblicità"
+  },
+  {
+    "domanda": "Qual è l'opzione migliore per la privacy quando appare il banner dei cookie?",
+    "risposte": [
+      "Accetta tutto",
+      "Rifiuta tutto o Solo necessari",
+      "Chiudi il browser"
+    ],
+    "corretta": "Rifiuta tutto o Solo necessari"
+  },
+  {
+    "domanda": "Cosa sono i Pop-up?",
+    "risposte": [
+      "Finestre che si aprono all'improvviso, spesso pubblicità fastidiose",
+      "Tasti della tastiera",
+      "Tipi di gelato"
+    ],
+    "corretta": "Finestre che si aprono all'improvviso, spesso pubblicità fastidiose"
+  },
+  {
+    "domanda": "Se un pop-up dice 'Hai vinto un iPhone', è vero?",
+    "risposte": [
+      "Sì, che fortuna!",
+      "È una truffa o un inganno per farti cliccare",
+      "Dipende dal giorno"
+    ],
+    "corretta": "È una truffa o un inganno per farti cliccare"
+  },
+  {
+    "domanda": "Cos'è l'Autenticazione a due fattori (2FA)?",
+    "risposte": [
+      "Avere due password uguali",
+      "Un sistema che chiede una seconda prova oltre alla password (es. codice SMS) per entrare",
+      "Usare due computer"
+    ],
+    "corretta": "Un sistema che chiede una seconda prova oltre alla password (es. codice SMS) per entrare"
+  },
+  {
+    "domanda": "Perché bisogna fare gli aggiornamenti del computer?",
+    "risposte": [
+      "Per renderlo più lento",
+      "Per riparare buchi di sicurezza e proteggersi dai nuovi virus",
+      "Per cambiare i colori"
+    ],
+    "corretta": "Per riparare buchi di sicurezza e proteggersi dai nuovi virus"
+  },
+  {
+    "domanda": "Se uso un computer pubblico, cosa devo fare alla fine?",
+    "risposte": [
+      "Chiudere solo la finestra",
+      "Cliccare su 'Esci' (Log out) da tutti i siti e non salvare le password",
+      "Spegnere il monitor"
+    ],
+    "corretta": "Cliccare su 'Esci' (Log out) da tutti i siti e non salvare le password"
+  },
+  {
+    "domanda": "Un sito Fake News (Notizie False) si riconosce perché:",
+    "risposte": [
+      "Ha notizie incredibili, non citate da giornali seri, e titoli esagerati",
+      "È scritto in blu",
+      "Ha tante immagini"
+    ],
+    "corretta": "Ha notizie incredibili, non citate da giornali seri, e titoli esagerati"
+  },
+  {
+    "domanda": "Cosa devo guardare per capire se un sito è quello vero della banca?",
+    "risposte": [
+      "Il colore del sito",
+      "L'URL esatto (indirizzo) e la presenza del lucchetto",
+      "Se ci sono foto di soldi"
+    ],
+    "corretta": "L'URL esatto (indirizzo) e la presenza del lucchetto"
+  },
+  {
+    "domanda": "Se un sito mi chiede di attivare le Notifiche, cosa è meglio fare?",
+    "risposte": [
+      "Accettare sempre",
+      "Bloccare/Rifiutare, per evitare distrazioni e avvisi continui",
+      "Non fare nulla"
+    ],
+    "corretta": "Bloccare/Rifiutare, per evitare distrazioni e avvisi continui"
+  },
+  {
+    "domanda": "È sicuro salvare le password nel browser di un computer CONDIVISO?",
+    "risposte": [
+      "Sì, è comodo",
+      "No, chiunque lo usi dopo di me può entrare nei miei account",
+      "Solo se è un amico"
+    ],
+    "corretta": "No, chiunque lo usi dopo di me può entrare nei miei account"
+  },
+  {
+    "domanda": "Cos'è un Virus informatico?",
+    "risposte": [
+      "Polvere sullo schermo",
+      "Un programma cattivo creato per danneggiare il PC o rubare dati",
+      "Un errore di stampa"
+    ],
+    "corretta": "Un programma cattivo creato per danneggiare il PC o rubare dati"
+  },
+  {
+    "domanda": "Windows ha un antivirus incluso?",
+    "risposte": [
+      "No, bisogna comprarlo",
+      "Sì, si chiama Windows Defender ed è valido",
+      "Sì, ma non funziona"
+    ],
+    "corretta": "Sì, si chiama Windows Defender ed è valido"
+  },
+  {
+    "domanda": "Cosa significa 'Privacy' online?",
+    "risposte": [
+      "Essere veloci",
+      "Proteggere i propri dati personali e la propria vita privata",
+      "Avere un computer costoso"
+    ],
+    "corretta": "Proteggere i propri dati personali e la propria vita privata"
+  },
+  {
+    "domanda": "Il Tracciamento pubblicitario serve a:",
+    "risposte": [
+      "Aiutarmi a scrivere",
+      "Capire i miei gusti per mostrarmi pubblicità mirata",
+      "Bloccare il computer"
+    ],
+    "corretta": "Capire i miei gusti per mostrarmi pubblicità mirata"
+  },
+  {
+    "domanda": "Quando compro online, quale metodo di pagamento è più sicuro?",
+    "risposte": [
+      "Inviare contanti per posta",
+      "PayPal o carte prepagate (con pochi soldi sopra)",
+      "Bonifico a sconosciuti"
+    ],
+    "corretta": "PayPal o carte prepagate (con pochi soldi sopra)"
+  },
+  {
+    "domanda": "Cosa è l'impronta digitale online?",
+    "risposte": [
+      "Il segno del dito sullo schermo",
+      "La traccia che lasciamo con tutto ciò che facciamo e scriviamo su internet",
+      "Un tasto del mouse"
+    ],
+    "corretta": "La traccia che lasciamo con tutto ciò che facciamo e scriviamo su internet"
+  },
+  {
+    "domanda": "Se trovo un sito che vende prodotti di lusso a prezzi stracciati (es. 10 euro invece di 500), è:",
+    "risposte": [
+      "Un affare imperdibile",
+      "Molto probabilmente una truffa",
+      "Un regalo"
+    ],
+    "corretta": "Molto probabilmente una truffa"
+  },
+  {
+    "domanda": "Perché non devo scrivere cose troppo personali sui Social Media?",
+    "risposte": [
+      "Perché annoio gli altri",
+      "Perché sono piazze pubbliche e le informazioni possono essere usate contro di me",
+      "Perché finisce lo spazio"
+    ],
+    "corretta": "Perché sono piazze pubbliche e le informazioni possono essere usate contro di me"
+  },
+  {
+    "domanda": "Se mi arriva un'email scritta in un italiano sgrammaticato che chiede soldi, è:",
+    "risposte": [
+      "Un amico straniero",
+      "Un segnale tipico di truffa (Phishing)",
+      "Un errore del computer"
+    ],
+    "corretta": "Un segnale tipico di truffa (Phishing)"
+  },
+  {
+    "domanda": "Cosa devo fare prima di comprare da un sito sconosciuto?",
+    "risposte": [
+      "Pagare subito",
+      "Cercare recensioni online per vedere se altri sono stati truffati",
+      "Spegnere il Wi-Fi"
+    ],
+    "corretta": "Cercare recensioni online per vedere se altri sono stati truffati"
+  },
+  {
+    "domanda": "Posso annullare un acquisto online?",
+    "risposte": [
+      "No, mai",
+      "Sì, per legge esiste il diritto di recesso (reso) entro 14 giorni",
+      "Solo se pago il doppio"
+    ],
+    "corretta": "Sì, per legge esiste il diritto di recesso (reso) entro 14 giorni"
+  },
+  {
+    "domanda": "Se un sito mi chiede 'Vuoi scaricare questo programma per velocizzare il PC?', cosa faccio?",
+    "risposte": [
+      "Dico di sì",
+      "Chiudo subito, spesso sono programmi dannosi o inutili",
+      "Lo installo su tutti i computer"
+    ],
+    "corretta": "Chiudo subito, spesso sono programmi dannosi o inutili"
+  }
+]

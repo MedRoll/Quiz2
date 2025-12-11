@@ -1,0 +1,272 @@
+[
+  {
+    "domanda": "Cos'è un Browser?",
+    "risposte": [
+      "Il motore di ricerca",
+      "Il programma (veicolo) che usiamo per visualizzare le pagine web",
+      "L'azienda che fornisce internet"
+    ],
+    "corretta": "Il programma (veicolo) che usiamo per visualizzare le pagine web"
+  },
+  {
+    "domanda": "Quale di questi è un Browser?",
+    "risposte": [
+      "Google Chrome",
+      "Microsoft Word",
+      "Windows 11"
+    ],
+    "corretta": "Google Chrome"
+  },
+  {
+    "domanda": "A cosa serve la 'Barra degli Indirizzi'?",
+    "risposte": [
+      "A scrivere le email",
+      "A scrivere l'indirizzo esatto del sito dove vogliamo andare",
+      "A cercare file nel computer"
+    ],
+    "corretta": "A scrivere l'indirizzo esatto del sito dove vogliamo andare"
+  },
+  {
+    "domanda": "Dove si trova solitamente la Barra degli Indirizzi?",
+    "risposte": [
+      "In basso a destra",
+      "In alto, è una barra bianca lunga",
+      "Al centro della pagina"
+    ],
+    "corretta": "In alto, è una barra bianca lunga"
+  },
+  {
+    "domanda": "A cosa serve il pulsante 'Indietro' (freccia verso sinistra)?",
+    "risposte": [
+      "A chiudere il browser",
+      "A tornare alla pagina precedente visitata",
+      "A spegnere il computer"
+    ],
+    "corretta": "A tornare alla pagina precedente visitata"
+  },
+  {
+    "domanda": "A cosa serve il pulsante 'Ricarica' (freccia che gira)?",
+    "risposte": [
+      "A ricaricare la batteria del PC",
+      "A rileggere la pagina se si è bloccata o per vedere aggiornamenti",
+      "A cancellare la cronologia"
+    ],
+    "corretta": "A rileggere la pagina se si è bloccata o per vedere aggiornamenti"
+  },
+  {
+    "domanda": "Cosa succede se clicco sull'icona della 'Casetta' (Home)?",
+    "risposte": [
+      "Torno alla pagina di partenza predefinita (spesso Google)",
+      "Spengo il computer",
+      "Apro la cartella documenti"
+    ],
+    "corretta": "Torno alla pagina di partenza predefinita (spesso Google)"
+  },
+  {
+    "domanda": "Cosa indica l'estensione '.it' in un indirizzo web?",
+    "risposte": [
+      "Che il sito è internazionale",
+      "Che il sito è italiano",
+      "Che il sito è governativo"
+    ],
+    "corretta": "Che il sito è italiano"
+  },
+  {
+    "domanda": "Cosa indica l'estensione '.com'?",
+    "risposte": [
+      "Commerciale o Internazionale",
+      "Comune di Roma",
+      "Computer"
+    ],
+    "corretta": "Commerciale o Internazionale"
+  },
+  {
+    "domanda": "Come si scrive correttamente un indirizzo web?",
+    "risposte": [
+      "Tutto maiuscolo con spazi",
+      "Tutto minuscolo e senza spazi (es. corriere.it)",
+      "Con le virgole al posto dei punti"
+    ],
+    "corretta": "Tutto minuscolo e senza spazi (es. corriere.it)"
+  },
+  {
+    "domanda": "Cosa significa 'Errore 404'?",
+    "risposte": [
+      "Il computer ha un virus",
+      "La pagina cercata non esiste più o l'indirizzo è sbagliato",
+      "La connessione è troppo lenta"
+    ],
+    "corretta": "La pagina cercata non esiste più o l'indirizzo è sbagliato"
+  },
+  {
+    "domanda": "Qual è la differenza tra HTTP e HTTPS?",
+    "risposte": [
+      "Nessuna",
+      "HTTPS ha la 'S' di Sicuro e i dati sono cifrati",
+      "HTTP è più veloce di HTTPS"
+    ],
+    "corretta": "HTTPS ha la 'S' di Sicuro e i dati sono cifrati"
+  },
+  {
+    "domanda": "Cosa indica il simbolo del 'Lucchetto' vicino all'indirizzo?",
+    "risposte": [
+      "Che il sito è bloccato",
+      "Che la connessione è sicura e crittografata",
+      "Che serve una chiave fisica per entrare"
+    ],
+    "corretta": "Che la connessione è sicura e crittografata"
+  },
+  {
+    "domanda": "Se vedo scritto 'Non sicuro' nella barra degli indirizzi, cosa NON devo fare?",
+    "risposte": [
+      "Leggere il testo",
+      "Inserire dati personali come password o carte di credito",
+      "Chiudere la finestra"
+    ],
+    "corretta": "Inserire dati personali come password o carte di credito"
+  },
+  {
+    "domanda": "A cosa serve il Menu del browser (tre puntini in alto a destra)?",
+    "risposte": [
+      "A spegnere il monitor",
+      "Contiene impostazioni, cronologia, preferiti e stampa",
+      "A inviare email"
+    ],
+    "corretta": "Contiene impostazioni, cronologia, preferiti e stampa"
+  },
+  {
+    "domanda": "Cosa sono le 'Schede' (Tabs) nel browser?",
+    "risposte": [
+      "Fogli di carta stampati",
+      "Pagine web aperte dentro un'unica finestra, come uno schedario",
+      "Errori di sistema"
+    ],
+    "corretta": "Pagine web aperte dentro un'unica finestra, come uno schedario"
+  },
+  {
+    "domanda": "Come si apre una nuova scheda vuota?",
+    "risposte": [
+      "Cliccando sulla X rossa",
+      "Cliccando sul piccolo '+' accanto all'ultima scheda",
+      "Riavviando il PC"
+    ],
+    "corretta": "Cliccando sul piccolo '+' accanto all'ultima scheda"
+  },
+  {
+    "domanda": "Come si chiude una singola scheda?",
+    "risposte": [
+      "Cliccando la piccola 'x' sulla linguetta della scheda",
+      "Staccando la spina",
+      "Cliccando sul lucchetto"
+    ],
+    "corretta": "Cliccando la piccola 'x' sulla linguetta della scheda"
+  },
+  {
+    "domanda": "Cosa succede se chiudo la 'X' grande in alto a destra della finestra?",
+    "risposte": [
+      "Chiudo solo una scheda",
+      "Chiudo tutto il programma browser e tutte le schede aperte",
+      "Cancello Internet"
+    ],
+    "corretta": "Chiudo tutto il programma browser e tutte le schede aperte"
+  },
+  {
+    "domanda": "Qual è la scorciatoia da tastiera per riaprire una scheda chiusa per sbaglio?",
+    "risposte": [
+      "Ctrl + Z",
+      "Ctrl + Maiusc (Shift) + T",
+      "Alt + F4"
+    ],
+    "corretta": "Ctrl + Maiusc (Shift) + T"
+  },
+  {
+    "domanda": "Cos'è la 'Home Page' di un sito?",
+    "risposte": [
+      "L'ultima pagina visitata",
+      "La pagina principale o 'copertina' del sito",
+      "La pagina di errore"
+    ],
+    "corretta": "La pagina principale o 'copertina' del sito"
+  },
+  {
+    "domanda": "Come riconosco un Link (collegamento) in una pagina?",
+    "risposte": [
+      "È sempre rosso lampeggiante",
+      "Spesso è blu sottolineato e il mouse diventa una manina",
+      "Non si può riconoscere"
+    ],
+    "corretta": "Spesso è blu sottolineato e il mouse diventa una manina"
+  },
+  {
+    "domanda": "Se il testo di una pagina è troppo piccolo, come posso ingrandirlo (Zoom)?",
+    "risposte": [
+      "Avvicinandomi allo schermo",
+      "Premendo Ctrl e il tasto '+'",
+      "Cambiando browser"
+    ],
+    "corretta": "Premendo Ctrl e il tasto '+'"
+  },
+  {
+    "domanda": "Come posso stampare una pagina web?",
+    "risposte": [
+      "Facendo una foto allo schermo",
+      "Dal Menu (tre puntini) > Stampa, oppure Ctrl + P",
+      "Non si può stampare da internet"
+    ],
+    "corretta": "Dal Menu (tre puntini) > Stampa, oppure Ctrl + P"
+  },
+  {
+    "domanda": "Cosa fa la 'Modalità Lettura' presente in alcuni browser?",
+    "risposte": [
+      "Legge il testo ad alta voce",
+      "Toglie la pubblicità e ingrandisce il testo per facilitare la lettura",
+      "Traduce la pagina in cinese"
+    ],
+    "corretta": "Toglie la pubblicità e ingrandisce il testo per facilitare la lettura"
+  },
+  {
+    "domanda": "Microsoft Edge, Safari e Firefox sono:",
+    "risposte": [
+      "Tipi di virus",
+      "Browser alternativi a Chrome",
+      "Marche di computer"
+    ],
+    "corretta": "Browser alternativi a Chrome"
+  },
+  {
+    "domanda": "Se clicco sul logo di un sito in alto a sinistra, di solito cosa succede?",
+    "risposte": [
+      "Si chiude il sito",
+      "Torno alla Home Page (inizio) di quel sito",
+      "Non succede nulla"
+    ],
+    "corretta": "Torno alla Home Page (inizio) di quel sito"
+  },
+  {
+    "domanda": "È possibile avere aperte contemporaneamente una scheda con le Notizie e una con il Meteo?",
+    "risposte": [
+      "No, solo una alla volta",
+      "Sì, grazie alla navigazione a schede",
+      "Solo se ho due monitor"
+    ],
+    "corretta": "Sì, grazie alla navigazione a schede"
+  },
+  {
+    "domanda": "La scorciatoia Ctrl + T serve a:",
+    "risposte": [
+      "Stampare",
+      "Aprire una Nuova Scheda (Tab)",
+      "Chiudere tutto"
+    ],
+    "corretta": "Aprire una Nuova Scheda (Tab)"
+  },
+  {
+    "domanda": "Perché non bisogna scrivere spazi nell'indirizzo di un sito?",
+    "risposte": [
+      "Perché è maleducato",
+      "Perché gli indirizzi web non accettano spazi, verrebbe interpretato come una ricerca",
+      "Perché si rompe la tastiera"
+    ],
+    "corretta": "Perché gli indirizzi web non accettano spazi, verrebbe interpretato come una ricerca"
+  }
+]
