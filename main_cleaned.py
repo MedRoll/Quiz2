@@ -5,24 +5,28 @@ from pathlib import Path
 
 app = FastAPI()
 
-# dizionario che contiene tutti i quiz caricati
+# Dizionario che contiene tutti i quiz caricati
 quizzes = {}
-alt_quizzes = {}  # Nuovo dizionario per quiz alternativi
+alt_quizzes = {}  # Dizionario per quiz alternativi
 
 def load_data():
     """
-    Carica i file ordered_questions1.json ... ordered_questions10.json
+    Carica i file ordered_questions1.json ... ordered_questions15.json
     """
     global quizzes
     quizzes.clear()
-    # MODIFICA QUI: da range(1, 6) a range(1, 11) per includere fino al 10
-    for i in range(1, 11): 
+    
+    # --- MODIFICA EFFETTUATA QUI SOTTO ---
+    # Prima era range(1, 11). Ora è range(1, 16) per caricare fino al file 15.
+    for i in range(1, 16): 
         path = Path(f"ordered_questions{i}.json")
         if path.exists():
             with open(path, "r", encoding="utf-8") as f:
                 quizzes[i] = json.load(f)
         else:
-            print(f"Attenzione: {path} non trovato.") # Opzionale: per debug
+            # Stampa un avviso nella console se mancano i file 11-15
+            print(f"Attenzione: {path} non trovato. Assicurati che il file esista nella cartella.")
+
 def load_alt_data():
     """
     Carica i file ordered_alt_questions1.json ... ordered_alt_questions5.json
@@ -35,7 +39,7 @@ def load_alt_data():
             with open(path, "r", encoding="utf-8") as f:
                 alt_quizzes[i] = json.load(f)
 
-# carico subito i dati all'avvio
+# Carico subito i dati all'avvio
 load_data()
 load_alt_data()
 
@@ -85,5 +89,9 @@ def index():
     """
     Restituisce la pagina HTML del quiz
     """
-    with open("template.html", encoding="utf-8") as f:
-        return f.read()
+    # Assicurati che il file template.html contenga il nuovo codice HTML che ti ho dato prima
+    path = Path("template.html")
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    return "Errore: template.html non trovato."
