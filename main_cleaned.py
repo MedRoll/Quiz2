@@ -16,9 +16,8 @@ def load_data():
     global quizzes
     quizzes.clear()
     
-    # --- MODIFICA EFFETTUATA QUI SOTTO ---
-    # Prima era range(1, 11). Ora è range(1, 16) per caricare fino al file 15.
-    for i in range(1, 16): 
+    # --- MODIFICA EFFETTUATA QUI SOTTO 
+    for i in range(1, 21): 
         path = Path(f"ordered_questions{i}.json")
         if path.exists():
             with open(path, "r", encoding="utf-8") as f:
