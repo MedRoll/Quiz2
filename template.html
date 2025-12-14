@@ -389,6 +389,31 @@
       document.getElementById('moduli-lezione-3').style.display='none'; 
       document.getElementById('moduli-lezione-4').style.display='none'; // NEW
     } 
+   function iniziaQuiz(id) {
+    quizCorrente = id;
+    indexDomanda = 0;
+    punteggio = 0;
+    risposteUtente = [];
+    MAX_DOMANDE = 0;
+
+    // Nasconde menu lezioni
+    document.getElementById("quiz-buttons").style.display = "none";
+
+    // Mostra interfaccia quiz
+    document.getElementById("titolo-quiz").style.display = "block";
+    document.getElementById("stats-container").style.display = "flex";
+    document.getElementById("progress-container").style.display = "block";
+    document.getElementById("card-container").style.display = "block";
+    document.getElementById("controls-container").style.display = "block";
+
+    document.getElementById("punteggio").textContent = "0";
+    document.getElementById("contatore").textContent = "0";
+    document.getElementById("domanda").textContent = "Caricamento...";
+    document.getElementById("risposte").innerHTML = "";
+    document.getElementById("feedback").textContent = "";
+
+    caricaDomanda();
+     }
 </script> 
 </body> 
 </html>
