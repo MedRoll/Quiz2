@@ -1,272 +1,152 @@
 [
   {
-    "domanda": "Cos'è un Browser?",
-    "risposte": [
-      "Il motore di ricerca",
-      "Il programma (veicolo) che usiamo per visualizzare le pagine web",
-      "L'azienda che fornisce internet"
-    ],
-    "corretta": "Il programma (veicolo) che usiamo per visualizzare le pagine web"
+    "domanda": "Scenario: Devi inviare un video di 200MB via mail. Cosa succede se provi ad allegarlo direttamente?",
+    "risposte": ["La mail parte senza problemi", "La mail viene bloccata perché supera il limite di dimensione", "Il video viene compresso automaticamente"],
+    "corretta": "La mail viene bloccata perché supera il limite di dimensione"
   },
   {
-    "domanda": "Quale di questi è un Browser?",
-    "risposte": [
-      "Google Chrome",
-      "Microsoft Word",
-      "Windows 11"
-    ],
-    "corretta": "Google Chrome"
+    "domanda": "Scenario: Come puoi inviare file molto pesanti (sopra i 25MB)?",
+    "risposte": ["Spezzando la mail in 50 parti", "Usando un servizio Cloud (Drive, WeTransfer) e inviando il link", "Stampandoli e spedendoli per posta"],
+    "corretta": "Usando un servizio Cloud (Drive, WeTransfer) e inviando il link"
   },
   {
-    "domanda": "A cosa serve la 'Barra degli Indirizzi'?",
-    "risposte": [
-      "A scrivere le email",
-      "A scrivere l'indirizzo esatto del sito dove vogliamo andare",
-      "A cercare file nel computer"
-    ],
-    "corretta": "A scrivere l'indirizzo esatto del sito dove vogliamo andare"
+    "domanda": "Scenario: Devi inviare 20 foto in una sola mail. Invece di allegarle una per una, cosa conviene fare?",
+    "risposte": ["Creare una cartella compressa (.zip)", "Inviare 20 mail diverse", "Metterle in un file Word"],
+    "corretta": "Creare una cartella compressa (.zip)"
   },
   {
-    "domanda": "Dove si trova solitamente la Barra degli Indirizzi?",
-    "risposte": [
-      "In basso a destra",
-      "In alto, è una barra bianca lunga",
-      "Al centro della pagina"
-    ],
-    "corretta": "In alto, è una barra bianca lunga"
+    "domanda": "Scenario: Ricevi una mail con un allegato .exe. Cosa fai?",
+    "risposte": ["Lo apro subito", "Lo cancello o non lo apro, è potenzialmente un virus", "Lo inoltro a un amico"],
+    "corretta": "Lo cancello o non lo apro, è potenzialmente un virus"
   },
   {
-    "domanda": "A cosa serve il pulsante 'Indietro' (freccia verso sinistra)?",
-    "risposte": [
-      "A chiudere il browser",
-      "A tornare alla pagina precedente visitata",
-      "A spegnere il computer"
-    ],
-    "corretta": "A tornare alla pagina precedente visitata"
+    "domanda": "Scenario: Un file con estensione .pdf è generalmente considerato...",
+    "risposte": ["Molto pericoloso", "Sicuro (documento standard)", "Un file audio"],
+    "corretta": "Sicuro (documento standard)"
   },
   {
-    "domanda": "A cosa serve il pulsante 'Ricarica' (freccia che gira)?",
-    "risposte": [
-      "A ricaricare la batteria del PC",
-      "A rileggere la pagina se si è bloccata o per vedere aggiornamenti",
-      "A cancellare la cronologia"
-    ],
-    "corretta": "A rileggere la pagina se si è bloccata o per vedere aggiornamenti"
+    "domanda": "Scenario: Vuoi pulire la casella di posta piena. Qual è il modo più veloce per liberare spazio?",
+    "risposte": ["Cancellare le mail di solo testo", "Cercare e cancellare le mail con allegati grandi (filtro dimensioni)", "Disiscriversi dalle newsletter"],
+    "corretta": "Cercare e cancellare le mail con allegati grandi (filtro dimensioni)"
   },
   {
-    "domanda": "Cosa succede se clicco sull'icona della 'Casetta' (Home)?",
-    "risposte": [
-      "Torno alla pagina di partenza predefinita (spesso Google)",
-      "Spengo il computer",
-      "Apro la cartella documenti"
-    ],
-    "corretta": "Torno alla pagina di partenza predefinita (spesso Google)"
+    "domanda": "Scenario: Ricevi troppe newsletter da un negozio online. Come smetti di riceverle?",
+    "risposte": ["Segno la mail come SPAM", "Clicco su 'Unsubscribe' o 'Disiscriviti' in fondo alla mail", "Rispondo insultando il negozio"],
+    "corretta": "Clicco su 'Unsubscribe' o 'Disiscriviti' in fondo alla mail"
   },
   {
-    "domanda": "Cosa indica l'estensione '.it' in un indirizzo web?",
-    "risposte": [
-      "Che il sito è internazionale",
-      "Che il sito è italiano",
-      "Che il sito è governativo"
-    ],
-    "corretta": "Che il sito è italiano"
+    "domanda": "Scenario: Qual è la differenza tra Archiviare ed Eliminare una mail?",
+    "risposte": ["Nessuna", "Eliminare la butta via definitivamente, Archiviare la nasconde ma la conserva", "Archiviare la stampa su carta"],
+    "corretta": "Eliminare la butta via definitivamente, Archiviare la nasconde ma la conserva"
   },
   {
-    "domanda": "Cosa indica l'estensione '.com'?",
-    "risposte": [
-      "Commerciale o Internazionale",
-      "Comune di Roma",
-      "Computer"
-    ],
-    "corretta": "Commerciale o Internazionale"
+    "domanda": "Scenario: Hai perso una mail importante. Dove dovresti guardare oltre alla posta in arrivo?",
+    "risposte": ["Solo nel Cestino", "Nello Spam e nella cartella 'Tutti i messaggi'", "Sul sito della Polizia Postale"],
+    "corretta": "Nello Spam e nella cartella 'Tutti i messaggi'"
   },
   {
-    "domanda": "Come si scrive correttamente un indirizzo web?",
-    "risposte": [
-      "Tutto maiuscolo con spazi",
-      "Tutto minuscolo e senza spazi (es. corriere.it)",
-      "Con le virgole al posto dei punti"
-    ],
-    "corretta": "Tutto minuscolo e senza spazi (es. corriere.it)"
+    "domanda": "Scenario: Vuoi organizzare le tue mail per argomento (es. Casa, Lavoro). Cosa usi?",
+    "risposte": ["Le Cartelle o Etichette", "I colori del monitor", "Diversi computer"],
+    "corretta": "Le Cartelle o Etichette"
   },
   {
-    "domanda": "Cosa significa 'Errore 404'?",
-    "risposte": [
-      "Il computer ha un virus",
-      "La pagina cercata non esiste più o l'indirizzo è sbagliato",
-      "La connessione è troppo lenta"
-    ],
-    "corretta": "La pagina cercata non esiste più o l'indirizzo è sbagliato"
+    "domanda": "Scenario: Se usi un PC pubblico (biblioteca, hotel) per controllare la mail, cosa devi assolutamente fare alla fine?",
+    "risposte": ["Chiudere la finestra del browser", "Cliccare su Logout / Esci", "Spegnere il monitor"],
+    "corretta": "Cliccare su Logout / Esci"
   },
   {
-    "domanda": "Qual è la differenza tra HTTP e HTTPS?",
-    "risposte": [
-      "Nessuna",
-      "HTTPS ha la 'S' di Sicuro e i dati sono cifrati",
-      "HTTP è più veloce di HTTPS"
-    ],
-    "corretta": "HTTPS ha la 'S' di Sicuro e i dati sono cifrati"
+    "domanda": "Scenario: Sei al bar e usi il Wi-Fi pubblico gratuito. È sicuro accedere alla mail della banca?",
+    "risposte": ["Sì, il Wi-Fi è comodo", "No, meglio usare la connessione dati (4G/5G) del telefono", "Sì, se navighi veloce"],
+    "corretta": "No, meglio usare la connessione dati (4G/5G) del telefono"
   },
   {
-    "domanda": "Cosa indica il simbolo del 'Lucchetto' vicino all'indirizzo?",
-    "risposte": [
-      "Che il sito è bloccato",
-      "Che la connessione è sicura e crittografata",
-      "Che serve una chiave fisica per entrare"
-    ],
-    "corretta": "Che la connessione è sicura e crittografata"
+    "domanda": "Scenario: Vuoi trovare rapidamente una mail inviata da Amazon con un allegato. Cosa scrivi nella barra di ricerca?",
+    "risposte": ["Amazon allegato", "from:amazon has:attachment", "Dove è la mail di Amazon"],
+    "corretta": "from:amazon has:attachment"
   },
   {
-    "domanda": "Se vedo scritto 'Non sicuro' nella barra degli indirizzi, cosa NON devo fare?",
-    "risposte": [
-      "Leggere il testo",
-      "Inserire dati personali come password o carte di credito",
-      "Chiudere la finestra"
-    ],
-    "corretta": "Inserire dati personali come password o carte di credito"
+    "domanda": "Scenario: Gmail divide la posta in schede (Principale, Social, Promozioni). Dove finiscono di solito le newsletter?",
+    "risposte": ["In Principale", "In Promozioni", "Nello Spam"],
+    "corretta": "In Promozioni"
   },
   {
-    "domanda": "A cosa serve il Menu del browser (tre puntini in alto a destra)?",
-    "risposte": [
-      "A spegnere il monitor",
-      "Contiene impostazioni, cronologia, preferiti e stampa",
-      "A inviare email"
-    ],
-    "corretta": "Contiene impostazioni, cronologia, preferiti e stampa"
+    "domanda": "Scenario: Cos'è il 'Phishing'?",
+    "risposte": ["Un tipo di pesca sportiva", "Una truffa via mail che cerca di rubare i tuoi dati fingendosi qualcun altro", "Un programma per disegnare"],
+    "corretta": "Una truffa via mail che cerca di rubare i tuoi dati fingendosi qualcun altro"
   },
   {
-    "domanda": "Cosa sono le 'Schede' (Tabs) nel browser?",
-    "risposte": [
-      "Fogli di carta stampati",
-      "Pagine web aperte dentro un'unica finestra, come uno schedario",
-      "Errori di sistema"
-    ],
-    "corretta": "Pagine web aperte dentro un'unica finestra, come uno schedario"
+    "domanda": "Scenario: Hai ricevuto un allegato .doc (Word). Perché devi fare attenzione?",
+    "risposte": ["Perché non si apre mai", "Perché potrebbe contenere 'Macro' malevole", "Perché è un file obsoleto"],
+    "corretta": "Perché potrebbe contenere 'Macro' malevole"
   },
   {
-    "domanda": "Come si apre una nuova scheda vuota?",
-    "risposte": [
-      "Cliccando sulla X rossa",
-      "Cliccando sul piccolo '+' accanto all'ultima scheda",
-      "Riavviando il PC"
-    ],
-    "corretta": "Cliccando sul piccolo '+' accanto all'ultima scheda"
+    "domanda": "Scenario: Vuoi vedere il contenuto di un allegato senza scaricarlo sul PC. Cosa usi?",
+    "risposte": ["La funzione Anteprima", "Devi per forza scaricarlo", "Lo stampi"],
+    "corretta": "La funzione Anteprima"
   },
   {
-    "domanda": "Come si chiude una singola scheda?",
-    "risposte": [
-      "Cliccando la piccola 'x' sulla linguetta della scheda",
-      "Staccando la spina",
-      "Cliccando sul lucchetto"
-    ],
-    "corretta": "Cliccando la piccola 'x' sulla linguetta della scheda"
+    "domanda": "Scenario: Se finisci in una conversazione 'Rispondi a tutti' che non ti interessa più, cosa puoi fare?",
+    "risposte": ["Cancellare l'account", "Usare la funzione 'Ignora' (Mute) la conversazione", "Rispondere chiedendo di smettere"],
+    "corretta": "Usare la funzione 'Ignora' (Mute) la conversazione"
   },
   {
-    "domanda": "Cosa succede se chiudo la 'X' grande in alto a destra della finestra?",
-    "risposte": [
-      "Chiudo solo una scheda",
-      "Chiudo tutto il programma browser e tutte le schede aperte",
-      "Cancello Internet"
-    ],
-    "corretta": "Chiudo tutto il programma browser e tutte le schede aperte"
+    "domanda": "Scenario: L'obiettivo 'Zero Inbox' significa...",
+    "risposte": ["Non ricevere mai mail", "Avere la casella di posta in arrivo vuota o quasi, archiviando tutto", "Cancellare tutte le mail senza leggerle"],
+    "corretta": "Avere la casella di posta in arrivo vuota o quasi, archiviando tutto"
   },
   {
-    "domanda": "Qual è la scorciatoia da tastiera per riaprire una scheda chiusa per sbaglio?",
-    "risposte": [
-      "Ctrl + Z",
-      "Ctrl + Maiusc (Shift) + T",
-      "Alt + F4"
-    ],
-    "corretta": "Ctrl + Maiusc (Shift) + T"
+    "domanda": "Scenario: Cosa succede se non usi il tuo account Google per molti anni?",
+    "risposte": ["Nulla", "Potrebbe essere considerato inattivo e i dati cancellati", "Diventa a pagamento"],
+    "corretta": "Potrebbe essere considerato inattivo e i dati cancellati"
   },
   {
-    "domanda": "Cos'è la 'Home Page' di un sito?",
-    "risposte": [
-      "L'ultima pagina visitata",
-      "La pagina principale o 'copertina' del sito",
-      "La pagina di errore"
-    ],
-    "corretta": "La pagina principale o 'copertina' del sito"
+    "domanda": "Scenario: Puoi impostare un 'erede' digitale per il tuo account?",
+    "risposte": ["Sì, tramite la Gestione Account Inattivo", "No, è illegale", "Solo se lasci la password nel testamento"],
+    "corretta": "Sì, tramite la Gestione Account Inattivo"
   },
   {
-    "domanda": "Come riconosco un Link (collegamento) in una pagina?",
-    "risposte": [
-      "È sempre rosso lampeggiante",
-      "Spesso è blu sottolineato e il mouse diventa una manina",
-      "Non si può riconoscere"
-    ],
-    "corretta": "Spesso è blu sottolineato e il mouse diventa una manina"
+    "domanda": "Scenario: Il testo in grassetto nell'elenco delle mail indica solitamente...",
+    "risposte": ["Un messaggio importante", "Un messaggio non ancora letto", "Un messaggio con virus"],
+    "corretta": "Un messaggio non ancora letto"
   },
   {
-    "domanda": "Se il testo di una pagina è troppo piccolo, come posso ingrandirlo (Zoom)?",
-    "risposte": [
-      "Avvicinandomi allo schermo",
-      "Premendo Ctrl e il tasto '+'",
-      "Cambiando browser"
-    ],
-    "corretta": "Premendo Ctrl e il tasto '+'"
+    "domanda": "Scenario: Se invii foto ad alta risoluzione via mail, il programma potrebbe proporti di...",
+    "risposte": ["Cancellarle", "Ridimensionarle per ridurre il peso", "Modificarle con Photoshop"],
+    "corretta": "Ridimensionarle per ridurre il peso"
   },
   {
-    "domanda": "Come posso stampare una pagina web?",
-    "risposte": [
-      "Facendo una foto allo schermo",
-      "Dal Menu (tre puntini) > Stampa, oppure Ctrl + P",
-      "Non si può stampare da internet"
-    ],
-    "corretta": "Dal Menu (tre puntini) > Stampa, oppure Ctrl + P"
+    "domanda": "Scenario: Perché è utile salvare un allegato direttamente su Drive/Cloud invece che scaricarlo?",
+    "risposte": ["Per non occupare spazio sul PC e averlo accessibile ovunque", "Perché è l'unico modo per aprirlo", "Perché così diventa un virus"],
+    "corretta": "Per non occupare spazio sul PC e averlo accessibile ovunque"
   },
   {
-    "domanda": "Cosa fa la 'Modalità Lettura' presente in alcuni browser?",
-    "risposte": [
-      "Legge il testo ad alta voce",
-      "Toglie la pubblicità e ingrandisce il testo per facilitare la lettura",
-      "Traduce la pagina in cinese"
-    ],
-    "corretta": "Toglie la pubblicità e ingrandisce il testo per facilitare la lettura"
+    "domanda": "Scenario: Un messaggio nella cartella Spam è sicuramente spazzatura?",
+    "risposte": ["Sì, sempre", "No, potrebbe essere un 'Falso Positivo' (mail buona finita lì per errore)", "Sì, i filtri non sbagliano mai"],
+    "corretta": "No, potrebbe essere un 'Falso Positivo' (mail buona finita lì per errore)"
   },
   {
-    "domanda": "Microsoft Edge, Safari e Firefox sono:",
-    "risposte": [
-      "Tipi di virus",
-      "Browser alternativi a Chrome",
-      "Marche di computer"
-    ],
-    "corretta": "Browser alternativi a Chrome"
+    "domanda": "Scenario: Per evitare che le mail della tua banca finiscano in Spam, cosa puoi fare?",
+    "risposte": ["Aggiungere l'indirizzo della banca in Rubrica (Whitelist)", "Scrivere alla banca", "Non fare nulla"],
+    "corretta": "Aggiungere l'indirizzo della banca in Rubrica (Whitelist)"
   },
   {
-    "domanda": "Se clicco sul logo di un sito in alto a sinistra, di solito cosa succede?",
-    "risposte": [
-      "Si chiude il sito",
-      "Torno alla Home Page (inizio) di quel sito",
-      "Non succede nulla"
-    ],
-    "corretta": "Torno alla Home Page (inizio) di quel sito"
+    "domanda": "Scenario: La funzione 'Snooze' o 'Posticipa' serve a...",
+    "risposte": ["Dormire mentre leggi le mail", "Nascondere temporaneamente una mail e farla riapparire in un momento scelto", "Cancellare la mail per sempre"],
+    "corretta": "Nascondere temporaneamente una mail e farla riapparire in un momento scelto"
   },
   {
-    "domanda": "È possibile avere aperte contemporaneamente una scheda con le Notizie e una con il Meteo?",
-    "risposte": [
-      "No, solo una alla volta",
-      "Sì, grazie alla navigazione a schede",
-      "Solo se ho due monitor"
-    ],
-    "corretta": "Sì, grazie alla navigazione a schede"
+    "domanda": "Scenario: Qual è l'estensione di un file eseguibile che NON dovresti mai aprire se arriva via mail?",
+    "risposte": [".jpg", ".exe o .bat", ".txt"],
+    "corretta": ".exe o .bat"
   },
   {
-    "domanda": "La scorciatoia Ctrl + T serve a:",
-    "risposte": [
-      "Stampare",
-      "Aprire una Nuova Scheda (Tab)",
-      "Chiudere tutto"
-    ],
-    "corretta": "Aprire una Nuova Scheda (Tab)"
+    "domanda": "Scenario: Se attivi la sincronizzazione automatica sul cellulare...",
+    "risposte": ["Le mail arrivano da sole (Push)", "Devi aprire l'app per vedere se c'è posta", "Il telefono si scarica in 10 minuti"],
+    "corretta": "Le mail arrivano da sole (Push)"
   },
   {
-    "domanda": "Perché non bisogna scrivere spazi nell'indirizzo di un sito?",
-    "risposte": [
-      "Perché è maleducato",
-      "Perché gli indirizzi web non accettano spazi, verrebbe interpretato come una ricerca",
-      "Perché si rompe la tastiera"
-    ],
-    "corretta": "Perché gli indirizzi web non accettano spazi, verrebbe interpretato come una ricerca"
+    "domanda": "Scenario: Sui dispositivi touch, cosa succede spesso scorrendo (swipe) il dito su una mail verso sinistra o destra?",
+    "risposte": ["Si cancella o si archivia la mail", "Si apre la mail", "Si spegne il telefono"],
+    "corretta": "Si cancella o si archivia la mail"
   }
 ]

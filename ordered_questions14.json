@@ -1,272 +1,152 @@
 [
   {
-    "domanda": "Cosa succede quando faccio un Download?",
-    "risposte": [
-      "Il file viene cancellato da Internet",
-      "Viene creata una copia del file sul mio Hard Disk",
-      "Il file viene stampato"
-    ],
-    "corretta": "Viene creata una copia del file sul mio Hard Disk"
+    "domanda": "Scenario: Cos'è lo SPID in parole semplici?",
+    "risposte": ["Un virus del computer", "Una coppia di credenziali unica per accedere ai servizi della Pubblica Amministrazione", "Un nuovo social network"],
+    "corretta": "Una coppia di credenziali unica per accedere ai servizi della Pubblica Amministrazione"
   },
   {
-    "domanda": "Dove finiscono automaticamente i file scaricati?",
-    "risposte": [
-      "Nel Cestino",
-      "Nella cartella 'Download'",
-      "Sul Desktop"
-    ],
-    "corretta": "Nella cartella 'Download'"
+    "domanda": "Scenario: Chi rilascia lo SPID?",
+    "risposte": ["Direttamente il Presidente della Repubblica", "I Provider autorizzati (Identity Provider) come Poste, Aruba, ecc.", "Il supermercato"],
+    "corretta": "I Provider autorizzati (Identity Provider) come Poste, Aruba, ecc."
   },
   {
-    "domanda": "Qual è il rischio principale dei file con estensione .EXE?",
-    "risposte": [
-      "Sono file immagine",
-      "Sono programmi eseguibili; se scaricati da siti non sicuri possono essere virus",
-      "Non si aprono mai"
-    ],
-    "corretta": "Sono programmi eseguibili; se scaricati da siti non sicuri possono essere virus"
+    "domanda": "Scenario: Qual è la differenza fisica principale tra SPID e CIE?",
+    "risposte": ["Lo SPID è smaterializzato (cloud), la CIE è una carta fisica (plastica)", "Non c'è differenza", "Lo SPID è rosso, la CIE è blu"],
+    "corretta": "Lo SPID è smaterializzato (cloud), la CIE è una carta fisica (plastica)"
   },
   {
-    "domanda": "Un file .PDF è generalmente:",
-    "risposte": [
-      "Un documento sicuro di sola lettura (come una fattura o manuale)",
-      "Un video",
-      "Un virus"
-    ],
-    "corretta": "Un documento sicuro di sola lettura (come una fattura o manuale)"
+    "domanda": "Scenario: Per usare la CIE (Carta d'Identità Elettronica) online da casa, cosa ti serve assolutamente?",
+    "risposte": ["Solo la carta", "La carta, il PIN e uno smartphone con NFC (o lettore PC)", "Una webcam"],
+    "corretta": "La carta, il PIN e uno smartphone con NFC (o lettore PC)"
   },
   {
-    "domanda": "Le estensioni .JPG e .PNG indicano:",
-    "risposte": [
-      "Programmi",
-      "Immagini e foto",
-      "Documenti di testo"
-    ],
-    "corretta": "Immagini e foto"
+    "domanda": "Scenario: Lo SPID di Livello 1 richiede...",
+    "risposte": ["Solo Nome Utente e Password", "Password e OTP", "Smart Card"],
+    "corretta": "Solo Nome Utente e Password"
   },
   {
-    "domanda": "Cosa devo fare se ricevo una fattura via email che finisce con .exe?",
-    "risposte": [
-      "Aprirla subito",
-      "Cancellarla immediatamente, è probabilmente un virus (una fattura deve essere PDF)",
-      "Ringraziare il mittente"
-    ],
-    "corretta": "Cancellarla immediatamente, è probabilmente un virus (una fattura deve essere PDF)"
+    "domanda": "Scenario: Lo SPID di Livello 2 (il più usato) richiede...",
+    "risposte": ["Solo Password", "Password + Codice temporaneo OTP (SMS/App)", "Scansione della retina"],
+    "corretta": "Password + Codice temporaneo OTP (SMS/App)"
   },
   {
-    "domanda": "Come posso salvare un'immagine da un sito web?",
-    "risposte": [
-      "Trascinandola fuori dallo schermo",
-      "Tasto destro sull'immagine > Salva immagine con nome",
-      "Non si può fare"
-    ],
-    "corretta": "Tasto destro sull'immagine > Salva immagine con nome"
+    "domanda": "Scenario: A cosa serve l'OTP nello SPID?",
+    "risposte": ["A nulla", "A garantire che sei tu, perché arriva sul tuo telefono personale", "A cambiare il colore dell'app"],
+    "corretta": "A garantire che sei tu, perché arriva sul tuo telefono personale"
   },
   {
-    "domanda": "Cos'è un file .ZIP?",
-    "risposte": [
-      "Un file veloce",
-      "Un archivio compresso che contiene uno o più file (come una valigia)",
-      "Un errore di download"
-    ],
-    "corretta": "Un archivio compresso che contiene uno o più file (come una valigia)"
+    "domanda": "Scenario: Se perdi il PIN della CIE, dove trovi il PUK per recuperarlo?",
+    "risposte": ["Sulla carta stessa", "Sul foglio ricevuto dal Comune alla richiesta della carta", "Su internet"],
+    "corretta": "Sul foglio ricevuto dal Comune alla richiesta della carta"
   },
   {
-    "domanda": "Cosa è consigliabile fare con la cartella Download periodicamente?",
-    "risposte": [
-      "Lasciarla riempire all'infinito",
-      "Svuotarla o spostare i file importanti nelle cartelle giuste (Documenti, Immagini)",
-      "Nasconderla"
-    ],
-    "corretta": "Svuotarla o spostare i file importanti nelle cartelle giuste (Documenti, Immagini)"
+    "domanda": "Scenario: Puoi usare lo SPID per accedere al sito dell'Agenzia delle Entrate?",
+    "risposte": ["Sì", "No, serve un codice diverso", "Solo se paghi"],
+    "corretta": "Sì"
   },
   {
-    "domanda": "Qual è la scorciatoia per vedere l'elenco dei download nel browser?",
-    "risposte": [
-      "Ctrl + D",
-      "Ctrl + J",
-      "Ctrl + S"
-    ],
-    "corretta": "Ctrl + J"
+    "domanda": "Scenario: L'App IO serve principalmente a...",
+    "risposte": ["Giocare online", "Raggruppare servizi, avvisi e pagamenti della Pubblica Amministrazione su smartphone", "Modificare le foto"],
+    "corretta": "Raggruppare servizi, avvisi e pagamenti della Pubblica Amministrazione su smartphone"
   },
   {
-    "domanda": "Se clicco su 'Salva link con nome', cosa succede?",
-    "risposte": [
-      "Salvo la destinazione di quel collegamento (es. un documento)",
-      "Salvo solo il testo blu",
-      "Non succede nulla"
-    ],
-    "corretta": "Salvo la destinazione di quel collegamento (es. un documento)"
+    "domanda": "Scenario: Con PagoPA puoi...",
+    "risposte": ["Pagare tasse, multe e ticket sanitari in modo standardizzato", "Comprare su Amazon", "Inviare messaggi agli amici"],
+    "corretta": "Pagare tasse, multe e ticket sanitari in modo standardizzato"
   },
   {
-    "domanda": "Posso aprire un file scaricato se sono Offline (senza internet)?",
-    "risposte": [
-      "No, serve sempre internet",
-      "Sì, perché ora è salvato sul mio computer",
-      "Solo se è un'immagine"
-    ],
-    "corretta": "Sì, perché ora è salvato sul mio computer"
+    "domanda": "Scenario: Il Fascicolo Sanitario Elettronico (FSE) permette di...",
+    "risposte": ["Curarsi da soli", "Vedere referti, ricette ed esami senza andare allo sportello", "Prenotare le vacanze"],
+    "corretta": "Vedere referti, ricette ed esami senza andare allo sportello"
   },
   {
-    "domanda": "Perché è meglio non aprire allegati .exe dalle email?",
-    "risposte": [
-      "Perché occupano troppo spazio",
-      "Perché sono spesso vettori di infezioni (malware)",
-      "Perché Windows non li legge"
-    ],
-    "corretta": "Perché sono spesso vettori di infezioni (malware)"
+    "domanda": "Scenario: Un minorenne può avere lo SPID?",
+    "risposte": ["Mai", "Sì, dai 5 anni", "Sì, dai 14 anni per uso personale (o prima sotto gestione genitori)"],
+    "corretta": "Sì, dai 14 anni per uso personale (o prima sotto gestione genitori)"
   },
   {
-    "domanda": "Un file .docx è:",
-    "risposte": [
-      "Un documento di Word",
-      "Una canzone",
-      "Un programma"
-    ],
-    "corretta": "Un documento di Word"
+    "domanda": "Scenario: Se ti rubano le credenziali SPID (password), possono entrare nel tuo account Livello 2?",
+    "risposte": ["Sì, subito", "No, se non hanno anche il tuo smartphone per ricevere l'OTP", "Sì, se sono hacker bravi"],
+    "corretta": "No, se non hanno anche il tuo smartphone per ricevere l'OTP"
   },
   {
-    "domanda": "Cosa indica l'icona della freccia in giù nel browser?",
-    "risposte": [
-      "Che la pagina sta scorrendo",
-      "I Download recenti o in corso",
-      "Che internet è lento"
-    ],
-    "corretta": "I Download recenti o in corso"
+    "domanda": "Scenario: Il riconoscimento per ottenere lo SPID (RAO) può avvenire...",
+    "risposte": ["Solo di persona", "Di persona, via webcam o usando CIE/CNS", "Solo per posta"],
+    "corretta": "Di persona, via webcam o usando CIE/CNS"
   },
   {
-    "domanda": "Cosa significa 'Salvare come PDF' una pagina web?",
-    "risposte": [
-      "Stampare su carta",
-      "Creare un documento digitale fisso della pagina, utile per ricevute",
-      "Cambiare il sito web"
-    ],
-    "corretta": "Creare un documento digitale fisso della pagina, utile per ricevute"
+    "domanda": "Scenario: Lo SPID ha una scadenza?",
+    "risposte": ["Sì, scade ogni anno", "No, le credenziali non scadono (ma la password va aggiornata)", "Scade se non lo usi per 1 mese"],
+    "corretta": "No, le credenziali non scadono (ma la password va aggiornata)"
   },
   {
-    "domanda": "Se scarico un programma (es. Zoom), da dove devo scaricarlo?",
-    "risposte": [
-      "Da qualsiasi sito che trovo",
-      "Solo dal sito ufficiale del produttore",
-      "Da Facebook"
-    ],
-    "corretta": "Solo dal sito ufficiale del produttore"
+    "domanda": "Scenario: Ti arriva un SMS: 'Il tuo SPID è in scadenza, clicca qui'. Cosa fai?",
+    "risposte": ["Clicco subito, ho paura di perderlo", "È una truffa (Phishing), lo SPID non scade via SMS. Ignoro.", "Rispondo all'SMS"],
+    "corretta": "È una truffa (Phishing), lo SPID non scade via SMS. Ignoro."
   },
   {
-    "domanda": "Se il browser mi avvisa che 'questo file potrebbe danneggiare il computer', cosa faccio?",
-    "risposte": [
-      "Lo ignoro sempre",
-      "Ci penso bene: se non sono sicuro della fonte, annullo il download",
-      "Spengo il monitor"
-    ],
-    "corretta": "Ci penso bene: se non sono sicuro della fonte, annullo il download"
+    "domanda": "Scenario: Cosa devi fare se sospetti un furto d'identità SPID?",
+    "risposte": ["Chiamare la polizia", "Contattare il provider per sospendere le credenziali", "Cancellare Internet"],
+    "corretta": "Contattare il provider per sospendere le credenziali"
   },
   {
-    "domanda": "La cartella Download è come:",
-    "risposte": [
-      "Una cassaforte",
-      "Una cassetta della posta: va svuotata ogni tanto",
-      "Un cestino dei rifiuti"
-    ],
-    "corretta": "Una cassetta della posta: va svuotata ogni tanto"
+    "domanda": "Scenario: La 'Delega Digitale' serve a...",
+    "risposte": ["Votare online", "Permettere a un familiare di gestire i servizi online di una persona meno autonoma (es. anziano)", "Delegare il lavoro ai colleghi"],
+    "corretta": "Permettere a un familiare di gestire i servizi online di una persona meno autonoma (es. anziano)"
   },
   {
-    "domanda": "Cosa significa 'Taglia e Incolla' un file dalla cartella Download?",
-    "risposte": [
-      "Farne una copia",
-      "Spostarlo definitivamente in un'altra cartella (es. Documenti) per fare ordine",
-      "Eliminarlo"
-    ],
-    "corretta": "Spostarlo definitivamente in un'altra cartella (es. Documenti) per fare ordine"
+    "domanda": "Scenario: Lo SPID Professionale serve per...",
+    "risposte": ["Accedere ai servizi come persona giuridica/azienda", "Avere uno SPID più veloce", "Saltare la fila alla posta"],
+    "corretta": "Accedere ai servizi come persona giuridica/azienda"
   },
   {
-    "domanda": "Posso scegliere in quale cartella scaricare un file?",
-    "risposte": [
-      "No, va sempre in Download",
-      "Sì, se scelgo l'opzione 'Salva con nome' o modifico le impostazioni",
-      "Solo se pago"
-    ],
-    "corretta": "Sì, se scelgo l'opzione 'Salva con nome' o modifico le impostazioni"
+    "domanda": "Scenario: Puoi usare il tuo SPID italiano per accedere a servizi universitari in Francia o Germania?",
+    "risposte": ["No, vale solo in Italia", "Sì, grazie al regolamento eIDAS", "Forse"],
+    "corretta": "Sì, grazie al regolamento eIDAS"
   },
   {
-    "domanda": "Un file musicale ha solitamente estensione:",
-    "risposte": [
-      ".mp3",
-      ".pdf",
-      ".exe"
-    ],
-    "corretta": ".mp3"
+    "domanda": "Scenario: Quale livello di sicurezza offre la CIE?",
+    "risposte": ["Basso", "Livello 3 (Massimo), pari a SPID 3", "Nessuno"],
+    "corretta": "Livello 3 (Massimo), pari a SPID 3"
   },
   {
-    "domanda": "Se scarico un file .zip, cosa devo fare per usarne il contenuto?",
-    "risposte": [
-      "Rinominarlo",
-      "Estrarlo (Decomprimerlo)",
-      "Cancellarlo"
-    ],
-    "corretta": "Estrarlo (Decomprimerlo)"
+    "domanda": "Scenario: Per leggere la CIE con il telefono, dove devi appoggiare la carta?",
+    "risposte": ["Sullo schermo", "Sul retro del telefono (zona sensore NFC)", "Sulla fotocamera"],
+    "corretta": "Sul retro del telefono (zona sensore NFC)"
   },
   {
-    "domanda": "Quanto tempo ci vuole per scaricare un file?",
-    "risposte": [
-      "Sempre 1 minuto",
-      "Dipende dalla velocità della connessione e dalla grandezza del file",
-      "Dipende dalla marca del PC"
-    ],
-    "corretta": "Dipende dalla velocità della connessione e dalla grandezza del file"
+    "domanda": "Scenario: SPID Livello 3 richiede un supporto fisico aggiuntivo o smart card. Chi lo usa solitamente?",
+    "risposte": ["Tutti i cittadini", "Professionisti per firme contratti o gestione dati sensibili", "I bambini"],
+    "corretta": "Professionisti per firme contratti o gestione dati sensibili"
   },
   {
-    "domanda": "Se il download si blocca, posso riprenderlo?",
-    "risposte": [
-      "Mai",
-      "Spesso sì, usando il tasto 'Riprendi' nella lista download",
-      "Devo comprare un nuovo PC"
-    ],
-    "corretta": "Spesso sì, usando il tasto 'Riprendi' nella lista download"
+    "domanda": "Scenario: Cos'è l'ANPR accessibile via SPID?",
+    "risposte": ["L'Anagrafe Nazionale dove scaricare certificati (residenza, nascita) gratis", "Un sito di ricette", "L'albo dei giornalisti"],
+    "corretta": "L'Anagrafe Nazionale dove scaricare certificati (residenza, nascita) gratis"
   },
   {
-    "domanda": "Scaricare film pirata è:",
-    "risposte": [
-      "Consigliato",
-      "Illegale e rischioso per i virus",
-      "L'unico modo per vedere film"
-    ],
-    "corretta": "Illegale e rischioso per i virus"
+    "domanda": "Scenario: Se perdi sia il PIN che il PUK della CIE, cosa devi fare?",
+    "risposte": ["Inventare un codice", "Andare in Comune per la ristampa dei codici", "Comprare un telefono nuovo"],
+    "corretta": "Andare in Comune per la ristampa dei codici"
   },
   {
-    "domanda": "Per mandare un documento via email a qualcuno, devo prima:",
-    "risposte": [
-      "Averlo salvato sul mio computer (o averlo scaricato)",
-      "Leggerlo ad alta voce",
-      "Stamparlo"
-    ],
-    "corretta": "Averlo salvato sul mio computer (o averlo scaricato)"
+    "domanda": "Scenario: Usare lo SPID al posto di mille password diverse per ogni sito PA è...",
+    "risposte": ["Più pericoloso", "Più sicuro e comodo", "Indifferente"],
+    "corretta": "Più sicuro e comodo"
   },
   {
-    "domanda": "Se non trovo un file appena scaricato, cosa faccio?",
-    "risposte": [
-      "Apro la cartella Download o premo Ctrl+J nel browser",
-      "Piango",
-      "Compro un nuovo mouse"
-    ],
-    "corretta": "Apro la cartella Download o premo Ctrl+J nel browser"
+    "domanda": "Scenario: Quando accedi con SPID, ti viene chiesto di autorizzare l'invio dei dati al servizio. Cosa significa?",
+    "risposte": ["Che stai dando tutti i tuoi dati a Facebook", "Che il provider comunica al sito (es. INPS) solo i dati necessari (es. Codice Fiscale) per riconoscerti", "Che devi pagare"],
+    "corretta": "Che il provider comunica al sito (es. INPS) solo i dati necessari (es. Codice Fiscale) per riconoscerti"
   },
   {
-    "domanda": "I file di installazione dei programmi su Windows finiscono spesso con:",
-    "risposte": [
-      ".jpg",
-      ".exe o .msi",
-      ".txt"
-    ],
-    "corretta": ".exe o .msi"
+    "domanda": "Scenario: Se hai problemi tecnici con lo SPID (es. non arriva SMS), chi devi chiamare?",
+    "risposte": ["Il Comune", "L'assistenza del tuo Provider (es. Poste, Aruba)", "Il 112"],
+    "corretta": "L'assistenza del tuo Provider (es. Poste, Aruba)"
   },
   {
-    "domanda": "È sicuro scaricare driver o aggiornamenti da siti sconosciuti?",
-    "risposte": [
-      "Sì, sempre",
-      "No, è meglio usare solo i canali ufficiali (es. Windows Update o sito produttore)",
-      "Solo di notte"
-    ],
-    "corretta": "No, è meglio usare solo i canali ufficiali (es. Windows Update o sito produttore)"
+    "domanda": "Scenario: In futuro, l'identità digitale potrebbe sostituire...",
+    "risposte": ["Le chiavi di casa e dell'auto", "Il cibo", "Gli amici"],
+    "corretta": "Le chiavi di casa e dell'auto"
   }
 ]

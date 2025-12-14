@@ -1,272 +1,152 @@
 [
   {
-    "domanda": "Qual è la funzione di un Motore di Ricerca (es. Google)?",
-    "risposte": [
-      "Scrivere documenti",
-      "Fare da 'bibliotecario' trovando le informazioni nel Web",
-      "Proteggere dai virus"
-    ],
-    "corretta": "Fare da 'bibliotecario' trovando le informazioni nel Web"
+    "domanda": "Scenario: Qual è la definizione più semplice di PEC?",
+    "risposte": ["Una chat veloce", "Una Raccomandata con Ricevuta di Ritorno Digitale", "Un social network"],
+    "corretta": "Una Raccomandata con Ricevuta di Ritorno Digitale"
   },
   {
-    "domanda": "Qual è la differenza tra Barra degli Indirizzi e Barra di Ricerca?",
-    "risposte": [
-      "La Barra Indirizzi è per siti che conosco già, la Ricerca è per trovare argomenti",
-      "Nessuna, sono uguali",
-      "La Barra di Ricerca è solo per le immagini"
-    ],
-    "corretta": "La Barra Indirizzi è per siti che conosco già, la Ricerca è per trovare argomenti"
+    "domanda": "Scenario: Qual è il vantaggio principale della PEC rispetto alla mail normale?",
+    "risposte": ["È più divertente", "Ha valore legale opponibile a terzi", "Puoi mettere più emoji"],
+    "corretta": "Ha valore legale opponibile a terzi"
   },
   {
-    "domanda": "Cosa sono le 'Parole Chiave'?",
-    "risposte": [
-      "Le password segrete",
-      "Parole sintetiche usate per cercare (es. 'Meteo Roma' invece di 'Che tempo fa')",
-      "Le parole scritte in grassetto"
-    ],
-    "corretta": "Parole sintetiche usate per cercare (es. 'Meteo Roma' invece di 'Che tempo fa')"
+    "domanda": "Scenario: Invii una PEC a un indirizzo email normale (Gmail). Ha valore legale completo?",
+    "risposte": ["Sì, sempre", "No, manca la ricevuta di consegna del destinatario", "Solo se il destinatario risponde"],
+    "corretta": "No, manca la ricevuta di consegna del destinatario"
   },
   {
-    "domanda": "Se cerco 'Ristoranti vicino a me', cosa vedrò nei primi risultati in alto?",
-    "risposte": [
-      "Sempre e solo Wikipedia",
-      "Spesso annunci pubblicitari (Sponsorizzati)",
-      "La mappa dell'America"
-    ],
-    "corretta": "Spesso annunci pubblicitari (Sponsorizzati)"
+    "domanda": "Scenario: Per avere valore legale completo, la comunicazione PEC deve avvenire...",
+    "risposte": ["Da PEC a Email normale", "Da Email normale a PEC", "Da PEC a PEC"],
+    "corretta": "Da PEC a PEC"
   },
   {
-    "domanda": "Come riconosco un risultato 'Sponsorizzato' (Pubblicità) su Google?",
-    "risposte": [
-      "È scritto in rosso",
-      "C'è scritto 'Annuncio' o 'Sponsorizzato' in piccolo sopra il titolo",
-      "Non si può riconoscere"
-    ],
-    "corretta": "C'è scritto 'Annuncio' o 'Sponsorizzato' in piccolo sopra il titolo"
+    "domanda": "Scenario: Quando invii una PEC, quante ricevute importanti devi aspettarti?",
+    "risposte": ["Nessuna", "Una sola", "Due: Accettazione e Consegna"],
+    "corretta": "Due: Accettazione e Consegna"
   },
   {
-    "domanda": "Cosa sono i 'Risultati Organici'?",
-    "risposte": [
-      "Risultati naturali che Google considera i migliori, non pagati",
-      "Prodotti biologici in vendita",
-      "Risultati vecchi"
-    ],
-    "corretta": "Risultati naturali che Google considera i migliori, non pagati"
+    "domanda": "Scenario: Cosa certifica la 'Ricevuta di Accettazione'?",
+    "risposte": ["Che il destinatario ha letto", "Che il tuo gestore ha preso in carico il messaggio", "Che la mail è bella"],
+    "corretta": "Che il tuo gestore ha preso in carico il messaggio"
   },
   {
-    "domanda": "A cosa servono i 'Suggerimenti' mentre scrivo su Google?",
-    "risposte": [
-      "A distrarmi",
-      "A completare la frase con le ricerche più frequenti per risparmiare tempo",
-      "A correggere la grammatica"
-    ],
-    "corretta": "A completare la frase con le ricerche più frequenti per risparmiare tempo"
+    "domanda": "Scenario: Qual è la prova legale che il destinatario ha ricevuto il messaggio?",
+    "risposte": ["La Ricevuta di Accettazione", "La Ricevuta di Consegna", "La risposta del destinatario"],
+    "corretta": "La Ricevuta di Consegna"
   },
   {
-    "domanda": "Cosa fa la funzione 'Forse cercavi...'?",
-    "risposte": [
-      "Mi prende in giro",
-      "Corregge automaticamente se ho sbagliato a scrivere una parola",
-      "Cancella la ricerca"
-    ],
-    "corretta": "Corregge automaticamente se ho sbagliato a scrivere una parola"
+    "domanda": "Scenario: Il contenuto di una PEC può essere modificato dopo l'invio?",
+    "risposte": ["Sì, facilmente", "No, l'integrità del contenuto è garantita", "Solo se paghi"],
+    "corretta": "No, l'integrità del contenuto è garantita"
   },
   {
-    "domanda": "Se voglio vedere solo foto di gatti, dove clicco dopo la ricerca?",
-    "risposte": [
-      "Su 'Immagini' sotto la barra di ricerca",
-      "Su 'Shopping'",
-      "Su 'Mappe'"
-    ],
-    "corretta": "Su 'Immagini' sotto la barra di ricerca"
+    "domanda": "Scenario: La PEC è obbligatoria per...",
+    "risposte": ["Tutti i cittadini", "Aziende e Professionisti", "Studenti"],
+    "corretta": "Aziende e Professionisti"
   },
   {
-    "domanda": "Se voglio vedere dove si trova una via, dove clicco?",
-    "risposte": [
-      "Su 'Notizie'",
-      "Su 'Maps' (Mappe)",
-      "Su 'Video'"
-    ],
-    "corretta": "Su 'Maps' (Mappe)"
+    "domanda": "Scenario: Dove puoi trovare l'indirizzo PEC ufficiale di un'azienda o un avvocato?",
+    "risposte": ["Su Google Immagini", "Sull'elenco pubblico INI-PEC", "Sulle Pagine Gialle cartacee"],
+    "corretta": "Sull'elenco pubblico INI-PEC"
   },
   {
-    "domanda": "A cosa serve il pulsante del microfono nella barra di ricerca?",
-    "risposte": [
-      "A registrare una canzone",
-      "A fare una Ricerca Vocale parlando invece di scrivere",
-      "A chiamare l'assistenza"
-    ],
-    "corretta": "A fare una Ricerca Vocale parlando invece di scrivere"
+    "domanda": "Scenario: Quanto costa generalmente una PEC?",
+    "risposte": ["È sempre gratis", "Ha un costo annuale (es. 5-30 euro)", "Costa 100 euro a messaggio"],
+    "corretta": "Ha un costo annuale (es. 5-30 euro)"
   },
   {
-    "domanda": "Cos'è Wikipedia?",
-    "risposte": [
-      "Un negozio online",
-      "Un'enciclopedia libera e gratuita scritta da volontari",
-      "Un sito di giochi"
-    ],
-    "corretta": "Un'enciclopedia libera e gratuita scritta da volontari"
+    "domanda": "Scenario: Cosa devi fare se la tua casella PEC è piena?",
+    "risposte": ["Nulla, continua a funzionare", "Non potrai ricevere nuovi messaggi legali, devi liberare spazio", "Ne compri una nuova"],
+    "corretta": "Non potrai ricevere nuovi messaggi legali, devi liberare spazio"
   },
   {
-    "domanda": "Cosa sono i 'Preferiti' (Bookmarks)?",
-    "risposte": [
-      "I siti che odio",
-      "Segnalibri per salvare l'indirizzo di un sito e ritrovarlo facilmente",
-      "Le password salvate"
-    ],
-    "corretta": "Segnalibri per salvare l'indirizzo di un sito e ritrovarlo facilmente"
+    "domanda": "Scenario: Puoi usare la PEC per disdire un contratto telefonico?",
+    "risposte": ["No, serve la raccomandata cartacea", "Sì, ha lo stesso valore della raccomandata", "Solo se l'operatore è d'accordo"],
+    "corretta": "Sì, ha lo stesso valore della raccomandata"
   },
   {
-    "domanda": "Quale icona si usa di solito per aggiungere un Preferito?",
-    "risposte": [
-      "Un cestino",
-      "Una Stella",
-      "Una chiave inglese"
-    ],
-    "corretta": "Una Stella"
+    "domanda": "Scenario: Se non controlli spesso la PEC, cosa ti conviene attivare?",
+    "risposte": ["La notifica via mail ordinaria o SMS quando ricevi un messaggio", "L'auto-distruzione dei messaggi", "Il blocco del mittente"],
+    "corretta": "La notifica via mail ordinaria o SMS quando ricevi un messaggio"
   },
   {
-    "domanda": "Dove trovo l'elenco dei miei Preferiti?",
-    "risposte": [
-      "Nella cartella Download",
-      "Nella Barra dei Preferiti o nel Menu del browser",
-      "Sul Desktop"
-    ],
-    "corretta": "Nella Barra dei Preferiti o nel Menu del browser"
+    "domanda": "Scenario: Cosa succederà con la normativa europea eIDAS e la REM?",
+    "risposte": ["La PEC sparirà", "La PEC diventerà standard europeo richiedendo verifica dell'identità", "La PEC diventerà a pagamento per ogni invio"],
+    "corretta": "La PEC diventerà standard europeo richiedendo verifica dell'identità"
   },
   {
-    "domanda": "Cos'è la 'Cronologia'?",
-    "risposte": [
-      "L'orologio del computer",
-      "L'elenco di tutti i siti visitati nel passato",
-      "Un sito di storia"
-    ],
-    "corretta": "L'elenco di tutti i siti visitati nel passato"
+    "domanda": "Scenario: Qual è la differenza tra PEC e Firma Digitale?",
+    "risposte": ["Sono la stessa cosa", "La PEC è il mezzo di trasporto (camion blindato), la Firma certifica l'autore (contenuto)", "La Firma Digitale serve solo per i disegni"],
+    "corretta": "La PEC è il mezzo di trasporto (camion blindato), la Firma certifica l'autore (contenuto)"
   },
   {
-    "domanda": "Qual è la scorciatoia da tastiera per aprire la Cronologia?",
-    "risposte": [
-      "Ctrl + C",
-      "Ctrl + H (History)",
-      "Ctrl + P"
-    ],
-    "corretta": "Ctrl + H (History)"
+    "domanda": "Scenario: È consigliabile usare la PEC per iscriversi alla newsletter di un supermercato?",
+    "risposte": ["Sì, è più sicuro", "No, è uno strumento professionale/legale, non per uso comune", "Sì, così arrivano prima gli sconti"],
+    "corretta": "No, è uno strumento professionale/legale, non per uso comune"
   },
   {
-    "domanda": "Perché potrei voler cancellare la Cronologia?",
-    "risposte": [
-      "Per liberare spazio sull'Hard Disk (anche se poco)",
-      "Per privacy, per non far vedere ad altri cosa ho visitato",
-      "Tutte le precedenti"
-    ],
-    "corretta": "Tutte le precedenti"
+    "domanda": "Scenario: Come si chiama il registro dove i cittadini possono eleggere il proprio 'Domicilio Digitale'?",
+    "risposte": ["INAD", "FACEBOOK", "PAGINE BIANCHE"],
+    "corretta": "INAD"
   },
   {
-    "domanda": "Cosa fa il Knowledge Graph (riquadro a destra nei risultati Google)?",
-    "risposte": [
-      "Mostra pubblicità",
-      "Dà una risposta diretta e immediata (es. meteo, data di nascita) senza cliccare link",
-      "Blocca il computer"
-    ],
-    "corretta": "Dà una risposta diretta e immediata (es. meteo, data di nascita) senza cliccare link"
+    "domanda": "Scenario: Se eleggi il tuo Domicilio Digitale su INAD, cosa succede?",
+    "risposte": ["La Pubblica Amministrazione ti scriverà le notifiche legali lì invece che via carta", "Riceverai più pubblicità", "Non succede nulla"],
+    "corretta": "La Pubblica Amministrazione ti scriverà le notifiche legali lì invece che via carta"
   },
   {
-    "domanda": "Se voglio cercare una frase esatta, cosa uso?",
-    "risposte": [
-      "Le parentesi quadre",
-      "Le virgolette (es. \"essere o non essere\")",
-      "Gli asterischi"
-    ],
-    "corretta": "Le virgolette (es. \"essere o non essere\")"
+    "domanda": "Scenario: Per salvare una prova legale di una PEC sul PC, quale file devi conservare?",
+    "risposte": ["Solo il testo copiato su Word", "Il messaggio originale completo (.eml o .xml)", "Uno screenshot dello schermo"],
+    "corretta": "Il messaggio originale completo (.eml o .xml)"
   },
   {
-    "domanda": "Se cerco 'Ricetta Tiramisù -caffè', cosa succede?",
-    "risposte": [
-      "Trova ricette col caffè",
-      "Esclude la parola caffè dai risultati (ricette senza caffè)",
-      "Cancella la ricerca"
-    ],
-    "corretta": "Esclude la parola caffè dai risultati (ricette senza caffè)"
+    "domanda": "Scenario: La ricevuta di 'Mancata Consegna' arriva quando...",
+    "risposte": ["Il messaggio è arrivato correttamente", "C'è stato un problema tecnico e il messaggio non è arrivato", "Il destinatario non ti piace"],
+    "corretta": "C'è stato un problema tecnico e il messaggio non è arrivato"
   },
   {
-    "domanda": "Come posso cercare una parola specifica dentro una pagina lunga?",
-    "risposte": [
-      "Leggendo tutto riga per riga",
-      "Usando la funzione Trova (Ctrl + F)",
-      "Chiedendo a voce alta"
-    ],
-    "corretta": "Usando la funzione Trova (Ctrl + F)"
+    "domanda": "Scenario: Un privato cittadino è obbligato ad avere la PEC?",
+    "risposte": ["Sì, per legge", "No, è facoltativa", "Solo se ha la patente"],
+    "corretta": "No, è facoltativa"
   },
   {
-    "domanda": "La Barra dei Preferiti può essere organizzata in:",
-    "risposte": [
-      "Non si può organizzare",
-      "Cartelle (es. Lavoro, Hobby, Ricette)",
-      "Pile di carta"
-    ],
-    "corretta": "Cartelle (es. Lavoro, Hobby, Ricette)"
+    "domanda": "Scenario: Se perdi la password della PEC...",
+    "risposte": ["Perdi valore legale di tutte le vecchie PEC", "Puoi recuperarla tramite la procedura del gestore, come una mail normale", "Devi rifare la carta d'identità"],
+    "corretta": "Puoi recuperarla tramite la procedura del gestore, come una mail normale"
   },
   {
-    "domanda": "Se Google mostra i risultati in inglese, cosa posso fare?",
-    "risposte": [
-      "Imparare l'inglese subito",
-      "Usare la funzione 'Traduci questa pagina' del browser",
-      "Spegnere il PC"
-    ],
-    "corretta": "Usare la funzione 'Traduci questa pagina' del browser"
+    "domanda": "Scenario: La PEC garantisce la 'Data Certa'. Cosa significa?",
+    "risposte": ["Che sai che giorno è oggi", "Che c'è una prova temporale inoppugnabile dell'invio e ricezione", "Che la data è scritta bella grande"],
+    "corretta": "Che c'è una prova temporale inoppugnabile dell'invio e ricezione"
   },
   {
-    "domanda": "YouTube è un sito specializzato in:",
-    "risposte": [
-      "Testi scritti",
-      "Video",
-      "Mappe"
-    ],
-    "corretta": "Video"
+    "domanda": "Scenario: I provider di PEC (es. Aruba, Poste) sono...",
+    "risposte": ["Enti pubblici", "Aziende private certificate", "Associazioni di volontariato"],
+    "corretta": "Aziende private certificate"
   },
   {
-    "domanda": "Se vedo 'Le persone hanno chiesto anche' nei risultati, a cosa serve?",
-    "risposte": [
-      "A vedere domande correlate per esplorare meglio l'argomento",
-      "È pubblicità",
-      "È un quiz obbligatorio"
-    ],
-    "corretta": "A vedere domande correlate per esplorare meglio l'argomento"
+    "domanda": "Scenario: Se la casella PEC del destinatario è piena, cosa ricevi?",
+    "risposte": ["Una ricevuta di Consegna", "Un messaggio di errore/mancata consegna", "Un invito a cena"],
+    "corretta": "Un messaggio di errore/mancata consegna"
   },
   {
-    "domanda": "Cosa significa 'Google ti legge nel pensiero'?",
-    "risposte": [
-      "È magia nera",
-      "Propone completamenti basati su cosa cercano milioni di altre persone",
-      "Usa la webcam per leggerti le labbra"
-    ],
-    "corretta": "Propone completamenti basati su cosa cercano milioni di altre persone"
+    "domanda": "Scenario: È possibile consultare la PEC dallo smartphone?",
+    "risposte": ["No, solo da PC fisso", "Sì, tramite apposite app o configurazione mail", "Solo se hai un telefono speciale"],
+    "corretta": "Sì, tramite apposite app o configurazione mail"
   },
   {
-    "domanda": "Perché è utile la scorciatoia Ctrl + Maiusc + B?",
-    "risposte": [
-      "Per mostrare o nascondere la Barra dei Preferiti",
-      "Per bloccare il PC",
-      "Per stampare in grassetto"
-    ],
-    "corretta": "Per mostrare o nascondere la Barra dei Preferiti"
+    "domanda": "Scenario: La PEC protegge dal...",
+    "risposte": ["Ripudio del messaggio (dire 'non l'ho mai mandato')", "Virus informatici al 100%", "Cattivo tempo"],
+    "corretta": "Ripudio del messaggio (dire 'non l'ho mai mandato')"
   },
   {
-    "domanda": "Se clicco sul titolo blu grande di un risultato:",
-    "risposte": [
-      "Apro quel sito",
-      "Cancello il risultato",
-      "Segnalo il sito"
-    ],
-    "corretta": "Apro quel sito"
+    "domanda": "Scenario: Un allegato inviato via PEC...",
+    "risposte": ["Perde valore legale", "Mantiene valore ed è certificato come parte del messaggio", "Viene cancellato automaticamente"],
+    "corretta": "Mantiene valore ed è certificato come parte del messaggio"
   },
   {
-    "domanda": "Il testo grigio piccolo sotto il titolo nei risultati Google è:",
-    "risposte": [
-      "Inutile",
-      "Una breve descrizione del contenuto della pagina",
-      "Il prezzo del sito"
-    ],
-    "corretta": "Una breve descrizione del contenuto della pagina"
+    "domanda": "Scenario: Cos'è il futuro 'IT Wallet'?",
+    "risposte": ["Un portafoglio fisico", "Un contenitore digitale per documenti ufficiali (patente, tessera sanitaria) nell'App IO", "Una marca di borse"],
+    "corretta": "Un contenitore digitale per documenti ufficiali (patente, tessera sanitaria) nell'App IO"
   }
 ]

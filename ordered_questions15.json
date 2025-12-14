@@ -1,272 +1,152 @@
 [
   {
-    "domanda": "Cos'è il Phishing?",
-    "risposte": [
-      "Uno sport acquatico",
-      "Una truffa via email/web che cerca di rubare i tuoi dati (pescare dati)",
-      "Un tipo di virus che rompe lo schermo"
-    ],
-    "corretta": "Una truffa via email/web che cerca di rubare i tuoi dati (pescare dati)"
+    "domanda": "Scenario: Perché si consiglia di non usare la password dello SPID per altri siti?",
+    "risposte": ["Per risparmiare memoria", "Perché se un sito viene violato, rubano anche il tuo accesso SPID", "Perché è troppo lunga"],
+    "corretta": "Perché se un sito viene violato, rubano anche il tuo accesso SPID"
   },
   {
-    "domanda": "Cosa sono i Cookie (biscotti) digitali?",
-    "risposte": [
-      "Dolci che escono dal lettore CD",
-      "Piccoli file di testo che i siti salvano sul PC per 'ricordarsi' di te",
-      "Virus pericolosissimi"
-    ],
-    "corretta": "Piccoli file di testo che i siti salvano sul PC per 'ricordarsi' di te"
+    "domanda": "Scenario: Quanto deve essere complessa una password sicura?",
+    "risposte": ["Basta '123456'", "Almeno 12 caratteri, con maiuscole, numeri e simboli", "Il proprio nome e data di nascita"],
+    "corretta": "Almeno 12 caratteri, con maiuscole, numeri e simboli"
   },
   {
-    "domanda": "Cosa fa la 'Navigazione in Incognito'?",
-    "risposte": [
-      "Mi rende invisibile alla polizia",
-      "Non salva la cronologia, i cookie e i dati dei moduli sul mio computer",
-      "Mi protegge dai virus"
-    ],
-    "corretta": "Non salva la cronologia, i cookie e i dati dei moduli sul mio computer"
+    "domanda": "Scenario: Il 'Phishing' fa leva solitamente su...",
+    "risposte": ["La tua conoscenza tecnica", "L'urgenza e la paura (es. 'conto bloccato!')", "La gentilezza"],
+    "corretta": "L'urgenza e la paura (es. 'conto bloccato!')"
   },
   {
-    "domanda": "La Navigazione in Incognito nasconde i miei siti al Provider Internet?",
-    "risposte": [
-      "Sì, nessuno vede nulla",
-      "No, il Provider sa comunque quali siti visito",
-      "Solo se uso Chrome"
-    ],
-    "corretta": "No, il Provider sa comunque quali siti visito"
+    "domanda": "Scenario: Se ricevi una mail dalla tua 'Banca' piena di errori grammaticali, probabilmente è...",
+    "risposte": ["Un errore del direttore", "Un tentativo di truffa (Phishing)", "Una nuova strategia di marketing"],
+    "corretta": "Un tentativo di truffa (Phishing)"
   },
   {
-    "domanda": "Se ricevo una mail dalle 'Poste' che dice 'Clicca qui per sbloccare il conto', cosa faccio?",
-    "risposte": [
-      "Clicco subito per paura",
-      "Non clicco. Controllo il mittente e vado sul sito ufficiale scrivendo l'indirizzo a mano",
-      "Rispondo con i miei dati"
-    ],
-    "corretta": "Non clicco. Controllo il mittente e vado sul sito ufficiale scrivendo l'indirizzo a mano"
+    "domanda": "Scenario: Perché non dovresti cliccare sui link nelle mail sospette?",
+    "risposte": ["Perché consumi giga", "Perché potrebbero portarti su un sito falso che ruba i dati o scarica virus", "Perché il mouse si rompe"],
+    "corretta": "Perché potrebbero portarti su un sito falso che ruba i dati o scarica virus"
   },
   {
-    "domanda": "Una password sicura dovrebbe contenere:",
-    "risposte": [
-      "Solo il mio nome",
-      "123456",
-      "Lettere maiuscole, minuscole, numeri e simboli speciali"
-    ],
-    "corretta": "Lettere maiuscole, minuscole, numeri e simboli speciali"
+    "domanda": "Scenario: Qual è il protocollo tecnico sicuro dietro lo SPID (simile a quello di Google/Facebook)?",
+    "risposte": ["OpenID Connect / SAML", "Bluetooth", "Infrared"],
+    "corretta": "OpenID Connect / SAML"
   },
   {
-    "domanda": "Devo dire la mia password alla banca se me la chiedono via email?",
-    "risposte": [
-      "Sì, sempre",
-      "Mai. La banca non chiede mai la password via email",
-      "Solo se lo chiedono per favore"
-    ],
-    "corretta": "Mai. La banca non chiede mai la password via email"
+    "domanda": "Scenario: Cosa significa che la PEC garantisce l'integrità?",
+    "risposte": ["Che il messaggio è onesto", "Che nessuno ha modificato il messaggio durante il tragitto", "Che il messaggio è arrivato intero e non a pezzi"],
+    "corretta": "Che nessuno ha modificato il messaggio durante il tragitto"
   },
   {
-    "domanda": "Cosa significa 'Accetta tutti i cookie'?",
-    "risposte": [
-      "Che accetto di mangiare biscotti",
-      "Che do il permesso al sito di tracciarmi, anche per la pubblicità",
-      "Che blocco il sito"
-    ],
-    "corretta": "Che do il permesso al sito di tracciarmi, anche per la pubblicità"
+    "domanda": "Scenario: Se sei l'esperto digitale della famiglia, cosa NON dovresti fare?",
+    "risposte": ["Insegnare a usare l'OTP", "Conservare le password degli altri su un foglietto nel portafoglio", "Attivare le deleghe ufficiali"],
+    "corretta": "Conservare le password degli altri su un foglietto nel portafoglio"
   },
   {
-    "domanda": "Qual è l'opzione migliore per la privacy quando appare il banner dei cookie?",
-    "risposte": [
-      "Accetta tutto",
-      "Rifiuta tutto o Solo necessari",
-      "Chiudi il browser"
-    ],
-    "corretta": "Rifiuta tutto o Solo necessari"
+    "domanda": "Scenario: Qual è un buon intervallo per cambiare le password importanti?",
+    "risposte": ["Mai", "Almeno una volta l'anno", "Ogni giorno"],
+    "corretta": "Almeno una volta l'anno"
   },
   {
-    "domanda": "Cosa sono i Pop-up?",
-    "risposte": [
-      "Finestre che si aprono all'improvviso, spesso pubblicità fastidiose",
-      "Tasti della tastiera",
-      "Tipi di gelato"
-    ],
-    "corretta": "Finestre che si aprono all'improvviso, spesso pubblicità fastidiose"
+    "domanda": "Scenario: Cos'è la 'Whitelist' nella gestione spam?",
+    "risposte": ["La lista dei cattivi", "La lista dei mittenti sicuri/approvati", "Una lista bianca vuota"],
+    "corretta": "La lista dei mittenti sicuri/approvati"
   },
   {
-    "domanda": "Se un pop-up dice 'Hai vinto un iPhone', è vero?",
-    "risposte": [
-      "Sì, che fortuna!",
-      "È una truffa o un inganno per farti cliccare",
-      "Dipende dal giorno"
-    ],
-    "corretta": "È una truffa o un inganno per farti cliccare"
+    "domanda": "Scenario: I file con estensione .zip servono a...",
+    "risposte": ["Raggruppare e comprimere più file in uno solo", "Cancellare i file", "Creare musica"],
+    "corretta": "Raggruppare e comprimere più file in uno solo"
   },
   {
-    "domanda": "Cos'è l'Autenticazione a due fattori (2FA)?",
-    "risposte": [
-      "Avere due password uguali",
-      "Un sistema che chiede una seconda prova oltre alla password (es. codice SMS) per entrare",
-      "Usare due computer"
-    ],
-    "corretta": "Un sistema che chiede una seconda prova oltre alla password (es. codice SMS) per entrare"
+    "domanda": "Scenario: Il 'Drag & Drop' negli allegati significa...",
+    "risposte": ["Che devi digitare il nome del file", "Che puoi trascinare il file dentro la finestra della mail", "Che il file cade per terra"],
+    "corretta": "Che puoi trascinare il file dentro la finestra della mail"
   },
   {
-    "domanda": "Perché bisogna fare gli aggiornamenti del computer?",
-    "risposte": [
-      "Per renderlo più lento",
-      "Per riparare buchi di sicurezza e proteggersi dai nuovi virus",
-      "Per cambiare i colori"
-    ],
-    "corretta": "Per riparare buchi di sicurezza e proteggersi dai nuovi virus"
+    "domanda": "Scenario: Se attivi la 'Modalità Offline' su Gmail...",
+    "risposte": ["Non puoi più usare internet", "Puoi leggere e scrivere mail recenti anche senza rete (partiranno dopo)", "Il PC si spegne"],
+    "corretta": "Puoi leggere e scrivere mail recenti anche senza rete (partiranno dopo)"
   },
   {
-    "domanda": "Se uso un computer pubblico, cosa devo fare alla fine?",
-    "risposte": [
-      "Chiudere solo la finestra",
-      "Cliccare su 'Esci' (Log out) da tutti i siti e non salvare le password",
-      "Spegnere il monitor"
-    ],
-    "corretta": "Cliccare su 'Esci' (Log out) da tutti i siti e non salvare le password"
+    "domanda": "Scenario: Un indirizzo email inizia con 'noreply@...'. Cosa significa?",
+    "risposte": ["Che devi rispondere subito", "Che è una casella automatica non monitorata, inutile rispondere", "Che il mittente è timido"],
+    "corretta": "Che è una casella automatica non monitorata, inutile rispondere"
   },
   {
-    "domanda": "Un sito Fake News (Notizie False) si riconosce perché:",
-    "risposte": [
-      "Ha notizie incredibili, non citate da giornali seri, e titoli esagerati",
-      "È scritto in blu",
-      "Ha tante immagini"
-    ],
-    "corretta": "Ha notizie incredibili, non citate da giornali seri, e titoli esagerati"
+    "domanda": "Scenario: Se inoltri una 'Catena di Sant'Antonio' o notizie non verificate...",
+    "risposte": ["Porti fortuna", "Contribuisci a diffondere Spam e Bufale", "Vinci un premio"],
+    "corretta": "Contribuisci a diffondere Spam e Bufale"
   },
   {
-    "domanda": "Cosa devo guardare per capire se un sito è quello vero della banca?",
-    "risposte": [
-      "Il colore del sito",
-      "L'URL esatto (indirizzo) e la presenza del lucchetto",
-      "Se ci sono foto di soldi"
-    ],
-    "corretta": "L'URL esatto (indirizzo) e la presenza del lucchetto"
+    "domanda": "Scenario: Quando configuri la mail sul telefono, 'Push' significa...",
+    "risposte": ["Che devi spingere il telefono", "Che i messaggi arrivano istantaneamente dal server", "Che devi scaricarli a mano"],
+    "corretta": "Che i messaggi arrivano istantaneamente dal server"
   },
   {
-    "domanda": "Se un sito mi chiede di attivare le Notifiche, cosa è meglio fare?",
-    "risposte": [
-      "Accettare sempre",
-      "Bloccare/Rifiutare, per evitare distrazioni e avvisi continui",
-      "Non fare nulla"
-    ],
-    "corretta": "Bloccare/Rifiutare, per evitare distrazioni e avvisi continui"
+    "domanda": "Scenario: Il campo 'Oggetto' vuoto aumenta il rischio che...",
+    "risposte": ["La mail finisca nello Spam o venga ignorata", "La mail arrivi prima", "Il destinatario sia felice"],
+    "corretta": "La mail finisca nello Spam o venga ignorata"
   },
   {
-    "domanda": "È sicuro salvare le password nel browser di un computer CONDIVISO?",
-    "risposte": [
-      "Sì, è comodo",
-      "No, chiunque lo usi dopo di me può entrare nei miei account",
-      "Solo se è un amico"
-    ],
-    "corretta": "No, chiunque lo usi dopo di me può entrare nei miei account"
+    "domanda": "Scenario: Se usi SPID su un PC non tuo, l'OTP ti protegge se...",
+    "risposte": ["Il proprietario del PC ha un Keylogger (ruba password)", "Dimentichi di fare Logout", "In entrambi i casi, l'OTP rende la password rubata inutile senza il telefono"],
+    "corretta": "In entrambi i casi, l'OTP rende la password rubata inutile senza il telefono"
   },
   {
-    "domanda": "Cos'è un Virus informatico?",
-    "risposte": [
-      "Polvere sullo schermo",
-      "Un programma cattivo creato per danneggiare il PC o rubare dati",
-      "Un errore di stampa"
-    ],
-    "corretta": "Un programma cattivo creato per danneggiare il PC o rubare dati"
+    "domanda": "Scenario: È possibile avere sia SPID che CIE?",
+    "risposte": ["No, devi scegliere", "Sì, sono complementari e puoi usarli entrambi", "Solo se sei ricco"],
+    "corretta": "Sì, sono complementari e puoi usarli entrambi"
   },
   {
-    "domanda": "Windows ha un antivirus incluso?",
-    "risposte": [
-      "No, bisogna comprarlo",
-      "Sì, si chiama Windows Defender ed è valido",
-      "Sì, ma non funziona"
-    ],
-    "corretta": "Sì, si chiama Windows Defender ed è valido"
+    "domanda": "Scenario: Per i bonus statali (Cultura, Trasporti, Psicologo), l'accesso avviene...",
+    "risposte": ["Mandando una lettera", "Esclusivamente tramite SPID o CIE", "Telefonando al ministro"],
+    "corretta": "Esclusivamente tramite SPID o CIE"
   },
   {
-    "domanda": "Cosa significa 'Privacy' online?",
-    "risposte": [
-      "Essere veloci",
-      "Proteggere i propri dati personali e la propria vita privata",
-      "Avere un computer costoso"
-    ],
-    "corretta": "Proteggere i propri dati personali e la propria vita privata"
+    "domanda": "Scenario: Le mail 'non lette' in una conversazione raggruppata (Thread) sono...",
+    "risposte": ["Sempre in fondo", "Solitamente espanse o evidenziate rispetto a quelle già lette", "Cancellate"],
+    "corretta": "Solitamente espanse o evidenziate rispetto a quelle già lette"
   },
   {
-    "domanda": "Il Tracciamento pubblicitario serve a:",
-    "risposte": [
-      "Aiutarmi a scrivere",
-      "Capire i miei gusti per mostrarmi pubblicità mirata",
-      "Bloccare il computer"
-    ],
-    "corretta": "Capire i miei gusti per mostrarmi pubblicità mirata"
+    "domanda": "Scenario: Se ricevi un errore '552 Message too large', cosa devi fare?",
+    "risposte": ["Rimpicciolire l'allegato o usare un link cloud", "Cambiare computer", "Urlare"],
+    "corretta": "Rimpicciolire l'allegato o usare un link cloud"
   },
   {
-    "domanda": "Quando compro online, quale metodo di pagamento è più sicuro?",
-    "risposte": [
-      "Inviare contanti per posta",
-      "PayPal o carte prepagate (con pochi soldi sopra)",
-      "Bonifico a sconosciuti"
-    ],
-    "corretta": "PayPal o carte prepagate (con pochi soldi sopra)"
+    "domanda": "Scenario: La 'Firma Digitale' (diversa dalla PEC) serve a...",
+    "risposte": ["Spedire il documento", "Garantire l'autenticità e integrità del documento stesso (chi l'ha scritto)", "Mettere un logo carino"],
+    "corretta": "Garantire l'autenticità e integrità del documento stesso (chi l'ha scritto)"
   },
   {
-    "domanda": "Cosa è l'impronta digitale online?",
-    "risposte": [
-      "Il segno del dito sullo schermo",
-      "La traccia che lasciamo con tutto ciò che facciamo e scriviamo su internet",
-      "Un tasto del mouse"
-    ],
-    "corretta": "La traccia che lasciamo con tutto ciò che facciamo e scriviamo su internet"
+    "domanda": "Scenario: Perché le macro nei file Excel/Word allegati sono bloccate spesso di default?",
+    "risposte": ["Perché sono noiose", "Perché possono nascondere codice malevolo (virus)", "Perché Microsoft vuole così"],
+    "corretta": "Perché possono nascondere codice malevolo (virus)"
   },
   {
-    "domanda": "Se trovo un sito che vende prodotti di lusso a prezzi stracciati (es. 10 euro invece di 500), è:",
-    "risposte": [
-      "Un affare imperdibile",
-      "Molto probabilmente una truffa",
-      "Un regalo"
-    ],
-    "corretta": "Molto probabilmente una truffa"
+    "domanda": "Scenario: Se devi inviare un documento ufficiale alla Pubblica Amministrazione, il metodo migliore è...",
+    "risposte": ["WhatsApp", "PEC", "Piccione viaggiatore"],
+    "corretta": "PEC"
   },
   {
-    "domanda": "Perché non devo scrivere cose troppo personali sui Social Media?",
-    "risposte": [
-      "Perché annoio gli altri",
-      "Perché sono piazze pubbliche e le informazioni possono essere usate contro di me",
-      "Perché finisce lo spazio"
-    ],
-    "corretta": "Perché sono piazze pubbliche e le informazioni possono essere usate contro di me"
+    "domanda": "Scenario: Chi è il 'Gestore' nelle PEC?",
+    "risposte": ["Il mittente", "L'azienda che fornisce il servizio (es. Aruba, Poste) e certifica l'invio", "Il destinatario"],
+    "corretta": "L'azienda che fornisce il servizio (es. Aruba, Poste) e certifica l'invio"
   },
   {
-    "domanda": "Se mi arriva un'email scritta in un italiano sgrammaticato che chiede soldi, è:",
-    "risposte": [
-      "Un amico straniero",
-      "Un segnale tipico di truffa (Phishing)",
-      "Un errore del computer"
-    ],
-    "corretta": "Un segnale tipico di truffa (Phishing)"
+    "domanda": "Scenario: L'identità digitale serve a dimostrare...",
+    "risposte": ["Quanto sei bravo col PC", "Chi sei in modo certo nell'ambiente digitale", "Dove abiti"],
+    "corretta": "Chi sei in modo certo nell'ambiente digitale"
   },
   {
-    "domanda": "Cosa devo fare prima di comprare da un sito sconosciuto?",
-    "risposte": [
-      "Pagare subito",
-      "Cercare recensioni online per vedere se altri sono stati truffati",
-      "Spegnere il Wi-Fi"
-    ],
-    "corretta": "Cercare recensioni online per vedere se altri sono stati truffati"
+    "domanda": "Scenario: 'Opponibile a terzi' (riguardo la PEC) significa...",
+    "risposte": ["Che puoi litigare con tutti", "Che ha valore di prova legale davanti a un giudice o autorità", "Che è segreta"],
+    "corretta": "Che ha valore di prova legale davanti a un giudice o autorità"
   },
   {
-    "domanda": "Posso annullare un acquisto online?",
-    "risposte": [
-      "No, mai",
-      "Sì, per legge esiste il diritto di recesso (reso) entro 14 giorni",
-      "Solo se pago il doppio"
-    ],
-    "corretta": "Sì, per legge esiste il diritto di recesso (reso) entro 14 giorni"
+    "domanda": "Scenario: Se usi un client mail (es. Outlook installato), il vantaggio principale è...",
+    "risposte": ["La gestione offline e avanzata delle mail", "Che non serve la password", "Che è più colorato"],
+    "corretta": "La gestione offline e avanzata delle mail"
   },
   {
-    "domanda": "Se un sito mi chiede 'Vuoi scaricare questo programma per velocizzare il PC?', cosa faccio?",
-    "risposte": [
-      "Dico di sì",
-      "Chiudo subito, spesso sono programmi dannosi o inutili",
-      "Lo installo su tutti i computer"
-    ],
-    "corretta": "Chiudo subito, spesso sono programmi dannosi o inutili"
+    "domanda": "Scenario: L'analfabetismo digitale nel XXI secolo sarà...",
+    "risposte": ["Non saper programmare", "Non saper gestire la propria identità online", "Non avere Facebook"],
+    "corretta": "Non saper gestire la propria identità online"
   }
 ]
