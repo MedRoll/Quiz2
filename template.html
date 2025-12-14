@@ -95,16 +95,17 @@
      
     <div id="lezione-container" style="max-width: 600px; margin: 10px auto; display: none;"> 
       <button onclick="mostraModuliQuiz(1)" style="width: 100%; font-size: 1.3rem; padding: 20px; margin-bottom: 15px;"> 
-        📚 Lezione 1: Anatomia e Fondamenti 
+        📚 Lezione 1: Anatomia PC e Fondamenti 
       </button> 
 
       <button onclick="mostraModuliQuiz(2)" style="width: 100%; font-size: 1.3rem; padding: 20px; margin-bottom: 15px; background-color: #6f42c1;"> 
-        🚀 Lezione 2: Office & Produttività 
+        🚀 Lezione 2: Sotware e Sistema OS
       </button>
 
       <button onclick="mostraModuliQuiz(3)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #e65100;"> 
-        🌟 Lezione 3: Argomenti Avanzati
+        🌟 Lezione 3: Internet
       </button> 
+      <button onclick="mostraModuliQuiz(4)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #20c997;">🧠 Lezione 4</button> <!-- NEW -->
     </div> 
      
     <div id="moduli-lezione-1" class="moduli-grid"> 
@@ -132,6 +133,14 @@
       <button onclick="iniziaQuiz(13)" style="background-color: #d24726;">Esercizio #3</button> 
       <button onclick="iniziaQuiz(14)" style="background-color: #0078d4;">Esercizio #4</button> 
       <button onclick="iniziaQuiz(15)" style="opacity: 0.8; background-color: #6f42c1; border: 1px solid white;">Esercizio #5</button> 
+    </div> 
+    <div id="moduli-lezione-4" class="moduli-grid"> <!-- NEW -->
+      <h3>Lezione 4</h3> 
+      <button onclick="iniziaQuiz(16)">Esercizio 1</button> 
+      <button onclick="iniziaQuiz(17)">Esercizio 2</button> 
+      <button onclick="iniziaQuiz(18)">Esercizio 3</button> 
+      <button onclick="iniziaQuiz(19)">Esercizio 4</button> 
+      <button onclick="iniziaQuiz(20)">Esercizio 5</button> 
     </div> 
 
     <div style="margin-top:25px;"> 
@@ -174,7 +183,7 @@
     </div> 
   </div> 
 
-  <script> 
+ <script> 
     let docenteMode = false; 
     let rispostaCorretta = ""; 
     let punteggio = 0; 
@@ -203,64 +212,63 @@
       const lezioneContainer = document.getElementById("lezione-container"); 
       const mod1 = document.getElementById("moduli-lezione-1"); 
       const mod2 = document.getElementById("moduli-lezione-2"); 
-      const mod3 = document.getElementById("moduli-lezione-3"); // NEW
+      const mod3 = document.getElementById("moduli-lezione-3"); 
+      const mod4 = document.getElementById("moduli-lezione-4"); // NEW
       const btnBackLez = document.getElementById("btn-back-lezione"); 
       const btnBackMode = document.getElementById("btn-back-mode"); 
 
       if (mode) { 
-        // Docente: Mostra TUTTI i moduli a cascata 
         lezioneContainer.style.display = "none"; 
         mod1.style.display = "grid"; 
         mod2.style.display = "grid"; 
-        mod3.style.display = "grid"; // NEW
+        mod3.style.display = "grid"; 
+        mod4.style.display = "grid"; // NEW
         btnBackLez.style.display = "none"; 
         btnBackMode.style.display = "inline-block"; 
       } else { 
-        // Studente: Mostra scelta lezione 
         lezioneContainer.style.display = "block";  
         mod1.style.display = "none"; 
         mod2.style.display = "none"; 
-        mod3.style.display = "none"; // NEW
+        mod3.style.display = "none"; 
+        mod4.style.display = "none"; // NEW
         btnBackLez.style.display = "none"; 
         btnBackMode.style.display = "inline-block"; 
       } 
     } 
      
-    // Funzione per mostrare i moduli della lezione specifica 
     function mostraModuliQuiz(lezione) { 
       document.getElementById("lezione-container").style.display = "none"; 
        
-      // Nascondi tutti prima 
       document.getElementById("moduli-lezione-1").style.display = "none"; 
       document.getElementById("moduli-lezione-2").style.display = "none"; 
-      document.getElementById("moduli-lezione-3").style.display = "none"; // NEW
+      document.getElementById("moduli-lezione-3").style.display = "none"; 
+      document.getElementById("moduli-lezione-4").style.display = "none"; // NEW
 
-      // Mostra quello selezionato 
       if(lezione === 1) { 
         document.getElementById("moduli-lezione-1").style.display = "grid"; 
       } else if (lezione === 2) { 
         document.getElementById("moduli-lezione-2").style.display = "grid"; 
       } else if (lezione === 3) { 
-        document.getElementById("moduli-lezione-3").style.display = "grid"; // NEW
+        document.getElementById("moduli-lezione-3").style.display = "grid"; 
+      } else if (lezione === 4) { // NEW
+        document.getElementById("moduli-lezione-4").style.display = "grid"; 
       }
 
-      // Gestione bottoni navigazione 
       document.getElementById("btn-back-lezione").style.display = "inline-block"; 
       document.getElementById("btn-back-mode").style.display = "none"; 
     } 
 
-    // Funzione per tornare indietro alla scelta Lezione 1 / Lezione 2 / Lezione 3
     function tornaAlleLezioni() { 
       document.getElementById("moduli-lezione-1").style.display = "none"; 
       document.getElementById("moduli-lezione-2").style.display = "none"; 
-      document.getElementById("moduli-lezione-3").style.display = "none"; // NEW
+      document.getElementById("moduli-lezione-3").style.display = "none"; 
+      document.getElementById("moduli-lezione-4").style.display = "none"; // NEW
       document.getElementById("lezione-container").style.display = "block"; 
        
       document.getElementById("btn-back-lezione").style.display = "none"; 
       document.getElementById("btn-back-mode").style.display = "inline-block"; 
     } 
 
-    // Fetch generico della domanda dal server 
     async function fetchDomanda(index){ 
       const res = await fetch(`/quiz/${quizCorrente}/${index}`); 
       return await res.json(); 
@@ -273,11 +281,12 @@
 
     async function caricaDomanda(){ 
       if(MAX_DOMANDE===0){ 
-        // Fetch per sapere quante domande ci sono nel quiz corrente 
         const res = await fetch(`/quiz_all/${quizCorrente}`); 
         const tutte = await res.json(); 
-
-        if(!tutte.errore){ MAX_DOMANDE = tutte.length; document.getElementById("contatore").textContent = `0/${MAX_DOMANDE}`; } 
+        if(!tutte.errore){ 
+          MAX_DOMANDE = tutte.length; 
+          document.getElementById("contatore").textContent = `0/${MAX_DOMANDE}`; 
+        } 
       } 
       if(indexDomanda >= MAX_DOMANDE){ mostraRecap(); return; } 
 
@@ -285,13 +294,7 @@
       if(domandaData.errore){ mostraRecap(); return; } 
 
       ultimaDomanda = domandaData; 
-      const domandaElem = document.getElementById('domanda'); 
-      domandaElem.textContent = domandaData.domanda; 
-      // Reset animazione 
-      domandaElem.style.animation = 'none'; 
-      domandaElem.offsetHeight; /* trigger reflow */ 
-      domandaElem.style.animation = "fadeInUp 0.6s ease"; 
-
+      document.getElementById('domanda').textContent = domandaData.domanda; 
       document.getElementById('contatore').textContent = `${indexDomanda+1}/${MAX_DOMANDE}`; 
       document.getElementById('progress-bar').style.width = Math.floor(((indexDomanda+1)/MAX_DOMANDE)*100) + "%"; 
       rispostaCorretta = domandaData.corretta; 
@@ -310,36 +313,27 @@
         container.appendChild(btn); 
       }); 
 
-      const salvata = risposteUtente[indexDomanda]; 
-      if(salvata){ 
-        const tutte = document.querySelectorAll('.risposta'); 
-        tutte.forEach(el=>{ el.onclick=null; el.style.pointerEvents='none'; }); 
-        if(salvata.esito) document.getElementById('feedback').textContent="✅ Corretto!"; 
-        else document.getElementById('feedback').textContent="❌ Sbagliato!"; 
-        tutte.forEach(el=>{ 
-          if(el.textContent===salvata.rispostaUtente){ if(salvata.esito) el.classList.add('corretta'); else el.classList.add('sbagliata'); } 
-          if(!salvata.esito && el.textContent===rispostaCorretta) el.classList.add('corretta'); 
-        }); 
-      } 
       aggiornaPunteggio(); 
     } 
 
-    function verificaRisposta(elemento,rispostaUtenteSelezionata){ 
+    function verificaRisposta(el, risposta){ 
       if(risposteUtente[indexDomanda]) return; 
 
-      const tutte = document.querySelectorAll('.risposta'); 
-      tutte.forEach(el=>el.onclick=null); 
+      const corretto = risposta === rispostaCorretta; 
+      el.classList.add(corretto ? "corretta" : "sbagliata"); 
 
-      const esitoCorretto = rispostaUtenteSelezionata===rispostaCorretta; 
-      if(esitoCorretto) { elemento.classList.add('corretta'); document.getElementById('feedback').textContent="✅ Corretto!"; } 
+      document.querySelectorAll('.risposta').forEach(b=>{ 
+        b.onclick=null; 
+        if(!corretto && b.textContent === rispostaCorretta) b.classList.add("corretta"); 
+      }); 
 
-      else { elemento.classList.add('sbagliata'); document.getElementById('feedback').textContent="❌ Sbagliato!"; tutte.forEach(el=>{ if(el.textContent===rispostaCorretta) el.classList.add('corretta'); }); } 
+      document.getElementById('feedback').textContent = corretto ? "✅ Corretto!" : "❌ Sbagliato!"; 
 
       risposteUtente[indexDomanda] = { 
         domanda: ultimaDomanda.domanda, 
-        rispostaUtente: rispostaUtenteSelezionata, 
+        rispostaUtente: risposta, 
         corretta: rispostaCorretta, 
-        esito: esitoCorretto 
+        esito: corretto 
       }; 
 
       aggiornaPunteggio(); 
@@ -354,67 +348,11 @@
       document.getElementById('domanda').textContent="📊 Test completato!"; 
       document.getElementById('risposte').innerHTML=""; 
       document.getElementById('feedback').textContent=""; 
-
-      let recapHTML="<h2 style='margin-bottom:20px;'>Riepilogo Risposte</h2><div>"; 
-      risposteUtente.forEach((item,i)=>{ 
-        if(!item) return; 
-        const corretta = item.rispostaUtente===item.corretta; 
-        recapHTML+=` 
-          <div class='domandaRecap'> 
-            <div><strong>${i+1}. ${item.domanda}</strong></div> 
-            ${!corretta? `<div><strong>Tua risposta:</strong> <span style="color:red;">${item.rispostaUtente}</span></div>` :``} 
-            <div><strong>Risposta corretta:</strong> <span style="color:lightgreen;">${item.corretta}</span></div> 
-            <div><strong>Esito:</strong> ${item.esito ? '✅ Corretto' : '❌ Sbagliato'}</div> 
-          </div>`; 
-      }); 
-      recapHTML+="</div>"; 
-
-      const corrette = risposteUtente.filter(r=>r && r.esito).length; 
-      const sbagliate = risposteUtente.filter(r=>r && !r.esito).length; 
-      const nonDate = MAX_DOMANDE - risposteUtente.length; 
-
-      recapHTML+=`<h3 style="margin-top:20px; text-align:center;">Statistiche Risposte</h3> 
-        <canvas id="graficoRiepilogo" style="max-width:500px; margin:auto; display:block;"></canvas> 
-        <div style="margin-top:20px; text-align:center;"> 
-          <button onclick="ricomincia()">🔄 Rifai questo Quiz</button> 
-          <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button> 
-        </div>`; 
-
-      document.getElementById('recap').innerHTML=recapHTML; 
-
-      const ctx=document.getElementById('graficoRiepilogo').getContext('2d'); 
-      new Chart(ctx,{ 
-        type:'bar', 
-        data:{ 
-          labels:['Corrette','Sbagliate','Non Risposte'], 
-          datasets:[{ 
-            label:'Risposte', 
-            data:[corrette,sbagliate,nonDate], 
-            backgroundColor:['#28a745','#dc3545','#6c757d'] 
-          }] 
-        }, 
-        options:{ 
-          responsive:true, 
-          plugins:{ 
-            legend:{display:false}, 
-            datalabels:{ 
-              anchor:'end', align:'end', color:'white', font:{weight:'bold',size:14}, 
-              formatter: function(value){ return value; } 
-            } 
-          }, 
-          scales:{ 
-            x:{ ticks:{ color:'white' } }, 
-            y:{ beginAtZero:true, ticks:{ color:'white', stepSize:1 } } 
-          } 
-        }, 
-        plugins:[ChartDataLabels] 
-      }); 
     } 
 
     function ricomincia(){ 
-      punteggio=0; indexDomanda=0; risposteUtente=[]; 
+      punteggio=0; indexDomanda=0; risposteUtente=[]; MAX_DOMANDE=0; 
       document.getElementById('punteggio').textContent="0"; 
-      document.getElementById('recap').innerHTML=""; 
       document.getElementById('controls-container').style.display='block'; 
       document.getElementById('progress-container').style.display='block'; 
       caricaDomanda(); 
@@ -422,65 +360,22 @@
 
     function terminaTest(){ indexDomanda=MAX_DOMANDE; mostraRecap(); } 
 
-    async function iniziaQuiz(quizId){ 
-      quizCorrente=quizId; 
-      document.getElementById('quiz-buttons').style.display='none'; 
-      if(docenteMode){ 
-        document.getElementById('docente-container').style.display='block'; 
-        caricaModalitaDocente(); 
-      } else { 
-        punteggio=0; indexDomanda=0; risposteUtente=[]; MAX_DOMANDE=0; 
-        document.getElementById('punteggio').textContent='0'; 
-        document.getElementById('recap').innerHTML=''; 
-        document.getElementById('titolo-quiz').style.display='block'; 
-        document.getElementById('stats-container').style.display='flex'; 
-        document.getElementById('card-container').style.display='block'; 
-        document.getElementById('controls-container').style.display='block'; 
-        document.getElementById('progress-container').style.display='block'; 
-        caricaDomanda(); 
-      } 
-    } 
-
-    async function caricaModalitaDocente(){ 
-      const res=await fetch(`/quiz_all/${quizCorrente}`); 
-      const domande=await res.json(); 
-      const container=document.getElementById("lista-docente"); 
-      container.innerHTML=""; 
-       
-      if(domande.errore || domande.length === 0) { 
-          container.innerHTML = "<h3>Nessuna domanda trovata per questo modulo.</h3>"; 
-          return; 
-      } 
-
-      domande.forEach((d,i)=>{ 
-        let html=`<div class="card"><div style="font-size:1.2em; margin-bottom:10px;"><strong>${i+1}. ${d.domanda}</strong></div>`; 
-        d.risposte.forEach(r=>{ 
-          if(r===d.corretta) html+=`<div class="risposta corretta">✔️ ${r}</div>`; 
-          else html+=`<div class="risposta">${r}</div>`; 
-        }); 
-        html+="</div>"; 
-        container.innerHTML+=html; 
-      }); 
-    } 
-
     function tornaAiQuiz(){ 
+      document.getElementById('quiz-buttons').style.display='block'; 
       document.getElementById('titolo-quiz').style.display='none'; 
       document.getElementById('stats-container').style.display='none'; 
       document.getElementById('card-container').style.display='none'; 
       document.getElementById('controls-container').style.display='none'; 
-      document.getElementById('docente-container').style.display='none'; 
       document.getElementById('progress-container').style.display='none'; 
       document.getElementById('recap').innerHTML=''; 
-      document.getElementById('quiz-buttons').style.display='block'; 
 
       if (docenteMode) { 
-        // Docente: tutto visibile 
         document.getElementById("lezione-container").style.display = "none"; 
         document.getElementById("moduli-lezione-1").style.display = "grid"; 
         document.getElementById("moduli-lezione-2").style.display = "grid"; 
-        document.getElementById("moduli-lezione-3").style.display = "grid"; // NEW
+        document.getElementById("moduli-lezione-3").style.display = "grid"; 
+        document.getElementById("moduli-lezione-4").style.display = "grid"; // NEW
       } else { 
-        // Studente: torna alla selezione lezioni (Home) 
         tornaAlleLezioni();  
       } 
     } 
@@ -491,8 +386,9 @@
       document.getElementById('lezione-container').style.display='none'; 
       document.getElementById('moduli-lezione-1').style.display='none'; 
       document.getElementById('moduli-lezione-2').style.display='none'; 
-      document.getElementById('moduli-lezione-3').style.display='none'; // NEW
+      document.getElementById('moduli-lezione-3').style.display='none'; 
+      document.getElementById('moduli-lezione-4').style.display='none'; // NEW
     } 
-  </script> 
+</script> 
 </body> 
 </html>
