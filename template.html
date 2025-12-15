@@ -34,6 +34,18 @@
     .corretta { background-color: #28a745; color: white; border-color: #28a745; } 
     .sbagliata { background-color: #dc3545; color: white; border-color: #dc3545; } 
 
+    /* --- Fix per lista docente (rimuove animazione e hover) --- */
+    .lista-docente-item .risposta {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        cursor: default;
+    }
+    .lista-docente-item .risposta:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
     /* --- BOTTONI --- */ 
     button {  
       padding: 10px 16px;  
@@ -83,7 +95,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script> 
 </head> 
 <body> 
-   
+    
   <div id="start-container" style="text-align: center; margin-bottom: 30px;"> 
     <h1>Benvenuto!</h1> 
     <button onclick="setDocenteMode(false)">📝 Modalità Studente</button> 
@@ -92,7 +104,7 @@
 
   <div id="quiz-buttons" style="margin-top:20px; display:none; text-align:center;"> 
     <h2 id="quiz-title"></h2> 
-     
+      
     <div id="lezione-container" style="max-width: 600px; margin: 10px auto; display: none;"> 
       <button onclick="mostraModuliQuiz(1)" style="width: 100%; font-size: 1.3rem; padding: 20px; margin-bottom: 15px;"> 
         📚 Lezione 1: Anatomia PC e Fondamenti 
@@ -105,9 +117,9 @@
       <button onclick="mostraModuliQuiz(3)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #e65100;"> 
         🌟 Lezione 3: Internet
       </button> 
-      <button onclick="mostraModuliQuiz(4)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #20c997;">🧠 Lezione 4</button> <!-- NEW -->
+      <button onclick="mostraModuliQuiz(4)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #20c997;">🧠 Lezione 4</button>
     </div> 
-     
+      
     <div id="moduli-lezione-1" class="moduli-grid"> 
       <h3 style="color: #1a73e8; margin-top:0;">Lezione 1: Fondamenti</h3> 
       <button onclick="iniziaQuiz(1)" style="background-color: #2b5797;">🖥️ Esercizio #1 - Hardware & Anatomia</button> 
@@ -134,13 +146,14 @@
       <button onclick="iniziaQuiz(14)" style="background-color: #0078d4;">Esercizio #4</button> 
       <button onclick="iniziaQuiz(15)" style="opacity: 0.8; background-color: #6f42c1; border: 1px solid white;">Esercizio #5</button> 
     </div> 
-    <div id="moduli-lezione-4" class="moduli-grid"> <!-- NEW -->
+
+    <div id="moduli-lezione-4" class="moduli-grid">
       <h3>Lezione 4</h3> 
-      <button onclick="iniziaQuiz(16)">Esercizio 1</button> 
-      <button onclick="iniziaQuiz(17)">Esercizio 2</button> 
-      <button onclick="iniziaQuiz(18)">Esercizio 3</button> 
-      <button onclick="iniziaQuiz(19)">Esercizio 4</button> 
-      <button onclick="iniziaQuiz(20)">Esercizio 5</button> 
+      <button onclick="iniziaQuiz(11)">Esercizio 1</button> 
+      <button onclick="iniziaQuiz(12)">Esercizio 2</button> 
+      <button onclick="iniziaQuiz(13)">Esercizio 3</button> 
+      <button onclick="iniziaQuiz(14)">Esercizio 4</button> 
+      <button onclick="iniziaQuiz(15)">Esercizio 5</button> 
     </div> 
 
     <div style="margin-top:25px;"> 
@@ -176,9 +189,9 @@
   <div id="recap"></div> 
 
   <div id="docente-container" style="display:none;"> 
-    <h1>Modalità Docente</h1> 
+    <h1>Modalità Docente - Revisione</h1> 
     <div id="lista-docente"></div> 
-    <div style="text-align:center;"> 
+    <div style="text-align:center; margin-top:20px;"> 
       <button onclick="tornaAiQuiz()">⬅️ Torna al Menu</button> 
     </div> 
   </div> 
@@ -202,18 +215,18 @@
           return; 
         } 
       } 
-       
+        
       docenteMode = mode; 
       document.getElementById("start-container").style.display = "none"; 
       document.getElementById("quiz-buttons").style.display = "block"; 
 
-      document.getElementById("quiz-title").textContent = mode ? "Tutti i Moduli (Modalità Docente)" : "Seleziona una Lezione"; 
+      document.getElementById("quiz-title").textContent = mode ? "Modalità Docente (Seleziona per vedere risposte)" : "Seleziona una Lezione"; 
        
       const lezioneContainer = document.getElementById("lezione-container"); 
       const mod1 = document.getElementById("moduli-lezione-1"); 
       const mod2 = document.getElementById("moduli-lezione-2"); 
       const mod3 = document.getElementById("moduli-lezione-3"); 
-      const mod4 = document.getElementById("moduli-lezione-4"); // NEW
+      const mod4 = document.getElementById("moduli-lezione-4"); 
       const btnBackLez = document.getElementById("btn-back-lezione"); 
       const btnBackMode = document.getElementById("btn-back-mode"); 
 
@@ -222,7 +235,7 @@
         mod1.style.display = "grid"; 
         mod2.style.display = "grid"; 
         mod3.style.display = "grid"; 
-        mod4.style.display = "grid"; // NEW
+        mod4.style.display = "grid"; 
         btnBackLez.style.display = "none"; 
         btnBackMode.style.display = "inline-block"; 
       } else { 
@@ -230,7 +243,7 @@
         mod1.style.display = "none"; 
         mod2.style.display = "none"; 
         mod3.style.display = "none"; 
-        mod4.style.display = "none"; // NEW
+        mod4.style.display = "none"; 
         btnBackLez.style.display = "none"; 
         btnBackMode.style.display = "inline-block"; 
       } 
@@ -242,7 +255,7 @@
       document.getElementById("moduli-lezione-1").style.display = "none"; 
       document.getElementById("moduli-lezione-2").style.display = "none"; 
       document.getElementById("moduli-lezione-3").style.display = "none"; 
-      document.getElementById("moduli-lezione-4").style.display = "none"; // NEW
+      document.getElementById("moduli-lezione-4").style.display = "none"; 
 
       if(lezione === 1) { 
         document.getElementById("moduli-lezione-1").style.display = "grid"; 
@@ -250,7 +263,7 @@
         document.getElementById("moduli-lezione-2").style.display = "grid"; 
       } else if (lezione === 3) { 
         document.getElementById("moduli-lezione-3").style.display = "grid"; 
-      } else if (lezione === 4) { // NEW
+      } else if (lezione === 4) { 
         document.getElementById("moduli-lezione-4").style.display = "grid"; 
       }
 
@@ -262,7 +275,7 @@
       document.getElementById("moduli-lezione-1").style.display = "none"; 
       document.getElementById("moduli-lezione-2").style.display = "none"; 
       document.getElementById("moduli-lezione-3").style.display = "none"; 
-      document.getElementById("moduli-lezione-4").style.display = "none"; // NEW
+      document.getElementById("moduli-lezione-4").style.display = "none"; 
       document.getElementById("lezione-container").style.display = "block"; 
        
       document.getElementById("btn-back-lezione").style.display = "none"; 
@@ -294,7 +307,9 @@
       if(domandaData.errore){ mostraRecap(); return; } 
 
       ultimaDomanda = domandaData; 
-      document.getElementById('domanda').textContent = domandaData.domanda; 
+      const domandaElem = document.getElementById('domanda');
+      domandaElem.textContent = domandaData.domanda; 
+      
       document.getElementById('contatore').textContent = `${indexDomanda+1}/${MAX_DOMANDE}`; 
       document.getElementById('progress-bar').style.width = Math.floor(((indexDomanda+1)/MAX_DOMANDE)*100) + "%"; 
       rispostaCorretta = domandaData.corretta; 
@@ -367,6 +382,7 @@
       document.getElementById('card-container').style.display='none'; 
       document.getElementById('controls-container').style.display='none'; 
       document.getElementById('progress-container').style.display='none'; 
+      document.getElementById('docente-container').style.display='none'; // Nascondi docente
       document.getElementById('recap').innerHTML=''; 
 
       if (docenteMode) { 
@@ -374,7 +390,7 @@
         document.getElementById("moduli-lezione-1").style.display = "grid"; 
         document.getElementById("moduli-lezione-2").style.display = "grid"; 
         document.getElementById("moduli-lezione-3").style.display = "grid"; 
-        document.getElementById("moduli-lezione-4").style.display = "grid"; // NEW
+        document.getElementById("moduli-lezione-4").style.display = "grid"; 
       } else { 
         tornaAlleLezioni();  
       } 
@@ -387,32 +403,69 @@
       document.getElementById('moduli-lezione-1').style.display='none'; 
       document.getElementById('moduli-lezione-2').style.display='none'; 
       document.getElementById('moduli-lezione-3').style.display='none'; 
-      document.getElementById('moduli-lezione-4').style.display='none'; // NEW
+      document.getElementById('moduli-lezione-4').style.display='none'; 
     } 
-   function iniziaQuiz(id) {
-    quizCorrente = id;
-    indexDomanda = 0;
-    punteggio = 0;
-    risposteUtente = [];
-    MAX_DOMANDE = 0;
+    
+    // --- FUNZIONE PER AVVIARE IL QUIZ (O LA VISTA DOCENTE) ---
+    async function iniziaQuiz(id) {
+        quizCorrente = id;
+        document.getElementById("quiz-buttons").style.display = "none";
 
-    // Nasconde menu lezioni
-    document.getElementById("quiz-buttons").style.display = "none";
+        // CONTROLLO FONDAMENTALE: Se sei docente, carica la lista e basta.
+        if (docenteMode) {
+            document.getElementById('docente-container').style.display = 'block';
+            await caricaModalitaDocente();
+            return;
+        }
 
-    // Mostra interfaccia quiz
-    document.getElementById("titolo-quiz").style.display = "block";
-    document.getElementById("stats-container").style.display = "flex";
-    document.getElementById("progress-container").style.display = "block";
-    document.getElementById("card-container").style.display = "block";
-    document.getElementById("controls-container").style.display = "block";
+        // Altrimenti avvia logica studente
+        indexDomanda = 0;
+        punteggio = 0;
+        risposteUtente = [];
+        MAX_DOMANDE = 0;
 
-    document.getElementById("punteggio").textContent = "0";
-    document.getElementById("contatore").textContent = "0";
-    document.getElementById("domanda").textContent = "Caricamento...";
-    document.getElementById("risposte").innerHTML = "";
-    document.getElementById("feedback").textContent = "";
+        document.getElementById("titolo-quiz").style.display = "block";
+        document.getElementById("stats-container").style.display = "flex";
+        document.getElementById("progress-container").style.display = "block";
+        document.getElementById("card-container").style.display = "block";
+        document.getElementById("controls-container").style.display = "block";
 
-    caricaDomanda();
+        document.getElementById("punteggio").textContent = "0";
+        document.getElementById("contatore").textContent = "0";
+        document.getElementById("domanda").textContent = "Caricamento...";
+        document.getElementById("risposte").innerHTML = "";
+        document.getElementById("feedback").textContent = "";
+
+        caricaDomanda();
+     }
+
+     // --- FUNZIONE PER CARICARE LA LISTA DOCENTE ---
+     async function caricaModalitaDocente(){
+        const res = await fetch(`/quiz_all/${quizCorrente}`);
+        const domande = await res.json();
+        const container = document.getElementById("lista-docente");
+        container.innerHTML = ""; // Pulisce eventuale contenuto precedente
+
+        if(domande.errore) {
+            container.innerHTML = "<p>Errore nel caricamento del file.</p>";
+            return;
+        }
+
+        domande.forEach((d,i)=>{
+            // Creiamo un blocco per ogni domanda
+            // Aggiungiamo la classe "lista-docente-item" per disattivare hover/animazioni
+            let html = `<div class="card lista-docente-item"><div style="font-size:1.2em; margin-bottom:10px;"><strong>Domanda ${i+1}: ${d.domanda}</strong></div>`;
+            
+            d.risposte.forEach(r=>{ 
+                if (r === d.corretta) {
+                    html += `<div class="risposta corretta">✔️ ${r}</div>`;
+                } else {
+                    html += `<div class="risposta">${r}</div>`;
+                }
+            });
+            html += "</div>";
+            container.innerHTML += html;
+        });
      }
 </script> 
 </body> 
