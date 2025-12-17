@@ -122,7 +122,14 @@
       <button onclick="mostraModuliQuiz(3)" style="width: 100%; font-size: 1.3rem; padding: 20px; margin-bottom: 15px; background-color: #e65100;"> 
         🌟 Lezione 3: Internet
       </button> 
-      <button onclick="mostraModuliQuiz(4)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #20c997;">🧠 Lezione 4</button> 
+      
+      <button onclick="mostraModuliQuiz(4)" style="width: 100%; font-size: 1.3rem; padding: 20px; margin-bottom: 15px; background-color: #20c997;">
+        🧠 Lezione 4
+      </button> 
+      
+      <button onclick="mostraModuliQuiz(5)" style="width: 100%; font-size: 1.3rem; padding: 20px; background-color: #dc3545;">
+        🧪 Lezione 5
+      </button>
     </div> 
      
     <div id="moduli-lezione-1" class="moduli-grid"> 
@@ -160,6 +167,15 @@
       <button onclick="iniziaQuiz(19)">Esercizio 4</button> 
       <button onclick="iniziaQuiz(20)">Esercizio 5</button> 
     </div> 
+
+    <div id="moduli-lezione-5" class="moduli-grid"> 
+        <h3 style="color: #dc3545; margin-top:0;">Lezione 5</h3> 
+        <button onclick="iniziaQuiz(21)">Esercizio 1</button> 
+        <button onclick="iniziaQuiz(22)">Esercizio 2</button> 
+        <button onclick="iniziaQuiz(23)">Esercizio 3</button> 
+        <button onclick="iniziaQuiz(24)">Esercizio 4</button> 
+        <button onclick="iniziaQuiz(25)">Esercizio 5</button> 
+      </div> 
 
     <div style="margin-top:25px;"> 
       <button id="btn-back-lezione" onclick="tornaAlleLezioni()" style="background-color: #6c757d; display:none;">⬅️ Cambia Lezione</button> 
@@ -232,6 +248,7 @@
       const mod2 = document.getElementById("moduli-lezione-2"); 
       const mod3 = document.getElementById("moduli-lezione-3"); 
       const mod4 = document.getElementById("moduli-lezione-4"); 
+      const mod5 = document.getElementById("moduli-lezione-5"); // Nuovo Modulo
       const btnBackLez = document.getElementById("btn-back-lezione"); 
       const btnBackMode = document.getElementById("btn-back-mode"); 
 
@@ -241,6 +258,7 @@
         mod2.style.display = "grid"; 
         mod3.style.display = "grid"; 
         mod4.style.display = "grid";
+        mod5.style.display = "grid"; // Mostra anche modulo 5
         btnBackLez.style.display = "none"; 
         btnBackMode.style.display = "inline-block"; 
       } else { 
@@ -249,6 +267,7 @@
         mod2.style.display = "none"; 
         mod3.style.display = "none"; 
         mod4.style.display = "none";
+        mod5.style.display = "none"; // Nascondi modulo 5
         btnBackLez.style.display = "none"; 
         btnBackMode.style.display = "inline-block"; 
       } 
@@ -261,6 +280,7 @@
       document.getElementById("moduli-lezione-2").style.display = "none"; 
       document.getElementById("moduli-lezione-3").style.display = "none"; 
       document.getElementById("moduli-lezione-4").style.display = "none"; 
+      document.getElementById("moduli-lezione-5").style.display = "none"; 
 
       if(lezione === 1) { 
         document.getElementById("moduli-lezione-1").style.display = "grid"; 
@@ -270,6 +290,8 @@
         document.getElementById("moduli-lezione-3").style.display = "grid"; 
       } else if (lezione === 4) {
         document.getElementById("moduli-lezione-4").style.display = "grid";
+      } else if (lezione === 5) {
+        document.getElementById("moduli-lezione-5").style.display = "grid";
       }
 
       document.getElementById("btn-back-lezione").style.display = "inline-block"; 
@@ -281,6 +303,7 @@
       document.getElementById("moduli-lezione-2").style.display = "none"; 
       document.getElementById("moduli-lezione-3").style.display = "none"; 
       document.getElementById("moduli-lezione-4").style.display = "none";
+      document.getElementById("moduli-lezione-5").style.display = "none";
       document.getElementById("lezione-container").style.display = "block"; 
        
       document.getElementById("btn-back-lezione").style.display = "none"; 
@@ -398,6 +421,7 @@
         document.getElementById("moduli-lezione-2").style.display = "grid"; 
         document.getElementById("moduli-lezione-3").style.display = "grid"; 
         document.getElementById("moduli-lezione-4").style.display = "grid"; 
+        document.getElementById("moduli-lezione-5").style.display = "grid"; 
       } else { 
         tornaAlleLezioni();  
       } 
@@ -411,6 +435,7 @@
       document.getElementById('moduli-lezione-2').style.display='none'; 
       document.getElementById('moduli-lezione-3').style.display='none'; 
       document.getElementById('moduli-lezione-4').style.display='none'; 
+      document.getElementById('moduli-lezione-5').style.display='none'; 
     } 
 
     // --- FUNZIONI DOCENTE ---
