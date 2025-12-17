@@ -1,0 +1,152 @@
+[
+  {
+    "domanda": "Scenario: Cos'è il Cloud Computing?",
+    "risposte": ["L'utilizzo di risorse (spazio, potenza) su server remoti via internet", "Usare il computer in aereo", "Una tecnologia meteorologica"],
+    "corretta": "L'utilizzo di risorse (spazio, potenza) su server remoti via internet"
+  },
+  {
+    "domanda": "Scenario: Qual è il vantaggio principale di Google Drive o OneDrive?",
+    "risposte": ["Accedere ai file da qualsiasi dispositivo (PC, telefono, tablet)", "Avere più icone sul desktop", "Non usare internet"],
+    "corretta": "Accedere ai file da qualsiasi dispositivo (PC, telefono, tablet)"
+  },
+  {
+    "domanda": "Scenario: Se modifichi un file su Google Docs, devi salvare?",
+    "risposte": ["No, il salvataggio è automatico in tempo reale", "Sì, ogni 5 minuti", "Sì, alla fine"],
+    "corretta": "No, il salvataggio è automatico in tempo reale"
+  },
+  {
+    "domanda": "Scenario: Vuoi mandare un video pesante (1GB) a un amico. Come fai col Cloud?",
+    "risposte": ["Carico il file su Drive e invio il link di condivisione", "Lo allego alla mail", "Lo comprimo in un txt"],
+    "corretta": "Carico il file su Drive e invio il link di condivisione"
+  },
+  {
+    "domanda": "Scenario: Cosa significa 'Sincronizzazione'?",
+    "risposte": ["Allineare i file tra PC e Cloud: se modifico uno, si aggiorna l'altro", "Cancellare tutto", "Copiare a mano"],
+    "corretta": "Allineare i file tra PC e Cloud: se modifico uno, si aggiorna l'altro"
+  },
+  {
+    "domanda": "Scenario: Se condividi un file in modalità 'Solo visualizzazione'...",
+    "risposte": ["L'altro può leggere ma non modificare il file", "L'altro può cancellarlo", "L'altro può modificarlo"],
+    "corretta": "L'altro può leggere ma non modificare il file"
+  },
+  {
+    "domanda": "Scenario: Dropbox è un servizio di...",
+    "risposte": ["Cloud Storage", "Posta elettronica", "Antivirus"],
+    "corretta": "Cloud Storage"
+  },
+  {
+    "domanda": "Scenario: Lavorare in 'Collaborazione' su un documento Cloud significa...",
+    "risposte": ["Che più persone possono scrivere sullo stesso file contemporaneamente", "Che ci si manda il file via mail a turno", "Che si lavora vicini"],
+    "corretta": "Che più persone possono scrivere sullo stesso file contemporaneamente"
+  },
+  {
+    "domanda": "Scenario: Se cancelli un file dal Cloud, è perso per sempre?",
+    "risposte": ["No, finisce nel Cestino del Cloud (recuperabile per 30gg solitamente)", "Sì, istantaneamente", "Rimane sul PC"],
+    "corretta": "No, finisce nel Cestino del Cloud (recuperabile per 30gg solitamente)"
+  },
+  {
+    "domanda": "Scenario: 'IaaS' (Infrastructure as a Service) è un modello Cloud. Un esempio?",
+    "risposte": ["Affittare server virtuali o spazio storage grezzo", "Gmail", "Windows"],
+    "corretta": "Affittare server virtuali o spazio storage grezzo"
+  },
+  {
+    "domanda": "Scenario: 'SaaS' (Software as a Service) significa...",
+    "risposte": ["Usare un software via web senza installarlo (es. Gmail, Google Docs)", "Comprare un CD", "Scaricare un driver"],
+    "corretta": "Usare un software via web senza installarlo (es. Gmail, Google Docs)"
+  },
+  {
+    "domanda": "Scenario: Qual è un rischio del Cloud?",
+    "risposte": ["Senza connessione internet potresti non accedere ai file (se non offline)", "I file si bagnano", "Il PC esplode"],
+    "corretta": "Senza connessione internet potresti non accedere ai file (se non offline)"
+  },
+  {
+    "domanda": "Scenario: Se condividi una cartella intera...",
+    "risposte": ["Tutto il contenuto presente e futuro sarà accessibile a chi hai invitato", "Solo il primo file è condiviso", "La cartella diventa pubblica al mondo"],
+    "corretta": "Tutto il contenuto presente e futuro sarà accessibile a chi hai invitato"
+  },
+  {
+    "domanda": "Scenario: Chi è responsabile della sicurezza dei dati nel Cloud?",
+    "risposte": ["Responsabilità condivisa: il provider protegge l'infrastruttura, tu proteggi l'accesso (password)", "Solo il provider", "Solo tu"],
+    "corretta": "Responsabilità condivisa: il provider protegge l'infrastruttura, tu proteggi l'accesso (password)"
+  },
+  {
+    "domanda": "Scenario: Il Cloud 'Ibrido' combina...",
+    "risposte": ["Cloud Pubblico e Cloud Privato (o server locali)", "Cloud e Pioggia", "Tablet e PC"],
+    "corretta": "Cloud Pubblico e Cloud Privato (o server locali)"
+  },
+  {
+    "domanda": "Scenario: OneDrive è integrato nativamente in...",
+    "risposte": ["Windows 10/11", "Android", "Linux"],
+    "corretta": "Windows 10/11"
+  },
+  {
+    "domanda": "Scenario: iCloud è il servizio Cloud di...",
+    "risposte": ["Apple", "Microsoft", "Google"],
+    "corretta": "Apple"
+  },
+  {
+    "domanda": "Scenario: Puoi accedere ai tuoi file Cloud da un PC di un hotel?",
+    "risposte": ["Sì, via browser, ma ricordati di fare logout", "No, serve il tuo PC", "Solo se hai la chiavetta"],
+    "corretta": "Sì, via browser, ma ricordati di fare logout"
+  },
+  {
+    "domanda": "Scenario: Per revocare l'accesso a un file condiviso...",
+    "risposte": ["Devi rimuovere l'utente dalle impostazioni di condivisione", "Devi cancellare il file", "Devi cambiare password"],
+    "corretta": "Devi rimuovere l'utente dalle impostazioni di condivisione"
+  },
+  {
+    "domanda": "Scenario: Il 'Versioning' (Cronologia versioni) nel Cloud permette di...",
+    "risposte": ["Ripristinare una versione precedente del file se hai fatto errori", "Vedere chi ha letto il file", "Creare copie"],
+    "corretta": "Ripristinare una versione precedente del file se hai fatto errori"
+  },
+  {
+    "domanda": "Scenario: I dati nel Cloud sono fisicamente...",
+    "risposte": ["In enormi Data Center sparsi nel mondo", "Nelle nuvole vere", "Nel tuo modem"],
+    "corretta": "In enormi Data Center sparsi nel mondo"
+  },
+  {
+    "domanda": "Scenario: Condividere tramite Link 'Chiunque abbia il link' è...",
+    "risposte": ["Meno sicuro, perché il link può essere girato a sconosciuti", "Sicurissimo", "Impossibile"],
+    "corretta": "Meno sicuro, perché il link può essere girato a sconosciuti"
+  },
+  {
+    "domanda": "Scenario: Lo spazio gratuito su Google Drive è solitamente...",
+    "risposte": ["15 GB (condivisi con Gmail e Foto)", "Infinito", "100 MB"],
+    "corretta": "15 GB (condivisi con Gmail e Foto)"
+  },
+  {
+    "domanda": "Scenario: Per modificare un file Word su Google Drive senza Office...",
+    "risposte": ["Drive lo converte o lo apre in modalità compatibilità Google Docs", "Non si può fare", "Devi pagare"],
+    "corretta": "Drive lo converte o lo apre in modalità compatibilità Google Docs"
+  },
+  {
+    "domanda": "Scenario: Se usi 'File Stream' o 'Drive per Desktop'...",
+    "risposte": ["Vedi i file del Cloud come se fossero una chiavetta nel PC", "Devi scaricare tutto", "Il PC rallenta"],
+    "corretta": "Vedi i file del Cloud come se fossero una chiavetta nel PC"
+  },
+  {
+    "domanda": "Scenario: GDPR e Cloud: dove dovrebbero risiedere i dati sensibili europei?",
+    "risposte": ["Preferibilmente su server in Europa", "In America", "In Cina"],
+    "corretta": "Preferibilmente su server in Europa"
+  },
+  {
+    "domanda": "Scenario: L'autenticazione a due fattori serve anche per il Cloud?",
+    "risposte": ["Assolutamente sì, per proteggere i dati", "No, è inutile", "Solo per le banche"],
+    "corretta": "Assolutamente sì, per proteggere i dati"
+  },
+  {
+    "domanda": "Scenario: Se il tuo PC si rompe, i dati su Drive...",
+    "risposte": ["Sono salvi e accessibili da un altro PC", "Sono persi", "Si rompono anche loro"],
+    "corretta": "Sono salvi e accessibili da un altro PC"
+  },
+  {
+    "domanda": "Scenario: Google Foto fa parte del sistema Cloud?",
+    "risposte": ["Sì, salva foto e video online", "No, è offline", "È un social"],
+    "corretta": "Sì, salva foto e video online"
+  },
+  {
+    "domanda": "Scenario: La 'Modalità Offline' di Drive serve a...",
+    "risposte": ["Lavorare sui file senza internet (si sincronizzeranno quando torni online)", "Spegnere il Cloud", "Risparmiare batteria"],
+    "corretta": "Lavorare sui file senza internet (si sincronizzeranno quando torni online)"
+  }
+]

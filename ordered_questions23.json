@@ -1,0 +1,152 @@
+[
+  {
+    "domanda": "Scenario: Quale password è più sicura?",
+    "risposte": ["Pippo123", "M1a_N0nn4_Fa_La_P1zz4!", "Password01"],
+    "corretta": "M1a_N0nn4_Fa_La_P1zz4!"
+  },
+  {
+    "domanda": "Scenario: Perché non dovresti usare la stessa password ovunque?",
+    "risposte": ["Se ne scoprono una, entrano in tutti i tuoi account", "Perché ti confondi", "Non c'è motivo"],
+    "corretta": "Se ne scoprono una, entrano in tutti i tuoi account"
+  },
+  {
+    "domanda": "Scenario: Cos'è la 2FA (Autenticazione a due fattori)?",
+    "risposte": ["Un secondo passaggio di sicurezza (es. codice SMS) oltre alla password", "Avere due password", "Accedere in due persone"],
+    "corretta": "Un secondo passaggio di sicurezza (es. codice SMS) oltre alla password"
+  },
+  {
+    "domanda": "Scenario: Un Password Manager serve a...",
+    "risposte": ["Creare e salvare password complesse in una cassaforte criptata", "Gestire le parole del dizionario", "Ricordare i nomi degli amici"],
+    "corretta": "Creare e salvare password complesse in una cassaforte criptata"
+  },
+  {
+    "domanda": "Scenario: Scriversi le password su un post-it attaccato al monitor è...",
+    "risposte": ["Pessima idea per la sicurezza fisica", "Comodo e sicuro", "Consigliato dagli esperti"],
+    "corretta": "Pessima idea per la sicurezza fisica"
+  },
+  {
+    "domanda": "Scenario: '123456' e 'password' sono...",
+    "risposte": ["Le password più usate e più insicure al mondo", "Ottime password facili da ricordare", "Codici segreti militari"],
+    "corretta": "Le password più usate e più insicure al mondo"
+  },
+  {
+    "domanda": "Scenario: L'autenticazione biometrica usa...",
+    "risposte": ["Impronta digitale, viso o iride", "La firma su carta", "Il tuo nome"],
+    "corretta": "Impronta digitale, viso o iride"
+  },
+  {
+    "domanda": "Scenario: Cosa sono le 'Domande di Sicurezza' (es. cognome nubile madre)?",
+    "risposte": ["Un metodo di recupero password spesso debole perché le risposte sono rintracciabili sui social", "Il metodo più sicuro esistente", "Un gioco a quiz"],
+    "corretta": "Un metodo di recupero password spesso debole perché le risposte sono rintracciabili sui social"
+  },
+  {
+    "domanda": "Scenario: Quanto spesso dovresti cambiare una password importante?",
+    "risposte": ["Periodicamente (es. ogni 3-6 mesi) o subito se sospetti un furto", "Mai", "Ogni giorno"],
+    "corretta": "Periodicamente (es. ogni 3-6 mesi) o subito se sospetti un furto"
+  },
+  {
+    "domanda": "Scenario: Un attacco 'Brute Force' sulle password consiste nel...",
+    "risposte": ["Provare tutte le combinazioni possibili fino a trovare quella giusta", "Picchiare il computer", "Indovinare al primo colpo"],
+    "corretta": "Provare tutte le combinazioni possibili fino a trovare quella giusta"
+  },
+  {
+    "domanda": "Scenario: Un attacco 'Dizionario'...",
+    "risposte": ["Prova parole comuni di senso compiuto per indovinare la password", "Usa un vocabolario di latino", "Cerca definizioni"],
+    "corretta": "Prova parole comuni di senso compiuto per indovinare la password"
+  },
+  {
+    "domanda": "Scenario: Se usi un PC pubblico, cosa NON devi mai fare?",
+    "risposte": ["Salvare la password nel browser ('Ricorda password')", "Navigare su internet", "Usare il mouse"],
+    "corretta": "Salvare la password nel browser ('Ricorda password')"
+  },
+  {
+    "domanda": "Scenario: Come deve essere una Passphrase?",
+    "risposte": ["Una frase lunga e facile da ricordare per te ma difficile per i computer (es. IlGattoMangiaLaPasta)", "Una parola corta", "Un numero"],
+    "corretta": "Una frase lunga e facile da ricordare per te ma difficile per i computer (es. IlGattoMangiaLaPasta)"
+  },
+  {
+    "domanda": "Scenario: Se il browser ti dice che una tua password è stata trovata in una fuga di dati (Data Breach)...",
+    "risposte": ["Cambiala subito", "Ignora l'avviso", "Disinstalla il browser"],
+    "corretta": "Cambiala subito"
+  },
+  {
+    "domanda": "Scenario: Cosa sono i codici di backup della 2FA?",
+    "risposte": ["Codici da stampare e conservare per accedere se perdi il telefono", "Codici sconto", "Codici inutili"],
+    "corretta": "Codici da stampare e conservare per accedere se perdi il telefono"
+  },
+  {
+    "domanda": "Scenario: L'OTP (One Time Password) è valida...",
+    "risposte": ["Una sola volta e per pochi minuti", "Per sempre", "Per un anno"],
+    "corretta": "Una sola volta e per pochi minuti"
+  },
+  {
+    "domanda": "Scenario: Condividere la password di Netflix o servizi simili via WhatsApp è...",
+    "risposte": ["Poco sicuro, il messaggio rimane in chat", "Sicurissimo", "L'unico modo"],
+    "corretta": "Poco sicuro, il messaggio rimane in chat"
+  },
+  {
+    "domanda": "Scenario: Cosa significa 'Hashing' delle password?",
+    "risposte": ["Che il server salva una versione crittografata irreversibile, non la password in chiaro", "Che le password vengono tagliate", "Che le password sono pubbliche"],
+    "corretta": "Che il server salva una versione crittografata irreversibile, non la password in chiaro"
+  },
+  {
+    "domanda": "Scenario: I pattern di sblocco (unire i puntini) su Android sono...",
+    "risposte": ["Spesso prevedibili e facili da spiare (macchie sullo schermo)", "Impossibili da indovinare", "Meglio del PIN a 6 cifre"],
+    "corretta": "Spesso prevedibili e facili da spiare (macchie sullo schermo)"
+  },
+  {
+    "domanda": "Scenario: Se ricevi una notifica 'Accesso da un nuovo dispositivo' che non sei tu...",
+    "risposte": ["Qualcuno ha la tua password, agisci subito", "Sarà un errore", "È il tecnico"],
+    "corretta": "Qualcuno ha la tua password, agisci subito"
+  },
+  {
+    "domanda": "Scenario: Qual è il modo migliore per trasmettere una password a un collega se necessario?",
+    "risposte": ["A voce o tramite servizi di messaggi che si autodistruggono, mai via mail chiara", "Scriverla nel soggetto della mail", "Urlarla"],
+    "corretta": "A voce o tramite servizi di messaggi che si autodistruggono, mai via mail chiara"
+  },
+  {
+    "domanda": "Scenario: Usare il tasto 'Accedi con Google/Facebook' è...",
+    "risposte": ["Comodo (SSO), ma se perdi quell'account perdi accesso a tutto", "Pericoloso sempre", "Lento"],
+    "corretta": "Comodo (SSO), ma se perdi quell'account perdi accesso a tutto"
+  },
+  {
+    "domanda": "Scenario: La verifica in due passaggi è obbligatoria per...",
+    "risposte": ["Le banche e molti servizi sensibili", "I giochi offline", "Nessuno"],
+    "corretta": "Le banche e molti servizi sensibili"
+  },
+  {
+    "domanda": "Scenario: Cosa significa MFA?",
+    "risposte": ["Multi-Factor Authentication (Autenticazione a più fattori)", "My Favorite App", "Molti File Aperti"],
+    "corretta": "Multi-Factor Authentication (Autenticazione a più fattori)"
+  },
+  {
+    "domanda": "Scenario: Un token fisico (chiavetta YubiKey) serve per...",
+    "risposte": ["Autenticarsi inserendo la chiavetta USB (fattore possesso)", "Salvare file", "Aprire le porte"],
+    "corretta": "Autenticarsi inserendo la chiavetta USB (fattore possesso)"
+  },
+  {
+    "domanda": "Scenario: La password 'qwerty' è...",
+    "risposte": ["Una sequenza di tasti vicini, molto debole", "Una password complessa", "Una parola straniera"],
+    "corretta": "Una sequenza di tasti vicini, molto debole"
+  },
+  {
+    "domanda": "Scenario: Se perdi lo smartphone con l'app Authenticator...",
+    "risposte": ["Devi usare i codici di backup o contattare l'assistenza", "Non puoi fare nulla", "Compri un telefono uguale e funziona subito"],
+    "corretta": "Devi usare i codici di backup o contattare l'assistenza"
+  },
+  {
+    "domanda": "Scenario: Le password scadute...",
+    "risposte": ["Non permettono più l'accesso finché non le cambi", "Funzionano lo stesso", "Si cancellano"],
+    "corretta": "Non permettono più l'accesso finché non le cambi"
+  },
+  {
+    "domanda": "Scenario: Perché il completamento automatico delle password nel browser può essere un rischio?",
+    "risposte": ["Chiunque acceda al tuo PC sbloccato entra nei tuoi siti", "Rallenta il PC", "Non funziona mai"],
+    "corretta": "Chiunque acceda al tuo PC sbloccato entra nei tuoi siti"
+  },
+  {
+    "domanda": "Scenario: Quali caratteri speciali dovresti includere in una password?",
+    "risposte": ["Simboli come ! @ # $ %", "Solo lettere", "Solo numeri"],
+    "corretta": "Simboli come ! @ # $ %"
+  }
+]

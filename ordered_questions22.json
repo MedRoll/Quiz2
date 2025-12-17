@@ -1,0 +1,152 @@
+[
+  {
+    "domanda": "Scenario: Ricevi una mail dalla 'Banca' che dice 'Conto bloccato, clicca qui'. Cosa controlli per primo?",
+    "risposte": ["L'indirizzo email reale del mittente", "Il colore del logo", "L'orario"],
+    "corretta": "L'indirizzo email reale del mittente"
+  },
+  {
+    "domanda": "Scenario: L'ingegneria sociale (Social Engineering) è...",
+    "risposte": ["L'arte di manipolare le persone per ottenere informazioni riservate", "Costruire ponti social", "Programmare in gruppo"],
+    "corretta": "L'arte di manipolare le persone per ottenere informazioni riservate"
+  },
+  {
+    "domanda": "Scenario: Cos'è lo 'Smishing'?",
+    "risposte": ["Phishing tramite SMS", "Phishing tramite email", "Un tipo di pesca"],
+    "corretta": "Phishing tramite SMS"
+  },
+  {
+    "domanda": "Scenario: Cos'è il 'Vishing'?",
+    "risposte": ["Truffa tramite telefonata vocale (Voice Phishing)", "Un virus video", "Vedere film illegali"],
+    "corretta": "Truffa tramite telefonata vocale (Voice Phishing)"
+  },
+  {
+    "domanda": "Scenario: Se un 'amico' sui social ti chiede soldi urgentemente con un messaggio strano, cosa fai?",
+    "risposte": ["Lo chiamo al telefono per verificare se è davvero lui", "Gli mando i soldi subito", "Lo blocco senza chiedere nulla"],
+    "corretta": "Lo chiamo al telefono per verificare se è davvero lui"
+  },
+  {
+    "domanda": "Scenario: Il 'CEO Fraud' o truffa del capo consiste nel...",
+    "risposte": ["Fingersi il capo per chiedere un bonifico urgente a un dipendente", "Rubare la sedia del capo", "Diventare capo dell'azienda"],
+    "corretta": "Fingersi il capo per chiedere un bonifico urgente a un dipendente"
+  },
+  {
+    "domanda": "Scenario: Perché le mail di phishing contengono spesso errori grammaticali?",
+    "risposte": ["Spesso provengono da truffatori esteri o traduttori automatici", "Per essere più simpatici", "Perché non hanno tempo"],
+    "corretta": "Spesso provengono da truffatori esteri o traduttori automatici"
+  },
+  {
+    "domanda": "Scenario: Se passi il mouse sopra un link (senza cliccare) e vedi un indirizzo strano...",
+    "risposte": ["Non cliccare, è probabilmente phishing", "Clicca per curiosità", "È un errore del browser"],
+    "corretta": "Non cliccare, è probabilmente phishing"
+  },
+  {
+    "domanda": "Scenario: Una mail che inizia con 'Gentile Cliente' invece che col tuo nome è...",
+    "risposte": ["Sospetta (messaggio generico)", "Normale", "Molto formale"],
+    "corretta": "Sospetta (messaggio generico)"
+  },
+  {
+    "domanda": "Scenario: 'Baiting' (esca) significa...",
+    "risposte": ["Lasciare una chiavetta USB infetta in un luogo pubblico sperando qualcuno la usi", "Pescare online", "Offrire sconti veri"],
+    "corretta": "Lasciare una chiavetta USB infetta in un luogo pubblico sperando qualcuno la usi"
+  },
+  {
+    "domanda": "Scenario: Cosa fare se hai cliccato per sbaglio su un link di phishing e inserito la password?",
+    "risposte": ["Cambiare immediatamente la password di quel servizio e di altri uguali", "Spegnere il monitor", "Aspettare una mail di conferma"],
+    "corretta": "Cambiare immediatamente la password di quel servizio e di altri uguali"
+  },
+  {
+    "domanda": "Scenario: Il 'Pretexting' è...",
+    "risposte": ["Creare uno scenario inventato (pretesto) per ottenere dati dalla vittima", "Scrivere testi prima", "Un software di scrittura"],
+    "corretta": "Creare uno scenario inventato (pretesto) per ottenere dati dalla vittima"
+  },
+  {
+    "domanda": "Scenario: Le truffe 'Romance Scam' giocano su...",
+    "risposte": ["Sentimenti e relazioni amorose fittizie per chiedere soldi", "La voglia di viaggiare", "La paura dei virus"],
+    "corretta": "Sentimenti e relazioni amorose fittizie per chiedere soldi"
+  },
+  {
+    "domanda": "Scenario: Un sito sicuro dove inserire dati deve avere...",
+    "risposte": ["HTTPS e il lucchetto nella barra indirizzi", "Tanti colori", "Il logo della banca grande"],
+    "corretta": "HTTPS e il lucchetto nella barra indirizzi"
+  },
+  {
+    "domanda": "Scenario: La tua banca ti chiederà mai la password completa via mail o telefono?",
+    "risposte": ["Mai", "Sì, per controlli", "Solo se chiami tu"],
+    "corretta": "Mai"
+  },
+  {
+    "domanda": "Scenario: Cos'è lo 'Spear Phishing'?",
+    "risposte": ["Un attacco di phishing mirato a una persona specifica (non di massa)", "Phishing veloce", "Phishing sportivo"],
+    "corretta": "Un attacco di phishing mirato a una persona specifica (non di massa)"
+  },
+  {
+    "domanda": "Scenario: Se ricevi una PEC di una multa che sembra vera ma l'allegato è .zip, cosa fai?",
+    "risposte": ["Controllo sul sito dell'ente o vado dai vigili, non apro lo zip", "Apro lo zip", "Pago subito"],
+    "corretta": "Controllo sul sito dell'ente o vado dai vigili, non apro lo zip"
+  },
+  {
+    "domanda": "Scenario: 'Shoulder Surfing' significa...",
+    "risposte": ["Spiare qualcuno alle spalle mentre digita pin o password", "Navigare con le spalle", "Fare surf"],
+    "corretta": "Spiare qualcuno alle spalle mentre digita pin o password"
+  },
+  {
+    "domanda": "Scenario: Le offerte 'Troppo belle per essere vere' (es. iPhone a 1€) sono...",
+    "risposte": ["Quasi sempre truffe per rubare dati carta di credito", "Grandi occasioni", "Errori del negozio"],
+    "corretta": "Quasi sempre truffe per rubare dati carta di credito"
+  },
+  {
+    "domanda": "Scenario: Un pop-up dice 'Hai vinto un premio!'. Cosa fai?",
+    "risposte": ["Chiudo la finestra, è un'esca", "Clicco per ritirarlo", "Do il mio indirizzo"],
+    "corretta": "Chiudo la finestra, è un'esca"
+  },
+  {
+    "domanda": "Scenario: Il 'Whaling' è un attacco phishing rivolto a...",
+    "risposte": ["Pesci grossi (dirigenti di alto livello)", "Pescatori", "Nessuno"],
+    "corretta": "Pesci grossi (dirigenti di alto livello)"
+  },
+  {
+    "domanda": "Scenario: I truffatori usano spesso il senso di URGENZA per...",
+    "risposte": ["Non farti ragionare e indurti all'errore", "Farti risparmiare tempo", "Essere efficienti"],
+    "corretta": "Non farti ragionare e indurti all'errore"
+  },
+  {
+    "domanda": "Scenario: Se un sito di streaming ti chiede di scaricare un 'Codec' per vedere il film...",
+    "risposte": ["È probabilmente un malware", "Fallo subito", "Serve per l'HD"],
+    "corretta": "È probabilmente un malware"
+  },
+  {
+    "domanda": "Scenario: 'Tailgating' in sicurezza fisica/informatica significa...",
+    "risposte": ["Seguire qualcuno autorizzato per entrare in una zona riservata senza badge", "Seguire un'auto", "Copiare i file"],
+    "corretta": "Seguire qualcuno autorizzato per entrare in una zona riservata senza badge"
+  },
+  {
+    "domanda": "Scenario: Cosa è il 'Watering Hole' attack?",
+    "risposte": ["Infettare un sito web frequentato dalla vittima per colpirla", "Dare acqua al PC", "Un attacco idrico"],
+    "corretta": "Infettare un sito web frequentato dalla vittima per colpirla"
+  },
+  {
+    "domanda": "Scenario: Ricevi una chiamata dal 'Supporto Tecnico Microsoft' che dice che il tuo PC ha un virus. È...",
+    "risposte": ["Una truffa nota (Tech Support Scam)", "Vero, Microsoft chiama tutti", "Un servizio gratuito"],
+    "corretta": "Una truffa nota (Tech Support Scam)"
+  },
+  {
+    "domanda": "Scenario: I QR Code possono essere usati per il phishing (Quishing)?",
+    "risposte": ["Sì, possono portare a siti malevoli", "No, sono solo immagini", "Solo se stampati male"],
+    "corretta": "Sì, possono portare a siti malevoli"
+  },
+  {
+    "domanda": "Scenario: Come verifichi se un URL abbreviato (bit.ly) è sicuro?",
+    "risposte": ["Uso servizi di 'URL expander' o scanner online prima di cliccare", "Clicco e spero", "Non si può"],
+    "corretta": "Uso servizi di 'URL expander' o scanner online prima di cliccare"
+  },
+  {
+    "domanda": "Scenario: Il 'Money Muling' consiste nel...",
+    "risposte": ["Ricevere soldi sporchi sul proprio conto per girarli ai truffatori (riciclaggio)", "Vincere soldi", "Prestare soldi"],
+    "corretta": "Ricevere soldi sporchi sul proprio conto per girarli ai truffatori (riciclaggio)"
+  },
+  {
+    "domanda": "Scenario: La miglior difesa contro l'ingegneria sociale è...",
+    "risposte": ["Il ripensamento critico e la verifica delle fonti", "Un antivirus costoso", "Non usare il telefono"],
+    "corretta": "Il ripensamento critico e la verifica delle fonti"
+  }
+]

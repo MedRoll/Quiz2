@@ -1,0 +1,152 @@
+[
+  {
+    "domanda": "Scenario: Il tuo PC improvvisamente mostra una schermata rossa che chiede un pagamento in Bitcoin per sbloccare i file. Di cosa si tratta?",
+    "risposte": ["Un Ransomware", "Un errore di Windows", "Un aggiornamento a pagamento"],
+    "corretta": "Un Ransomware"
+  },
+  {
+    "domanda": "Scenario: Scarichi un programma gratuito per modificare foto, ma installandolo il PC inizia a riempirsi di pubblicità pop-up. Cosa hai installato probabilmente?",
+    "risposte": ["Un Adware", "Un driver video", "Un antivirus"],
+    "corretta": "Un Adware"
+  },
+  {
+    "domanda": "Scenario: Cos'è un 'Trojan Horse' in informatica?",
+    "risposte": ["Un virus che si nasconde dentro un programma apparentemente utile", "Un cavallo virtuale per videogiochi", "Un programma che protegge il PC"],
+    "corretta": "Un virus che si nasconde dentro un programma apparentemente utile"
+  },
+  {
+    "domanda": "Scenario: Un 'Worm' si differenzia da un virus classico perché...",
+    "risposte": ["Può replicarsi e diffondersi nella rete da solo senza bisogno di un file ospite", "È più lento", "Colpisce solo i Mac"],
+    "corretta": "Può replicarsi e diffondersi nella rete da solo senza bisogno di un file ospite"
+  },
+  {
+    "domanda": "Scenario: Il termine 'Malware' è un termine ombrello che indica...",
+    "risposte": ["Software Malevolo (qualsiasi programma dannoso)", "Solo i virus", "I programmi malfunzionanti"],
+    "corretta": "Software Malevolo (qualsiasi programma dannoso)"
+  },
+  {
+    "domanda": "Scenario: Hai ricevuto un allegato che sembra una fattura ma finisce con '.exe'. Cosa fai?",
+    "risposte": ["Lo apro per controllare", "Lo cancello immediatamente, è un eseguibile sospetto", "Lo rinomino"],
+    "corretta": "Lo cancello immediatamente, è un eseguibile sospetto"
+  },
+  {
+    "domanda": "Scenario: Uno 'Spyware' ha lo scopo principale di...",
+    "risposte": ["Spiare le tue attività e rubare dati senza farsi notare", "Bloccare il PC", "Rompere lo schermo"],
+    "corretta": "Spiare le tue attività e rubare dati senza farsi notare"
+  },
+  {
+    "domanda": "Scenario: Il PC è diventato improvvisamente lentissimo e la ventola gira al massimo anche se non fai nulla. Potrebbe essere...",
+    "risposte": ["Un Cryptominer (virus che mina criptovalute)", "La polvere", "Un aggiornamento andato a buon fine"],
+    "corretta": "Un Cryptominer (virus che mina criptovalute)"
+  },
+  {
+    "domanda": "Scenario: Quale di questi dispositivi può prendere un virus?",
+    "risposte": ["Solo i PC Windows", "PC, Mac, Smartphone e Tablet", "Solo i computer vecchi"],
+    "corretta": "PC, Mac, Smartphone e Tablet"
+  },
+  {
+    "domanda": "Scenario: Un Keylogger è un programma che...",
+    "risposte": ["Registra tutto ciò che digiti sulla tastiera (inclusi password)", "Pulisce la tastiera", "Blocca i tasti"],
+    "corretta": "Registra tutto ciò che digiti sulla tastiera (inclusi password)"
+  },
+  {
+    "domanda": "Scenario: Cos'è una 'Botnet'?",
+    "risposte": ["Una rete di dispositivi infetti controllati a distanza da un hacker", "Una rete di robot domestici", "Un nuovo social network"],
+    "corretta": "Una rete di dispositivi infetti controllati a distanza da un hacker"
+  },
+  {
+    "domanda": "Scenario: Se inserisci una chiavetta USB trovata per terra nel tuo PC aziendale...",
+    "risposte": ["Rischi di infettare l'intera rete aziendale", "È un buon modo per trovare file gratis", "Non succede nulla se hai l'antivirus"],
+    "corretta": "Rischi di infettare l'intera rete aziendale"
+  },
+  {
+    "domanda": "Scenario: I 'Macro Virus' si nascondono spesso in...",
+    "risposte": ["Documenti Office (Word, Excel)", "File musicali MP3", "Immagini JPG"],
+    "corretta": "Documenti Office (Word, Excel)"
+  },
+  {
+    "domanda": "Scenario: Qual è il danno principale di un Ransomware?",
+    "risposte": ["Cifra i tuoi dati rendendoli inaccessibili", "Ti ruba la connessione internet", "Cambia lo sfondo del desktop"],
+    "corretta": "Cifra i tuoi dati rendendoli inaccessibili"
+  },
+  {
+    "domanda": "Scenario: Un 'Exploit' sfrutta...",
+    "risposte": ["Una vulnerabilità (bug) di un software non aggiornato", "La potenza della CPU", "La tua password"],
+    "corretta": "Una vulnerabilità (bug) di un software non aggiornato"
+  },
+  {
+    "domanda": "Scenario: Cosa significa 'Zero-Day'?",
+    "risposte": ["Una minaccia nuova per cui non esiste ancora una difesa/patch", "Un virus che dura zero giorni", "Un giorno senza virus"],
+    "corretta": "Una minaccia nuova per cui non esiste ancora una difesa/patch"
+  },
+  {
+    "domanda": "Scenario: Il 'Pharming' è una tecnica che...",
+    "risposte": ["Reindirizza il traffico web su un sito falso anche se digiti l'indirizzo giusto", "Coltiva virus", "Manda spam"],
+    "corretta": "Reindirizza il traffico web su un sito falso anche se digiti l'indirizzo giusto"
+  },
+  {
+    "domanda": "Scenario: Un Rootkit serve all'hacker per...",
+    "risposte": ["Ottenere privilegi di amministratore e nascondere la propria presenza", "Rompere il router", "Cambiare la data del PC"],
+    "corretta": "Ottenere privilegi di amministratore e nascondere la propria presenza"
+  },
+  {
+    "domanda": "Scenario: Se il browser cambia pagina iniziale da solo e aggiunge barre degli strumenti strane, hai...",
+    "risposte": ["Un Browser Hijacker", "Un virus mortale", "Un aggiornamento utile"],
+    "corretta": "Un Browser Hijacker"
+  },
+  {
+    "domanda": "Scenario: I virus possono infettare anche i dispositivi IoT (telecamere, frigo smart)?",
+    "risposte": ["Sì, spesso hanno sicurezze deboli", "No, non hanno schermi", "Solo se sono marca Apple"],
+    "corretta": "Sì, spesso hanno sicurezze deboli"
+  },
+  {
+    "domanda": "Scenario: Qual è il sintomo classico di un'infezione?",
+    "risposte": ["Il computer è silenzioso", "Rallentamenti, crash, finestre strane, file scomparsi", "La tastiera si illumina"],
+    "corretta": "Rallentamenti, crash, finestre strane, file scomparsi"
+  },
+  {
+    "domanda": "Scenario: Un virus 'Polimorfo' è difficile da rilevare perché...",
+    "risposte": ["Cambia il proprio codice ogni volta che si replica", "È invisibile", "Si nasconde nella RAM"],
+    "corretta": "Cambia il proprio codice ogni volta che si replica"
+  },
+  {
+    "domanda": "Scenario: Cosa significa 'Quarantena' nell'antivirus?",
+    "risposte": ["Isolare il file infetto in modo che non possa fare danni", "Cancellare il file", "Curare il file"],
+    "corretta": "Isolare il file infetto in modo che non possa fare danni"
+  },
+  {
+    "domanda": "Scenario: Come si diffondono principalmente i malware oggi?",
+    "risposte": ["Email di phishing e download da siti non sicuri", "Floppy disk", "Tramite la polvere"],
+    "corretta": "Email di phishing e download da siti non sicuri"
+  },
+  {
+    "domanda": "Scenario: Uno 'Scareware' cerca di...",
+    "risposte": ["Spaventarti con falsi avvisi di virus per farti comprare un software inutile", "Farti ridere", "Bloccare il mouse"],
+    "corretta": "Spaventarti con falsi avvisi di virus per farti comprare un software inutile"
+  },
+  {
+    "domanda": "Scenario: Un attacco DDoS serve a...",
+    "risposte": ["Mandare in tilt un sito web inondandolo di traffico", "Rubare password", "Cancellare file"],
+    "corretta": "Mandare in tilt un sito web inondandolo di traffico"
+  },
+  {
+    "domanda": "Scenario: Se ricevi un link via SMS da un numero sconosciuto, potrebbe contenere...",
+    "risposte": ["Malware per smartphone", "Un regalo sicuro", "Un aggiornamento ufficiale"],
+    "corretta": "Malware per smartphone"
+  },
+  {
+    "domanda": "Scenario: I file con doppia estensione (es. fattura.pdf.exe) sono...",
+    "risposte": ["Quasi sempre trappole/malware", "Errori di battitura", "File sicuri"],
+    "corretta": "Quasi sempre trappole/malware"
+  },
+  {
+    "domanda": "Scenario: Qual è la prima linea di difesa contro i malware?",
+    "risposte": ["Il comportamento prudente dell'utente", "L'antivirus gratis", "Il firewall"],
+    "corretta": "Il comportamento prudente dell'utente"
+  },
+  {
+    "domanda": "Scenario: Riavviare il PC rimuove un virus?",
+    "risposte": ["Quasi mai, serve una scansione antivirus", "Sì, sempre", "Solo se stacchi la spina"],
+    "corretta": "Quasi mai, serve una scansione antivirus"
+  }
+]

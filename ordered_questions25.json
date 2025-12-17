@@ -1,0 +1,152 @@
+[
+  {
+    "domanda": "Scenario: La regola del Backup '3-2-1' dice...",
+    "risposte": ["3 copie dei dati, su 2 supporti diversi, di cui 1 fuori sede (o Cloud)", "3 backup al giorno, 2 alla notte", "3 password diverse"],
+    "corretta": "3 copie dei dati, su 2 supporti diversi, di cui 1 fuori sede (o Cloud)"
+  },
+  {
+    "domanda": "Scenario: Perché è importante fare gli aggiornamenti (Update)?",
+    "risposte": ["Per correggere falle di sicurezza (patch) e migliorare le funzioni", "Per occupare memoria", "Per cambiare i colori"],
+    "corretta": "Per correggere falle di sicurezza (patch) e migliorare le funzioni"
+  },
+  {
+    "domanda": "Scenario: Un Firewall serve a...",
+    "risposte": ["Filtrare il traffico in entrata e uscita, bloccando connessioni sospette", "Spegnere gli incendi nel PC", "Velocizzare internet"],
+    "corretta": "Filtrare il traffico in entrata e uscita, bloccando connessioni sospette"
+  },
+  {
+    "domanda": "Scenario: Usare il Wi-Fi pubblico (es. aeroporto) senza VPN è...",
+    "risposte": ["Rischioso, i dati potrebbero essere intercettati (Sniffing)", "Sicuro", "Consigliato per la banca"],
+    "corretta": "Rischioso, i dati potrebbero essere intercettati (Sniffing)"
+  },
+  {
+    "domanda": "Scenario: Una VPN (Virtual Private Network)...",
+    "risposte": ["Cifra la tua connessione nascondendo l'IP e proteggendo i dati", "Ti fa navigare gratis", "Rimuove i virus"],
+    "corretta": "Cifra la tua connessione nascondendo l'IP e proteggendo i dati"
+  },
+  {
+    "domanda": "Scenario: Se devi buttare un vecchio PC o Hard Disk, cosa fai?",
+    "risposte": ["Formatto il disco in modo sicuro (Wipe) o lo distruggo fisicamente", "Lo butto così com'è", "Cancello i file nel cestino"],
+    "corretta": "Formatto il disco in modo sicuro (Wipe) o lo distruggo fisicamente"
+  },
+  {
+    "domanda": "Scenario: L'antivirus deve essere aggiornato?",
+    "risposte": ["Sì, quotidianamente/automaticamente per riconoscere i nuovi virus", "No, basta installarlo una volta", "Solo una volta l'anno"],
+    "corretta": "Sì, quotidianamente/automaticamente per riconoscere i nuovi virus"
+  },
+  {
+    "domanda": "Scenario: Cosa fare se trovi una chiavetta USB nel parcheggio aziendale?",
+    "risposte": ["La consegno alla sicurezza informatica, NON la inserisco nel PC", "La provo per vedere di chi è", "La formattto"],
+    "corretta": "La consegno alla sicurezza informatica, NON la inserisco nel PC"
+  },
+  {
+    "domanda": "Scenario: La crittografia (BitLocker, FileVault) del disco serve a...",
+    "risposte": ["Rendere i dati illeggibili se ti rubano il computer fisico", "Nascondere le cartelle", "Comprimere i file"],
+    "corretta": "Rendere i dati illeggibili se ti rubano il computer fisico"
+  },
+  {
+    "domanda": "Scenario: 'Lock Screen': quando ti allontani dalla scrivania devi...",
+    "risposte": ["Bloccare lo schermo (Win+L)", "Lasciare tutto aperto", "Spegnere il monitor ma non il PC"],
+    "corretta": "Bloccare lo schermo (Win+L)"
+  },
+  {
+    "domanda": "Scenario: Perché disattivare le macro di Office è una buona pratica?",
+    "risposte": ["Perché sono un veicolo comune per i malware", "Perché Excel funziona meglio senza", "Perché consumano batteria"],
+    "corretta": "Perché sono un veicolo comune per i malware"
+  },
+  {
+    "domanda": "Scenario: Il protocollo HTTPS garantisce...",
+    "risposte": ["Che la comunicazione tra te e il sito è cifrata e autenticata", "Che il sito è divertente", "Che il sito non ha virus (falso, garantisce solo la connessione)"],
+    "corretta": "Che la comunicazione tra te e il sito è cifrata e autenticata"
+  },
+  {
+    "domanda": "Scenario: Un backup su disco esterno collegato sempre al PC è sicuro dai Ransomware?",
+    "risposte": ["No, se il virus colpisce il PC, cifra anche il disco collegato", "Sì, è esterno", "Dipende dalla marca"],
+    "corretta": "No, se il virus colpisce il PC, cifra anche il disco collegato"
+  },
+  {
+    "domanda": "Scenario: Cosa sono i 'Cookie'?",
+    "risposte": ["Piccoli file di testo che salvano preferenze e tracciamento sui siti", "Biscotti digitali", "Virus"],
+    "corretta": "Piccoli file di testo che salvano preferenze e tracciamento sui siti"
+  },
+  {
+    "domanda": "Scenario: Navigazione in incognito (Privata) serve a...",
+    "risposte": ["Non salvare cronologia e cookie sul TUO dispositivo", "Essere invisibili agli hacker e alla polizia (falso)", "Nascondere l'IP (falso)"],
+    "corretta": "Non salvare cronologia e cookie sul TUO dispositivo"
+  },
+  {
+    "domanda": "Scenario: Se vendi il tuo smartphone, prima devi...",
+    "risposte": ["Fare un ripristino dati di fabbrica (Wipe)", "Cancellare le foto a mano", "Togliere la cover"],
+    "corretta": "Fare un ripristino dati di fabbrica (Wipe)"
+  },
+  {
+    "domanda": "Scenario: Cos'è un attacco Man-in-the-Middle (MITM)?",
+    "risposte": ["Qualcuno intercetta la comunicazione tra due parti senza che lo sappiano", "Un arbitro di calcio", "Un server centrale"],
+    "corretta": "Qualcuno intercetta la comunicazione tra due parti senza che lo sappiano"
+  },
+  {
+    "domanda": "Scenario: La 'Privacy Sandbox' è...",
+    "risposte": ["Un ambiente isolato dove eseguire programmi sospetti senza rischi", "Un gioco di sabbia", "Una cartella segreta"],
+    "corretta": "Un ambiente isolato dove eseguire programmi sospetti senza rischi"
+  },
+  {
+    "domanda": "Scenario: Aggiornare il firmware del router di casa è...",
+    "risposte": ["Importante per evitare intrusioni nella rete domestica", "Inutile", "Dannoso"],
+    "corretta": "Importante per evitare intrusioni nella rete domestica"
+  },
+  {
+    "domanda": "Scenario: Il 'Social Engineering' funziona perché sfrutta...",
+    "risposte": ["La fiducia, la paura o la curiosità umana", "I bug del software", "La velocità di internet"],
+    "corretta": "La fiducia, la paura o la curiosità umana"
+  },
+  {
+    "domanda": "Scenario: Cosa fare se sospetti che il PC sia infetto?",
+    "risposte": ["Scollegarlo dalla rete (staccare cavo/Wi-Fi) e avviare antivirus", "Continuare a lavorare", "Mandare mail a tutti"],
+    "corretta": "Scollegarlo dalla rete (staccare cavo/Wi-Fi) e avviare antivirus"
+  },
+  {
+    "domanda": "Scenario: Un backup 'Incrementale'...",
+    "risposte": ["Copia solo i file modificati dall'ultimo backup (risparmia spazio)", "Copia tutto ogni volta", "Cancella i file vecchi"],
+    "corretta": "Copia solo i file modificati dall'ultimo backup (risparmia spazio)"
+  },
+  {
+    "domanda": "Scenario: Per proteggere la privacy sui social...",
+    "risposte": ["Imposta il profilo come 'Privato' e controlla chi può vedere i post", "Scrivi tutto pubblicamente", "Non mettere la foto profilo"],
+    "corretta": "Imposta il profilo come 'Privato' e controlla chi può vedere i post"
+  },
+  {
+    "domanda": "Scenario: Geolocalizzazione nelle foto: perché può essere un rischio?",
+    "risposte": ["Rivela dove abiti o dove ti trovi esattamente", "Occupa spazio", "Sfoca la foto"],
+    "corretta": "Rivela dove abiti o dove ti trovi esattamente"
+  },
+  {
+    "domanda": "Scenario: L'Internet of Things (IoT) richiede sicurezza?",
+    "risposte": ["Sì, lampadine e termostati smart possono essere punti di accesso per hacker", "No, sono innocui", "Solo se costosi"],
+    "corretta": "Sì, lampadine e termostati smart possono essere punti di accesso per hacker"
+  },
+  {
+    "domanda": "Scenario: Se ricevi una richiesta di amicizia da un profilo duplicato di un amico...",
+    "risposte": ["Verifica con l'amico reale, potrebbe essere un furto d'identità (Clonazione profilo)", "Accetta subito", "Segnala l'amico vero"],
+    "corretta": "Verifica con l'amico reale, potrebbe essere un furto d'identità (Clonazione profilo)"
+  },
+  {
+    "domanda": "Scenario: Il 'Diritto all'Oblio' (GDPR) è...",
+    "risposte": ["Il diritto di chiedere la cancellazione dei propri dati personali dal web", "Dimenticare le password", "Cancellare la cronologia"],
+    "corretta": "Il diritto di chiedere la cancellazione dei propri dati personali dal web"
+  },
+  {
+    "domanda": "Scenario: Un'immagine disco (Image Backup) serve a...",
+    "risposte": ["Clonare l'intero sistema operativo, programmi e impostazioni per ripristino totale", "Salvare solo le foto", "Fare una foto allo schermo"],
+    "corretta": "Clonare l'intero sistema operativo, programmi e impostazioni per ripristino totale"
+  },
+  {
+    "domanda": "Scenario: Perché non si deve usare l'account 'Amministratore' per l'uso quotidiano?",
+    "risposte": ["Perché se prendi un virus, questo eredita i poteri massimi e fa più danni", "Perché è più lento", "Perché costa di più"],
+    "corretta": "Perché se prendi un virus, questo eredita i poteri massimi e fa più danni"
+  },
+  {
+    "domanda": "Scenario: La sicurezza al 100%...",
+    "risposte": ["Non esiste, bisogna gestire e mitigare il rischio", "Esiste con un buon antivirus", "Esiste se spegni il PC"],
+    "corretta": "Non esiste, bisogna gestire e mitigare il rischio"
+  }
+]
