@@ -11,19 +11,19 @@ alt_quizzes = {}  # Dizionario per quiz alternativi
 
 def load_data():
     """
-    Carica i file ordered_questions1.json ... ordered_questions15.json
+    Carica i file ordered_questions1.json ... ordered_questions25.json
     """
     global quizzes
     quizzes.clear()
     
-    # --- MODIFICA EFFETTUATA QUI SOTTO 
-    for i in range(1, 21): 
+    # --- MODIFICA: Range esteso fino a 26 per includere i file 21-25 ---
+    for i in range(1, 26): 
         path = Path(f"ordered_questions{i}.json")
         if path.exists():
             with open(path, "r", encoding="utf-8") as f:
                 quizzes[i] = json.load(f)
         else:
-            # Stampa un avviso nella console se mancano i file 11-15
+            # Stampa un avviso nella console se mancano i file
             print(f"Attenzione: {path} non trovato. Assicurati che il file esista nella cartella.")
 
 def load_alt_data():
@@ -88,7 +88,6 @@ def index():
     """
     Restituisce la pagina HTML del quiz
     """
-    # Assicurati che il file template.html contenga il nuovo codice HTML che ti ho dato prima
     path = Path("template.html")
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
